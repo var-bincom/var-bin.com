@@ -1,0 +1,100 @@
+/*styles.css*/
+
+#cover h2 {
+  margin: 30px 0 0;
+  font-size: 70px;
+  text-align: center;
+  color: #fff;
+}
+#cover p {
+  margin: 10px 0 0;
+  font-size: 20px;
+  font-style: italic;
+  text-align: right;
+  color: #fff;
+}
+#cover p a {
+  color: #fff;
+}
+
+.mark_cross {
+  text-decoration: line-through;
+}
+
+.slide {
+  padding-top: 80px;
+}
+
+.slide h2 {
+  margin-bottom: 25px;
+}
+
+.figure {
+  max-width: 1000px;
+  min-width: 300px;
+}
+
+.figure a {
+  display: block;
+  text-align: center;
+}
+
+.figure img {
+  display: inline-block;
+}
+
+.figure figcaption {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.figure.console2 img {
+  width: 100%;
+}
+
+.figure.conemu img {
+  width: 60%;
+}
+
+.figure.cygwin img,
+.figure.alias img {
+  width: 95%;
+}
+
+.figure.git img {
+  width: 50%;
+}
+
+.slide pre code.console2,
+.slide pre code.code__wsn {
+  white-space: normal;
+}
+
+.triple {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -webkit-column-gap: 15px;
+  -moz-column-gap: 15px;
+  column-gap: 15px
+}
+
+.slide ol.triple li {
+  text-indent: 0;
+}
+
+.stdout pre code {
+  white-space: pre-wrap;
+}
+
+.slide .slide-comment {
+  line-height: 1.4;
+}
+
+.slide .if-else-example {
+  line-height: 1.3;
+}
+
+.tree {
+  line-height: 1.18;
+}
