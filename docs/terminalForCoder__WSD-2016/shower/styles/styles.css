@@ -185,3 +185,12 @@ ul.tree-view::before {
 .shower.is-black .slide code, .slide kbd, .slide samp {
   background: rgba(88,90,94,.5);
 }
+
+.slide.slide__video h2 {
+  margin-bottom: 0;
+}
+
+.slide.slide__video video {
+  width: 100%;
+  height: 78%;
+}
