@@ -704,6 +704,24 @@
 			<li class="next">Показать код</li>
 		</ul>
 	</section>
+	<!-- Автоматизация рутинных задач. ап репозиториев. До -->
+	<section class="slide slide__video">
+		<h2>Up большого числа репозиториев. До:</h2>
+		<button id="playStopVideoBefore">Play/Pause</button>
+		<video id="videoBefore">
+			<source src="./videos/2016-11-16-2356-05-1.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</section>
+	<!-- Автоматизация рутинных задач. ап репозиториев. После -->
+	<section class="slide slide__video">
+		<h2>Up большого числа репозиториев. После</h2>
+		<button id="playStopVideoAfter">Play/Pause</button>
+		<video id="videoAfter">
+			<source src="./videos/2016-11-17-2347-08-1.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</section>
 	<!-- Автоматизация рутинных задач. Полезные алиасы -->
 	<section class="slide">
 		<h2>Полезные алиасы</h2>
@@ -750,5 +768,30 @@
 	<script src="shower/shower.min.js"></script>
 	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
 	<!-- Photos by John Carey, fiftyfootshadows.net -->
+	<script>
+	var videoBefore = document.getElementById("videoBefore"),
+			videoAfter = document.getElementById("videoAfter"),
+			playStopVideoBefore = document.getElementById("playStopVideoBefore"),
+			playStopVideoAfter = document.getElementById("playStopVideoAfter");
+
+	function playPause(videoId) {
+		if (videoId.paused) {
+			videoId.play();
+		} else {
+			videoId.pause();
+		}
+	}
+
+	function playVideoBefore() {
+		playPause(videoBefore);
+	}
+
+	function playVideoAfter() {
+		playPause(videoAfter);
+	}
+
+	playStopVideoBefore.addEventListener("click", playVideoBefore);
+	playStopVideoAfter.addEventListener("click", playVideoAfter);
+	</script>
 </body>
 </html>
