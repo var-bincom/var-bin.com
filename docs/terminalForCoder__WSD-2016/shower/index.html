@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
+<!-- is-black for black theme-->
 <body class="shower list">
 	<header class="caption">
 		<h1>Shower Presentation Engine</h1>
@@ -29,6 +30,43 @@
 			<li>Конец</li>
 		</ol>
 	</section>
+	<!-- ссылка на репо -->
+	<section class="slide">
+		<h2>Репозиторий</h2>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/ldvSjh">https://goo.gl/ldvSjh</a>
+			<figure>
+				<img src="./pictures/console/qr-repo.png" alt="link to repo">
+			</figure>
+		</div>
+	</section>
+	<!-- ссылка на слайды -->
+	<section class="slide">
+		<h2>Слайды</h2>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/PqnRx4">https://goo.gl/PqnRx4</a>
+			<figure>
+				<img src="./pictures/console/qr-slides.png" alt="link to slides">
+			</figure>
+		</div>
+	</section>
+	<!-- ссылка на слайды -->
+	<section class="slide">
+		<h2>Где это все работает</h2>
+		<ul>
+			<li>
+				<a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">Win10_preview stable</a>
+				<ul>
+					<li><a href="https://blogs.msdn.microsoft.com/commandline/2016/04/06/bash-on-ubuntu-on-windows-download-now-3/">Bash on Ubuntu on Windows</a></li>
+					<li><a href="https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/">Windows and Ubuntu Interoperability</a></li>
+				</ul>
+			</li>
+			<li>Mac OS</li>
+			<li><a href="https://www.ubuntu.com/download/desktop">Ubuntu</a></li>
+			<li><a href="http://www.conemu.ru">ConEmu</a></li>
+			<li><a href="https://hyper.is/">Hyper.app</a></li>
+		</ul>
+	</section>
 	<!-- Менеджеры терминалов -->
 	<section class="slide">
 		<h2>Менеджеры терминалов</h2>
@@ -39,36 +77,44 @@
 			<li>
 				tmux
 			</li>
+			<li>
+				screen vs tmux
+			</li>
 		</ol>
 	</section>
 	<!-- Менеджеры терминалов. Screen -->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Screen</h2>
-		<div class="slide-comment">
-			<em>
-				screen доступен на песочницах с настройками <b>по умолчанию</b>. Чтобы его запустить, достаточно выполнить команду <code>screen</code>.
-			</em>
-		</div>
 		<b>
-			Пример файла конфигураций:
+			Установка:
 		</b>
 		<pre>
-			<code># Select whether you want to see the copyright</code>
-			<code># notice during startup.</code>
-			<code># Default is ‘on’, as you probably noticed.</code>
-			<code>startup_message off</code>
+			<code>sudo apt-get install screen</code>
+			<code>screen</code>
 		</pre>
 	</section>
-	<!-- Менеджеры терминалов. Screen -->
+	<!-- Менеджеры терминалов. Screen Hot keys-->
+	<section class="slide">
+		<h2>Менеджеры терминалов. Screen</h2>
+		<b>
+			Базовые сочетания клавиш:
+		</b>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/RyRfO5">https://goo.gl/RyRfO5</a>
+			<figure>
+				<img src="./pictures/console/qr-screen-hot-keys.png" alt="link to screen hot keys">
+			</figure>
+		</div>
+	</section>
+	<!-- Менеджеры терминалов. Screen Config-->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Screen</h2>
 		<b>
 			Пример файла конфигураций:
 		</b>
 		<pre>
-			<code># Change or display the status of automatcally</code>
-			<code># saving layouts.</code>
-			<code>layout autosave on</code>
+			<code># Default is ‘on’, as you probably noticed.</code>
+			<code>startup_message off</code>
 			<code># Window list at the bottom.</code>
 			<code>hardstatus alwayslastline</code>
 			<code>hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"</code>
@@ -77,213 +123,138 @@
 			Что означают непонятные символы в этой строке <code>hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"</code> можно почитать <a href="http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/" target="_blank">тут</a>.
 		</div>
 	</section>
-	<!-- Менеджеры терминалов. Screen -->
+	<!-- Менеджеры терминалов. Screen Example-->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Screen</h2>
 		<b>
-			Базовые сочетания клавиш:
+			Показать в работе
 		</b>
-		<a href="https://github.com/var-bin/terminalForCoder__WSD/blob/master/screen/hotkey.md" target="_blank">Тут</a>
 	</section>
-	<!-- Менеджеры терминалов. Screen -->
-	<section class="slide">
-		<h2>Менеджеры терминалов. Screen</h2>
-		<b>
-			Недостатки:
-		</b>
-		<ul>
-			<li>
-				Не умеет создавать layout для каждой вкладки;
-			</li>
-			<li>
-				Не умеет сохранять layout, если оборвалась связь или еще что-то там;
-			</li>
-			<li>
-				До версии 4.1 не умел делать разбивку по вертикали (для меня это критично);
-			</li>
-			<li>
-				Когда вы создаете новый регион, то в нем отдельно нужно создавать новое окно <code>(Ctrl+a c)</code>, выполнить переход в нужную директорию и т.д.;
-			</li>
-			<li>
-				Чтобы удалить регион тоже нужно помучатся <code>Ctrl+a :remove</code>.
-			</li>
-		</ul>
-	</section>
-	<!-- Менеджеры терминалов. Tmux -->
+	<!-- Менеджеры терминалов. Tmux Установка -->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Tmux</h2>
 		<div><em>
 			“Это тот-же screen, только на стероидах”
 		</em></div>
-		<div><b>
-			Сборка tmux:
-		</b></div>
-		<ol>
-			<li>
-				<code>wget --spider https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz</code> - проверим доступность файла по ссылке
-			</li>
-			<li>
-				<code>wget -P ~/ https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz</code> - если все норм, скачиваем архив себе в домашнюю директорию
-			</li>
-		</ol>
-	</section>
-	<!-- Менеджеры терминалов. Tmux -->
-	<section class="slide">
-		<h2>Менеджеры терминалов. Tmux</h2>
-		<div><b>
-			Сборка tmux:
-		</b></div>
-		<ol start="3">
-			<li>
-				<code>tar -xzvf ~/tmux-2.2.tar.gz</code> - нам нужно разархивировать содержимое архива, а сам архив можно удалить
-			</li>
-			<li>
-				<code>./configure && make</code> - нам нужно выполнить сборку, чтобы можно было обращаться по имени <code>tmux</code>
-			</li>
-		</ol>
-	</section>
-	<!-- Менеджеры терминалов. Tmux -->
-	<section class="slide">
-		<h2>Менеджеры терминалов. Tmux</h2>
-		<div><b>
-			Преимущества tmux:
-		</b></div>
-		<ol>
-			<li>
-				tmux что называется <em>“с коробки”</em> настроен довольно качественно;
-			</li>
-			<li>
-				не нужно настраивать положение панели с вкладками и как их подсвечивать, как это было с <code>screen</code>;
-			</li>
-			<li>
-				умеет делить экран на так называемые регионы, как по вертикали, так и по горизонтали;
-			</li>
-			<li>
-				умеет держать удаленное соединение *.
-			</li>
-		</ol>
-		<div>
-			<em>
-				* нужна дополнительная магия для того, чтобы <code>tmux</code> сохранил доступы
-			</em>
-		</div>
-	</section>
-	<!-- Менеджеры терминалов. Tmux -->
-	<section class="slide">
-		<h2>Менеджеры терминалов. Tmux</h2>
-		<div><b>
-			Дополнительная магия для того, чтобы <code>tmux</code> сохранил доступы:
-		</b></div>
+		<b>
+			Установка:
+		</b>
 		<pre>
-			<code class="code__wsn">if [ ! -z "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$HOME/agent_sock" ]; then</code>
-			<code>	unlink "$HOME/agent_sock" 2>/dev/null</code>
-			<code>	ln -s "$SSH_AUTH_SOCK" "$HOME/agent_sock"</code>
-			<code>	export SSH_AUTH_SOCK="$HOME/agent_sock"</code>
-			<code>fi</code>
+			<code>sudo apt-get install tmux</code>
+			<code>tmux</code>
 		</pre>
 	</section>
-	<!-- Менеджеры терминалов. Tmux -->
+	<!-- Менеджеры терминалов. Tmux Сборка-->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Tmux</h2>
 		<div><b>
-			Базовые сочетания клавиш:
-		</b> <a href="https://github.com/var-bin/terminalForCoder__WSD/blob/master/tmux/hotkey.md" target="_blank">Тут</a></div>
-		<b>
-			Еще несколько команд, которые будут полезны при работе с tmux:
-		</b>
-		<div>
-			<code>tmux attach || tmux new</code> - если есть запущенная сессия tmux подключаемся. Если нет - создаем новую сессию
-		</div>
-		<div>
-			<code>tmux ls</code> - список сессий tmux для текущего пользователя
-		</div>
+			Сборка tmux:
+		</b></div>
+		<ol>
+			<li>
+				<code>wget -P ~/ https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz</code> - скачиваем архив себе в домашнюю директорию
+			</li>
+			<li>
+				<code>tar -xzvf ~/tmux-2.2.tar.gz</code> - разархивировать содержимое архива, а сам архив можно удалить
+			</li>
+			<li>
+				<code>./configure && make</code> - выполняем сборку, чтобы можно было обращаться по имени <code>tmux</code>
+			</li>
+		</ol>
 	</section>
-	<!-- Менеджеры терминалов. Tmux -->
+	<!-- Менеджеры терминалов. Tmux Hot keys-->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Tmux</h2>
-		<div>
-			<b>
-				Полезные ссылки:
-			</b>
+		<b>
+			Базовые сочетания клавиш:
+		</b>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/zSLFIJ">https://goo.gl/zSLFIJ</a>
+			<figure>
+				<img src="./pictures/console/qr-tmux-hot-keys.png" alt="link to screen hot keys">
+			</figure>
 		</div>
-		<ul>
-			<li>
-				<a href="https://gist.github.com/MohamedAlaa/2961058" target="_blank">https://gist.github.com/MohamedAlaa/2961058</a>
-			</li>
-			<li>
-				<a href="https://habrahabr.ru/post/126996/" target="_blank">https://habrahabr.ru/post/126996/</a>
-			</li>
-			<li>
-				<a href="https://tmux.github.io/" target="_blank">https://tmux.github.io/</a>
-			</li>
-			<li>
-				<code>man tmux</code> =)
-			</li>
-		</ul>
+	</section>
+	<!-- Менеджеры терминалов. Tmux Example-->
+	<section class="slide">
+		<h2>Менеджеры терминалов. Tmux</h2>
+		<b>
+			Показать в работе
+		</b>
+	</section>
+	<!-- Менеджеры терминалов. Screen vs Tmux -->
+	<section class="slide">
+		<h2>Менеджеры терминалов. screen vs tmux</h2>
+		<table class="slide_table__c">
+			<thead>
+				<tr>
+					<td align="center"><b>screen</b></td>
+					<td align="center"><b>tmux</b></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td valign="top">
+						<code>-</code> Не умеет создавать layout для каждой вкладки<br/>
+						<code>-</code> Не умеет сохранять layout, если оборвалась связь или еще что-то там<br/>
+						<code>-</code> До версии 4.1 не умел делать разбивку по вертикали<br/>
+						<code>-</code> Когда вы создаете новый регион, то в нем отдельно нужно создавать новое окно <code>(Ctrl+a c)</code>, выполнить переход в нужную директорию и т.д.<br/>
+						<code>-</code> Чтобы удалить регион тоже нужно помучатся <code>Ctrl+a :remove</code>
+					</td>
+					<td>
+						<code>+</code> Что называется “с коробки” настроен довольно качественно<br/>
+						<code>+</code> Не нужно настраивать положение панели с вкладками и как их подсвечивать, как это было с <code>screen</code><br/>
+						<code>+</code> Умеет делить экран на так называемые регионы, как по вертикали, так и по горизонтали<br/>
+						<code>+</code> Чтобы закрыть регион, достаточно написать <code>exit</code><br/>
+						<code>+</code> Умеет держать удаленное соединение <code>*</code><br/><br/>
+						<p>
+							<code>*</code> <i>нужна дополнительная магия</i>
+						</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</section>
 	<!-- Скрипты на bash -->
 	<section class="slide">
-		<h2>Скрипты на bash</h2>
-		<ol class="tree">
+		<h2>bash</h2>
+		<ol>
 			<li>
 				Основы
-				<ol class="tree tree_2l">
-					<li>
-						Перменные
-						<ol class="tree tree_3l">
-							<li>
-								Передача аргументов скрипту
-							</li>
-							<li>
-								Обработка внутри скрипта
-							</li>
-						</ol>
-					</li>
-				</ol>
 			</li>
 			<li>
-				Ветвление и циклы
-				<ol class="tree tree_2l">
-					<li>
-						Ветвление
-						<ol class="tree tree_3l">
-							<li>
-								if
-							</li>
-							<li>
-								Условия (строки)
-							</li>
-							<li>
-								Условия (числа/строки)
-							</li>
-							<li>
-								Условия (файлы)
-							</li>
-							<li>
-								Условия (логические)
-							</li>
-							<li>
-								if/else
-							</li>
-							<li>
-								if/elif/else
-							</li>
-						</ol>
-					</li>
-					<li>
-						Циклы
-						<ol class="tree tree_3l">
-							<li>
-								for/in
-							</li>
-							<li>
-								while
-							</li>
-						</ol>
-					</li>
-				</ol>
+				Ветвления
+			</li>
+			<li>
+				Циклы
 			</li>
 		</ol>
+	</section>
+	<!-- Скрипты на bash. Основы -->
+	<section class="slide">
+		<h2>bash. Основы</h2>
+		<ol>
+			<li>
+				Переменные
+			</li>
+			<li>
+				Передача аргументов скрипту
+			</li>
+			<li>
+				Обработка внутри скрипта
+			</li>
+		</ol>
+	</section>
+	<!-- Скрипты на bash. Основы. "Hello, world!" -->
+	<section class="slide">
+		<h2>bash. Основы. "Hello, world!"</h2>
+		<pre>
+			<code>#!/bin/bash</code>
+			<code>echo "Hello, world!"</code>
+		</pre>
+		<div>
+			<code>./hw.sh # вызов</code>
+		</div>
 	</section>
 	<!-- Скрипты на bash. Основы. Перменные -->
 	<section class="slide">
@@ -300,7 +271,7 @@
 			</li>
 		</ul>
 		<b>Создание (перезапись) переменной:</b>
-		<div><code>path=~/Docs</code></div>
+		<div><code>path="~/Docs"</code></div>
 		<b>Чтение переменной:</b>
 		<div><code>$path или ${path}</code></div>
 	</section>
@@ -310,24 +281,12 @@
 		<b>
 			Передача аргументов скрипту:
 		</b>
-		<div><code>./script.sh arg1, arg2, arg3, …, argN</code></div>
+		<div><code>./script.sh arg1 arg2 arg3 … argN</code></div>
 		<b>Обработка внутри скрипта:</b>
 		<div><code>$1</code> - первый аргумент</div>
 		<div><code>$2</code> - второй аргумент</div>
 		<div><code>$0</code> - имя скрипта</div>
 		<div><code>$#</code> - количество аргументов</div>
-	</section>
-	<!-- Скрипты на bash. Основы. Примеры -->
-	<section class="slide">
-		<h2>Скрипты на bash. Основы. Примеры</h2>
-		<b>
-			Hello, world!
-		</b>
-		<pre>
-			<code>#!/bin/bash</code>
-			<code>echo "Hello, world!"</code>
-			<code>./hw.sh # вызов</code>
-		</pre>
 	</section>
 	<!-- Скрипты на bash. Основы. Примеры -->
 	<section class="slide">
@@ -340,8 +299,28 @@
 			<code>var1=$1</code>
 			<code>var2=$2</code>
 			<code>echo "Arguments are \$1=$var1 \$2=$var2"</code>
-			<code>./variables.sh var1 var2 # вызов</code>
 		</pre>
+		<div>
+			<code>./variables.sh var1 var2 # вызов</code>
+		</div>
+	</section>
+	<!-- Скрипты на bash. Основы. Ветвление -->
+	<section class="slide">
+		<h2>bash. Основы. Ветвление</h2>
+		<ol>
+			<li>
+				<code>if</code>
+			</li>
+			<li>
+				<code>if/else</code>
+			</li>
+			<li>
+				<code>if/elif/else</code>
+			</li>
+			<li>
+				<code>case/in/esac</code>
+			</li>
+		</ol>
 	</section>
 	<!-- Скрипты на bash. Основы. Ветвление. if -->
 	<section class="slide">
@@ -461,7 +440,7 @@
 	<section class="slide">
 		<h2>Скрипты на bash. Основы. Ветвление</h2>
 		<b>
-			if/else Пример:
+			if/elif/else Пример:
 		</b>
 		<pre>
 			<code class="if-else-example"># if_elif_fi.sh</code>
@@ -479,23 +458,47 @@
 			<code class="if-else-example">fi</code>
 		</pre>
 	</section>
+	<!-- Скрипты на bash. Основы. Ветвление. if/else Пример -->
+	<section class="slide">
+		<h2>Скрипты на bash. Основы. Ветвление</h2>
+		<b>
+			case/in/esac:
+		</b>
+		<div>
+			<code>
+				case_in_esac.sh
+			</code>
+		</div>
+	</section>
+	<!-- Скрипты на bash. Основы. Циклы -->
+	<section class="slide">
+		<h2>bash. Основы. Циклы</h2>
+		<ol>
+			<li>
+				<code>for/in</code>
+			</li>
+			<li>
+				<code>while</code>
+			</li>
+		</ol>
+	</section>
 	<!-- Скрипты на bash. Основы. Циклы for/in-->
 	<section class="slide">
-		<h2>Скрипты на bash. Основы. Циклы</h2>
+		<h2>bash. Основы. Циклы</h2>
 		<b>
 			for/in:
 		</b>
 		<pre>
 			<code>for i in array</code>
 			<code>do</code>
-			<code>	# дейтсвие, переменная i каждый раз принимает</code>
+			<code>	# действие, переменная i каждый раз принимает</code>
 			<code>	# следующее значение из array</code>
 			<code>done</code>
 		</pre>
 	</section>
 	<!-- Скрипты на bash. Основы. Циклы for/in. Пример -->
 	<section class="slide">
-		<h2>Скрипты на bash. Основы. Циклы. Пример</h2>
+		<h2>bash. Основы. Циклы. Пример</h2>
 		<b>
 			for/in:
 		</b>
@@ -516,7 +519,7 @@
 	</section>
 	<!-- Скрипты на bash. Основы. Циклы while -->
 	<section class="slide">
-		<h2>Скрипты на bash. Основы. Циклы.</h2>
+		<h2>bash. Основы. Циклы.</h2>
 		<b>
 			while:
 		</b>
@@ -529,7 +532,7 @@
 	</section>
 	<!-- Скрипты на bash. Основы. Циклы while. Пример -->
 	<section class="slide">
-		<h2>Скрипты на bash. Основы. Циклы.</h2>
+		<h2>bash. Основы. Циклы.</h2>
 		<b>
 			while:
 		</b>
@@ -549,7 +552,7 @@
 	</section>
 	<!-- Скрипты на bash. Полезные ссылки -->
 	<section class="slide">
-		<h2>Скрипты на bash. Полезные ссылки.</h2>
+		<h2>Полезные ссылки.</h2>
 		<ul>
 			<li><a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">Learn the Command Line</a></li>
 			<li><a href="http://cli.learncodethehardway.org/" target="_blank">The Command Line Crash Course</a></li>
@@ -562,22 +565,16 @@
 		<h2>Автоматизация рутинных задач</h2>
 		<ul>
 			<li>
-				Быстрый дифф
+				Создаем <code>diff</code>
 			</li>
 			<li>
-				“Убиваем” задачи пачками
+				Создаем <code>diff + Jira API</code>
 			</li>
 			<li>
-				Добавляем миграции пачками
+				Чистим <code>_dist</code>
 			</li>
 			<li>
-				Запуск воркеров + интерэкшены - ???
-			</li>
-			<li>
-				Чистим <code>dist, build</code> для конкретной темы
-			</li>
-			<li>
-				Blackjack - ап репозиториев в <code>path</code>
+				Up большого числа репозиториев
 			</li>
 			<li>
 				Полезные алиасы
@@ -586,17 +583,22 @@
 	</section>
 	<!-- Автоматизация рутинных задач. Быстрый дифф -->
 	<section class="slide">
-		<h2>Быстрый дифф</h2>
+		<h2>Создаем дифф</h2>
 		<em>
 			Стандартный подход
 		</em>
 		<div>
-			<code class="code__wsn">git diff origin/master origin/%branch-name% > ~/%path_to_diff_dir%/diff-%branch-name%.diff</code>
+			<pre>
+				<code class="code__wsn">git diff origin/master origin/%branch-name% > ~/%path_to_diff_dir%/diff-%branch-name%.diff</code>
+			</pre>
 		</div>
 		<div>
 			<code>%branch-name% # имя ветки для которой нужно создать diff</code>
 		</div>
-		<b>
+		<div>
+			<code>%path_to_diff_dir% # путь к директории с diff файлами</code>
+		</div>
+		<!-- <b>
 			В данном подходе есть как минимум 2 больших минуса:
 		</b>
 		<ul>
@@ -606,158 +608,105 @@
 			<li>
 				в процессе набора большой % того, что мы допустим ошибки в командах и нужно будет все исправлять, что тоже занимает время
 			</li>
-		</ul>
+		</ul> -->
 	</section>
 	<!-- Автоматизация рутинных задач. Быстрый дифф -->
 	<section class="slide">
-		<h2>Быстрый дифф</h2>
+		<h2>Создаем дифф</h2>
 		<b>
 			Автоматизируем
 		</b>
 		<ul>
 			<li class="next"><code>gdd %branch-name%</code> - финальный вид команды</li>
-			<li class="next">написать скрипт</li>
 			<li class="next">добавить команду <code>gdd</code></li>
 			<li class="next">Показать код</li>
 		</ul>
 	</section>
-	<!-- Автоматизация рутинных задач. “Убиваем” задачи пачками -->
+	<!-- Автоматизация рутинных задач. Чистим dist, build для конкретной темы -->
 	<section class="slide">
-		<h2>“Убиваем” задачи пачками</h2>
-		<ul>
-			<li class="next"><a href="http://joxi.ru/0KAgEM5SxkNJml" target="_blank">http://joxi.ru/0KAgEM5SxkNJml</a></li>
-			<li class="next">ID каждой следующей задачи равен ID предыдущей задачи + 1</li>
-			<li class="next">чтобы завершить их все одним скопом достаточно написать скрипт, которому нужно указать <b>начальное значение</b> и <b>конечное значение</b>, а промежуточные значения скрипт сам за нас сгенерирует</li>
-			<li class="next">Автоматизируем</li>
+		<h2>Чистим _dist</h2>
+		<!-- <div><em>
+			Бывает, что нужно удалить дисты/билды для конкретного набора тем или одной темы. Как обычно, сначала делал это руками каждый раз, потом надоело и решил написать скрипт, который будет принимать на вход имя темы и удалять дисты/билды для этой темы и для всех дочерних
+		</em></div> -->
+		<ul class="tree-view">
+			<li class="tree-view_item is-directory">theme1
+				<ul class="tree-view">
+					<li class="tree-view_item is-directory">_dist</li>
+					<li class="tree-view_item is-directory">_styles</li>
+					<li class="tree-view_item is-directory">base</li>
+					<li class="tree-view_item is-directory">profile</li>
+					<li class="tree-view_item is-directory">toolbar</li>
+				</ul>
+			</li>
+			<li class="tree-view_item is-directory">theme2</li>
+			<li class="tree-view_item is-directory">theme3</li>
+			<li class="tree-view_item is-directory">theme4</li>
 		</ul>
-	</section>
-	<!-- Автоматизация рутинных задач. “Убиваем” задачи пачками -->
-	<section class="slide">
-		<h2>“Убиваем” задачи пачками</h2>
-		<b>
-			Автоматизируем
-		</b>
-		<pre>
-			<code class="if-else-example">#!/bin/bash</code>
-			<code class="if-else-example"># killd.sh</code>
-			<code class="if-else-example"># kill all processes from diapason</code>
-			<code class="if-else-example">start=$1</code>
-			<code class="if-else-example">end=$2</code>
-			<code class="if-else-example">end=$2</code>
-			<code class="if-else-example">while [[ $start -le $end ]]</code>
-			<code class="if-else-example">do</code>
-			<code class="if-else-example">	kill -9 $start</code>
-			<code class="if-else-example mark">	start=$((start + 1)) # !!!</code>
-			<code class="if-else-example">done</code>
-		</pre>
-		<ul><li class="next"><code>let "start = $start + 1"</code></li></ul>
-	</section>
-	<!-- Автоматизация рутинных задач. Добавляем миграции пачками -->
-	<section class="slide">
-		<h2>Добавляем миграции пачками</h2>
-		<div class="slide-comment">
-			<em>
-				Каждый раз нужно было писать <code>arm migration %migration_name%</code>. <b>Прошу обратить внимание - каждую миграцию нужно добавлять отдельно.</b>
-			</em>
-		</div>
-		<div>
-			<b>
-				Решение, которое я себе представлял:
-			</b>
-			<ul>
-				<li class="next slide-comment">
-					ввести команду в терминале и передать ей список миграций через пробел;
-				</li>
-				<li class="next slide-comment">
-					если количество миграций равно 1, значит добавляем миграцию и все;
-				</li>
-				<li class="next slide-comment">
-					если больше 1, значит запускаем цикл и в цикле добавляем все миграции;
-				</li>
-				<li class="next slide-comment">
-					дополнительные плюшки - добавить информацию о названии скрипта, количество миграций, которые были добавлены и названия самих миграций;
-				</li>
-			</ul>
-		</div>
-	</section>
-	<!-- Автоматизация рутинных задач. Добавляем миграции пачками -->
-	<section class="slide">
-		<h2>Добавляем миграции пачками</h2>
-		<b>Автоматизируем</b>
-		<div><code>am.sh migration1 migration2 ... migrationN</code></div>
-	</section>
-	<!-- Автоматизация рутинных задач. Запуск воркеров + интерэкшены -->
-	<section class="slide">
-		<h2>Запуск воркеров + интерэкшены</h2>
-		<div class="slide-comment"><em>
-			Наверное одна из самых часто выполняемых задач ежедневно.
-		</em></div>
-		<b>Как было раньше:</b>
-		<pre>
-			<code class="if-else-example"># workers</code>
-			<code class="code__wsn if-else-example">[code goes here] - ???
-</code>
-		</pre>
-	</section>
-	<!-- Автоматизация рутинных задач. Запуск воркеров + интерэкшены -->
-	<section class="slide">
-		<h2>Запуск воркеров + интерэкшены</h2>
-		<b>Как было раньше:</b>
-		<pre>
-			<code class="if-else-example"># interactions</code>
-			<code class="if-else-example">node server.js</code>
-		</pre>
-		<b>Минусы подхода:</b>
-		<ul>
-			<li class="next slide-comment">строку для запуска воркеров тяжело держать в голове (нет смысла);</li>
-			<li class="next slide-comment">поменяли название песочницы, нужно менять и строку для запуска воркеров;</li>
-			<li class="next slide-comment">эту строку нужно где-то хранить все время под рукой;</li>
-			<li class="next slide-comment">запускать интерэкшены нужно там, где находится репозиторий интерэкшенов.</li>
-		</ul>
-	</section>
-	<!-- Автоматизация рутинных задач. Запуск воркеров + интерэкшены -->
-	<section class="slide">
-		<h2>Запуск воркеров + интерэкшены</h2>
-		<b>Автоматизируем</b>
 	</section>
 	<!-- Автоматизация рутинных задач. Чистим dist, build для конкретной темы -->
 	<section class="slide">
-		<h2>Чистим dist, build для конкретной темы</h2>
-		<div><em>
-			Бывает, что нужно удалить дисты/билды для конкретного набора тем или одной темы. Как обычно, сначала делал это руками каждый раз, потом надоело и решил написать скрипт, который будет принимать на вход имя темы и удалять дисты/билды для этой темы и для всех дочерних
-		</em></div>
+		<h2>Чистим _dist</h2>
+		<b>
+			Автоматизируем
+		</b>
 		<ul>
-			<li class="next">Автоматизируем</li>
+			<li class="next"><code>clearDist %theme%</code> - финальный вид команды</li>
+			<li class="next">добавить команду <code>clearDist</code></li>
+			<li class="next">Показать код</li>
 		</ul>
 	</section>
-	<!-- Автоматизация рутинных задач. ап репозиториев в %path_to_repositories% -->
+	<!-- Автоматизация рутинных задач. ап репозиториев -->
 	<section class="slide">
-		<h2>Up репозиториев в %path_to_repositories%</h2>
-		<div><em>
+		<h2>Up большого числа репозиториев</h2>
+		<ul class="tree-view">
+			<li class="tree-view_item is-directory">vendors
+				<ul class="tree-view">
+					<li class="tree-view_item is-directory">vendor1</li>
+					<li class="tree-view_item is-directory">vendor2</li>
+					<li class="tree-view_item is-directory">vendor3
+						<ul class="tree-view">
+							<li class="tree-view_item is-directory">vendor3-1</li>
+							<li class="tree-view_item is-directory">vendor3-2</li>
+						</ul>
+					</li>
+					<li class="tree-view_item is-directory">vendor4</li>
+					<li class="tree-view_item is-directory">vendor5</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- <div><em>
 			Иногда бывают проблемы с репозиториями, которые находятся в директории <code>%path_to_repositories%</code>
 		</em></div>
 		<b>Проблема:</b>
 		<ul>
 			<li class="next">очередная миграция или какие-то обновления в этой директории, которые не описаны нигде с большой долей вероятности приведут вашу песочницу в неработающее состояние</li>
-		</ul>
+		</ul> -->
 	</section>
-	<!-- Автоматизация рутинных задач. ап репозиториев в %path_to_repositories% -->
+	<!-- Автоматизация рутинных задач. ап репозиториев -->
 	<section class="slide">
-		<h2>Up репозиториев в %path_to_repositories%</h2>
+		<h2>Up большого числа репозиториев</h2>
 		<b>Решение:</b>
 		<ul>
-			<li class="next"><em>
+			<li class="next">cd %path_to_vendor_repo%</li>
+			<li class="next">check branch</li>
+			<li class="next">git pull</li>
+			<!-- <li class="next"><em>
 			Чтобы исправить положение нужно перейти в эту директорию и проверить все репозитории на предмет того, чтобы они все были на <code>live</code> ветке и в состоянии <code>Already up-to-date</code>. Бывают даже проблемы, когда репозиторий находится на ветке <code>live</code>, но не в состоянии <code>Already up-to-date</code>. И тогда тоже нужно вручную сделать <code>git pull origin live</code>.
-		</em></li>
-			<li class="next">
-				<b>Автоматизируем</b>
+					</em></li> -->
 			</li>
+		</ul>
+		<b class="next">
+			Автоматизируем
+		</b>
+		<ul>
+			<li class="next"><code>clearDist %theme%</code> - финальный вид команды</li>
+			<li class="next">добавить команду <code>clearDist</code></li>
+			<li class="next">Показать код</li>
 		</ul>
 	</section>
 	<!-- Автоматизация рутинных задач. Полезные алиасы -->
 	<section class="slide">
 		<h2>Полезные алиасы</h2>
-		<b>Вопрос:</b>
 		<ul>
 			<li class="next">
 				<code>git branch</code> - <b>как часто вам приходиться набирать эту команду в течении дня ?</b>
