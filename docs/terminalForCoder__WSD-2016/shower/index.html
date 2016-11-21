@@ -16,8 +16,8 @@
 	</header>
 	<!-- start slide -->
 	<section class="slide" id="cover">
-		<h2>Консоль для кодера__</h2>
-		<p>Виталий Рыбка</p>
+		<h2>Консоль в массы__</h2>
+		<p class="slide_author">Виталий Рыбка</p>
 		<img src="pictures/console/terminal1-new.jpg" alt="" class="cover">
 	</section>
 	<!-- план -->
@@ -27,7 +27,6 @@
 			<li>Менеджеры терминалов</li>
 			<li>Скрипты на bash</li>
 			<li>Автоматизация рутинных задач</li>
-			<li>Конец</li>
 		</ol>
 	</section>
 	<!-- ссылка на репо -->
@@ -64,7 +63,6 @@
 			<li>Mac OS</li>
 			<li><a href="https://www.ubuntu.com/download/desktop">Ubuntu</a></li>
 			<li><a href="http://www.conemu.ru">ConEmu</a></li>
-			<li><a href="https://hyper.is/">Hyper.app</a></li>
 		</ul>
 	</section>
 	<!-- Менеджеры терминалов -->
@@ -110,7 +108,7 @@
 	<section class="slide">
 		<h2>Менеджеры терминалов. Screen</h2>
 		<b>
-			Пример файла конфигураций:
+			Пример файла конфигураций (<code>.screenrc</code>):
 		</b>
 		<pre>
 			<code># Default is ‘on’, as you probably noticed.</code>
@@ -144,24 +142,6 @@
 			<code>tmux</code>
 		</pre>
 	</section>
-	<!-- Менеджеры терминалов. Tmux Сборка-->
-	<section class="slide">
-		<h2>Менеджеры терминалов. Tmux</h2>
-		<div><b>
-			Сборка tmux:
-		</b></div>
-		<ol>
-			<li>
-				<code>wget -P ~/ https://github.com/tmux/tmux/releases/download/2.2/tmux-2.2.tar.gz</code> - скачиваем архив себе в домашнюю директорию
-			</li>
-			<li>
-				<code>tar -xzvf ~/tmux-2.2.tar.gz</code> - разархивировать содержимое архива, а сам архив можно удалить
-			</li>
-			<li>
-				<code>./configure && make</code> - выполняем сборку, чтобы можно было обращаться по имени <code>tmux</code>
-			</li>
-		</ol>
-	</section>
 	<!-- Менеджеры терминалов. Tmux Hot keys-->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Tmux</h2>
@@ -189,7 +169,6 @@
 			<thead>
 				<tr>
 					<td align="center"><b>screen</b></td>
-					<td align="center"><b>tmux</b></td>
 				</tr>
 			</thead>
 			<tbody>
@@ -201,12 +180,27 @@
 						<code>-</code> Когда вы создаете новый регион, то в нем отдельно нужно создавать новое окно <code>(Ctrl+a c)</code>, выполнить переход в нужную директорию и т.д.<br/>
 						<code>-</code> Чтобы удалить регион тоже нужно помучатся <code>Ctrl+a :remove</code>
 					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<!-- Менеджеры терминалов. Screen vs Tmux -->
+	<section class="slide">
+		<h2>Менеджеры терминалов. screen vs tmux</h2>
+			<table class="slide_table__c">
+			<thead>
+				<tr>
+					<td align="center"><b>tmux</b></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
 					<td>
 						<code>+</code> Что называется “с коробки” настроен довольно качественно<br/>
 						<code>+</code> Не нужно настраивать положение панели с вкладками и как их подсвечивать, как это было с <code>screen</code><br/>
 						<code>+</code> Умеет делить экран на так называемые регионы, как по вертикали, так и по горизонтали<br/>
 						<code>+</code> Чтобы закрыть регион, достаточно написать <code>exit</code><br/>
-						<code>+</code> Умеет держать удаленное соединение <code>*</code><br/><br/>
+						<code>+</code> Умеет держать удаленное соединение <code>*</code>
 						<p>
 							<code>*</code> <i>нужна дополнительная магия</i>
 						</p>
@@ -273,7 +267,7 @@
 		<b>Создание (перезапись) переменной:</b>
 		<div><code>path="~/Docs"</code></div>
 		<b>Чтение переменной:</b>
-		<div><code>$path или ${path}</code></div>
+		<div><code>$path</code></div>
 	</section>
 	<!-- Скрипты на bash. Основы. Аргументы -->
 	<section class="slide">
@@ -334,9 +328,6 @@
 			<code>	# action, if condition is true</code>
 			<code>fi</code>
 		</pre>
-		<em>
-			Обратите внимание на то, что в конце каждой строки отсутствует точка с запятой.
-		</em>
 	</section>
 	<!-- Скрипты на bash. Основы. Ветвление. Условия (строки) -->
 	<section class="slide">
@@ -420,56 +411,6 @@
 			<code>|| # boolean “or”</code>
 		</div>
 	</section>
-	<!-- Скрипты на bash. Основы. Ветвление. if/else -->
-	<section class="slide">
-		<h2>Скрипты на bash. Основы. Ветвление</h2>
-		<b>
-			if/else:
-		</b>
-		<pre>
-			<code>if [[ condition ]]</code>
-			<code>then</code>
-			<code>	# action, if condition is true</code>
-			<code>else</code>
-			<code>	# action, if condition is false</code>
-			<code>fi</code>
-		</pre>
-		<em>Существует еще один вид конструкции <code>if/else</code> - это <code>if/elif/else</code></em>
-	</section>
-	<!-- Скрипты на bash. Основы. Ветвление. if/else Пример -->
-	<section class="slide">
-		<h2>Скрипты на bash. Основы. Ветвление</h2>
-		<b>
-			if/elif/else Пример:
-		</b>
-		<pre>
-			<code class="if-else-example"># if_elif_fi.sh</code>
-			<code class="if-else-example">#!/bin/bash</code>
-			<code class="if-else-example">if [[ -f $1 ]]</code>
-			<code class="if-else-example">then</code>
-			<code class="if-else-example">	echo "Removing file"</code>
-			<code class="if-else-example">	rm $1</code>
-			<code class="if-else-example">elif [[ -d $1 ]]</code>
-			<code class="if-else-example">then</code>
-			<code class="if-else-example">	echo "Removing dir"</code>
-			<code class="if-else-example">	rm -r $1</code>
-			<code class="if-else-example">else</code>
-			<code class="if-else-example">	echo "Can't remove $1"</code>
-			<code class="if-else-example">fi</code>
-		</pre>
-	</section>
-	<!-- Скрипты на bash. Основы. Ветвление. if/else Пример -->
-	<section class="slide">
-		<h2>Скрипты на bash. Основы. Ветвление</h2>
-		<b>
-			case/in/esac:
-		</b>
-		<div>
-			<code>
-				case_in_esac.sh
-			</code>
-		</div>
-	</section>
 	<!-- Скрипты на bash. Основы. Циклы -->
 	<section class="slide">
 		<h2>bash. Основы. Циклы</h2>
@@ -496,68 +437,15 @@
 			<code>done</code>
 		</pre>
 	</section>
-	<!-- Скрипты на bash. Основы. Циклы for/in. Пример -->
-	<section class="slide">
-		<h2>bash. Основы. Циклы. Пример</h2>
-		<b>
-			for/in:
-		</b>
-		<pre>
-			<code class="if-else-example"># for.sh</code>
-			<code class="if-else-example">#!/bin/bash</code>
-			<code class="if-else-example">for i in 1 2 3 4 5</code>
-			<code class="if-else-example">do</code>
-			<code class="if-else-example">	file_name=file${i}.txt</code>
-			<code class="if-else-example">	if [[ -e $file_name ]]</code>
-			<code class="if-else-example">	then</code>
-			<code class="if-else-example">		continue</code>
-			<code class="if-else-example">	fi</code>
-			<code class="if-else-example">	echo "Creating file $file_name"</code>
-			<code class="if-else-example">	touch $file_name</code>
-			<code class="if-else-example">done</code>
-		</pre>
-	</section>
-	<!-- Скрипты на bash. Основы. Циклы while -->
-	<section class="slide">
-		<h2>bash. Основы. Циклы.</h2>
-		<b>
-			while:
-		</b>
-		<pre>
-			<code>while [[ condition ]]</code>
-			<code>do</code>
-			<code>	# action, while condition is true</code>
-			<code>done</code>
-		</pre>
-	</section>
-	<!-- Скрипты на bash. Основы. Циклы while. Пример -->
-	<section class="slide">
-		<h2>bash. Основы. Циклы.</h2>
-		<b>
-			while:
-		</b>
-		<pre>
-			<code class="if-else-example"># while.sh</code>
-			<code class="if-else-example">#!/bin/bash</code>
-			<code class="if-else-example">again="yes"</code>
-			<code class="if-else-example">while [ "$again" = "yes" ]</code>
-			<code class="if-else-example">do</code>
-			<code class="if-else-example">	echo "Please enter a name:"</code>
-			<code class="if-else-example">	read name</code>
-			<code class="if-else-example">	echo "The name you entered is $name"</code>
-			<code class="if-else-example">	echo "Do you wish to continue? (yes/no)"</code>
-			<code class="if-else-example">	read again</code>
-			<code class="if-else-example">done</code>
-		</pre>
-	</section>
 	<!-- Скрипты на bash. Полезные ссылки -->
 	<section class="slide">
-		<h2>Полезные ссылки.</h2>
+		<h2>Полезные ссылки</h2>
 		<ul>
 			<li><a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">Learn the Command Line</a></li>
 			<li><a href="http://cli.learncodethehardway.org/" target="_blank">The Command Line Crash Course</a></li>
 			<li><a href="http://www.linuxguide.it/command_line/linux_commands_ru.html" target="_blank">Linux Command Line in Русский</a></li>
 			<li><a href="https://www.youtube.com/watch?v=3DA1grSp4mU" target="_blank">Basic Unix commands</a></li>
+			<li><a href="https://habrahabr.ru/company/mailru/blog/311762/" target="_blank">Подводные камни Bash</a></li>
 		</ul>
 	</section>
 	<!-- Автоматизация рутинных задач -->
@@ -565,94 +453,11 @@
 		<h2>Автоматизация рутинных задач</h2>
 		<ul>
 			<li>
-				Создаем <code>diff</code>
-			</li>
-			<li>
-				Создаем <code>diff + Jira API</code>
-			</li>
-			<li>
-				Чистим <code>_dist</code>
-			</li>
-			<li>
 				Up большого числа репозиториев
 			</li>
 			<li>
 				Полезные алиасы
 			</li>
-		</ul>
-	</section>
-	<!-- Автоматизация рутинных задач. Быстрый дифф -->
-	<section class="slide">
-		<h2>Создаем дифф</h2>
-		<em>
-			Стандартный подход
-		</em>
-		<div>
-			<pre>
-				<code class="code__wsn">git diff origin/master origin/%branch-name% > ~/%path_to_diff_dir%/diff-%branch-name%.diff</code>
-			</pre>
-		</div>
-		<div>
-			<code>%branch-name% # имя ветки для которой нужно создать diff</code>
-		</div>
-		<div>
-			<code>%path_to_diff_dir% # путь к директории с diff файлами</code>
-		</div>
-		<!-- <b>
-			В данном подходе есть как минимум 2 больших минуса:
-		</b>
-		<ul>
-			<li>
-				уходит много времени на набор данных команд с клавиатуры;
-			</li>
-			<li>
-				в процессе набора большой % того, что мы допустим ошибки в командах и нужно будет все исправлять, что тоже занимает время
-			</li>
-		</ul> -->
-	</section>
-	<!-- Автоматизация рутинных задач. Быстрый дифф -->
-	<section class="slide">
-		<h2>Создаем дифф</h2>
-		<b>
-			Автоматизируем
-		</b>
-		<ul>
-			<li class="next"><code>gdd %branch-name%</code> - финальный вид команды</li>
-			<li class="next">добавить команду <code>gdd</code></li>
-			<li class="next">Показать код</li>
-		</ul>
-	</section>
-	<!-- Автоматизация рутинных задач. Чистим dist, build для конкретной темы -->
-	<section class="slide">
-		<h2>Чистим _dist</h2>
-		<!-- <div><em>
-			Бывает, что нужно удалить дисты/билды для конкретного набора тем или одной темы. Как обычно, сначала делал это руками каждый раз, потом надоело и решил написать скрипт, который будет принимать на вход имя темы и удалять дисты/билды для этой темы и для всех дочерних
-		</em></div> -->
-		<ul class="tree-view">
-			<li class="tree-view_item is-directory">theme1
-				<ul class="tree-view">
-					<li class="tree-view_item is-directory">_dist</li>
-					<li class="tree-view_item is-directory">_styles</li>
-					<li class="tree-view_item is-directory">base</li>
-					<li class="tree-view_item is-directory">profile</li>
-					<li class="tree-view_item is-directory">toolbar</li>
-				</ul>
-			</li>
-			<li class="tree-view_item is-directory">theme2</li>
-			<li class="tree-view_item is-directory">theme3</li>
-			<li class="tree-view_item is-directory">theme4</li>
-		</ul>
-	</section>
-	<!-- Автоматизация рутинных задач. Чистим dist, build для конкретной темы -->
-	<section class="slide">
-		<h2>Чистим _dist</h2>
-		<b>
-			Автоматизируем
-		</b>
-		<ul>
-			<li class="next"><code>clearDist %theme%</code> - финальный вид команды</li>
-			<li class="next">добавить команду <code>clearDist</code></li>
-			<li class="next">Показать код</li>
 		</ul>
 	</section>
 	<!-- Автоматизация рутинных задач. ап репозиториев -->
@@ -674,13 +479,6 @@
 				</ul>
 			</li>
 		</ul>
-		<!-- <div><em>
-			Иногда бывают проблемы с репозиториями, которые находятся в директории <code>%path_to_repositories%</code>
-		</em></div>
-		<b>Проблема:</b>
-		<ul>
-			<li class="next">очередная миграция или какие-то обновления в этой директории, которые не описаны нигде с большой долей вероятности приведут вашу песочницу в неработающее состояние</li>
-		</ul> -->
 	</section>
 	<!-- Автоматизация рутинных задач. ап репозиториев -->
 	<section class="slide">
@@ -690,28 +488,14 @@
 			<li class="next">cd %path_to_vendor_repo%</li>
 			<li class="next">check branch</li>
 			<li class="next">git pull</li>
-			<!-- <li class="next"><em>
-			Чтобы исправить положение нужно перейти в эту директорию и проверить все репозитории на предмет того, чтобы они все были на <code>live</code> ветке и в состоянии <code>Already up-to-date</code>. Бывают даже проблемы, когда репозиторий находится на ветке <code>live</code>, но не в состоянии <code>Already up-to-date</code>. И тогда тоже нужно вручную сделать <code>git pull origin live</code>.
-					</em></li> -->
-			</li>
 		</ul>
 		<b class="next">
 			Автоматизируем
 		</b>
 		<ul>
-			<li class="next"><code>clearDist %theme%</code> - финальный вид команды</li>
-			<li class="next">добавить команду <code>clearDist</code></li>
+			<li class="next"><code>upRepo</code> - финальный вид команды</li>
 			<li class="next">Показать код</li>
 		</ul>
-	</section>
-	<!-- Автоматизация рутинных задач. ап репозиториев. До -->
-	<section class="slide slide__video">
-		<h2>Up большого числа репозиториев. До:</h2>
-		<button id="playStopVideoBefore">Play/Pause</button>
-		<video id="videoBefore">
-			<source src="./videos/2016-11-16-2356-05-1.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
 	</section>
 	<!-- Автоматизация рутинных задач. ап репозиториев. После -->
 	<section class="slide slide__video">
@@ -727,7 +511,7 @@
 		<h2>Полезные алиасы</h2>
 		<ul>
 			<li class="next">
-				<code>git branch</code> - <b>как часто вам приходиться набирать эту команду в течении дня ?</b>
+				<code>git branch</code> - <b>как часто вам приходиться набирать эту команду ?</b>
 			</li>
 			<li class="next">
 				<code>git status</code> - <b>а эту команду ?</b>
@@ -749,6 +533,44 @@
 		<figure class="figure alias">
 			<img src="./pictures/console/maxresdefault6-1.jpg" alt="">
 		</figure>
+	</section>
+	<!-- Автоматизация рутинных задач. Полезные алиасы -->
+	<section class="slide">
+		<h2>Полезные алиасы</h2>
+		<b><code>.bashrc</code></b>
+		<pre>
+			<code>alias gst='git status'</code>
+			<code>alias gf='git fetch'</code>
+			<code>alias ghide='git stash'</code>
+			<code>alias gshow='git stash pop'</code>
+			<code>alias gmom='git merge origin/master' # !!!</code>
+			<code>alias gad='git add'</code>
+			<code>alias grm='git rm'</code>
+			<code>alias showaliases='cat $HOME/.bashrc | grep alias'</code>
+		</pre>
+	</section>
+	<!-- Автоматизация рутинных задач. Полезные алиасы -->
+	<section class="slide">
+		<h2>Полезные ссылки</h2>
+		<ul>
+			<li><a href="https://stepik.org/course/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Linux-73">Введение в Linux</a></li>
+			<li><a href="https://ru.hexlet.io/courses/bash">Bash: Основы командной строки</a></li>
+		</ul>
+	</section>
+	<!-- About -->
+	<section class="slide">
+		<h2>About me</h2>
+		<ul class="al-list">
+			<li class="al-list_item">
+				<a href="https://twitter.com/var_bincom" class="al-link al-link__twitter">var_bincom</a>
+			</li>
+			<li class="al-list_item">
+				<a href="https://github.com/var-bin" class="al-link al-link__github">var-bin</a>
+			</li>
+			<li class="al-list_item">
+				<a href="https://shwr.me/" class="al-link al-link__shower">shower</a>
+			</li>
+		</ul>
 	</section>
 	<!-- Автоматизация рутинных задач. Конец -->
 	<section class="slide">
@@ -789,8 +611,6 @@
 	function playVideoAfter() {
 		playPause(videoAfter);
 	}
-
-	playStopVideoBefore.addEventListener("click", playVideoBefore);
 	playStopVideoAfter.addEventListener("click", playVideoAfter);
 	</script>
 </body>
