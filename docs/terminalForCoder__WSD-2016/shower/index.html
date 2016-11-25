@@ -23,7 +23,7 @@
 	<!-- план -->
 	<section class="slide">
 		<h2>План <em class="mark mark_cross">побега</em></h2>
-		<ol>
+		<ol class="slide_plan">
 			<li>Менеджеры терминалов</li>
 			<li>Скрипты на bash</li>
 			<li>Автоматизация рутинных задач</li>
@@ -33,7 +33,7 @@
 	<section class="slide">
 		<h2>Репозиторий</h2>
 		<div class="slide_repo-links">
-			<a href="https://goo.gl/ldvSjh">https://goo.gl/ldvSjh</a>
+			<a href="https://goo.gl/ldvSjh">goo.gl/ldvSjh</a>
 			<figure>
 				<img src="./pictures/console/qr-repo.png" alt="link to repo">
 			</figure>
@@ -43,7 +43,7 @@
 	<section class="slide">
 		<h2>Слайды</h2>
 		<div class="slide_repo-links">
-			<a href="https://goo.gl/PqnRx4">https://goo.gl/PqnRx4</a>
+			<a href="https://goo.gl/PqnRx4">goo.gl/PqnRx4</a>
 			<figure>
 				<img src="./pictures/console/qr-slides.png" alt="link to slides">
 			</figure>
@@ -52,15 +52,15 @@
 	<!-- ссылка на слайды -->
 	<section class="slide">
 		<h2>Где это все работает</h2>
-		<ul>
+		<ul class="slide_works-on">
 			<li>
-				<a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">Win10_preview stable</a>
+				<a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">Microsoft ♥ Linux (Win10 stable)</a>
 				<ul>
 					<li><a href="https://blogs.msdn.microsoft.com/commandline/2016/04/06/bash-on-ubuntu-on-windows-download-now-3/">Bash on Ubuntu on Windows</a></li>
 					<li><a href="https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/">Windows and Ubuntu Interoperability</a></li>
 				</ul>
 			</li>
-			<li>Mac OS</li>
+			<li>Mac OS X</li>
 			<li><a href="https://www.ubuntu.com/download/desktop">Ubuntu</a></li>
 			<li><a href="http://www.conemu.ru">ConEmu</a></li>
 		</ul>
@@ -68,7 +68,7 @@
 	<!-- Менеджеры терминалов -->
 	<section class="slide">
 		<h2>Менеджеры терминалов</h2>
-		<ol>
+		<ol class="slide_plan">
 			<li>
 				screen
 			</li>
@@ -86,7 +86,7 @@
 		<b>
 			Установка:
 		</b>
-		<pre>
+		<pre class="slide_pre-formated">
 			<code>sudo apt-get install screen</code>
 			<code>screen</code>
 		</pre>
@@ -98,7 +98,7 @@
 			Базовые сочетания клавиш:
 		</b>
 		<div class="slide_repo-links">
-			<a href="https://goo.gl/RyRfO5">https://goo.gl/RyRfO5</a>
+			<a href="https://goo.gl/RyRfO5">goo.gl/RyRfO5</a>
 			<figure>
 				<img src="./pictures/console/qr-screen-hot-keys.png" alt="link to screen hot keys">
 			</figure>
@@ -121,13 +121,6 @@
 			Что означают непонятные символы в этой строке <code>hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"</code> можно почитать <a href="http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/" target="_blank">тут</a>.
 		</div>
 	</section>
-	<!-- Менеджеры терминалов. Screen Example-->
-	<section class="slide">
-		<h2>Менеджеры терминалов. Screen</h2>
-		<b>
-			Показать в работе
-		</b>
-	</section>
 	<!-- Менеджеры терминалов. Tmux Установка -->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Tmux</h2>
@@ -137,7 +130,7 @@
 		<b>
 			Установка:
 		</b>
-		<pre>
+		<pre class="slide_pre-formated">
 			<code>sudo apt-get install tmux</code>
 			<code>tmux</code>
 		</pre>
@@ -149,7 +142,7 @@
 			Базовые сочетания клавиш:
 		</b>
 		<div class="slide_repo-links">
-			<a href="https://goo.gl/zSLFIJ">https://goo.gl/zSLFIJ</a>
+			<a href="https://goo.gl/zSLFIJ">goo.gl/zSLFIJ</a>
 			<figure>
 				<img src="./pictures/console/qr-tmux-hot-keys.png" alt="link to screen hot keys">
 			</figure>
@@ -212,7 +205,7 @@
 	<!-- Скрипты на bash -->
 	<section class="slide">
 		<h2>bash</h2>
-		<ol>
+		<ol class="slide_plan">
 			<li>
 				Основы
 			</li>
@@ -227,7 +220,7 @@
 	<!-- Скрипты на bash. Основы -->
 	<section class="slide">
 		<h2>bash. Основы</h2>
-		<ol>
+		<ol class="slide_plan">
 			<li>
 				Переменные
 			</li>
@@ -451,7 +444,7 @@
 	<!-- Автоматизация рутинных задач -->
 	<section class="slide">
 		<h2>Автоматизация рутинных задач</h2>
-		<ul>
+		<ul class="slide_plan">
 			<li>
 				Up большого числа репозиториев
 			</li>
@@ -500,7 +493,6 @@
 	<!-- Автоматизация рутинных задач. ап репозиториев. После -->
 	<section class="slide slide__video">
 		<h2>Up большого числа репозиториев. После</h2>
-		<button id="playStopVideoAfter">Play/Pause</button>
 		<video id="videoAfter">
 			<source src="./videos/2016-11-17-2347-08-1.mp4" type="video/mp4">
 			Your browser does not support the video tag.
@@ -560,7 +552,7 @@
 	<!-- About -->
 	<section class="slide">
 		<h2>About me</h2>
-		<ul class="al-list">
+		<ul class="al-list slide_plan">
 			<li class="al-list_item">
 				<a href="https://twitter.com/var_bincom" class="al-link al-link__twitter">var_bincom</a>
 			</li>
@@ -591,10 +583,7 @@
 	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
 	<!-- Photos by John Carey, fiftyfootshadows.net -->
 	<script>
-	var videoBefore = document.getElementById("videoBefore"),
-			videoAfter = document.getElementById("videoAfter"),
-			playStopVideoBefore = document.getElementById("playStopVideoBefore"),
-			playStopVideoAfter = document.getElementById("playStopVideoAfter");
+	var videoAfter = document.getElementById("videoAfter");
 
 	function playPause(videoId) {
 		if (videoId.paused) {
@@ -604,14 +593,11 @@
 		}
 	}
 
-	function playVideoBefore() {
-		playPause(videoBefore);
-	}
-
 	function playVideoAfter() {
 		playPause(videoAfter);
 	}
-	playStopVideoAfter.addEventListener("click", playVideoAfter);
+
+	videoAfter.addEventListener("click", playVideoAfter);
 	</script>
 </body>
 </html>
