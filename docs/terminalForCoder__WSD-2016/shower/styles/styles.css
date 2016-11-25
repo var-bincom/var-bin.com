@@ -2,7 +2,7 @@
 
 #cover h2 {
   margin: 30px 0 0;
-  font-size: 70px;
+  font-size: 100px;
   color: #fff;
 }
 #cover p {
@@ -24,6 +24,7 @@
 
 .slide h2 {
   margin-bottom: 25px;
+  font-size: 50px;
 }
 
 .figure {
@@ -103,7 +104,7 @@
 }
 
 .slide_repo-links a {
-  font-size: 40px;
+  font-size: 80px;
 }
 
 ul.tree-view {
@@ -171,12 +172,12 @@ ul.tree-view::before {
 }
 
 .slide.slide__video h2 {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .slide.slide__video video {
   width: 100%;
-  height: 78%;
+  height: 85%;
 }
 
 .slide .slide_author {
@@ -201,8 +202,8 @@ ul.al-list .al-link::before {
   display: inline-block;
   vertical-align: middle;
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
 }
 
 ul.al-list .al-link.al-link__twitter {
@@ -210,15 +211,15 @@ ul.al-list .al-link.al-link__twitter {
 }
 
 ul.al-list .al-link.al-link__twitter::before {
-  background: url("../pictures/Twitter_Logo_Blue.png") no-repeat center;
+  background: url("../pictures/Twitter_Logo_Blue.svg") no-repeat center;
   background-size: cover;
-  width: 64px;
-  height: 64px;
   margin: 0 -5px 0 -15px;
+  width: 96px;
+  height: 96px;
 }
 
 ul.al-list .al-link.al-link__github::before {
-  background: url("../pictures/GitHub-Mark-32px.png") no-repeat center;
+  background: url("../pictures/GitHub-Mark-120px-plus.png") no-repeat center;
   background-size: cover;
   margin-right: 15px;
 }
@@ -227,4 +228,17 @@ ul.al-list .al-link.al-link__shower::before {
   background: url("../pictures/logo.svg") no-repeat center;
   background-size: cover;
   margin-right: 15px;
+}
+
+.slide_plan {
+  font-size: 50px;
+}
+
+.slide_pre-formated {
+  font-size: 30px;
+}
+
+.slide_works-on {
+  font-size: 38px;
+  margin-top: -20px;
 }
