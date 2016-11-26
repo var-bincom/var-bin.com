@@ -50,6 +50,18 @@
   width: 100%;
 }
 
+.figure.console2.bash {
+  height: 100%;
+  width: auto;
+  text-align: center;
+  background: #000;
+}
+
+.figure.console2.bash img {
+  height: 100%;
+  width: auto;
+}
+
 .figure.conemu img {
   width: 60%;
 }
