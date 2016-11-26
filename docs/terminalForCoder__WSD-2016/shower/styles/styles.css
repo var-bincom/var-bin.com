@@ -146,6 +146,7 @@ ul.tree-view::before {
   content: "";
   height: 2px;
   width: auto;
+  max-width: 2px;
   background: #ccc;
   position: absolute;
   top: 1em;
