@@ -20,6 +20,20 @@
 		<p class="slide_author">Виталий Рыбка</p>
 		<img src="pictures/console/terminal1-new.jpg" alt="" class="cover">
 	</section>
+	<!-- Любимый браузер -->
+	<section class="slide">
+		<h2>Любимый браузер</h2>
+		<figure class="figure console2">
+			<img src="./pictures/prostredi-ie6.gif" alt="Любимый браузер">
+		</figure>
+	</section>
+	<!-- Консоль для пользователя -->
+	<section class="slide">
+		<h2>Консоль для пользователя</h2>
+		<figure class="figure console2">
+			<img src="./pictures/2000px-StartingMsdos2-1300x731.jpg" alt="Консоль для пользователя">
+		</figure>
+	</section>
 	<!-- план -->
 	<section class="slide">
 		<h2>План <em class="mark mark_cross">побега</em></h2>
@@ -49,7 +63,7 @@
 			</figure>
 		</div>
 	</section>
-	<!-- ссылка на слайды -->
+	<!-- Где это все работает -->
 	<section class="slide">
 		<h2>Где это все работает</h2>
 		<ul class="slide_works-on">
@@ -121,6 +135,13 @@
 			Что означают непонятные символы в этой строке <code>hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"</code> можно почитать <a href="http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/" target="_blank">тут</a>.
 		</div>
 	</section>
+	<!-- Менеджеры терминалов. Screen Example-->
+	<section class="slide">
+		<h2>Менеджеры терминалов. Screen</h2>
+		<figure class="figure console2">
+			<img src="./pictures/console/screen-example.jpg" alt="screen example">
+		</figure>
+	</section>
 	<!-- Менеджеры терминалов. Tmux Установка -->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Tmux</h2>
@@ -151,9 +172,9 @@
 	<!-- Менеджеры терминалов. Tmux Example-->
 	<section class="slide">
 		<h2>Менеджеры терминалов. Tmux</h2>
-		<b>
-			Показать в работе
-		</b>
+		<figure class="figure console2">
+			<img src="./pictures/console/tmux-example.jpg" alt="tmux example">
+		</figure>
 	</section>
 	<!-- Менеджеры терминалов. Screen vs Tmux -->
 	<section class="slide">
@@ -201,6 +222,12 @@
 				</tr>
 			</tbody>
 		</table>
+	</section>
+	<!-- Скрипты на bash start -->
+	<section class="slide">
+		<figure class="figure console2 bash">
+			<img src="./pictures/keep-calm-and-bin-bash.png" alt="keep calm and bin bash">
+		</figure>
 	</section>
 	<!-- Скрипты на bash -->
 	<section class="slide">
@@ -315,12 +342,12 @@
 		<b>
 			if
 		</b>
-		<pre>
-			<code>if [[ condition ]]</code>
-			<code>then</code>
-			<code>	# action, if condition is true</code>
-			<code>fi</code>
+		<pre class="slide_pre-formated">
+			<code>git diff origin/master origin/%branch% > %path%</code>
 		</pre>
+		<div>
+			<code>fast_diff.sh</code>
+		</div>
 	</section>
 	<!-- Скрипты на bash. Основы. Ветвление. Условия (строки) -->
 	<section class="slide">
@@ -420,15 +447,11 @@
 	<section class="slide">
 		<h2>bash. Основы. Циклы</h2>
 		<b>
-			for/in:
+			while:
 		</b>
-		<pre>
-			<code>for i in array</code>
-			<code>do</code>
-			<code>	# действие, переменная i каждый раз принимает</code>
-			<code>	# следующее значение из array</code>
-			<code>done</code>
-		</pre>
+		<div>
+			<code>while.sh</code>
+		</div>
 	</section>
 	<!-- Скрипты на bash. Полезные ссылки -->
 	<section class="slide">
@@ -529,7 +552,7 @@
 	<!-- Автоматизация рутинных задач. Полезные алиасы -->
 	<section class="slide">
 		<h2>Полезные алиасы</h2>
-		<b><code>.bashrc</code></b>
+		<b><code>.bashrc, .gitconfig</code></b>
 		<pre>
 			<code>alias gst='git status'</code>
 			<code>alias gf='git fetch'</code>
@@ -547,6 +570,7 @@
 		<ul>
 			<li><a href="https://stepik.org/course/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Linux-73">Введение в Linux</a></li>
 			<li><a href="https://ru.hexlet.io/courses/bash">Bash: Основы командной строки</a></li>
+			<li><a href="https://github.com/mathiasbynens/dotfiles">dotfiles</a></li>
 		</ul>
 	</section>
 	<!-- About -->
