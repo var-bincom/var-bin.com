@@ -195,8 +195,8 @@
 						<code>-</code> Cannot create independent layouts for each tab<br/>
 						<code>-</code> Cannot save layouts in case of a connection’s drop<br/>
 						<code>-</code> Before 4.1 version couldn’t support vertical separation<br/>
-						<code>-</code> Whenever you create a new region, you also need to create a new window <code>(Ctrl+a c)</code>, then shift to the needed directory, etc<br/>
-						<code>-</code> To delete a region, you’d need to press one more key combination <code>Ctrl+a :remove</code>
+						<code>-</code> Whenever you create a new region, you also need to create a new window <code>(Ctrl+a, c)</code>, then shift to the needed directory, etc<br/>
+						<code>-</code> To delete a region, you’d need to press one more key combination <code>Ctrl+a, :remove</code>
 					</td>
 				</tr>
 			</tbody>
@@ -218,10 +218,10 @@
 						<code>+</code> No need to customize the arrangement and backlight of the control pane<br/>
 						<code>+</code> Supports both vertical and horizontal splits<br/>
 						<code>+</code> In order to close the pane, you only need to enter <code>exit</code><br/>
-						<code>+</code> Can hold a remote connection by SSH <code>*</code>
-						<p>
+						<code>+</code> Can hold a remote connection by SSH<code>*</code>
+						<blockquote>
 							<code>*</code> <i>requires some additional magic</i>
-						</p>
+						</blockquote>
 					</td>
 				</tr>
 			</tbody>
@@ -241,10 +241,10 @@
 				Basics
 			</li>
 			<li>
-				Conditions to execute different branches of code
+				Conditions
 			</li>
 			<li>
-				Loops for repeated code
+				Loops
 			</li>
 		</ol>
 	</section>
@@ -259,7 +259,7 @@
 				Passing arguments to the script
 			</li>
 			<li>
-				Processing within the script
+				Processing arguments within the script
 			</li>
 		</ol>
 	</section>
@@ -285,7 +285,7 @@
 				name - letters, numbers, <code>_</code>.
 			</li>
 			<li>
-				value - numbers, strings (if there is any whitespace - wrap into double quotes), symbols.
+				value - numbers, strings (if there is any whitespace - wrap into double quotes), characters.
 			</li>
 		</ul>
 		<b>Create (rewrite) variable:</b>
@@ -300,7 +300,7 @@
 			Passing arguments to the script:
 		</b>
 		<div><code>./script.sh arg1 arg2 arg3 … argN</code></div>
-		<b>Processing within the script:</b>
+		<b>Processing arguments within the script:</b>
 		<div><code>$1</code> - first argument</div>
 		<div><code>$2</code> - second argument</div>
 		<div><code>$0</code> - name of script</div>
@@ -310,7 +310,7 @@
 	<section class="slide">
 		<h2>bash. Basics. Examples</h2>
 		<b>
-			Another one example, working with variables
+			Another one example of working with variables
 		</b>
 		<pre>
 			<code>#!/bin/bash</code>
