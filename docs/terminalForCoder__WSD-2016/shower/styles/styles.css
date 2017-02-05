@@ -58,8 +58,8 @@
 }
 
 .figure.console2.bash img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 
 .figure.conemu img {
@@ -254,4 +254,31 @@ ul.al-list .al-link.al-link__shower::before {
 .slide_works-on {
   font-size: 38px;
   margin-top: -20px;
+}
+
+.l-article-links {
+  margin-top: -15px;
+}
+
+.slide ul li.article-links_link-holder {
+  text-indent: 0;
+}
+
+.slide ul li.article-links_link-item {
+  line-height: 1.8;
+}
+
+.slide ul > li.article-links_link-holder::before {
+  content: none;
+}
+
+.article-links_link-holder_icon.icon__icon-habr .icon-svg_logo-habrahabr {
+  vertical-align: middle;
+}
+
+.article-links_link-holder_icon.icon__icon-medium {
+  width: 200px;
+  height: 40px;
+  background: url("../pictures/medium-wordmark-dark-100px.png") no-repeat 50%;
+  margin: 10px 0;
 }
