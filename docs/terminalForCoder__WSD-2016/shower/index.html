@@ -158,9 +158,6 @@
 			<li>
 				tmux
 			</li>
-			<li>
-				screen vs tmux
-			</li>
 		</ol>
 	</section>
 	<!-- Менеджеры терминалов. Screen -->
@@ -365,12 +362,12 @@
 		<b>
 			if
 		</b>
-		<pre class="slide_pre-formated">
-			<code>git diff origin/master origin/%branch% > %path%</code>
+		<pre>
+			<code>if [[ condition ]]</code>
+			<code>then</code>
+			<code>  # an action, if condition is true</code>
+			<code>done</code>
 		</pre>
-		<div>
-			<code>fast_diff.sh</code>
-		</div>
 	</section>
 	<!-- Скрипты на bash. Основы. Ветвление. Условия (строки) -->
 	<section class="slide">
@@ -588,7 +585,6 @@
 			<code>alias gmom='git merge origin/master' # !!!</code>
 			<code>alias gad='git add'</code>
 			<code>alias grm='git rm'</code>
-			<code>alias showaliases='cat $HOME/.bashrc | grep alias'</code>
 		</pre>
 	</section>
 	<!-- Автоматизация рутинных задач. Полезные алиасы -->
