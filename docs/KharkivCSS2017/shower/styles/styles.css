@@ -292,3 +292,22 @@ ul.al-list .al-link.al-link__shower::before {
   width: auto;
   height: 85%;
 }
+
+.email-support-wrapper {
+  display: flex;
+}
+
+.email-support-wrapper .email-support {
+  width: 65%;
+  display: block;
+}
+
+.email-support img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.email-support-wrapper .info {
+  padding-left: 20px;
+}
