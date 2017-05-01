@@ -22,3 +22,9 @@ node_modules
 
 # bower_components
 bower_components
+
+# _logo
+_logo
+
+# *.lock
+*.lock
