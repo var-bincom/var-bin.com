@@ -1,0 +1,30 @@
+# This is where the generated site will be placed (by default) once
+# Jekyll is done transforming it.
+_site
+
+# sass cache
+.sass-cache
+
+# metadata
+.jekyll-metadata
+
+# sublime project files
+*.sublime*
+
+# fonts directory
+_fonts
+
+# assets/*.css
+assets/*.css
+
+# node_modules
+node_modules
+
+# bower_components
+bower_components
+
+# _logo
+_logo
+
+# *.lock
+*.lock

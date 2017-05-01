@@ -1,0 +1,17 @@
+/* layout styles */
+
+// header primary
+.l-header-primary {
+  background: $header-primary-bg;
+  clear: both;
+  overflow: hidden;
+  padding: 0 1em;
+}
+
+.l-main,
+.l-footer {
+  max-width: $main-max_width;
+  min-width: $main-min_width;
+  margin: 0 auto;
+  padding: 0 1em;
+}

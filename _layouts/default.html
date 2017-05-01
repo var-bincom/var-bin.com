@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include {{ site.head }} %}
+<body>
+  {% include {{ site.header }} %}
+  <main class="l-main">
+    <hgroup>
+      <h1>Hello, world! {{ site.twitter_username }}</h1>
+    </hgroup>
+    <p>
+      {{ site.time }}
+    </p>
+    <p>
+      {{ site.url }}  {{ site.head }}
+    </p>
+
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+  {% include {{ site.social }} %}
+  {% include {{ site.footer }} %}
+</body>
+</html>
