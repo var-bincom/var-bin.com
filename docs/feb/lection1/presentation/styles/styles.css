@@ -117,3 +117,13 @@
   margin-left: 2em;
   counter-reset: list 9;
 }
+
+.slide_repo-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide_repo-links a {
+  font-size: 80px;
+}
