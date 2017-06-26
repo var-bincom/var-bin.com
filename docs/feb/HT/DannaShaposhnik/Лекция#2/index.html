@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <title>Створення облікового запису</title>
+        
+    </head>
+    <body>
+        <form action="index.html" method="get">
+            <h2>Створення облікового запису</h2>
+                <div>
+                    <label for="fn">Ім'я</label>
+                     <input type="text" id="fn"/>
+                </div>
+                  <div>
+                    <label for="ln">Прізвище</label>
+                     <input type="text" id="ln"/>
+                </div>
+                  <div>
+                    <label for="un">Ім'я користувача</label>
+                     <input type="text" id="un" placeholder="abc@example.com"/>
+                </div>
+                <h5><a href="#">Отримати нову адресу електронної пошти</a></h5>
+                  <div>
+                    <label for="password">Пароль</label>
+                     <input type="password" id="password"/>
+                </div>
+                <h5>Принайні 8 символів з урахуванням регістра</h5>
+                  <div>
+                    <label for="password">Введіть пароль ще раз</label>
+                     <input type="password" id="password"/>
+                </div>
+                  <div>
+                    <label for="country">Країна або регіон</label>
+                     <p><select size="1" multiple name="country">
+                    <option disabled>Україна</option></select></p>
+                </div>
+                  <div>
+                    <label for="date">Дата народження</label>
+                      <p><select size="1" multiple name="day">
+                    <option disabled>День</option></select></p>
+                <p><select size="1" multiple name="month">
+                    <option disabled>Місяць</option></select></p>
+                      <p><select size="1" multiple name="year">
+                    <option disabled>Рік</option></select></p>
+                </div>
+                 <div>
+                    <label for="sex">Стать</label>
+                     <p><select size="1" multiple name="sex">
+                    <option disabled>Вибрати...</option></select></p>
+                </div>
+                <h3> Допоможіть нам захистити ваші відомості</h3>
+                 <h4> Номер телефону допоможе захистити обліковий запис</h4>
+
+                  <div>
+                    <label for="code">Код країни</label>
+                     <p><select size="1" multiple name="code">
+                    <option disabled>Україна(+380)</option></select></p>
+                </div>
+                 <div>
+                    <label for="number">Номер телефону</label>
+                     <input type="number" id="number"/>
+                </div>
+               
+                <h4>Перш ніж продовжити, ми маємо переконатись що обліковий запис створює людина</h4>
+                   <div>
+                    <button type="submit"> Оновити  </button>
+                 </div>
+                   <div>
+                    <button type="submit">Аудіо</button>
+                 </div>
+                   <div>
+                    <label for="number">Введіть символи, які бачите</label>
+                     <input type="number" id="number"/>
+                </div>
+                 <div>
+                    <label for="letter">Надсилати мені повідомлення електронної пошти з рекламними пропозиціями. 
+                        Підписку можна завжди скасувати</label>
+                     <input type="checkbox" id="letter"/>
+                </div>
+                <div>
+                    <label for="number">Введіть символи, які бачите</label>
+                     <input type="number" id="number"/>
+                </div>
+                <h4>Натискаючи кнопку Створити обліковий запис,ви приймаєте умови <a href="#">Угоди про використання</a>,
+                 а також <a href="#">Декларації про конфіденційність і використання файлів cookie</a>. </h4>
+                 <div>
+                    <button type="submit"> Створити обліковий запис  </button>
+                 </div>
+            </form>
+    </body>
+</html>
