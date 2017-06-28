@@ -387,13 +387,13 @@
       <tbody>
         <tr>
           <td>"truetype"</td>
-          <td><a href="http://www.w3.org/TR/WOFF/" target="_blank">WOFF (Web Open Font Format)</a></td>
-          <td>.woff <a href="http://caniuse.com/#feat=woff" target="_blank">Поддержка</a></td>
+          <td><a href="http://www.microsoft.com/typography/otspec/default.htm" target="_blank">TrueType</a></td>
+          <td>.ttf <a href="http://caniuse.com/#feat=ttf" target="_blank">Поддержка</a></td>
         </tr>
         <tr>
           <td>"woff"</td>
-          <td><a href="http://www.microsoft.com/typography/otspec/default.htm" target="_blank">TrueType</a></td>
-          <td>.ttf <a href="http://caniuse.com/#feat=ttf" target="_blank">Поддержка</a></td>
+          <td><a href="http://www.w3.org/TR/WOFF/" target="_blank">WOFF (Web Open Font Format)</a></td>
+          <td>.woff <a href="http://caniuse.com/#feat=woff" target="_blank">Поддержка</a></td>
         </tr>
         <tr>
           <td>"opentype"</td>
@@ -419,8 +419,8 @@
     <h2>Шрифты. Как подключить нестандартные шрифты</h2>
 
     <ul>
-      <li class="next"><a href="">@font-face</a></li>
-      <li class="next"><a href="">Google Fonts</a></li>
+      <li class="next"><a href="https://www.w3.org/TR/css-fonts-3/#font-face-rule">@font-face</a></li>
+      <li class="next"><a href="https://fonts.google.com/">Google Fonts</a></li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -442,9 +442,49 @@
 
     Подключить к <a href="../examples/index.html" target="_blank">примеру</a>, который мы делали на прошлой лекции эти два шрифта: [ <a href="../examples/sourcesanspro-regular-webfont.woff" target="_blank">1</a> ] [ <a href="../examples/sourcesanspro-regular-webfont.woff2" target="_blank">2</a> ].
 
+    <hr/>
     <h2>
-      Source Sans Pro Regular
+      Что cделали на уроке
     </h2>
+    <ul>
+      <li><a href="../examples/index.html">index.html</a></li>
+      <li><a href="../examples/styles.css">styles.css</a></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ol>
+      <li>Задайте следующие свойства для <a href="../examples/minimo.jpg" target="_blank">данного примера</a>
+        <ul>
+          <li>Цвет шрифта</li>
+          <li>Цвет заливки элементов</li>
+          <li>Семейство шрифтов</li>
+          <li>Картинки</li>
+        </ul>
+        Все необходимые материалы, вы найдете в <a href="../examples/blog.zip" target="_blank">этом архиве</a>.
+        <mark>
+          Шрифты идут в формате <code>.ttf</code>. Их нужно конвертировать в <code>.woff/.woff2</code>.
+        </mark>
+        Вам поможет <a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank">этот сервис</a>. Также вам понадобится правило <code>@font-face</code>. Небольшой <a href="../examples/font-face.css" target="_blank">пример</a> использования.
+      </li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+      <em>
+        Все, кина на будет...
+      </em>
+
+      <ul>
+        <li><a href="https://www.w3.org/Style/CSS20/" target="_blank">CSS 20 Лет</a></li>
+        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Валидатор CSS Стилей</a></li>
+        <li><a href="https://webref.ru/css" target="_blank">Справочник CSS (RU)</a></li>
+        <li><a href="http://cssreference.io/" target="_blank">A free visual guide to CSS</a></li>
+        <li>Пропработать свойства из этих двух слайдов [ <a href="http://var-bin.com/feb/lection3/presentation/#21" target="_blank">1</a> ], [ <a href="http://var-bin.com/feb/lection3/presentation/#22" target="_blank">2</a> ]</li>
+        <li>Сделать таблицу как на <a href="../examples/1498678354597.jpg" target="_blank">скрине</a>. Этот <a href="http://var-bin.com/feb/lection3/presentation/#26" target="_blank">слайд</a> поможет</li>
+      </ul>
   </section>
   <p class="badge">
     <a href="https://github.com/shower/shower">Fork me on GitHub</a>
