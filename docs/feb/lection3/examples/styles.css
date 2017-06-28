@@ -1,0 +1,50 @@
+@font-face {
+  font-family: sourcesanspro;
+  src: url('sourcesanspro-regular-webfont.woff2') format('woff2'),
+       url('sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: sourcesanspro, Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #000;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-style: normal;
+  font-size: 2em;
+  color: #fff;
+}
+
+header a {
+  color: inherit;
+}
+
+main {
+  background-color: #f00;
+  text-indent: 20px;
+}
+
+main p {
+  word-spacing: 10px;
+}
+
+#leftNav {
+  background-color: #363;
+  text-decoration: line-through;
+}
+
+#leftNav a {
+  text-decoration: inherit;
+  letter-spacing: 10px;
+}
+
+#rightNav {
+  background-color: #369;
+}
+
+footer {
+  background-color: #ccc;
+}
