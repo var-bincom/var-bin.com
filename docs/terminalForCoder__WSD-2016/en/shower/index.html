@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<!-- is-black for black theme-->
+<body class="shower list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<!-- start slide -->
+	<section class="slide" id="cover">
+		<h2>Console Into Mass__</h2>
+		<p class="slide_author">Vitalii Rybka</p>
+		<img src="pictures/console/terminal1-new.jpg" alt="" class="cover">
+	</section>
+	<!-- Favourite browser -->
+	<section class="slide">
+		<h2>Favourite browser</h2>
+		<figure class="figure console2">
+			<img src="./pictures/prostredi-ie6.gif" alt="Favourite browser">
+		</figure>
+	</section>
+	<!-- Console for user -->
+	<section class="slide">
+		<h2>Console for user</h2>
+		<figure class="figure console2">
+			<img src="./pictures/2000px-StartingMsdos2-1300x731.jpg" alt="Console for user">
+		</figure>
+	</section>
+	<!-- devtools terminal -->
+	<section class="slide">
+		<h2>devtools terminal</h2>
+		<figure class="figure console2">
+			<img src="./pictures/console/devtools-terminal.gif" alt="devtools terminal">
+		</figure>
+	</section>
+	<!-- The plan -->
+	<section class="slide">
+		<h2>The <em class="mark mark_cross">escape</em> plan</h2>
+		<ol class="slide_plan">
+			<li>Console manager</li>
+			<li>Bash-scripting</li>
+			<li>Routine tasks automation</li>
+		</ol>
+	</section>
+	<!-- Repository -->
+	<section class="slide">
+		<h2>Repository</h2>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/ldvSjh">goo.gl/ldvSjh</a>
+			<figure>
+				<img src="./pictures/console/qr-repo.png" alt="link to repo">
+			</figure>
+		</div>
+	</section>
+	<!-- Slides -->
+	<section class="slide">
+		<h2>Slides</h2>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/Q5KrHT">goo.gl/Q5KrHT</a>
+			<figure>
+				<img src="./pictures/console/qr-slides-en.png" alt="link to slides">
+			</figure>
+		</div>
+	</section>
+	<!-- Compatible OS -->
+	<section class="slide">
+		<h2>Compatible OS</h2>
+		<ul class="slide_works-on">
+			<li>
+				<a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">Microsoft ♥ Linux (Win10 stable)</a>
+				<ul>
+					<li><a href="https://blogs.msdn.microsoft.com/commandline/2016/04/06/bash-on-ubuntu-on-windows-download-now-3/">Bash on Ubuntu on Windows</a></li>
+					<li><a href="https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/">Windows and Ubuntu Interoperability</a></li>
+				</ul>
+			</li>
+			<li>Mac OS X</li>
+			<li><a href="https://www.ubuntu.com/download/desktop">Ubuntu</a></li>
+			<li><a href="https://conemu.github.io/">ConEmu</a></li>
+		</ul>
+	</section>
+	<!-- Console managers -->
+	<section class="slide">
+		<h2>Console managers</h2>
+		<ol class="slide_plan">
+			<li>
+				screen
+			</li>
+			<li>
+				tmux
+			</li>
+			<li>
+				screen vs tmux
+			</li>
+		</ol>
+	</section>
+	<!-- Console managers. Screen -->
+	<section class="slide">
+		<h2>Console managers. Screen</h2>
+		<b>
+			Installation:
+		</b>
+		<pre class="slide_pre-formated">
+			<code>sudo apt-get install screen</code>
+			<code>screen</code>
+		</pre>
+	</section>
+	<!-- Console managers. Screen. Hot keys-->
+	<section class="slide">
+		<h2>Console managers. Screen</h2>
+		<b>
+			Basic key combinations:
+		</b>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/RyRfO5">goo.gl/RyRfO5</a>
+			<figure>
+				<img src="./pictures/console/qr-screen-hot-keys.png" alt="link to screen hot keys">
+			</figure>
+		</div>
+	</section>
+	<!-- Console managers. Screen. Config-->
+	<section class="slide">
+		<h2>Console managers. Screen</h2>
+		<b>
+			An example of configuration (<code>.screenrc</code>):
+		</b>
+		<pre>
+			<code># Default is ‘on’, as you probably noticed.</code>
+			<code>startup_message off</code>
+			<code># Window list at the bottom.</code>
+			<code>hardstatus alwayslastline</code>
+			<code>hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"</code>
+		</pre>
+		<div class="slide-comment">
+			What are the strange characters in this line <code>hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"</code> can be read <a href="http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/" target="_blank">here</a>.
+		</div>
+	</section>
+	<!-- Console managers. Screen. Example-->
+	<section class="slide">
+		<h2>Console managers. Screen</h2>
+		<figure class="figure console2">
+			<img src="./pictures/console/screen-example.jpg" alt="screen example">
+		</figure>
+	</section>
+	<!-- Console managers. Tmux. Installation -->
+	<section class="slide">
+		<h2>Console managers. Tmux</h2>
+		<b>
+			Installation:
+		</b>
+		<pre class="slide_pre-formated">
+			<code>sudo apt-get install tmux</code>
+			<code>tmux</code>
+		</pre>
+	</section>
+	<!-- Console managers. Tmux. Hot keys-->
+	<section class="slide">
+		<h2>Console managers. Tmux.</h2>
+		<b>
+			Basic key combinations:
+		</b>
+		<div class="slide_repo-links">
+			<a href="https://goo.gl/zSLFIJ">goo.gl/zSLFIJ</a>
+			<figure>
+				<img src="./pictures/console/qr-tmux-hot-keys.png" alt="link to screen hot keys">
+			</figure>
+		</div>
+	</section>
+	<!-- Console managers. Tmux. Example-->
+	<section class="slide">
+		<h2>Console managers. Tmux</h2>
+		<figure class="figure console2">
+			<img src="./pictures/console/tmux-example.jpg" alt="tmux example">
+		</figure>
+	</section>
+	<!--Console managers. Screen vs Tmux -->
+	<section class="slide">
+		<h2>Console managers. screen vs tmux</h2>
+		<table class="slide_table__c">
+			<thead>
+				<tr>
+					<td align="center"><b>screen</b></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td valign="top">
+						<code>-</code> Cannot create independent layouts for each tab<br/>
+						<code>-</code> Cannot save layouts in case of a connection’s drop<br/>
+						<code>-</code> Before 4.1 version couldn’t support vertical separation<br/>
+						<code>-</code> Whenever you create a new region, you also need to create a new window <code>(Ctrl+a, c)</code>, then shift to the needed directory, etc<br/>
+						<code>-</code> To delete a region, you’d need to press one more key combination <code>Ctrl+a, :remove</code>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<!-- Console managers. Screen vs Tmux -->
+	<section class="slide">
+		<h2>Console managers. screen vs tmux</h2>
+			<table class="slide_table__c">
+			<thead>
+				<tr>
+					<td align="center"><b>tmux</b></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<code>+</code> Boasts quality default settings out-of-the-box<br/>
+						<code>+</code> No need to customize the arrangement and backlight of the control pane<br/>
+						<code>+</code> Supports both vertical and horizontal splits<br/>
+						<code>+</code> In order to close the pane, you only need to enter <code>exit</code><br/>
+						<code>+</code> Can hold a remote connection by SSH<code>*</code>
+						<blockquote>
+							<code>*</code> <i>requires some additional magic</i>
+						</blockquote>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<!-- Bash-scripting start -->
+	<section class="slide">
+		<figure class="figure console2 bash">
+			<img src="./pictures/keep-calm-and-bin-bash.png" alt="keep calm and bin bash">
+		</figure>
+	</section>
+	<!-- Bash-scripting -->
+	<section class="slide">
+		<h2>bash</h2>
+		<ol class="slide_plan">
+			<li>
+				Basics
+			</li>
+			<li>
+				Conditions
+			</li>
+			<li>
+				Loops
+			</li>
+		</ol>
+	</section>
+	<!-- Bash-scripting. Basics -->
+	<section class="slide">
+		<h2>bash. Basics</h2>
+		<ol class="slide_plan">
+			<li>
+				Variables
+			</li>
+			<li>
+				Passing arguments to the script
+			</li>
+			<li>
+				Processing arguments within the script
+			</li>
+		</ol>
+	</section>
+	<!-- Bash-scripting. Basics. "Hello, world!" -->
+	<section class="slide">
+		<h2>bash. Basics. "Hello, world!"</h2>
+		<pre>
+			<code>#!/bin/bash</code>
+			<code>echo "Hello, world!"</code>
+		</pre>
+		<div>
+			<code>./hw.sh # how it calls</code>
+		</div>
+	</section>
+	<!-- Bash-scripting. Basics. Variables -->
+	<section class="slide">
+		<h2>bash. Basics. Variables</h2>
+		<b>
+			Variables:
+		</b>
+		<ul>
+			<li>
+				name - letters, numbers, <code>_</code>.
+			</li>
+			<li>
+				value - numbers, strings (if there is any whitespace - wrap into double quotes), characters.
+			</li>
+		</ul>
+		<b>Create (rewrite) variable:</b>
+		<div><code>path="~/Docs"</code></div>
+		<b>Read variable:</b>
+		<div><code>$path</code></div>
+	</section>
+	<!-- Bash-scripting. Basics. Arguments -->
+	<section class="slide">
+		<h2>bash. Basics. Arguments</h2>
+		<b>
+			Passing arguments to the script:
+		</b>
+		<div><code>./script.sh arg1 arg2 arg3 … argN</code></div>
+		<b>Processing arguments within the script:</b>
+		<div><code>$1</code> - first argument</div>
+		<div><code>$2</code> - second argument</div>
+		<div><code>$0</code> - name of script</div>
+		<div><code>$#</code> - count of arguments</div>
+	</section>
+	<!-- Bash-scripting. Basics. Examples -->
+	<section class="slide">
+		<h2>bash. Basics. Examples</h2>
+		<b>
+			Another one example of working with variables
+		</b>
+		<pre>
+			<code>#!/bin/bash</code>
+			<code>var1=$1</code>
+			<code>var2=$2</code>
+			<code>echo "Arguments are \$1=$var1 \$2=$var2"</code>
+		</pre>
+		<div>
+			<code>./variables.sh var1 var2 # how it calls</code>
+		</div>
+	</section>
+	<!-- Bash-scripting. Basics. Conditions to execute different branches of code -->
+	<section class="slide">
+		<h2>bash. Basics. Conditions</h2>
+		<ol>
+			<li>
+				<code>if</code>
+			</li>
+			<li>
+				<code>if/else</code>
+			</li>
+			<li>
+				<code>if/elif/else</code>
+			</li>
+			<li>
+				<code>case/in/esac</code>
+			</li>
+		</ol>
+	</section>
+	<!-- Bash-scripting. Basics. Conditions. if -->
+	<section class="slide">
+		<h2>bash. Basics. Conditions</h2>
+		<b>
+			if
+		</b>
+		<pre class="slide_pre-formated">
+			<code>git diff origin/master origin/%branch% > %path%</code>
+		</pre>
+		<div>
+			<code>fast_diff.sh</code>
+		</div>
+	</section>
+	<!--  Bash-scripting. Basics. Conditions. (strings) -->
+	<section class="slide">
+		<h2>bash. Basics. Conditions</h2>
+		<b>
+			Conditions (strings):
+		</b>
+		<div>
+			<code>-z &lt;string&gt; # string is empty</code>
+		</div>
+		<div>
+			<code>-n &lt;string&gt; # string is not empty</code>
+		</div>
+		<div>
+			<code>&lt;str1&gt; == &lt;str2&gt; # strings are equal</code>
+		</div>
+		<div>
+			<code>&lt;str1&gt; != &lt;str2&gt; # strings are not equal</code>
+		</div>
+	</section>
+	<!-- Bash-scripting. Basics. Conditions. (numbers/strings) -->
+	<section class="slide">
+		<h2>bash. Basics. Conditions</h2>
+		<b>
+			Conditions (numbers/strings):
+		</b>
+		<div>
+			<code>-eq, (==) # equal</code>
+		</div>
+		<div>
+			<code>-ne, (!=) # not equal</code>
+		</div>
+		<div>
+			<code>-lt, (&lt;) # less than</code>
+		</div>
+		<div>
+			<code>-le # less than or equal</code>
+		</div>
+		<div>
+			<code>-gt, (&gt;) # more than</code>
+		</div>
+		<div>
+			<code>-ge # more than or equal</code>
+		</div>
+	</section>
+	<!-- Bash-scripting. Basics. Conditions. (files) -->
+	<section class="slide">
+		<h2>bash. Basics. Conditions</h2>
+		<b>
+			Conditions (files):
+		</b>
+		<div>
+			<code>-e &lt;path&gt; # path is exist</code>
+		</div>
+		<div>
+			<code>-f &lt;path&gt; # is file</code>
+		</div>
+		<div>
+			<code>-d &lt;path&gt; # is directory</code>
+		</div>
+		<div>
+			<code>-s &lt;path&gt; # file size more than 0</code>
+		</div>
+		<div>
+			<code>-x &lt;path&gt; # file is executable</code>
+		</div>
+	</section>
+	<!-- Bash-scripting. Basics. Conditions. (boolean) -->
+	<section class="slide">
+		<h2>bash. Basics. Conditions</h2>
+		<b>
+			Conditions (boolean):
+		</b>
+		<div>
+			<code>! # denial of boolean expression</code>
+		</div>
+		<div>
+			<code>&& # boolean "and"</code>
+		</div>
+		<div>
+			<code>|| # boolean "or"</code>
+		</div>
+	</section>
+	<!-- Bash-scripting. Basics. Loops. -->
+	<section class="slide">
+		<h2>bash. Basics. Loops</h2>
+		<ol>
+			<li>
+				<code>for/in</code>
+			</li>
+			<li>
+				<code>while</code>
+			</li>
+		</ol>
+	</section>
+	<!-- bash. Basics. for/in-->
+	<section class="slide">
+		<h2>bash. Basics. Loops</h2>
+		<b>
+			for/in:
+		</b>
+		<pre>
+			<code>for i in array</code>
+			<code>do</code>
+			<code>  # an action, i on every iteration is getting</code>
+			<code>  # the next value from array</code>
+			<code>done</code>
+		</pre>
+	</section>
+	<!-- Bash-scripting. Helpful links -->
+	<section class="slide">
+		<h2>Helpful links</h2>
+		<ul>
+			<li><a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">Learn the Command Line</a></li>
+			<li><a href="http://cli.learncodethehardway.org/" target="_blank">The Command Line Crash Course</a></li>
+			<li><a href="http://www.linuxguide.it/command_line/linux_commands_ru.html" target="_blank">Linux Command Line in Русский (ru)</a></li>
+			<li><a href="https://www.youtube.com/watch?v=3DA1grSp4mU" target="_blank">Basic Unix commands</a></li>
+			<li><a href="https://habrahabr.ru/company/mailru/blog/311762/" target="_blank">Подводные камни Bash (ru)</a></li>
+		</ul>
+	</section>
+	<!-- Routine tasks automation -->
+	<section class="slide">
+		<h2>Routine tasks automation</h2>
+		<ul class="slide_plan">
+			<li>
+				Up a large number of repositories
+			</li>
+			<li>
+				Helpful aliases
+			</li>
+		</ul>
+	</section>
+	<!-- Routine tasks automation. Up a large number of repositories -->
+	<section class="slide">
+		<h2>Up a large number of repositories</h2>
+		<ul class="tree-view">
+			<li class="tree-view_item is-directory">vendors
+				<ul class="tree-view">
+					<li class="tree-view_item is-directory">vendor1</li>
+					<li class="tree-view_item is-directory">vendor2</li>
+					<li class="tree-view_item is-directory">vendor3
+						<ul class="tree-view">
+							<li class="tree-view_item is-directory">vendor3-1</li>
+							<li class="tree-view_item is-directory">vendor3-2</li>
+						</ul>
+					</li>
+					<li class="tree-view_item is-directory">vendor4</li>
+					<li class="tree-view_item is-directory">vendor5</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- Routine tasks automation. Up a large number of repositories -->
+	<section class="slide">
+		<h2>Up a large number of repositories</h2>
+		<b>Solution:</b>
+		<ul>
+			<li class="next">cd %path_to_vendor_repo%</li>
+			<li class="next">check branch</li>
+			<li class="next">git pull</li>
+		</ul>
+		<b class="next">
+			Automation
+		</b>
+		<ul>
+			<li class="next"><code>upRepo</code> - final result</li>
+		</ul>
+	</section>
+	<!-- Routine tasks automation. Up a large number of repositories After -->
+	<section class="slide slide__video">
+		<h2>Up a large number of repositories. After</h2>
+		<video id="videoAfter">
+			<source src="./videos/2016-11-17-2347-08-1.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</section>
+	<!-- Routine tasks automation. Helpful aliases -->
+	<section class="slide">
+		<h2>Helpful aliases</h2>
+		<ul>
+			<li class="next">
+				<code>git branch</code> - <b>how often do you enter this command?</b>
+			</li>
+			<li class="next">
+				<code>git status</code> - <b>what about this command?</b>
+			</li>
+			<li class="next">
+				<code>git push origin %branch-name%</code> - <b>what about this?</b>
+			</li>
+			<li class="next">
+				<code>git commit -m 'some comments'</code> - <b>what about this?</b>
+			</li>
+			<li class="next">
+				<code>...</code>
+			</li>
+		</ul>
+	</section>
+	<!-- Routine tasks automation. Helpful aliases -->
+	<section class="slide">
+		<h2>Helpful aliases</h2>
+		<figure class="figure alias">
+			<img src="./pictures/console/maxresdefault6-1en.jpg" alt="">
+		</figure>
+	</section>
+	<!-- Routine tasks automation. Helpful aliases -->
+	<section class="slide">
+		<h2>Helpful aliases</h2>
+		<b><code>.bashrc, .gitconfig</code></b>
+		<pre>
+			<code>alias gst='git status'</code>
+			<code>alias gf='git fetch'</code>
+			<code>alias ghide='git stash'</code>
+			<code>alias gshow='git stash pop'</code>
+			<code>alias gmom='git merge origin/master' # !!!</code>
+			<code>alias gad='git add'</code>
+			<code>alias grm='git rm'</code>
+			<code>alias showaliases='cat $HOME/.bashrc | grep alias'</code>
+		</pre>
+	</section>
+	<!-- Routine tasks automation. Helpful aliases -->
+	<section class="slide">
+		<h2>Helpful links</h2>
+		<ul>
+			<li><a href="https://stepik.org/course/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Linux-73">Введение в Linux (ru)</a></li>
+			<li><a href="https://ru.hexlet.io/courses/bash">Bash: Основы командной строки (ru)</a></li>
+			<li><a href="https://github.com/mathiasbynens/dotfiles">dotfiles</a></li>
+		</ul>
+	</section>
+	<!-- About -->
+	<section class="slide">
+		<h2>About me</h2>
+		<ul class="al-list slide_plan">
+			<li class="al-list_item">
+				<a href="https://twitter.com/var_bincom" class="al-link al-link__twitter">var_bincom</a>
+			</li>
+			<li class="al-list_item">
+				<a href="https://github.com/var-bin" class="al-link al-link__github">var-bin</a>
+			</li>
+			<li class="al-list_item">
+				<a href="https://shwr.me/" class="al-link al-link__shower">shower</a>
+			</li>
+		</ul>
+	</section>
+	<!-- Routine tasks automation. The End -->
+	<section class="slide">
+		<h2>This is the last slide</h2>
+		<em>
+			Go ahead...
+		</em>
+	</section>
+	<p class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+	<script>
+	var videoAfter = document.getElementById("videoAfter");
+
+	function playPause(videoId) {
+		if (videoId.paused) {
+			videoId.play();
+		} else {
+			videoId.pause();
+		}
+	}
+
+	function playVideoAfter() {
+		playPause(videoAfter);
+	}
+
+	videoAfter.addEventListener("click", playVideoAfter);
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site.time }} {{ site.url }}</title>
+  {% if jekyll.environment == "local" %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/styles.css">
+  {% endif %}
+</head>
