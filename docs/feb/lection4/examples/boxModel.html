@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box Model</title>
+  <style>
+
+    ul {
+      background: yellow;
+      margin: 12px 12px 12px 12px;
+      padding: 3px 3px 3px 3px;
+      /* No borders set */
+    }
+
+    li {
+      color: white;                /* text color is white */
+      background: blue;            /* Content, padding will be blue */
+      margin: 12px 12px 12px 12px;
+      padding: 12px 0 12px 12px; /* Note 0px padding right */
+      list-style: none             /* no glyphs before a list item */
+        /* No borders set */
+    }
+
+    li.withborder {
+      border-style: dashed;
+      border-width: medium;        /* sets border width on all sides */
+      border-color: lime;
+      margin-top: 50px;
+    }
+
+    /* block elements */
+    .l-box-block {
+      background-color: #009688;
+    }
+
+    .l-box-block .box__item {
+      color: #fff;
+      background-color: green;
+    }
+
+    .l-box-block .box__item:first-child {
+      background-color: #F44336;
+      padding: 10px;
+      margin: 20px;
+    }
+
+    .l-box-block .box__item:last-child {
+       margin-top: 50px;
+      background-color: #2196F3;
+    }
+
+
+    /* inline elements */
+    .l-box-inline {
+      background-color: #009688;
+    }
+
+    .l-box-inline .box__item {
+      color: #fff;
+      background-color: green;
+    }
+
+    .l-box-inline .box__item:first-child {
+      background-color: #F44336;
+      padding: 10px;
+      margin: 20px;
+    }
+
+    .l-box-inline .box__item:last-child {
+       margin-top: 50px;
+      background-color: #2196F3;
+    }
+  </style>
+</head>
+<body>
+  <h2>
+    V1
+  </h2>
+  <ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, fuga! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, fuga!</li>
+    <li class="withborder">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque quaerat obcaecati consequuntur tempore iure iusto enim animi libero dolor tenetur.</li>
+  </ul>
+
+  <h2>
+    V2
+  </h2>
+  <div class="l-box-block">
+    <div class="box__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque labore qui recusandae expedita porro minima! Nulla vel quos suscipit repudiandae sit modi accusamus, nihil explicabo dignissimos commodi et quo enim.</div>
+    <div class="box__item">Praesentium temporibus adipisci, velit debitis aut harum doloremque eius tenetur sint architecto ab consequatur rem dolorem cupiditate fuga deleniti quo quas nobis perspiciatis ex laborum dignissimos delectus nulla, sunt. Tempore.</div>
+  </div>
+
+  <h2>
+    V3
+  </h2>
+  <span class="l-box-inline">
+    <span class="box__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi repellat aperiam eligendi temporibus sit nam esse sunt ratione quis perferendis sed placeat obcaecati harum, odio odit distinctio nesciunt. Modi!</span>
+    <span class="box__item">In explicabo architecto rem necessitatibus laboriosam, ad aliquam ut corporis provident, alias accusamus nostrum cumque doloribus voluptas magni quasi perferendis illo excepturi molestiae consequatur nesciunt. Laborum quam quia repudiandae voluptate!</span>
+  </span>
+</body>
+</html>
