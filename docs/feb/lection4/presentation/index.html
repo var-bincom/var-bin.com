@@ -830,26 +830,33 @@ is <mark>&lt;em&gt;very&lt;/em&gt;</mark> important&lt;/span&gt;&lt;/h1&gt;</cod
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Блочная модель. Collapsing margins</h2>
 
+    <figure>
+      <blockquote>
+        <p>
+          В CSS смежные <mark>margin'ы</mark> двух или более блоков (которые могут быть соседями или нет) могут объединяться. Такое поведение называется <strong>collapsed margin</strong>.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/CSS22/box.html#collapsing-margins" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
 
+    <div class="slide__list">
+      <pre>
+        <code>html {</code>
+        <code>  box-sizing: border-box;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>*, *::before, *::after</code>
+        <code>  box-sizing: inherit;</code>
+        <code>}</code>
+      </pre>
+    </div>
   </section>
+
+  <a href="https://codepen.io/var-bin/full/EXEXay/" target="_blank">Пример</a>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Домашнее задание</h2>
 
-    <ol>
-      <li>Задайте следующие свойства для <a href="../examples/minimo.jpg" target="_blank">данного примера</a>
-        <ul>
-          <li>Цвет шрифта</li>
-          <li>Цвет заливки элементов</li>
-          <li>Семейство шрифтов</li>
-          <li>Картинки</li>
-        </ul>
-        Все необходимые материалы, вы найдете в <a href="../examples/blog.zip" target="_blank">этом архиве</a>.
-        <mark>
-          Шрифты идут в формате <code>.ttf</code>. Их нужно конвертировать в <code>.woff/.woff2</code>.
-        </mark>
-        Вам поможет <a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank">этот сервис</a>. Также вам понадобится правило <code>@font-face</code>. Небольшой <a href="../examples/font-face.css" target="_blank">пример</a> использования.
-      </li>
-    </ol>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд. Домашнее задание</h2>
@@ -859,12 +866,11 @@ is <mark>&lt;em&gt;very&lt;/em&gt;</mark> important&lt;/span&gt;&lt;/h1&gt;</cod
       </em>
 
       <ul>
-        <li><a href="https://www.w3.org/Style/CSS20/" target="_blank">CSS 20 Лет</a></li>
-        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Валидатор CSS Стилей</a></li>
-        <li><a href="https://webref.ru/css" target="_blank">Справочник CSS (RU)</a></li>
-        <li><a href="http://cssreference.io/" target="_blank">A free visual guide to CSS</a></li>
-        <li>Пропработать свойства из этих двух слайдов [ <a href="http://var-bin.com/feb/lection3/presentation/#21" target="_blank">1</a> ], [ <a href="http://var-bin.com/feb/lection3/presentation/#22" target="_blank">2</a> ]</li>
-        <li>Сделать таблицу как на <a href="../examples/1498678354597.jpg" target="_blank">скрине</a>. Этот <a href="http://var-bin.com/feb/lection3/presentation/#26" target="_blank">слайд</a> поможет</li>
+        <li><a href="https://quirksmode.org/css/user-interface/boxsizing.html" target="_blank">box-sizing на quirksmode.org</a></li>
+        <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/box-sizing" target="_blank">box-sizing на MDN</a></li>
+        <li><a href="https://webref.ru/css/box-sizing" target="_blank">box-sizing (RU)</a></li>
+        <li><a href="http://specificity.keegan.st/" target="_blank">Specificity Calculator</a></li>
+        <li><a href="http://youmightnotneedjs.com/" target="_blank">You might not need JavaScript</a></li>
       </ul>
   </section>
   <p class="badge">
