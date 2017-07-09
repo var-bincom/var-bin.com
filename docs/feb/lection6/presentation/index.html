@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">Float. Clearfix</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/cFvgt9" target="_blank">goo.gl/cFvgt9</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next"><code>a[href^="https"]</code></li>
+      <li class="next"><code>input[type="radio"]</code></li>
+      <li class="next"><code>a[href*="w3.org"]</code></li>
+      <li class="next"><code>nav a:nth-child(even)</code></li>
+      <li class="next"><code>nav a:nth-child(odd)</code></li>
+      <li class="next"><code>p:first-child</code></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>:nth-child</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>n</th>
+          <th>2n+1</th>
+          <th>4n+1</th>
+          <th>4n+4</th>
+          <th>4n</th>
+          <th>5n-2</th>
+          <th>-n+3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>1</td>
+          <td>4</td>
+          <td>–</td>
+          <td>–</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>3</td>
+          <td>5</td>
+          <td>8</td>
+          <td>4</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>5</td>
+          <td>9</td>
+          <td>12</td>
+          <td>8</td>
+          <td>8</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>7</td>
+          <td>13</td>
+          <td>16</td>
+          <td>12</td>
+          <td>13</td>
+          <td>–</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>9</td>
+          <td>17</td>
+          <td>20</td>
+          <td>16</td>
+          <td>18</td>
+          <td>–</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>11</td>
+          <td>21</td>
+          <td>24</td>
+          <td>20</td>
+          <td>23</td>
+          <td>–</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="https://web-standards.ru/articles/nth-child/" target="_blank">Прочитать</a>
+
+    <div>
+      <a href="https://codepen.io/var-bin/pen/qjJRMW?editors=1100" target="_blank">Пример</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next">Свойство display</li>
+      <li class="next">margin, padding, border, outline</li>
+      <li class="next">Float</li>
+      <li class="next">Clearfix</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Свойство display</h2>
+
+    <em>
+      display: block;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>display: block;</code> означает, что элемент будет отображаться как <strong>блочный</strong>, например как параграф оформленный при помощи тега <mark>&lt;p&gt;</mark> и любой тег <mark>&lt;div&gt;</mark>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/pwxgKM?editors=0100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Свойство display</h2>
+
+    <em>
+      display: inline;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>display: inline;</code> означает, что элемент будет отображаться <strong>инлайн</strong>, в текущем блоке на той же строке.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/owabPw?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Свойство display</h2>
+
+    <em>
+      display: none;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>display: none;</code> означает, что элемент НЕ будет отображаться.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/xryZyg?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Свойство display</h2>
+
+    <em>
+      display: inline-block;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>display: inline-block;</code> означает, что элемент будет отображаться как <strong>инлайн</strong>, НО вести себя будет как <strong>блочный</strong>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/PjyZvx?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Свойство display</h2>
+
+    <em>
+      display: list-item;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>display: list-item;</code> означает, что элемент будет отображаться как <strong>list-item</strong> элемент, что в большинстве случаев означает, что данный элемент будет иметь маркер в виде точки.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/NgOxZV?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Свойство display</h2>
+
+    <em>
+      display: table;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>display: table;</code> означает, что элемент будет отображаться как <strong>таблица</strong>. Вложенные элементы должны отображаться как <code>table-row</code> и <code>table-cell</code> тем самым иммитирующие <mark>TR</mark> и <mark>TD</mark>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/JJmGgJ?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Свойство display</h2>
+
+    <em>
+      display: block | inline | none | inline-block | list-item | table;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          Как разные свойства взаимодействуют между собой. <strong>Обязательно</strong> попрактикуйтесь.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/full/yXROLY/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>margin, padding, border, outline</h2>
+
+    <figure class="slide__box-model">
+      <img src="http://var-bin.com/feb/lection4/presentation/pictures/box-model.png" alt="box model"/>
+      <figcaption>
+        Как взаимодействуют между собой <code>margin</code>, <code>padding</code>, <code>border</code>, <code>outline</code>.
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Float</h2>
+
+    <em>
+      float: left;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элемент генерирует блочный элемент, который перемещается влево. Контент перемещается вправо от этого блока.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/xryVOX?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Float</h2>
+    <em>
+      float: right;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элемент генерирует блочный элемент, который перемещается вправо. Контент перемещается влево от этого блока.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/xryVOX?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Float</h2>
+
+    <em>
+      float: none;
+    </em>
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элемент перестает быть плаващим.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/xryVOX?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Взаимодейстивие между: display, position, float</h2>
+
+    <table>
+      <caption>
+        Три свойства, которые влияют на формирование и компоновку элементов на странице - <code>display</code>, <code>position</code>, and <code>float</code>
+      </caption>
+      <thead>
+        <tr>
+          <th>Значение</th>
+          <th width="30%">Итоговое значение</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>inline-table</td>
+          <td>table</td>
+        </tr>
+        <tr>
+          <td>
+            inline, table-row-group, table-column, table-column-group, table-header-group, table-footer-group, table-row, table-cell, table-caption, inline-block
+        </td>
+        <td>
+          block
+        </td>
+        </tr>
+        <tr>
+          <td>Другие</td>
+          <td>Как указано выше</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Clear</h2>
+
+    <em>
+      clear: left | right | both | none;
+    </em>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Это свойство определяет как один блок взаимодействует с другим блоком у которого выставлено свойство <code>float</code>, отличное от <code>none</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/xryVOX?editors=0100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
