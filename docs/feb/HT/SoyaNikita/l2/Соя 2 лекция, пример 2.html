@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Профиль</title>
+</head>
+<body>
+     <h1>Профиль</h1>
+        <form action="https://rabota.ua/" method="post" enctype="multipart/form-data">
+                Ваш пол: <input type="radio" name="sex" value="man"> Мужской
+                <input type="radio" name="sex" value="women" checked> Женский<br>
+            Месяц и год рождения:<br>
+            <select name ="month">
+                <option value="jan"> Январь</option>
+                <option value="feb"> Февраль</option>
+                <option value="mar"> Март</option>
+                <option value="apr"> Апрель</option>
+                </select>
+                <select name ="year">
+                <option value="1990"> 1990 год </option>
+                <option value="1991"> 1991 год </option> 
+                <option value="1992"> 1992 год </option> 
+                <option value="1993"> 1993 год </option> 
+                </select><br>
+            Знакомые технологии:<br>
+            <select name="days[]" multiple size="4">
+                <option>HTML</option>
+                <option selected>CSS</option>
+                <option>JavaScript</option>
+                <option>Node.js</option>
+                </select><br>
+            Фото: <input type="file" name="photo"><br>
+            <input type="submit" value="Сохранить">
+        </form>
+</body>
+</html>

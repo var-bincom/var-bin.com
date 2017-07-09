@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">Псевдоклассы. Псевдоэлементы</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Небольшой тест</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/CBv7x7" target="_blank">goo.gl/CBv7x7</a>
+      <figure>
+        <img src="./pictures/chart-test.png" alt="link to test">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/cFvgt9" target="_blank">goo.gl/cFvgt9</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Разбор ДЗ</h2>
+
+    <ul>
+      <li class="next">Таблицы</li>
+      <li class="next">Навигация в &lt;header&gt; и в &lt;footer&gt;</li>
+      <li class="next">&lt;button&gt; vs. &lt;a&gt;</li>
+      <li class="next">Валидатор верстки/стилей</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Разбор ДЗ. Таблицы</h2>
+
+    <pre>
+      <code>&lt;table&gt;</code>
+      <code>  &lt;caption&gt;some text&lt;/caption&gt;</code>
+      <code>  &lt;thead&gt;&lt;/thead&gt;</code>
+      <code class="comment">  &lt;!-- ... --&gt;</code>
+      <code>  &lt;tbody&gt;&lt;/tbody&gt;</code>
+      <code>&lt;/table&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Разбор ДЗ. Навигация в &lt;header&gt; и в &lt;footer&gt;</h2>
+
+    <p>
+      Создайте HTML5 структуру для <a href="http://var-bin.com/feb/lection2/examples/minimo1.jpg" target="_blank">данного примера</a>
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Разбор ДЗ. &lt;button&gt; vs. &lt;a&gt;</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Тег <code>&lt;button&gt;</code> используйте в тех случаях, если по нажатию на кнопку/ссылку пользователя не перекидывает на другие страницы, ресурсы (исключение формы). Тег <code>&lt;a&gt;</code> используйте в тех случаях, если по нажатию на кнопку/ссылку пользователя перекидывает на другие страницы, ресурсы.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Разбор ДЗ. Валидатор верстки/стилей</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Прежде чем отправить свою работу на проверку, будьте добры, проверьте ее через <a href="https://validator.w3.org/nu/" target="_blank">HTML</a> / <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS</a> валидаторы
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next">Селекторы атрибутов</li>
+      <li class="next">Структурные псевдоклассы</li>
+      <li class="next">Еще псевдоклассы</li>
+      <li class="next">Псевдоэлементы</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы атрибутов</h2>
+
+    <ul>
+      <li class="next">Начинается ли атрибут с префикса</li>
+      <li class="next">Содержит ли он экземпляр</li>
+      <li class="next">Заканчивается ли атрибут суффиксом</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы атрибутов. Атрибут начинается с...</h2>
+
+    <pre>
+      <code>элемент[атрибут^="значение"]</code>
+    </pre>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Выбрать все ссылки, у которых атрибут <code>href</code> начинается с <mark>https</mark>
+        </p>
+      </blockquote>
+      <pre class="next">
+        <code>a[href^="https"] {</code>
+        <code>  color: red;</code>
+        <code>}</code>
+      </pre>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/QgxBYP?editors=1100" target="_blank" class="next">
+      Пример
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы атрибутов. Атрибут содержит...</h2>
+
+    <pre>
+      <code>элемент[атрибут*="значение"]</code>
+    </pre>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Выбрать все ссылки, у которых атрибут <code>href</code> содержит <mark>w3.org</mark>
+        </p>
+      </blockquote>
+      <pre class="next">
+        <code>a[href*="w3.org"] {</code>
+        <code>  border-bottom: 1px dashed #369;</code>
+        <code>}</code>
+      </pre>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/QgxBYP?editors=1100" target="_blank" class="next">
+      Пример
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы атрибутов. Заканчивается на...</h2>
+
+    <pre>
+      <code>элемент[атрибут$="значение"]</code>
+    </pre>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Выбрать все ссылки, у которых атрибут <code>href</code> заканчивается на<mark>.pdf</mark>
+        </p>
+      </blockquote>
+      <pre class="next">
+        <code>a[href$=".pdf"] {</code>
+        <code>  font-size: 10px;</code>
+        <code>  text-transform: uppercase;</code>
+        <code>}</code>
+      </pre>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/QgxBYP?editors=1100" target="_blank" class="next">
+      Пример
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Структурные псевдоклассы</h2>
+
+    <ul>
+      <li class="next">
+        <code>:first-child</code>
+      </li>
+      <li class="next">
+        <code>:last-child</code>
+      </li>
+      <li class="next">
+        <code>:nth-child(n)</code>
+      </li>
+      <li class="next">
+        <code>:nth-last-child(n)</code>
+      </li>
+      <li class="next">
+        <code>:nth-of-type(n)</code>
+      </li>
+      <li class="next">
+        <code>:nth-last-of-type(n)</code>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Структурные псевдоклассы. :first-child, :last-child. Как было раньше</h2>
+
+    <figure>
+      <pre>
+        <code class="comment">&lt;!-- html --&gt;</code>
+        <code>&lt;nav&gt;</code>
+        <code class="mark">  &lt;a href="/" <mark>class="first"</mark>&gt;Home&lt;/a&gt;</code>
+        <code>  &lt;a href="posts"&gt;Posts&lt;/a&gt;</code>
+        <code>  &lt;a href="courses"&gt;Courses&lt;/a&gt;</code>
+        <code>  &lt;a href="blog"&gt;Blog&lt;/a&gt;</code>
+        <code class="mark">  &lt;a href="about" <mark>class="last"</mark>&gt;About&lt;/a&gt;</code>
+        <code>&lt;/nav&gt;</code>
+      </pre>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Структурные псевдоклассы. :first-child, :last-child. Как было раньше</h2>
+
+    <figure>
+      <pre>
+        <code class="comment">/* css */</code>
+        <code class="mark"><mark>.first</mark> {</code>
+        <code>  color: green;</code>
+        <code>}</code>
+        <code class="mark"><mark>.last</mark> {</code>
+        <code>  color: blue;</code>
+        <code>}</code>
+      </pre>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Структурные псевдоклассы. :first-child, :last-child. Как теперь</h2>
+
+    <figure>
+      <pre>
+        <code class="comment">&lt;!-- html --&gt;</code>
+        <code>&lt;nav&gt;</code>
+        <code class="mark">  &lt;a href="/"&gt;Home&lt;/a&gt;</code>
+        <code>  &lt;a href="posts"&gt;Posts&lt;/a&gt;</code>
+        <code>  &lt;a href="courses"&gt;Courses&lt;/a&gt;</code>
+        <code>  &lt;a href="blog"&gt;Blog&lt;/a&gt;</code>
+        <code class="mark">  &lt;a href="about"&gt;About&lt;/a&gt;</code>
+        <code>&lt;/nav&gt;</code>
+      </pre>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Структурные псевдоклассы. :first-child, :last-child. Как теперь</h2>
+
+    <figure>
+      <pre>
+        <code class="comment">/* css */</code>
+        <code class="mark"><mark>nav a:first-child</mark> {</code>
+        <code>  color: green;</code>
+        <code>}</code>
+        <code class="mark"><mark>nav a:last-child</mark> {</code>
+        <code>  color: blue;</code>
+        <code>}</code>
+      </pre>
+    </figure>
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :nth-child(n)</h2>
+
+    <pre>
+      <code>элемент:nth-child(n)</code>
+    </pre>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Выбрать все четные ссылки, внутри тега <code>&lt;nav&gt;</code> и изменить регистр букв на <span class="text-uc">заглавные</span>
+        </p>
+      </blockquote>
+      <pre class="next">
+        <code>nav a<mark>:nth-child(even)</mark> {</code>
+        <code>  text-transform: uppercase;</code>
+        <code>}</code>
+      </pre>
+    </figure>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :nth-child(n)</h2>
+
+    <pre>
+      <code>элемент:nth-child(n)</code>
+    </pre>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Выбрать все НЕ четные ссылки, внутри тега <code>&lt;nav&gt;</code> и изменить цвет
+        </p>
+      </blockquote>
+      <pre class="next">
+        <code>nav a<mark>:nth-child(odd)</mark> {</code>
+        <code>  color: orange;</code>
+        <code>}</code>
+      </pre>
+    </figure>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :nth-child(n). Параметр n</h2>
+
+    <em>
+      Как еще можно использовать атрибут <mark>n</mark>
+    </em>
+
+    <ul>
+      <li class="next">
+        Подставить целое число, например <code>:nth-child(<mark>2</mark>)</code>, будет выбран <mark>второй</mark> элемент;
+      </li>
+      <li class="next">
+        Подставить числовое выражение, например <code>:nth-child(<mark>3n+1</mark>)</code>, выборка начнется с элемента номер <mark>1</mark> и будет выбран <mark>каждый третий</mark> элемент.
+      </li>
+    </ul>
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :nth-child(n). Параметр n</h2>
+
+    <em>
+      Подставить числовое выражение, например <code>:nth-child(<mark>3n+1</mark>)</code>
+    </em>
+
+    <figure class="next">
+      <pre>
+        <code class="mark">nav a:nth-child(<mark>3n+1</mark>) {</code>
+        <code>  color: pink;</code>
+        <code>  text-transform: uppercase;</code>
+        <code>}</code>
+      </pre>
+      <figcaption class="next">
+        Выборке подвергнется каждый <mark>3й</mark> элемент, начиная с элемента номер <mark>1</mark>
+      </figcaption>
+    </figure>
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :nth-child(n). Параметр n</h2>
+
+    <em>
+      Отрицательные числа в выражении, например <code>:nth-child(<mark>3n-2</mark>)</code>
+    </em>
+
+    <figure class="next">
+      <pre>
+        <code class="mark">nav a:nth-child(<mark>3n-2</mark>) {</code>
+        <code>  color: brown;</code>
+        <code>  letter-spacing: 1em;</code>
+        <code>}</code>
+      </pre>
+      <figcaption class="next">
+        Выборка начнется с элемента номер <mark>-2</mark>, а затем будет выбран каждый <mark>3й</mark> элемент.
+      </figcaption>
+    </figure>
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :empty</h2>
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:empty</mark> представляет элемент у которого нет потомков.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#empty-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code class="comment">/* css */</code>
+        <code>p<mark>:empty</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">&lt;!-- html --&gt;</code>
+        <code><mark>&lt;p&gt;&lt;/p&gt;</mark></code>
+      </pre>
+    </div>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдокласы. :not(X)</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:not()</mark> представляет элемент который не соответствует переданным аргументам.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#negation" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code class="comment">/* Выберет все кнопки в HTML документе</code>
+      <code class="comment">у которых нет атрибута disabled */</code>
+      <code>button<mark>:not([disabled])</mark></code>
+    </pre>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдокласы. :lang(X)</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Определяет язык, который используется в документе или его фрагменте. С помощью псевдокласса <mark:lang></mark> можно задавать определённые настройки, характерные для разных языков, например, вид кавычек в цитатах.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/css3-selectors/#lang-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code>html<mark>:lang(fr-be)</mark>,</code>
+      <code>html<mark>:lang(de)</mark></code>
+    </pre>
+
+    <div class="next">
+      <a href="../examples/lang.html" target="_blank">Пример</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдокласы. :checked</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдокласс <mark>:checked</mark> применяется к элементам интерфейса, таким как переключатели (checkbox), флажки (radio) и пункты списка (option), когда они находятся в положение <strong>"включено"</strong>.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/css3-selectors/#checked" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code>input<mark>:checked ~ p</mark> {</code>
+      <code>  display: block;</code>
+      <code>}</code>
+    </pre>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/JJZZeQ" target="_blank">Пример</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Динамические псевдоклассы</h2>
+
+    <pre>
+      <code class="comment">/* unvisited links */</code>
+      <code>a<mark>:link</mark></code>
+      <code class="comment">/* visited links */</code>
+      <code>a<mark>:visited</mark></code>
+      <code class="comment">/* user hovers */</code>
+      <code>a<mark>:hover</mark></code>
+      <code class="comment">/* active links */</code>
+      <code>a<mark>:active</mark></code>
+    </pre>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a>
+    </div>
+  </section>
+
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Динамические псевдоклассы</h2>
+
+    <pre>
+      <code class="comment">/* Комбинируем динамические псевдоклассы */</code>
+      <code>a<mark>:focus</mark></code>
+      <code>a<mark>:focus:hover</mark></code>
+    </pre>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоэлементы. ::before, ::after</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдоэлементы <mark>::before</mark>, <mark>::after</mark> могут быть использованы для создания генерируемого контента <u>до</u> или <u>после</u> основного контента елемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#gen-content" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="next">
+      <a href="https://codepen.io/var-bin/pen/owyPdy?editors=1100" target="_blank">Пример Навигация</a> <a href="https://codepen.io/var-bin/pen/owyPbo?editors=1100" target="_blank">Пример Таблица</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Специфичность селекторов</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Специфичность селектора разбивается на 4 группы — <mark>a</mark>, <mark>b</mark>, <mark>c</mark>, <mark>d</mark>
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#specificity" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+    <ul>
+      <li>
+        <mark>a</mark> = 1 если стили заданы через атрибут<code>style=""</code>. Иначе = 0.
+      </li>
+      <li>
+        <mark>b</mark> = считает количество <code>ID</code> в селекторе
+      </li>
+      <li>
+        <mark>c</mark> = считает количество классов, атрибутов и псевдо-классов в селекторе
+      </li>
+      <li>
+        <mark>d</mark> = считает количество селекторов по типу (тегов) и псевдо-элементов в селекторе
+      </li>
+    </ul>
+
+    <a href="http://css.yoksel.ru/specifity/" target="_blank">Прочитать</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Специфичность селекторов.</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Селектор</th>
+          <th>a</th>
+          <th>b</th>
+          <th>c</th>
+          <th>d</th>
+          <th>Результат</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>*</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>li</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td><mark>1</mark></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ul li</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td><mark>2</mark></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>#main</td>
+          <td>0</td>
+          <td><mark>1</mark></td>
+          <td>0</td>
+          <td>0</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>style=""</td>
+          <td><mark>1</mark></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>li.red.level</td>
+          <td>0</td>
+          <td>0</td>
+          <td><mark>2</mark></td>
+          <td><mark>1</mark></td>
+          <td>21</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Есть такая <a href="https://codepen.io/var-bin/pen/owyPbo.html" target="_blank">таблица</a>. Нужно сделать следующее:
+        <ol>
+          <li>
+            Для каждого <code>&lt;th&gt;</code> сделать бордер слева размером <code>3px</code>, тип <code>dashed</code>, цвет <code>#000</code>. У первого <code>&lt;th&gt;</code> бордер’a слева не должно быть.
+          </li>
+          <li>
+            Для всех <code>&lt;tr&gt;</code> сделать бордер снизу <code>2px solid</code>, цвет <code>rgba(0, 0, 0, 0.8)</code>.
+          </li>
+          <li>
+            Для всех <code>&lt;td&gt;</code> которые находятся в каждой четной <code>&lt;tr&gt;</code> сделать фоновый цвет <code>yellow</code>.
+          </li>
+          <li>
+            Для всех <code>&lt;td&gt;</code> которые находятся в каждой НЕчетной <code>&lt;tr&gt;</code> сделать фоновый цвет <code>rgba(0, 255, 0, 0.6)</code>.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Есть такая <a href="https://codepen.io/var-bin/pen/owyPbo.html" target="_blank">таблица</a>. Нужно сделать следующее:
+        <ol>
+          <li>
+            Для каждой первой <code>&lt;td&gt;</code>, которые находятся в любой <code>&lt;tr&gt;</code> сделать шрифт жирный и добавить вот <a href="https://icon.now.sh/square" target="_blank">эту иконку</a> справа от текста. <a href="https://icon.now.sh/" target="_blank">Пример</a>, как использовать иконку. Иконка должна быть размером <code>20px х 20px</code>, цвет на ваше усмотрение. <strong>Подсказка:</strong> нужно использовать псевдоэлементы; сервис не поддерживает именованные цвета.
+          </li>
+          <li>
+            При наведении на любой <code>&lt;tr&gt;</code> должен меняться цвет фона у этого <code>&lt;tr&gt;</code> и цвет шрифта. Цвета на ваш выбор.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Есть такая <a href="https://codepen.io/var-bin/pen/owyPbo.html" target="_blank">таблица</a>. Нужно сделать следующее:
+        <ol>
+          <li>
+           При наведении на любой <code>&lt;td&gt;</code> должен меняться цвет фона у этого <code>&lt;td&gt;</code> и цвет шрифта. Цвета на ваш выбор. Также, должна быть рамка вокруг этого <code>&lt;td&gt;</code> размером <code>2px</code>, цвет и тип сваш выбор. <strong>Подсказка</strong>: для создания рамки используйте свойство <code>outline</code>. <mark>Подумайте, почему лучше использовать <code>outline</code>, вместо <code>border</code></mark>. Состояние курсора мыши тоже должно меняться. Подберите сами курсор, какой вам больше по душе. <a href="http://take.ms/sbNKn" target="_blank">Пример</a> как должны работать этот пункт и предыдущий вместе. <strong>Подсказка</strong>: для изменения состояние курсора мыши используйте свойство <code>cursor</code>.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Есть такая <a href="https://codepen.io/var-bin/pen/owyPbo.html" target="_blank">таблица</a>. Нужно сделать следующее:
+        <ol class="info-list">
+          <li>
+            Текст во всех <code>&lt;th&gt;</code> сделайте заглавными буквами.
+          </li>
+          <li>
+            Для футера таблицы задайте цвет фона <code>#ccc</code>, расстояние между буквами <code>3px</code>. Отмените у него бордер по наведению, если такой будет.
+          </li>
+          <li>
+            Для всех <code>&lt;td&gt;</code>, которые находятся под строкой <mark>"Result"</mark> сделать подчеркнутый шрифт. <strong>Теперь внимание</strong>. Для каждой второй <code>&lt;td&gt;</code>, начиная с 1й добавить знак доллара (<samp>$</samp>). Для каждой третьей <code>&lt;td&gt;</code>, начиная со второй добавить знак евро (<samp>€</samp>). Для каждой четвертой <code>&lt;td&gt;</code>, начиная с третьей добавить знак гривны (<samp>₴</samp>). Примерно, <a href="http://take.ms/IQIHY" target="_blank">должно быть так</a>.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li><a href="https://icon.now.sh/" target="_blank">SVG icon placeholder microservice</a></li>
+          <li><a href="https://source.unsplash.com/" target="_blank">Simple embedding for Unsplash photos.</a></li>
+          <li><a href="https://icomoon.io" target="_blank">Удобнейший инструмент.</a> Можно не только выбрать и скачать готовые иконки, но также можно загрузить свои и получить их в виде шрифта и/или спрайта. Вместе со спрайтом предлагается загрузить его PNG-версию.</li>
+          <li><a href="http://www.flaticon.com/" target="_blank">flaticon</a> The largest database of free icons available in PNG, SVG, EPS, PSD and BASE 64 formats.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul>
+      <li><a href="http://css-live.ru/articles-css/impossible-pseudos.html" target="_blank">Интересная статья про псевдоэлементы</a></li>
+      <li><a href="http://css-live.ru/articles/oformlenie-nezagruzhennyx-izobrazhenij.html" target="_blank">Как с помощью псевдоэлементов оформить незагруженные изображения</a></li>
+      <li><a href="http://css.yoksel.ru/nth-child/" target="_blank">Nth-child и nth-of-type</a></li>
+      <li><a href="http://css.yoksel.ru/specifity/" target="_blank">Сколько весят селекторы?</a></li>
+      <li><a href="http://css.yoksel.ru/content/" target="_blank">Свойство content</a></li>
+      <li><a href="https://codepen.io/collection/XdOJRY/" target="_blank">Все примеры lection5</a></li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

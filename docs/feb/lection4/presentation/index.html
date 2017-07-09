@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">Селекторы. Специфичность селекторов. Блочная модель</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_teacher-info slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/XN8vhM" target="_blank">goo.gl/XN8vhM</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ol>
+      <li class="next">Какие есть источники CSS стилей?</li>
+      <li class="next">Какой порядок применения стилей?</li>
+      <li class="next">Как использовать стили?</li>
+      <li class="next">Какая проблема есть при подключении стилей через <code><mark class="important">@import</mark> "mystyle.css";</code></li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ol>
+      <li class="next">
+        Где ошибка?
+        <pre>
+          <code class="mark">{</code>
+          <code class="mark">  background-color: black</code>
+          <code class="mark">  color: white;</code>
+          <code class="mark">}</code>
+        </pre>
+      </li>
+      <li class="next">
+        Где ошибка?
+        <pre>
+          <code class="mark">{</code>
+          <code class="mark">  background-color black;</code>
+          <code class="mark">}</code>
+        </pre>
+      </li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next">Единицы измерения в CSS</li>
+      <li class="next">Цвета в CSS</li>
+      <li class="next">CSS Селекторы</li>
+      <li class="next">Специфичность CSS селекторов</li>
+      <li class="next">Блочная модель</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Редакторы кода</h2>
+
+    <ul>
+      <li>
+        VS Code
+        <ul>
+          <li>
+            Настройки + Сочетания клавиш:
+            <ul>
+              <li>
+                <a href="https://gist.github.com/var-bin/652575c202a898939ea103457eabeda5" target="_blank">
+                  Пользовательские настройки
+                </a>
+              </li>
+              <li>
+                <a href="https://code.visualstudio.com/docs/getstarted/settings" target="_blank">
+                  Полный список настроек
+                </a>
+              </li>
+              <li>
+                <a href="https://code.visualstudio.com/docs/getstarted/keybindings" target="_blank">
+                  Сочетания клавиш
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Расширения:
+            <ul>
+              <li>
+                <a href="https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons" target="_blank">
+                  vscode-icons
+                </a>
+              </li>
+              <li>
+                <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.sublime-keybindings" target="_blank">
+                  Sublime Text Keymap
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Редакторы кода</h2>
+
+    <ul>
+      <li>
+        Sublime Text
+        <ul>
+          <li>
+            Настройки + Сочетания клавиш:
+            <ul>
+              <li>
+                <a href="https://gist.github.com/var-bin/b3c13be51a0e44ebdc67851552be7d52" target="_blank">
+                  Пользовательские настройки
+                </a>
+              </li>
+              <li>
+                <a href="http://sublimetext.ru/documentation/preferences/list" target="_blank">
+                  Полный список настроек
+                </a>
+              </li>
+              <li>
+                Сочетания клавиш: <code>Preferences -> Key Bindings</code>
+              </li>
+              <li>
+                <a href="https://packagecontrol.io/installation" target="_blank">
+                  Package Control
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Расширения: <mark>Alignment</mark>, <mark>Autoprefixer</mark>, <mark>BracketHighlighter</mark>, <mark>Color Highlighter</mark>, <mark>CSSComb</mark>, EJS, <mark>Emmet</mark>, Handlebars, <mark>HTML-CSS-JS Prettify</mark>, Jade, JSX, <mark>LESS</mark>, <mark>Sass</mark>, SideBarEnhancements, SideBarGit, Stylus, <mark>Tag</mark>.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Единицы размерности в CSS</h2>
+
+    <div class="slide__list">
+      <ul>
+        <li>
+          px
+        </li>
+        <li>
+          em
+        </li>
+        <li>
+          rem
+        </li>
+        <li>
+          %
+        </li>
+      </ul>
+      <ul>
+        <li>
+          vh
+        </li>
+        <li>
+          vw
+        </li>
+        <li>
+          vmin
+        </li>
+        <li>
+          vmax
+        </li>
+      </ul>
+    </div>
+
+    <a href="https://webref.ru/css/value/size" target="_blank">Прочитать</a>
+
+    <div><a href="https://codepen.io/var-bin/pen/ZyxBQm?editors=1100" target="_blank">Пример</a></div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Цвета в CSS</h2>
+
+    <a href="https://codepen.io/var-bin/full/qjoqyN/" target="_blank">Большой список</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Цвета в CSS. Ключевое слово transparent</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Спецификация CSS1 ввела ключевое слово <mark>transparent</mark> для cвойства <code>background-color</code>. CSS2 добавила поддержку этого ключевого слова для <code>border-color</code>. Спецификация CSS3 расширила поддержку данного ключевого слова для всех свойств, которым можно задавать цвет.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/css3-color/#transparent" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code>{</code>
+      <code>  background-color: <mark>transparent</mark>;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Цвета в CSS. RGB vs. RGBA</h2>
+
+    <pre>
+      <code>{</code>
+      <code>  background-color: <mark>#f00</mark>; /* rgb */</code>
+      <code>}</code>
+    </pre>
+
+    <pre>
+      <code>{</code>
+      <code>  background-color: <mark>#ff0000</mark>; /* rrggbb */</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Цвета в CSS. RGB vs. RGBA</h2>
+
+    <pre>
+      <code>{</code>
+      <code class="comment">/* integer range 0 - 255 */</code>
+      <code>  background-color: <mark>rgb(255, 0, 0)</mark>;</code>
+      <code>}</code>
+    </pre>
+
+    <pre>
+      <code>{</code>
+      <code class="comment">/* the same, with explicit opacity of 0.1</code>
+      <code class="comment">range 0 - 1*/</code>
+      <code>  background-color: <mark>rgba(255, 0, 0, 0.1)</mark>;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы</h2>
+
+    <ul>
+      <li class="next">Универсальный селектор</li>
+      <li class="next">Селектор по типу (тег)</li>
+      <li class="next">Псевдоклассы</li>
+      <li class="next">Псевдоэлементы</li>
+      <li class="next">Селектор по классу</li>
+      <li class="next">Селектор по ID</li>
+      <li class="next">Селектор потомков</li>
+      <li class="next">Селектор дочерных элементов</li>
+      <li class="next">Селектор соседних элементов</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Все селекторы не чувствительны к регистру ([a-z] и [A-Z] одинаковы). За исключением тех случаев, когда у самого элемента к которому мы хотим применить селектор регистр отличается. <mark>Правилом "хорошего тона" считается писать все селекторы в нижнем регистре</mark>.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#casesens" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Универсальный селектор</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Предназначен для выбора любора одиночного элемента в DOM структуре.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#universal-selector" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code><mark>*</mark> {</code>
+      <code>  background-color: #369;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Универсальный селектор</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Если универсальный селектор, не является единственным компонентом последовательности простых селекторов или следует вместе с псевдоэлементом, то <code>*</code> может быть пропущен.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#universal-selector" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Универсальный селектор</h2>
+
+    <div class="slide__list">
+      <pre>
+        <code class="comment">/* Оба селектора идентичны */</code>
+        <code><mark>*</mark>.warning</code>
+        <code>.warning</code>
+        <code class="comment">/* Оба селектора идентичны */</code>
+        <code><mark>*</mark>#myid</code>
+        <code>#myid</code>
+      </pre>
+      <pre>
+        <code class="comment">/* Следующие два
+селектора
+НЕ идентичны */</code>
+        <code class="mark">div :first-child</code>
+        <code class="mark">div:first-child</code>
+        <code>div <mark>*</mark>:first-child</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Селектор по типу (тег)</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Селектор по типу представляет сущность типа элемента в DOM структуре.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#type-selectors" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code><mark>h1</mark> {</code>
+        <code>  font-size: 1.75em;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code><mark>p</mark> {</code>
+        <code>  font-size: 1em;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :root</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:root</mark> представляет элемент, который является корнем документа. В большинстве случаев это <code>html</code> элемент.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#root-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code><mark>:root</mark> {</code>
+      <code>  font-family: Arial, Helvetica, sans-serif;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :nth-*()</h2>
+
+    <ul>
+      <li class="next"><code>:nth-child()</code></li>
+      <li class="next"><code>:nth-child(odd) === :nth-child(2n+1)</code></li>
+      <li class="next"><code>:nth-child(even) === :nth-child(2n)</code></li>
+      <li class="next"><code>:nth-last-child()</code></li>
+      <li class="next"><code>:nth-of-type()</code></li>
+      <li class="next"><code>:nth-last-of-type()</code></li>
+    </ul>
+
+    <a href="http://css.yoksel.ru/nth-child/" target="_blank">Прочитать</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :first-child</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:first-child</mark> представляет элемент, который является первым потомком другого элемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#first-child-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code>ul li<mark>:first-child</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">/* Делает тоже самое */</code>
+        <code>ul li<mark>:nth-child(1)</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :last-child</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:last-child</mark> представляет элемент, который является последним потомком другого элемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#last-child-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code>ul li<mark>:last-child</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">/* Делает тоже самое */</code>
+        <code>ul li<mark>:nth-last-child(1)</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :first-of-type</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:first-of-type</mark> представляет элемент, который является первым соседом данного типа в списке потомков родительского элемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#first-of-type-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code>tr td<mark>:first-of-type</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">/* Делает тоже самое */</code>
+        <code>tr td<mark>:nth-of-type(1)</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :last-of-type</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:last-of-type</mark> представляет элемент, который является последним соседом данного типа в списке потомков родительского элемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#last-of-type-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code>tr td<mark>:last-of-type</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">/* Делает тоже самое */</code>
+        <code>tr td<mark>:nth-last-of-type(1)</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :only-child</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:only-child</mark> представляет элемент, у которого есть родитель и этот родительский элемент не имеет других потомков.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#only-child-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code class="comment">/* Специфичность
+меньше */</code>
+        <code>tr td<mark>:only-child</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">/* Делает тоже самое */</code>
+        <code>tr td<mark>:first-child:last-child</mark></code>
+        <code class="comment">/* Делает тоже самое */</code>
+        <code>tr td<mark>:nth-child(1):nth-last-child(1)</mark></code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоклассы (Структура DOM). :empty</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:empty</mark> представляет элемент у которого нет потомков.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#empty-pseudo" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code class="comment">/* css */</code>
+        <code>p<mark>:empty</mark> {</code>
+        <code>  color: #555;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">&lt;!-- html --&gt;</code>
+        <code><mark>&lt;p&gt;&lt;/p&gt;</mark></code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдокласы. :not(X)</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдо-класс <mark>:not()</mark> представляет элемент который не соответствует переданным аргументам.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#negation" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code class="comment">/* Выберет все кнопки в HTML документе</code>
+      <code class="comment">у которых нет атрибута disabled */</code>
+      <code>button<mark>:not([disabled])</mark></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Динамические псевдоклассы</h2>
+
+    <pre>
+      <code class="comment">/* unvisited links */</code>
+      <code>a<mark>:link</mark></code>
+      <code class="comment">/* visited links */</code>
+      <code>a<mark>:visited</mark></code>
+      <code class="comment">/* user hovers */</code>
+      <code>a<mark>:hover</mark></code>
+      <code class="comment">/* active links */</code>
+      <code>a<mark>:active</mark></code>
+    </pre>
+  </section>
+
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Динамические псевдоклассы</h2>
+
+    <pre>
+      <code class="comment">/* Комбинируем динамические псевдоклассы */</code>
+      <code>a<mark>:focus</mark></code>
+      <code>a<mark>:focus:hover</mark></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоэлементы. ::first-line</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдоэлементы представляют абстрактную сущность в DOM дереве.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#pseudo-elements" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдоэлемент <mark>::first-line</mark> представляют контент первой форматированной линии элемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#first-line" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+    <pre>
+      <code>p<mark>::first-line</mark> {</code>
+      <code>  text-transform: uppercase;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоэлементы. ::first-letter</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдоэлемент <mark>::first-letter</mark> представляют первую букву элемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#first-letter" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <pre>
+      <code>p { color: red; font-size: 12px; }</code>
+      <code>p<mark>::first-letter</mark> { color: green; font-size: 200%; }</code>
+      <code>p::first-line { color: blue; }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Псевдоэлементы. ::before, ::after</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Псевдоэлементы <mark>::before</mark>, <mark>::after</mark> могут быть использованы для создания генерируемого контента <u>до</u> или <u>после</u> основного контента елемента.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#gen-content" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Селекторы потомков</h2>
+
+    <div class="slide__list">
+      <pre>
+        <code class="comment">/* css */</code>
+        <code><mark>h1 em</mark> {</code>
+        <code>  color: blue;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code class="comment">/* html */</code>
+        <code>&lt;h1&gt;This &lt;span class="myclass"&gt;headline
+is <mark>&lt;em&gt;very&lt;/em&gt;</mark> important&lt;/span&gt;&lt;/h1&gt;</code>
+      </pre>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Селекторы дочерних элементов</h2>
+
+    <pre>
+      <code>body <mark>&gt;</mark> p</code>
+      <code>div ol <mark>&gt;</mark> li p</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Селектор первого соседнего элемента</h2>
+
+    <pre>
+      <code>h1 <mark>+</mark> p</code>
+      <code>h1.opener <mark>+</mark> h2</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Селектор всех соседей</h2>
+
+    <pre>
+      <code>h1 <mark>~</mark> p</code>
+      <code>h1.opener <mark>~</mark> h2</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Селектор по классу</h2>
+
+    <pre>
+      <code>h1<mark>.main-title</mark></code>
+      <code><mark>.description</mark></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Селектор по ID</h2>
+
+    <pre>
+      <code>h1<mark>#main-title</mark></code>
+      <code><mark>#description</mark></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Практика</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Попробовать применить все селекторы, которые были рассмотрены
+        </p>
+      </blockquote>
+      <figcaption><a href="https://codepen.io/var-bin/pen/QgmvEm?editors=1000" target="_blank">Пример для практики</a></figcaption>
+    </figure>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Специфичность селекторов</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Специфичность селектора разбивается на 4 группы — <mark>a</mark>, <mark>b</mark>, <mark>c</mark>, <mark>d</mark>
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/selectors/#specificity" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+    <ul>
+      <li>
+        <mark>a</mark> = 1 если стили заданы через атрибут<code>style=""</code>. Иначе = 0.
+      </li>
+      <li>
+        <mark>b</mark> = считает количество <code>ID</code> в селекторе
+      </li>
+      <li>
+        <mark>c</mark> = считает количество классов, атрибутов и псевдо-классов в селекторе
+      </li>
+      <li>
+        <mark>d</mark> = считает количество селекторов по типу (тегов) и псевдо-элементов в селекторе
+      </li>
+    </ul>
+
+    <a href="http://css.yoksel.ru/specifity/" target="_blank">Прочитать</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Специфичность селекторов.</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Селектор</th>
+          <th>a</th>
+          <th>b</th>
+          <th>c</th>
+          <th>d</th>
+          <th>Результат</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>*</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>li</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td><mark>1</mark></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ul li</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td><mark>2</mark></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>#main</td>
+          <td>0</td>
+          <td><mark>1</mark></td>
+          <td>0</td>
+          <td>0</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>style=""</td>
+          <td><mark>1</mark></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>li.red.level</td>
+          <td>0</td>
+          <td>0</td>
+          <td><mark>2</mark></td>
+          <td><mark>1</mark></td>
+          <td>21</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Селекторы. Специфичность селекторов. Практика</h2>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Блочная модель</h2>
+
+    <figure class="slide__box-model">
+      <img src="./pictures/box-model.png" alt="Блочная модель"/>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/full/EXEXay/" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Блочная модель. Collapsing margins</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          В CSS смежные <mark>margin'ы</mark> двух или более блоков (которые могут быть соседями или нет) могут объединяться. Такое поведение называется <strong>collapsed margin</strong>.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/CSS22/box.html#collapsing-margins" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <div class="slide__list">
+      <pre>
+        <code>html {</code>
+        <code>  box-sizing: border-box;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>*, *::before, *::after</code>
+        <code>  box-sizing: inherit;</code>
+        <code>}</code>
+      </pre>
+    </div>
+
+    <a href="https://codepen.io/var-bin/full/EXEXay/" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Используя <a href="../examples/CSSSelectors.Practice.html" target="_blank">пример</a>, который мы разбирали на лекции, сделайте следующее:
+        <ol>
+          <li>
+            Для всего документа задайте шрифт <code>"Times New Roman", Times, serif;</code>
+          </li>
+          <li>
+            Для тега <code>&lt;h1&gt;</code> задайте шрифт <code>"Palatino Linotype", "Book Antiqua", Palatino, serif</code>
+          </li>
+          <li>
+            Для тега <code>&lt;h2&gt;</code> задайте шрифт <code>"Comic Sans MS", cursive, sans-serif</code>
+          </li>
+          <li>
+            Для всех тегов <code>&lt;p&gt;</code> задайте шрифт <code>"Comic Sans MS", cursive, sans-serif</code>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Используя <a href="../examples/CSSSelectors.Practice.html" target="_blank">пример</a>, который мы разбирали на лекции, сделайте следующее:
+        <ol>
+          <li>
+            Для всех тегов <code>&lt;em&gt;</code>, которые есть только в первом теге <code>&lt;p&gt;</code> задайте шрифт <code>"Lucida Sans Unicode", "Lucida Grande", sans-serif</code>, размер шрифта <code>10px</code>, цвет <code>336699</code>
+          </li>
+          <li>
+            Для всех тегов <code>&lt;img&gt;</code> задайте рамку размером <code>5px</code>, цвет рамки <code>f53</code>, тип рамки на ваш выбор.
+          </li>
+          <li>
+            Для каждого второго тега <code>&lt;em&gt;</code> сделайте жирный шрифт
+          </li>
+          <li>
+            Для всех тегов <code>&lt;mark&gt;</code> сделайте все буквы заглавными, размер шрифта <code>8px</code>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Используя <a href="../examples/CSSSelectors.Practice.html" target="_blank">пример</a>, который мы разбирали на лекции, сделайте следующее:
+        <ol>
+          <li>
+            Скройте все теги у которых нет дочерных элементов.
+          </li>
+          <li>
+            Для нумерованого списка поменяйте формат нумерации на греческие буквы.
+          </li>
+          <li>
+            Для всех не нумерованых списков поменяйте формат маркера в форме квадрата.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Используя <a href="../examples/CSSSelectors.Practice.html" target="_blank">пример</a>, который мы разбирали на лекции, сделайте следующее:
+        <ol>
+          <li>
+            У каждого тега <code>&lt;p&gt;</code>, первая строка должна иметь растояние между словами <code>10px</code>, растояние между буквами <code>3px</code>, цвет на ваш выбор.
+          </li>
+          <li>
+            Для всех заголовков (<code>&lt;h1&gt;-&lt;h6&gt;</code>), сделайте первую букву размером <code>20px</code>, шрифт <code>Impact, Charcoal, sans-serif</code>. Также добавьте двойную рамку вокруг этой буквы размером <code>3px</code>, цвет на ваш выбор.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Посчитайте специфичность селекторов для:
+        <ol class="info-list">
+          <li>
+            <code>#mainTitle</code>
+          </li>
+          <li>
+            <code>nav ul li</code>
+          </li>
+          <li>
+            <code>h1.text .hello</code>
+          </li>
+          <li>
+            <code>.title > .text + .hello:first-child</code>
+          </li>
+          <li>
+            <code>.title > .text + .hello::first-line</code>
+          </li>
+          <li>
+            <code>#title > .text + #hello .text::before</code>
+          </li>
+          <li>
+            <code>body main article section p em</code>
+          </li>
+          <li>
+            <code>.body .main .article .section .p .em</code>
+          </li>
+        </ol>
+      </li>
+    </ul>
+
+    <mark>Постарайтесь это сделать самостоятельно, используя <a href="http://var-bin.com/feb/lection4/presentation/#41" target="_blank">таблицу</a> из лекции</mark>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+      <em>
+        Все, кина на будет...
+      </em>
+
+      <ul>
+        <li><a href="https://quirksmode.org/css/user-interface/boxsizing.html" target="_blank">box-sizing на quirksmode.org</a></li>
+        <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS/box-sizing" target="_blank">box-sizing на MDN</a></li>
+        <li><a href="https://webref.ru/css/box-sizing" target="_blank">box-sizing (RU)</a></li>
+        <li><a href="http://specificity.keegan.st/" target="_blank">Specificity Calculator</a></li>
+        <li><a href="http://youmightnotneedjs.com/" target="_blank">You might not need JavaScript</a></li>
+        <li><a href="https://codepen.io/collection/DObxqY/" target="_blank">Все примеры к лекции</a></li>
+      </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

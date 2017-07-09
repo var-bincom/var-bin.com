@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">L2. HTML 5</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_teacher-info slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/gPyh3i" target="_blank">goo.gl/gPyh3i</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ol>
+      <li class="next">Контакты Skype</li>
+      <li class="next">Для чего нужен <code>!DOCTYPE</code></li>
+      <li class="next">Для чего нужен <code>charset="utf-8"</code></li>
+      <li class="next">Основное отличие между блочными и строчными элементами</li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next">Проблеммы, которые призван решить HTML5</li>
+      <li class="next">Новые теги, которые были добавлены в HTML5</li>
+      <li class="next">Формы в HTML5</li>
+      <li class="next">Наш первый макет</li>
+    </ul>
+  </section>
+  <section class="slide slide_teacher-info slide_hillel-bg slide_pt">
+    <h2>Логотипы</h2>
+
+    <div class="slide_repo-links">
+      <figure>
+        <a href="https://www.w3.org/html/logo/#the-technology" target="_blank"><img src="./pictures/HTML5_Logo.svg" alt="HTML5 Logo"/></a>
+      </figure>
+      <figure>
+        <a href="https://www.w3.org/html/logo/#the-technology" target="_blank">
+          <img src="./pictures/class-header-semantics.jpg" alt="HTML5 Class: Semantics"/>
+        </a>
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Проблеммы, которые призван решить HTML5</h2>
+
+    <ul>
+      <li class="next">Спецификация HTML4 очень неточная в отношении того, что представляет собой раздел и как определяется его область.</li>
+      <li class="next">В HTML4 каждый раздел является частью структуры документа.</li>
+      <li class="next">В HTML4 нет возможности указать специальные разделы, которые будут относиться не к конкретной странице, документу, а ко всему сайту.</li>
+      <li class="next"><strong>Семантика</strong></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Новые теги, которые были добавлены в HTML5</h2>
+    <div class="slide__list">
+      <ul>
+        <li class="next"><a href="https://webref.ru/html/main" target="_blank">main</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-main-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://www.w3.org/TR/html51/sections.html#the-article-element" target="_blank">article</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-main-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/section" target="_blank">section</a><a href="https://www.w3.org/TR/html51/sections.html#the-section-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/nav" target="_blank">nav</a><a href="https://www.w3.org/TR/html51/sections.html#the-nav-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/aside" target="_blank">aside</a><a href="https://www.w3.org/TR/html51/sections.html#the-aside-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/header" target="_blank">header</a><a href="https://www.w3.org/TR/html51/sections.html#the-header-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/footer" target="_blank">footer</a><a href="https://www.w3.org/TR/html51/sections.html#the-footer-element" target="_blank" class="text-uc">w3c (en)</a></li>
+      </ul>
+      <ul>
+        <li class="next"><a href="https://webref.ru/html/figure" target="_blank">figure</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-figure-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/figcaption" target="_blank">figcaption</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-figcaption-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/mark" target="_blank">mark</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-mark-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/time" target="_blank">time</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-time-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/progress" target="_blank">progress</a><a href="https://www.w3.org/TR/html51/sec-forms.html#the-progress-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/video" target="_blank">video</a><a href="https://www.w3.org/TR/html51/semantics-embedded-content.html#the-video-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next"><a href="https://webref.ru/html/audio" target="_blank">audio</a><a href="https://www.w3.org/TR/html51/semantics-embedded-content.html#the-audio-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li class="next">
+          ...
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как это было раньше</h2>
+
+    <pre>
+      <code>&lt;div <mark>id="header"</mark>&gt;</code>
+      <code>  &lt;div <mark>id="mainNav"</mark>&gt;&lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
+      <code>&lt;div <mark>id="wrapper"</mark>&gt;</code>
+      <code>  &lt;div <mark>id="rightNav"</mark>&gt;&lt;/div&gt;</code>
+      <code>  &lt;div <mark>id="leftNav"</mark>&gt;&lt;/div&gt;</code>
+      <code>  &lt;div <mark>id="content"</mark>&gt;&lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
+      <code>&lt;div <mark>id="footer"</mark>&gt;&lt;/div&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>HTML5 подход</h2>
+
+    <pre>
+      <code>&lt;<mark>header</mark>&gt;</code>
+      <code>  &lt;<mark>nav</mark>&gt;&lt;/nav&gt;</code>
+      <code>&lt;/header&gt;</code>
+      <code>&lt;<mark>main</mark>&gt;</code>
+      <code>  &lt;<mark>aside id="rightNav"</mark>&gt;&lt;/aside&gt;</code>
+      <code>  &lt;<mark>aside id="leftNav"</mark>&gt;&lt;/aside&gt;</code>
+      <code>  &lt;<mark>article</mark>&gt;&lt;/article&gt;</code>
+      <code>&lt;/main&gt;</code>
+      <code>&lt;<mark>footer</mark>&gt;&lt;/footer&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;header&gt; и &lt;footer&gt;</h2>
+
+    <pre>
+      <code>&lt;body&gt;</code>
+      <code>  ...</code>
+      <code>  &lt;header&gt;</code>
+      <code>    &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;</code>
+      <code>  &lt;/header&gt;</code>
+      <code>  ...</code>
+      <code>&lt;/body&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;header&gt; и &lt;footer&gt;</h2>
+
+    <pre>
+      <code>  ...</code>
+      <code>  &lt;header&gt;</code>
+      <code>    &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;</code>
+      <code>  &lt;/header&gt;</code>
+      <code>  &lt;article&gt;</code>
+      <code>    &lt;header&gt;</code>
+      <code>      &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;</code>
+      <code>    &lt;/header&gt;</code>
+      <code>  &lt;/article&gt;</code>
+      <code>  ...</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;nav&gt;</h2>
+
+    <pre>
+      <code>...</code>
+      <code>  &lt;header&gt;</code>
+      <code>    &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;</code>
+      <code>    &lt;nav&gt;</code>
+      <code>      &lt;a href="/"&gt;Home&lt;/a&gt;</code>
+      <code>      &lt;a href="blog.html"&gt;Blog&lt;/a&gt;</code>
+      <code>    &lt;/nav&gt;</code>
+      <code>  &lt;/header&gt;</code>
+    </pre>
+
+    <div class="slide__list">
+      <ul>
+        <li><a href="https://codepen.io/var-bin/pen/GEvLZM?editors=1000#0" target="_blank">Пример</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://codepen.io/var-bin/pen/BZdEzx" target="_blank">Пример2</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;article&gt;</h2>
+
+    <pre>
+      <code>&lt;article&gt;</code>
+      <code>  &lt;header&gt;</code>
+      <code>    &lt;hgroup&gt;</code>
+      <code>      &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;</code>
+      <code>    &lt;/hgroup&gt;</code>
+      <code>  &lt;/header&gt;</code>
+      <code>  &lt;p&gt;Lorem ipsum dolor.&lt;/p&gt;</code>
+      <code>&lt;article&gt;</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/pen/LLjvxb?editors=1000" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;section&gt;</h2>
+
+    <pre>
+      <code>&lt;article&gt;</code>
+      <code>  &lt;section&gt;</code>
+      <code>    &lt;header&gt;</code>
+      <code>      &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;</code>
+      <code>    &lt;/header&gt;</code>
+      <code>    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;</code>
+      <code>  &lt;section&gt;</code>
+      <code>&lt;article&gt;</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/pen/LLjvxb?editors=1000" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;aside&gt;</h2>
+
+    <pre>
+      <code>&lt;article&gt;</code>
+      <code>  &lt;section&gt;</code>
+      <code>    &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;</code>
+      <code>    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;</code>
+      <code>    &lt;aside&gt;Lorem ipsum dolor sit amet.&lt;/aside&gt;</code>
+      <code>  &lt;section&gt;</code>
+      <code>&lt;article&gt;</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/pen/LLjvxb?editors=1000" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;figure&gt; и &lt;figcaption&gt;</h2>
+
+    <pre>
+      <code>&lt;article&gt;</code>
+      <code>  ...</code>
+      <code>  &lt;figure&gt;</code>
+      <code>    &lt;img src="apple.jpg" alt="title"/&gt;</code>
+      <code>    &lt;figcaption&gt;Lorem ipsum dolor sit amet.&lt;/figcaption&gt;</code>
+      <code>  &lt;figure&gt;</code>
+      <code>&lt;article&gt;</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/pen/LLjvxb?editors=1000" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Еще теги</h2>
+
+    <div class="slide__list">
+      <ul>
+        <li><a href="https://webref.ru/html/p" target="_blank">p</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/h1" target="_blank">h1-h6</a><a href="https://www.w3.org/TR/html51/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/hr" target="_blank">hr</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-hr-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/blockquote" target="_blank">blockquote</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-blockquote-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/ol" target="_blank">ol, li</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-ol-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/ul" target="_blank">ul, li</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-ul-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/a" target="_blank">a</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-a-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/br" target="_blank">br</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-br-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/div" target="_blank">div</a><a href="https://www.w3.org/TR/html51/grouping-content.html#the-div-element" target="_blank" class="text-uc">w3c (en)</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://webref.ru/html/span" target="_blank">span</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-span-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/sup" target="_blank">sup</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-sub-and-sup-elements" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/sub" target="_blank">sub</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-sub-and-sup-elements" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/i" target="_blank">i</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-i-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/b" target="_blank">b</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-b-element" target="_blank" class="text-uc">w3c (en)</a></li>
+        <li><a href="https://webref.ru/html/u" target="_blank">u</a><a href="https://www.w3.org/TR/html51/textlevel-semantics.html#the-u-element" target="_blank" class="text-uc">w3c (en)</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Практическое задание</h2>
+    <p>
+      Конвертировать макет при помощи HTML5 тегов. <strong>Подсказка: </strong> заменять нужно <mark>ТОЛЬКО</mark> теги у которых есть атрибут <mark>id</mark>. Будут полезны эти два слайда: <a href="http://var-bin.com/feb/lection2/presentation/#7" target="_blank">раз</a> <a href="http://var-bin.com/feb/lection2/presentation/#7" target="_blank">два</a>
+    </p>
+
+    <a href="https://codepen.io/var-bin/pen/rwzboe?editors=1000" target="_blank">Макет</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Формы в HTML5</h2>
+
+    <pre>
+      <code>&lt;form action="https://www.google.com/search"&gt;</code>
+      <code>  &lt;label for="name"&gt;Customer name:&lt;/label&gt;</code>
+      <code>  &lt;input id="name" type="text"/&gt;</code>
+      <code>  &lt;label for="password"&gt;Customer password:&lt;/label&gt;</code>
+      <code>  &lt;input type="password"/&gt;</code>
+      <code>  &lt;input type="hidden" name="id"/&gt;</code>
+      <code>  &lt;input type="submit" value="Submit" name="id"/&gt;</code>
+      <code>&lt;/form&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;label&gt;</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          &lt;label&gt; предназначен для создания подписей в пользовательском интерфейсе. Эта подпись может быть ассоциирована с конкретным элементом форм посредством добавления атрибута <mark>for</mark> или оборачивания элементов форм в &lt;label&gt;
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/html51/sec-forms.html#the-label-element" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/YQxmxx?editors=1000" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;input&gt;</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          &lt;input&gt; является одним из разносторонних элементов формы и позволяет создавать разные части интерфейса и обеспечивать взаимодействие с пользователем. Главным образом &lt;input&gt; предназначен для создания текстовых полей, различных кнопок, переключателей и флажков.
+        </p>
+        <p>
+          Основной атрибут &lt;input&gt;, определяющий вид элемента — <mark>type</mark>.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/html51/sec-forms.html#the-input-element" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;input&gt;. Атрибут type</h2>
+
+    <div class="slide__list">
+      <ul>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#hidden-state-typehidden" target="_blank">hidden <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#text-typetext-state-and-search-state-typesearch" target="_blank">text <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#text-typetext-state-and-search-state-typesearch" target="_blank"><mark>search</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#telephone-state-typetel" target="_blank"><mark>tel</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#url-state-typeurl" target="_blank"><mark>url</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#email-state-typeemail" target="_blank"><mark>email</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#password-state-typepassword" target="_blank">password <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#date-state-typedateord" target="_blank"><mark>date</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#month-state-typemonth" target="_blank"><mark>month</mark> <span class="text-uc">w3c (en)</span></a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#week-state-typeweek" target="_blank"><mark>week</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#local-date-and-time-state-typedatetimelocal" target="_blank"><mark>datetime-local</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#number-state-typenumber" target="_blank"><mark>number</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#range-state-typerange" target="_blank"><mark>range</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#color-state-typecolor" target="_blank"><mark>color</mark> <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#checkbox-state-typecheckbox" target="_blank">checkbox <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#radio-button-state-typeradio" target="_blank">radio <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#file-upload-state-typefile" target="_blank">file <span class="text-uc">w3c (en)</span></a></li>
+      </ul>
+      <ul>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#submit-button-state-typesubmit" target="_blank">submit <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#image-button-state-typeimage" target="_blank">image <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#reset-button-state-typereset" target="_blank">reset <span class="text-uc">w3c (en)</span></a></li>
+        <li><a href="https://www.w3.org/TR/html51/sec-forms.html#button-state-typebutton" target="_blank">button <span class="text-uc">w3c (en)</span></a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;input&gt;. Атрибут type</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          &lt;input&gt; если не указан атрибут <mark>type</mark>, то значением по-умолчанию будет <mark>"text"</mark>
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/html51/sec-forms.html#text-typetext-state-and-search-state-typesearch" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/gRGYWy?editors=1000" target="_blank">Пример</a>
+    <div>
+      <a href="https://webref.ru/html/input/type" target="_blank">Прочитать</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Использование &lt;button&gt;</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Неудобство использования <code>&lt;input type="submit|reset|button"&gt;</code> заключаетсчя в том, что их практически невозможно стилизировать. Речь идет о более сложном дизайне, чем просто картинка на фон.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://www.w3.org/TR/html51/sec-forms.html#the-button-element" target="_blank" class="text-uc">w3c</a></figcaption>
+    </figure>
+
+    <code>&lt;button type="submit|reset|button|menu"&gt;</code>
+
+    <div>
+      <a href="https://codepen.io/var-bin/pen/dRVbEr?editors=1000" target="_blank">Пример</a>
+    </div>
+    <div>
+      <a href="https://webref.ru/html/button" target="_blank">Прочитать</a>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Примеры из занятия</h2>
+
+    <ul>
+      <li><a href="../examples/index.html" target="_blank">index.html</a></li>
+      <li><a href="../examples/form.html" target="_blank">form.html</a></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это не последний слайд</h2>
+
+    <ol>
+      <li>Создайте HTML5 структуру для <a href="../examples/minimo1.jpg" target="_blank">данного примера</a>
+        <div>
+          <strong>
+            Не нужно стилизировать ничего!!! Нужна только структура по типу той, что мы делали в <a href="../examples/index.html" target="_blank">этом примере</a>
+          </strong>
+        </div>
+        <p>
+          Если не знаете с чего начать, начните с <a href="../examples/1498497862842-first-step.jpg" target="_blank">этого блока</a>. Он должен содержать теги <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;a&gt;</code>
+        </p>
+        <mark>
+          Будем с этим примером и дальше работать. Очень важно, чтобы вы попробовали сделать
+        </mark>
+      </li>
+      <li>Сделать форму как на <a href="http://take.ms/hgGfs" target="_blank">видео</a></li>
+      <li>Сделать таблицу как на <a href="../examples/1498498544314-table.jpg" target="_blank">скрине</a></li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul>
+      <li>Домашнее задание
+        <div class="slide__list">
+          <ul>
+            <li><a href="http://css-live.ru/articles/legkaya-organizaciya-kontenta-s-html5.html" target="_blank">Легкая организация контента с HTML5</a></li>
+            <li><a href="http://css-live.ru/articles/blok-sxema-sekcionirovaniya-elementov-html5.html" target="_blank">Блок-схема алгоритма выбора структурных (секционных) элементов HTML5</a></li>
+            <li><a href="http://css-live.ru/articles/blok-sxema-sekcionirovaniya-elementov-html5.html" target="_blank">Элемент &lt;header&gt;</a></li>
+            <li><a href="https://web-standards.ru/articles/figure-figcaption/" target="_blank">Элементы figure и figcaption</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://web-standards.ru/articles/i-b-em-strong-elements/" target="_blank">Элементы i, b, em и strong</a></li>
+            <li><a href="https://webref.ru/layout/html5-css3/form" target="_blank">Формы</a></li>
+            <li><a href="https://webref.ru/html/table" target="_blank">Таблицы</a> <a href="https://www.w3.org/TR/html51/tabular-data.html#tabular-data" target="_blank" class="text-uc">w3c</a></li>
+            <li><a href="https://codepen.io/collection/AzoZGO/" target="_blank">Все примеры к lection2</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

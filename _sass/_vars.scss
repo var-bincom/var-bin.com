@@ -1,0 +1,26 @@
+/* variables */
+
+// fonts
+$font-default: Arial, Helvetica, sans-serif;
+$font-regular: "notosansui-regular-webfont";
+/* $font-bold: "source_sans_probold", "Arial Black", Gadget, sans-serif;
+$font-italic: "source_sans_proitalic"; */
+
+$font-size-base: 12px;
+$font-path: "../fonts";
+
+// colors
+$black: #000;
+$white: #fff;
+$link-color: #0c81f6;
+$h1-h6-color: #015668;
+$body-color: #2e383f;
+$header-primary-bg: rgba(158, 158, 158, 0.2);
+$header-primary_link-color: $black;
+$header-primary_link_hover-color: #283739;
+$header-primary_link_active-color: $black;
+$header-primary_link_active-bg: #ffd900;
+
+// dimensions
+$main-max_width: 68.75rem; // 1100px / 16px
+$main-min_width: 60rem; // 960px / 16px
