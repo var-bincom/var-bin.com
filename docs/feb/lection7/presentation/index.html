@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">Position</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/7G8K8Z" target="_blank">goo.gl/7G8K8Z</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next"><code>display: inline;</code> vs. <code>display: inline-block;</code></li>
+      <li class="next">Что происходит с элементом, который изначально <code>display: inline;</code> или <code>display: inline-block;</code> после того, как ему присваивают значение <code>float</code> отличное от <code>none</code>?</li>
+      <li class="next">Что такое <mark>Clearfix</mark>?</li>
+      <li class="next">Как сделать так, чтобы элемент, который идет после элемента с <code>float: left;</code> перестал реагировать на это свойство?</li>
+      <li class="next">На какой селектор можно заменить данный <code>ul li:nth-child(1)</code>?</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next"><code>position</code></li>
+      <li class="next"><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code></li>
+      <li class="next"><code>z-index</code></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: static</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          По умолчанию <code>position</code> у всех элементов равен <code>static</code>. Это означает, что элемент находится в общем потоке. Также элемент не может принимать (игнорирует) такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/BZvwdq?editors=1100" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: relative</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элементы у которых свойство <code>position</code> установлено в значение <code>relative</code> ведут себя точно также как и элементы с <code>position: static</code>. Главное отличие, эти элементы могут принимать такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/vZveep?editors=1100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: absolute</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элементы у которых свойство <code>position</code> установлено в значение <code>absolute</code> ведут себя совершенно иначе. Главное отличие, эти элементы не находятся в <a href="https://www.w3.org/TR/CSS22/visuren.html#normal-flow" target="_blank">нормальном потоке</a>. Такие элементы также могут такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/qjLPJX?editors=1100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: fixed</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элементы у которых свойство <code>position</code> установлено в значение <code>fixed</code> подчиняются тем же правилам, что и элементы у которых свойство <code>position</code> установлено в значение <code>absolute</code>. Исключения:
+          <ul>
+            <li>
+              Элементы позиционируются относительно окна браузера/устройства
+            </li>
+            <li>
+              Элементы не прокручиваются вмете со всем документом
+            </li>
+          </ul>
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/ZyVaBe?editors=1100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как элементы позиционируются относительно друг друга</h2>
+
+    <ul>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/EXGbrp?editors=1100" target="_blank">relative + relative</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/NgeXpa?editors=1100" target="_blank">relative + absolute</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/rwopzo?editors=1100" target="_blank">absolute + relative</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/xrmppv?editors=1100" target="_blank">absolute + absolute</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/EXGbrp?editors=1100" target="_blank">relative + fixed</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/gRZvao?editors=1100" target="_blank">fixed + relative</a></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как элементы позиционируются относительно друг друга</h2>
+
+    <ul>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/xrmYEO?editors=1100" target="_blank">absolute + fixed</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/pwqaNm?editors=1100" target="_blank">fixed + absolute</a></li>
+      <li class="next">Не забывайте про порядок элементов и свойство <code>z-index</code></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        <ol>
+          <li></li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li><a href="https://www.quirksmode.org/css/clearing.html" target="_blank">Clearing floats</a></li>
+          <li>
+            Полезные сервисы по работе с <code>:nth-*</code>
+            <ul>
+              <li><a href="https://css-tricks.com/examples/nth-child-tester/" target="_blank">:nth Tester</a></li>
+              <li><a href="http://www.topdesignagencies.com/nth-test/" target="_blank">nth-test</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
