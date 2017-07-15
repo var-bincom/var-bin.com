@@ -103,89 +103,253 @@
     <h2>План</h2>
 
     <ul>
-      <li class="next"></li>
+      <li class="next">Для чего был придуман еще один режим разметки?</li>
+      <li class="next">Терминология</li>
+      <li class="next">Как определить flex-контейнер</li>
+      <li class="next">Управляем поведением flex-контейнера</li>
+      <li class="next">Управляем распределением пространства относительно главной оси</li>
+      <li class="next">Управляем распределением пространства относительно поперечной оси</li>
+      <li class="next">Дополнительные свойства для выравнивания контента</li>
+      <li class="next">Управление размером flex-элементов</li>
+      <li class="next">Определяем порядок следования flex элементов</li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>position: static</h2>
+    <h2>Для чего был придуман еще один режим разметки?</h2>
 
     <figure class="next">
       <blockquote>
         <p>
-          По умолчанию <code>position</code> у всех элементов равен <code>static</code>. Это означает, что элемент находится в общем потоке. Также элемент не может принимать (игнорирует) такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
+          Модуль <a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank">CSS Flexible Box Layout</a> был разработан с целью предоставить более удобный способ создания разметки, которая не зависит от порядка следования элементов в DOM дереве. Также как более простой способ разработки интерфейсов для сложных приложений и веб страниц.
         </p>
       </blockquote>
     </figure>
-
-    <a href="https://codepen.io/var-bin/pen/BZvwdq?editors=1100" target="_blank">Пример</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>position: relative</h2>
+    <h2>Терминология</h2>
 
-    <figure class="next">
-      <blockquote>
-        <p>
-          Элементы у которых свойство <code>position</code> установлено в значение <code>relative</code> ведут себя точно также как и элементы с <code>position: static</code>. Главное отличие, эти элементы могут принимать такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
-        </p>
-      </blockquote>
+    <figure>
+      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
     </figure>
-
-    <a href="https://codepen.io/var-bin/pen/vZveep?editors=1100" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>position: absolute</h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          Элементы у которых свойство <code>position</code> установлено в значение <code>absolute</code> ведут себя совершенно иначе. Главное отличие, эти элементы не находятся в <a href="https://www.w3.org/TR/CSS22/visuren.html#normal-flow" target="_blank">нормальном потоке</a>. Такие элементы также могут такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <a href="https://codepen.io/var-bin/pen/qjLPJX?editors=1100" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>position: fixed</h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          Элементы у которых свойство <code>position</code> установлено в значение <code>fixed</code> подчиняются тем же правилам, что и элементы у которых свойство <code>position</code> установлено в значение <code>absolute</code>. Исключения:
-          <ul>
-            <li>
-              Элементы позиционируются относительно окна браузера/устройства
-            </li>
-            <li>
-              Элементы не прокручиваются вмете со всем документом
-            </li>
-          </ul>
-        </p>
-      </blockquote>
-    </figure>
-
-    <a href="https://codepen.io/var-bin/pen/ZyVaBe?editors=1100" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как элементы позиционируются относительно друг друга</h2>
 
     <ul>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/RgEEmp" target="_blank">relative + relative</a></li>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/NgeXpa?editors=1100" target="_blank">relative + absolute</a></li>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/rwopzo?editors=1100" target="_blank">absolute + relative</a></li>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/xrmppv?editors=1100" target="_blank">absolute + absolute</a></li>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/EXGbrp?editors=1100" target="_blank">relative + fixed</a></li>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/gRZvao?editors=1100" target="_blank">fixed + relative</a></li>
+      <li class="next">
+        <mark>main-axis</mark> - главная ось, вдоль которой располагаются flex-элементы.
+      </li>
+      <li class="next">
+        <mark>main-start | main-end</mark> - flex-элементы размещаются в контейнере от позиции <strong>main-start</strong> до позиции <strong>main-end</strong>.
+      </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как элементы позиционируются относительно друг друга</h2>
+    <h2>Терминология</h2>
+
+    <figure>
+      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
+    </figure>
 
     <ul>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/xrmYEO?editors=1100" target="_blank">absolute + fixed</a></li>
-      <li class="next"><a href="https://codepen.io/var-bin/pen/pwqaNm?editors=1100" target="_blank">fixed + absolute</a></li>
-      <li class="next">Не забывайте про порядок элементов и свойство <code>z-index</code></li>
+      <li class="next">
+        <mark>main size</mark> - ширина или высота flex-элемента в зависимости от выбранной основной величины. Основная величина может быть либо шириной, либо высотой элемента.
+      </li>
     </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Терминология</h2>
+
+    <figure>
+      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
+    </figure>
+
+    <ul>
+      <li class="next">
+        <mark>cross axis</mark> - поперечная ось, перпендикулярная к главной. Её направление зависит от направления главной оси.
+      </li>
+      <li class="next">
+        <mark>cross-start | cross-end</mark> - flex-строки заполняются элементами и размещаются в контейнере от позиции <strong>cross-start</strong> и до позиции <strong>cross-end</strong>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Терминология</h2>
+
+    <figure>
+      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
+    </figure>
+
+    <ul>
+      <li class="next">
+        <mark>cross size</mark> - ширина или высота flex-элемента в зависимости от выбранной размерности равняется этой величине. Это свойство совпадает с <mark>width</mark> или <mark>height</mark> элемента в зависимости от выбранной размерности.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как определить flex контейнер</h2>
+
+    <pre>
+      <code>display: flex | inline-flex;</code>
+    </pre>
+
+    <ul>
+      <li class="next">
+        <mark>display: flex;</mark> - создает flex-контейнер <strong>блочного</strong> типа.
+      </li>
+      <li class="next">
+        <mark>display: inline-flex;</mark> - создает flex-контейнер <strong>inline</strong> типа.
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/pen/gREJQX?editors=1100#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как определить flex контейнер. Важно знать</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          flex-контейнер - это не <strong>блочный</strong> контейнер. Некоторые свойства CSS к нему, а также к flex-элементам применяться не могут:
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers" target="_blank" class="text-uc">w3c</a>
+      </figcaption>
+    </figure>
+
+    <ul>
+      <li class="next">
+        <code>column-*</code> CSS-столбцы
+      </li>
+      <li class="next">
+        <code>float</code>, <code>clear</code> не создают плавающих flex-элементов и не "очищают" <mark>float</mark>
+      </li>
+      <li class="next">
+        Псевдоэлементы<code>::first-line</code> и <code>::first-letter</code>не применяются к flex-контейнеру
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Определяем поведение flex контейнера</h2>
+
+    <ul>
+      <li class="next">
+        <code>flex-wrap: <mark>nowrap<sup>*</sup></mark> | wrap | wrap-reverse;</code> - определяет, будет ли flex-контейнер однострочный или многострочный, а также направление по поперечнай оси.
+      </li>
+      <li class="next">
+        <code>flex-direction: <mark>row<sup>*</sup></mark> | row-reverse | column | column-reverse;</code> - определяет, каким образом будут расположены flex-элементы внутри flex-контейнера относительно главной оси.
+      </li>
+      <li class="next">
+        <code>flex-flow: &lt;'flex-direction'&gt; || &lt;'flex-wrap'&gt;</code>
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+    <a href="https://codepen.io/var-bin/pen/xrBvgz" target="_blank" class="next">Пример flex-wrap</a>
+    <a href="https://codepen.io/var-bin/full/PjLMKw/" target="_blank" class="next">Пример flex-direction</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Определяем как будет распределятся пространство относительно главной оси</h2>
+
+    <ul>
+      <li class="next">
+        <code>justify-content: <mark>flex-start<sup>*</sup></mark> | flex-end | center | space-between | space-around;</code> - распределяет flex-элементы вдоль главной оси на текущей линии flex-контейнера.
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+    <a href="https://codepen.io/var-bin/pen/jwJgYB?editors=1100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Определяем как будет распределятся пространство относительно поперечной оси</h2>
+
+    <ul>
+      <li class="next">
+        <code>align-items: flex-start | flex-end | center | baseline | <mark>stretch<sup>*</sup></mark>;</code> - выравнивает все flex-элементы внутри flex-контейнера, включая <strong>анонимные</strong> flex-элементы.
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+    <a href="https://codepen.io/var-bin/full/weOVmG/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Дополнительные свойства для выравнивания контента</h2>
+
+    <ul>
+      <li class="next">
+        <code>align-self: <mark>auto<sup>*</sup></mark> | flex-start | flex-end | center | baseline | stretch;</code> - позволяет переопределить поведение <mark>align-items</mark> для конкретного flex-элемента.
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+    <a href="https://codepen.io/var-bin/full/BZEBLZ/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Дополнительные свойства для выравнивания контента</h2>
+
+    <ul>
+      <li class="next">
+        <code>align-content: flex-start | flex-end | center | space-between | space-around | <mark>stretch<sup>*</sup></mark>;</code> - позволяет задавать выравнивание для flex-линий внутри flex-контейнера, если есть свободное пространство. Выравнивание происходит относительно поперечной оси.
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/full/XgQrZw/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Управление размером flex элементов</h2>
+
+    <ul>
+      <li class="next">
+        <code>flex-grow: <mark>0<sup>*</sup></mark> | number;</code> - определяет <strong>flex-grow фактор</strong>, который в свою очередь определяет как flex-элемент(ы) будет увеличиваться относительно других flex-элементов. <strong>Не принимает отрицательные значения</strong>.
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/full/XgQrZw/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Управление размером flex элементов</h2>
+
+    <ul>
+      <li class="next">
+        <code>flex-shrink: <mark>1<sup>*</sup></mark> | number;</code> - определяет <strong>flex-shrink фактор</strong>, который в свою очередь определяет как flex-элемент(ы) будет уменьшаться относительно других flex-элементов. <strong>Не принимает отрицательные значения</strong>.
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/full/EXJxvN/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Управление размером flex элементов</h2>
+
+    <ul>
+      <li class="next">
+        <code>flex-basis: <mark>auto<sup>*</sup></mark> | content | width;</code> - определяет начальный размер flex-элемента перед тем, как свободное пространство будет распределено с учетом flex-фактора.
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/full/bRJGjy/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Определяем порядок следования flex элементов</h2>
+
+    <ul>
+      <li class="next">
+        <code>order: <mark>0<sup>*</sup></mark> | integer;</code> - определяет в каком порядке будут появляться flex-элементы внутри flex-контейнера. <strong>Может принимать отрицательные значения</strong>
+        <hr/>
+        <mark><sup>*</sup></mark> - значение по умолчанию
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/full/jwROQE/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>UI шаблоны (patterns)</h2>
+
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Домашнее задание</h2>
