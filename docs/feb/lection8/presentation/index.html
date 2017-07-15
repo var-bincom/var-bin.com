@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">Flexbox</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/gsHKMP" target="_blank">goo.gl/gsHKMP</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы по ДЗ</h2>
+
+    <ul>
+      <li class="next">Лекция 5. <a href="https://codepen.io/var-bin/full/owyPbo/" target="_blank">Таблица</a>. Одно из заданий:
+        <ul>
+          <li>
+            Для каждой первой <code>&lt;td&gt;</code>, которые находятся в любой <code>&lt;tr&gt;</code> сделать шрифт жирный и добавить вот <a href="https://icon.now.sh/square" target="_blank">эту иконку</a> справа от текста. <a href="https://icon.now.sh/" target="_blank">Пример</a>, как использовать иконку. Иконка должна быть размером <code>20px х 20px</code>, цвет на ваше усмотрение.
+          </li>
+          <li class="next">
+            <code>content: url();</code>&nbsp;<a href="https://codepen.io/var-bin/full/zzbeoX/" target="_blank">Пример</a>
+          </li>
+          <li class="next">
+            <code>background: url();</code>&nbsp;<a href="https://codepen.io/var-bin/full/GEezrr/" target="_blank">Пример</a>
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        Какой из этих вариантов лучше?
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы по ДЗ</h2>
+
+    <ul>
+      <li class="next">Лекция 4. <a href="http://var-bin.com/feb/lection4/examples/CSSSelectors.Practice.html" target="_blank">Пример</a>. Одно из заданий:
+        <ul>
+          <li>
+            Для всех заголовков (<code>&lt;h1&gt;-&lt;h6&gt;</code>), сделайте первую букву размером <code>20px</code>, шрифт <code>Impact, Charcoal, sans-serif</code>. Также добавьте двойную рамку вокруг этой буквы размером <code>3px</code>, цвет на ваш выбор.
+          </li>
+          <li class="next">
+            <a href="../examples/h1-h6-first_letter.css" target="_blank">Пример</a>
+          </li>
+          <li class="next">
+            <a href="../examples/h1-h6-first_letter-v2.css" target="_blank">Пример</a>
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        Какой из этих вариантов лучше?
+      </li>
+      <li class="next">
+        Как оптимизировать?
+      </li>
+      <li class="next">
+        <a href="../examples/h1-h6-first_letter-opt.css" target="_blank">Oптимизированный вариант</a>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">Чему равен <code>position</code> по умолчанию?</li>
+      <li class="next"><code>position: static;</code> vs. <code>display: relative;</code></li>
+      <li class="next">Что происходит с <code>inline</code> элементами и <code>inline-block</code> элементами когда им присваивается свойство <code>position</code> со значением отличным от значения по умолчанию?</li>
+      <li class="next">Как сбросить значение свойства <code>position</code> в значение по умолчанию?</li>
+      <li class="next">Какие особенности работы <code>position: fixed;</code>?</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next"></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: static</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          По умолчанию <code>position</code> у всех элементов равен <code>static</code>. Это означает, что элемент находится в общем потоке. Также элемент не может принимать (игнорирует) такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/BZvwdq?editors=1100" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: relative</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элементы у которых свойство <code>position</code> установлено в значение <code>relative</code> ведут себя точно также как и элементы с <code>position: static</code>. Главное отличие, эти элементы могут принимать такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/vZveep?editors=1100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: absolute</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элементы у которых свойство <code>position</code> установлено в значение <code>absolute</code> ведут себя совершенно иначе. Главное отличие, эти элементы не находятся в <a href="https://www.w3.org/TR/CSS22/visuren.html#normal-flow" target="_blank">нормальном потоке</a>. Такие элементы также могут такие значения как: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> и <code>z-index</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/qjLPJX?editors=1100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>position: fixed</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Элементы у которых свойство <code>position</code> установлено в значение <code>fixed</code> подчиняются тем же правилам, что и элементы у которых свойство <code>position</code> установлено в значение <code>absolute</code>. Исключения:
+          <ul>
+            <li>
+              Элементы позиционируются относительно окна браузера/устройства
+            </li>
+            <li>
+              Элементы не прокручиваются вмете со всем документом
+            </li>
+          </ul>
+        </p>
+      </blockquote>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/ZyVaBe?editors=1100" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как элементы позиционируются относительно друг друга</h2>
+
+    <ul>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/RgEEmp" target="_blank">relative + relative</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/NgeXpa?editors=1100" target="_blank">relative + absolute</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/rwopzo?editors=1100" target="_blank">absolute + relative</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/xrmppv?editors=1100" target="_blank">absolute + absolute</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/EXGbrp?editors=1100" target="_blank">relative + fixed</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/gRZvao?editors=1100" target="_blank">fixed + relative</a></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как элементы позиционируются относительно друг друга</h2>
+
+    <ul>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/xrmYEO?editors=1100" target="_blank">absolute + fixed</a></li>
+      <li class="next"><a href="https://codepen.io/var-bin/pen/pwqaNm?editors=1100" target="_blank">fixed + absolute</a></li>
+      <li class="next">Не забывайте про порядок элементов и свойство <code>z-index</code></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul class="info-list">
+      <li>
+        За основу взять <a href="../examples/users.html" target="_blank">этот файл</a> и <a href="../examples/users-styles.css" target="_blank">стили</a> для него. Нужно сделать следующее:
+        <ol>
+          <li>
+            Элементы с классом <code>.user-info__header</code> и <code>.user-info__description</code> должны находится справа от фото. Отступ от фото <code>20px</code>.
+          </li>
+          <li>
+            Элемент с классом <code>.user-info__status</code> должен быть поверх фото. Он должен позиционироваться относительно фото. Равняться по правому краю. Отступы: сверху <code>10px</code>, справа <code>10px</code>.
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <div class="att">
+      Обратите внимание на разметку. Попробуйте разобраться, почему элементы с классом <code>.user-info__header</code> и <code>.user-info__description</code> идут после элемента с классом <code>.user-info__photo</code>.
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        За основу взять <a href="../examples/users.html" target="_blank">этот файл</a> и <a href="../examples/users-styles.css" target="_blank">стили</a> для него. Нужно сделать следующее:
+        <ol>
+          <li>
+            Элемент с классом <code>.user-info__icons</code> должен быть поверх фото. Он должен позиционироваться относительно фото. Равняться по левому краю. Отступы: снизу <code>10px</code>, слева <code>10px</code>. Фоновый цвет <code>222</code>. Отступы внутри элемента по <code>3px</code>. Скругленные углы по <code>3px</code>. Учитывая предыдущие пункты, должно получиться так: [&nbsp;<a href="../examples/1499888065364-super-user.jpg" target="_blank">1</a>&nbsp;], [&nbsp;<a href="../examples/1499888081516-default-user.jpg" target="_blank">2</a>&nbsp;]. Не забываем про <a href="../examples/1499887440475-overhead.jpg" target="_blank">переполнение</a>.
+          </li>
+          <li>
+            Элементы с классом <code>.user-info</code> должны выстраиваться друг за другом. Отступы справа и слева по <code>20px</code> соответственно.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Домашнее задание</h2>
+
+    <ul>
+      <li>
+        За основу взять <a href="../examples/users.html" target="_blank">этот файл</a> и <a href="../examples/users-styles.css" target="_blank">стили</a> для него. Нужно сделать следующее:
+        <ol>
+          <li>
+            Контент внутри элемента с классом <code>.user</code> должен выравниваться по центру. Учитывая предыдущие пункты, должно получиться так: [&nbsp;<a href="../examples/1499888204129-result.jpg" target="_blank">1</a>&nbsp;]
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li>
+            <a href="https://web-standards.ru/articles/css-techniques-p2-alternate/" target="_blank">Основные способы вёрстки. Часть вторая: бестабличная верстка (раздел “Контекст размещения”)</a>
+          </li>
+          <li>
+            <a href="https://alistapart.com/article/css-positioning-101" target="_blank">CSS Positioning 101</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position?v=control" target="_blank">position MDN</a>
+          </li>
+          <li>
+            <a href="https://web-standards.ru/articles/css-architecture/" target="_blank">Архитектура CSS</a>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/position" target="_blank">position [ RU ]</a>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/z-index" target="_blank">z-index [ RU ]</a>
+          </li>
+          <li>
+            Все примеры к <a href="https://codepen.io/collection/XWokjW/" target="_blank">lection7</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
