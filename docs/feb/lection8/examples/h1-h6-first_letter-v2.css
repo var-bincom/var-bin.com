@@ -1,0 +1,5 @@
+h1::first-letter, h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 20px;
+    border: 3px double #c71585;
+}

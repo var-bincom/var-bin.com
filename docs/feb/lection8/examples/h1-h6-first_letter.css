@@ -1,0 +1,35 @@
+h1::first-letter {
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	border: 3px dashed green;
+}
+
+h2::first-letter {
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	border: 3px dashed green;
+}
+
+h3::first-letter {
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	border: 3px dashed green;
+}
+
+h4::first-letter {
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	border: 3px dashed green;
+}
+
+h5::first-letter {
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	border: 3px dashed green;
+}
+
+h6::first-letter {
+	font-size: 20px;
+	font-family: Impact, Charcoal, sans-serif;
+	border: 3px dashed green;
+}
