@@ -16,7 +16,7 @@
   </header>
   <section class="slide slide_pt" id="cover">
     <h2>Front-End Basic</h2>
-    <h2 class="slide_lection-title">Flexbox</h2>
+    <h2 class="slide_lection-title">Адаптивность. Responsive. Media queries</h2>
     <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
     <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
     <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
@@ -39,52 +39,34 @@
     </div>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Вопросы по ДЗ</h2>
+    <h2>Вопросы</h2>
 
     <ul>
-      <li class="next">Лекция 5. <a href="https://codepen.io/var-bin/full/owyPbo/" target="_blank">Таблица</a>. Одно из заданий:
-        <ul>
+      <li class="next">Какое из этих правил не работает с flex-элементами:
+        <ol class="next">
           <li>
-            Для каждой первой <code>&lt;td&gt;</code>, которые находятся в любой <code>&lt;tr&gt;</code> сделать шрифт жирный и добавить вот <a href="https://icon.now.sh/square" target="_blank">эту иконку</a> справа от текста. <a href="https://icon.now.sh/" target="_blank">Пример</a>, как использовать иконку. Иконка должна быть размером <code>20px х 20px</code>, цвет на ваше усмотрение.
+            <code>float</code>&nbsp;<mark class="next">+</mark>
           </li>
-          <li class="next">
-            <code>content: url();</code>&nbsp;<a href="https://codepen.io/var-bin/full/zzbeoX/" target="_blank">Пример</a>
-          </li>
-          <li class="next">
-            <code>background: url();</code>&nbsp;<a href="https://codepen.io/var-bin/full/GEezrr/" target="_blank">Пример</a>
-          </li>
-        </ul>
-      </li>
-      <li class="next">
-        Какой из этих вариантов лучше?
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Вопросы по ДЗ</h2>
-
-    <ul>
-      <li class="next">Лекция 4. <a href="http://var-bin.com/feb/lection4/examples/CSSSelectors.Practice.html" target="_blank">Пример</a>. Одно из заданий:
-        <ul>
           <li>
-            Для всех заголовков (<code>&lt;h1&gt;-&lt;h6&gt;</code>), сделайте первую букву размером <code>20px</code>, шрифт <code>Impact, Charcoal, sans-serif</code>. Также добавьте двойную рамку вокруг этой буквы размером <code>3px</code>, цвет на ваш выбор.
+            <code>::first-line</code>
           </li>
-          <li class="next">
-            <a href="../examples/h1-h6-first_letter.css" target="_blank">Пример</a>
+          <li>
+            <code>clear</code>&nbsp;<mark class="next">+</mark>
           </li>
-          <li class="next">
-            <a href="../examples/h1-h6-first_letter-v2.css" target="_blank">Пример</a>
+        </ol>
+      </li>
+      <li class="next">Какое из этих правил определяет, будет ли flex-контейнер однострочный или многострочный, а также направление по поперечнай оси:
+        <ol class="next">
+          <li>
+            <code>flex-wrap</code>&nbsp;<mark class="next">+</mark>
           </li>
-        </ul>
-      </li>
-      <li class="next">
-        Какой из этих вариантов лучше?
-      </li>
-      <li class="next">
-        Как оптимизировать?
-      </li>
-      <li class="next">
-        <a href="../examples/h1-h6-first_letter-opt.css" target="_blank">Oптимизированный вариант</a>
+          <li>
+            <code>flex-direction</code>
+          </li>
+          <li>
+            <code>flex-flow</code>&nbsp;<mark class="next">+</mark>
+          </li>
+        </ol>
       </li>
     </ul>
   </section>
@@ -92,38 +74,116 @@
     <h2>Вопросы</h2>
 
     <ul>
-      <li class="next">Чему равен <code>position</code> по умолчанию?</li>
-      <li class="next"><code>position: static;</code> vs. <code>display: relative;</code></li>
-      <li class="next">Что происходит с <code>inline</code> элементами и <code>inline-block</code> элементами когда им присваивается свойство <code>position</code> со значением отличным от значения по умолчанию?</li>
-      <li class="next">Как сбросить значение свойства <code>position</code> в значение по умолчанию?</li>
-      <li class="next">Какие особенности работы <code>position: fixed;</code>?</li>
+      <li class="next">Какое из этих правил выравнивает все flex-элементы внутри flex-контейнера, включая анонимные flex-элементы:
+        <ol class="next">
+          <li>
+            <code>align-items</code>&nbsp;<mark class="next">+</mark>
+          </li>
+          <li>
+            <code>align-self</code>
+          </li>
+          <li>
+            <code>align-content</code>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">Какое из этих правил позволяет задавать выравнивание для flex-линий внутри flex-контейнера относительно поперечной оси, если есть свободное пространство:
+        <ol class="next">
+          <li>
+            <code>align-content</code>&nbsp;<mark class="next">+</mark>
+          </li>
+          <li>
+            <code>justify-content</code>
+          </li>
+          <li>
+            <code>align-items</code>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">Какое из этих правил определяет как flex-элемент(ы) будет увеличиваться относительно других flex-элементов:
+        <ol class="next">
+          <li>
+            <code>flex-grow</code>&nbsp;<mark class="next">+</mark>
+          </li>
+          <li>
+            <code>flex-shrink</code>
+          </li>
+          <li>
+            <code>flex-basis</code>
+          </li>
+        </ol>
+      </li>
+      <li class="next">Какое из этих правил определяет начальный размер flex-элемента:
+        <ol class="next">
+          <li>
+            <code>flex-grow</code>
+          </li>
+          <li>
+            <code>flex-shrink</code>
+          </li>
+          <li>
+            <code>flex-basis</code>&nbsp;<mark class="next">+</mark>
+          </li>
+        </ol>
+      </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
 
     <ul>
-      <li class="next">Для чего был придуман еще один режим разметки?</li>
-      <li class="next">Терминология</li>
-      <li class="next">Как определить flex-контейнер</li>
-      <li class="next">Управляем поведением flex-контейнера</li>
-      <li class="next">Управляем распределением пространства относительно главной оси</li>
-      <li class="next">Управляем распределением пространства относительно поперечной оси</li>
-      <li class="next">Дополнительные свойства для выравнивания контента</li>
-      <li class="next">Управление размером flex-элементов</li>
-      <li class="next">Определяем порядок следования flex элементов</li>
+      <li class="next">Как появился термин <mark>Responsive</mark></li>
+      <li class="next"><em>Адаптивность</em> vs. <em>Responsive</em>. В чем разница</li>
+      <li class="next">Медиазапросы <code>@media</code> и <strong>viewport</strong> браузера</li>
+      <li class="next">Преобразование железобетонных пикселей в пропорциональные значения</li>
+      <li class="next"><code>px</code> vs. <code>em</code> vs. <code>rem</code></li>
+      <li class="next">Конвертируем <code>px</code> в <code>em</code></li>
+      <li class="next"><code>max-width</code>, <code>min-width</code>, <code>width</code></li>
+      <li class="next"><em>Резиновые</em> изображения</li>
+      <li class="next">Инструменты браузера для проверки работы медиазапросов и не только</li>
+      <li class="next">Онлайн инструменты для проверки работы медиазапросов и не только</li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Для чего был придуман еще один режим разметки?</h2>
+    <h2>Как появился термин <mark>Responsive</mark></h2>
 
-    <figure class="next">
+    <figure>
       <blockquote>
         <p>
-          Модуль <a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank">CSS Flexible Box Layout</a> был разработан с целью предоставить более удобный способ создания разметки, которая не зависит от порядка следования элементов в DOM дереве. Также как более простой способ разработки интерфейсов для сложных приложений и веб страниц.
+          Fluid grids, flexible images, and media queries are the three technical ingredients for responsive web design, but it also requires a different way of thinking.
         </p>
       </blockquote>
+      <figcaption>
+        <a href="https://alistapart.com/article/responsive-web-design" target="_blank">Responsive Web Design</a> by <a href="https://alistapart.com/author/emarcotte">Ethan Marcotte</a>&nbsp;<time>May 25, 2010</time>
+      </figcaption>
     </figure>
+
+    <ul>
+      <li class="next">
+        Макет гибкой сетки
+      </li>
+      <li class="next">
+        Медиазапросы
+      </li>
+      <li class="next">
+        Гибкие изображения
+      </li>
+      <li class="next">
+        Flexbox
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Терминология</h2>
