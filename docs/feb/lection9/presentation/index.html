@@ -147,9 +147,7 @@
       <li class="next">Как появился термин <mark>Responsive</mark></li>
       <li class="next"><em>Адаптивность</em> vs. <em>Responsive</em>. В чем разница</li>
       <li class="next">Медиазапросы <code>@media</code> и <strong>viewport</strong> браузера</li>
-      <li class="next">Преобразование железобетонных пикселей в пропорциональные значения</li>
-      <li class="next"><code>px</code> vs. <code>em</code> vs. <code>rem</code></li>
-      <li class="next">Конвертируем <code>px</code> в <code>em</code></li>
+      <li class="next">Преобразование железобетонных пикселей в пропорциональные значения: <code>px</code> vs. <code>em</code> vs. <code>rem</code></li>
       <li class="next"><code>max-width</code>, <code>min-width</code>, <code>width</code></li>
       <li class="next"><em>Резиновые</em> изображения</li>
       <li class="next">Инструменты браузера для проверки работы медиазапросов и не только</li>
@@ -186,247 +184,227 @@
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Терминология</h2>
+    <h2>Почему важно поддерживать мобильные устройства, а не устаревшие <del>IE</del> браузеры</h2>
 
-    <figure>
-      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
+    <figure class="slide__box-model">
+      <a href="http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank">
+        <img src="./pictures/StatCounter-comparison-ww-monthly-201606-201706.png" alt="StatCounter-comparison-ww-monthly"/>
+      </a>
+      <figcaption></figcaption>
     </figure>
-
-    <ul>
-      <li class="next">
-        <mark>main-axis</mark> - главная ось, вдоль которой располагаются flex-элементы.
-      </li>
-      <li class="next">
-        <mark>main-start | main-end</mark> - flex-элементы размещаются в контейнере от позиции <strong>main-start</strong> до позиции <strong>main-end</strong>.
-      </li>
-    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Терминология</h2>
+    <h2><em>Адаптивность</em> vs. <em>Responsive</em>. В чем разница</h2>
 
-    <figure>
-      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
+    <figure class="slide__box-model">
+      <img src="./pictures/01_Responsive-vs-Adaptive.gif" alt="Адаптивность vs. Responsive">
+      <figcaption><a href="http://blog.froont.com/9-basic-principles-of-responsive-web-design/">9 basic principles of responsive web design</a></figcaption>
     </figure>
-
-    <ul>
-      <li class="next">
-        <mark>main size</mark> - ширина или высота flex-элемента в зависимости от выбранной основной величины. Основная величина может быть либо шириной, либо высотой элемента.
-      </li>
-    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Терминология</h2>
-
-    <figure>
-      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
-    </figure>
-
-    <ul>
-      <li class="next">
-        <mark>cross axis</mark> - поперечная ось, перпендикулярная к главной. Её направление зависит от направления главной оси.
-      </li>
-      <li class="next">
-        <mark>cross-start | cross-end</mark> - flex-строки заполняются элементами и размещаются в контейнере от позиции <strong>cross-start</strong> и до позиции <strong>cross-end</strong>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Терминология</h2>
-
-    <figure>
-      <img src="pictures/flex-direction-terms.svg" alt="flex direction terms"/>
-    </figure>
-
-    <ul>
-      <li class="next">
-        <mark>cross size</mark> - ширина или высота flex-элемента в зависимости от выбранной размерности равняется этой величине. Это свойство совпадает с <mark>width</mark> или <mark>height</mark> элемента в зависимости от выбранной размерности.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как определить flex контейнер</h2>
+    <h2>Что такое <mark>viewport</mark></h2>
 
     <pre>
-      <code>display: flex | inline-flex;</code>
+      <code>&lt;meta <mark>name="viewport"</mark> <mark class="important">content="width=device-width,</mark></code>
+      <code><mark class="important"> initial-scale=1"</mark>&gt;</code>
     </pre>
-
-    <ul>
-      <li class="next">
-        <mark>display: flex;</mark> - создает flex-контейнер <strong>блочного</strong> типа.
-      </li>
-      <li class="next">
-        <mark>display: inline-flex;</mark> - создает flex-контейнер <strong>inline</strong> типа.
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/pen/gREJQX?editors=1100#0" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как определить flex контейнер. Важно знать</h2>
 
     <figure>
       <blockquote>
         <p>
-          flex-контейнер - это не <strong>блочный</strong> контейнер. Некоторые свойства CSS к нему, а также к flex-элементам применяться не могут:
+          <code>&lt;meta name="viewport"&gt;</code> тег позволяет задавать браузеру инструкции как контролировать размеры страницы и масштабирование.
         </p>
       </blockquote>
       <figcaption>
-        <a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers" target="_blank" class="text-uc">w3c</a>
+        <a href="https://www.quirksmode.org/mobile/metaviewport/" target="_blank">quirksmode.org</a>
       </figcaption>
     </figure>
-
-    <ul>
-      <li class="next">
-        <code>column-*</code> CSS-столбцы
-      </li>
-      <li class="next">
-        <code>float</code>, <code>clear</code> не создают плавающих flex-элементов и не "очищают" <mark>float</mark>
-      </li>
-      <li class="next">
-        Псевдоэлементы<code>::first-line</code> и <code>::first-letter</code>не применяются к flex-контейнеру
-      </li>
-    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Определяем поведение flex контейнера</h2>
+    <h2>Как начать использовать <mark>viewport</mark></h2>
 
-    <ul>
+    <pre>
+      <code>&lt;meta name="viewport"content="width=device-width,</code>
+      <code> initial-scale=1"&gt;</code>
+    </pre>
+    <ol>
       <li class="next">
-        <code>flex-wrap: <mark>nowrap<sup>*</sup></mark> | wrap | wrap-reverse;</code> - определяет, будет ли flex-контейнер однострочный или многострочный, а также направление по поперечнай оси.
+        Добавить <code>&lt;meta name="viewport"&gt;</code> тег в секцию <mark>&lt;head&gt;</mark>.
       </li>
       <li class="next">
-        <code>flex-direction: <mark>row<sup>*</sup></mark> | row-reverse | column | column-reverse;</code> - определяет, каким образом будут расположены flex-элементы внутри flex-контейнера относительно главной оси.
+        Добавить <code>width=device-width</code> тег в тег <mark>viewport</mark>, чтобы ширина экрана соответствовала ширине <strong>viewport'а</strong> устройства на котором открывается данная страница.
       </li>
       <li class="next">
-        <code>flex-flow: &lt;'flex-direction'&gt; || &lt;'flex-wrap'&gt;</code>
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
+        Добавить <code>initial-scale=1</code> тег в тег <mark>viewport</mark>, чтобы задать начальный zoom и ширину <strong>viewport'а</strong> устройства на котором открывается данная страница.
       </li>
-    </ul>
-    <a href="https://codepen.io/var-bin/pen/xrBvgz" target="_blank" class="next">Пример flex-wrap</a>
-    <a href="https://codepen.io/var-bin/full/PjLMKw/" target="_blank" class="next">Пример flex-direction</a>
+    </ol>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Определяем как будет распределятся пространство относительно главной оси</h2>
+    <h2>Как начать использовать <mark>viewport</mark></h2>
 
-    <ul>
-      <li class="next">
-        <code>justify-content: <mark>flex-start<sup>*</sup></mark> | flex-end | center | space-between | space-around;</code> - распределяет flex-элементы вдоль главной оси на текущей линии flex-контейнера.
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-    <a href="https://codepen.io/var-bin/pen/jwJgYB?editors=1100" target="_blank" class="next">Пример</a>
+    <div class="slide_repo-links">
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+        <figcaption>
+          Без <mark>viewport</mark>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+        <figcaption>
+          C <mark>viewport</mark>
+        </figcaption>
+      </figure>
+    </div>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Определяем как будет распределятся пространство относительно поперечной оси</h2>
-
-    <ul>
-      <li class="next">
-        <code>align-items: flex-start | flex-end | center | baseline | <mark>stretch<sup>*</sup></mark>;</code> - выравнивает все flex-элементы внутри flex-контейнера, включая <strong>анонимные</strong> flex-элементы.
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-    <a href="https://codepen.io/var-bin/full/weOVmG/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Дополнительные свойства для выравнивания контента</h2>
-
-    <ul>
-      <li class="next">
-        <code>align-self: <mark>auto<sup>*</sup></mark> | flex-start | flex-end | center | baseline | stretch;</code> - позволяет переопределить поведение <mark>align-items</mark> для конкретного flex-элемента.
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-    <a href="https://codepen.io/var-bin/full/BZEBLZ/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Дополнительные свойства для выравнивания контента</h2>
-
-    <ul>
-      <li class="next">
-        <code>align-content: flex-start | flex-end | center | space-between | space-around | <mark>stretch<sup>*</sup></mark>;</code> - позволяет задавать выравнивание для flex-линий внутри flex-контейнера, если есть свободное пространство. Выравнивание происходит относительно поперечной оси.
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/full/XgQrZw/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Управление размером flex элементов</h2>
-
-    <ul>
-      <li class="next">
-        <code>flex-grow: <mark>0<sup>*</sup></mark> | number;</code> - определяет <strong>flex-grow фактор</strong>, который в свою очередь определяет как flex-элемент(ы) будет увеличиваться относительно других flex-элементов. <strong>Не принимает отрицательные значения</strong>.
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/full/XgQrZw/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Управление размером flex элементов</h2>
-
-    <ul>
-      <li class="next">
-        <code>flex-shrink: <mark>1<sup>*</sup></mark> | number;</code> - определяет <strong>flex-shrink фактор</strong>, который в свою очередь определяет как flex-элемент(ы) будет уменьшаться относительно других flex-элементов. <strong>Не принимает отрицательные значения</strong>.
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/full/EXJxvN/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Управление размером flex элементов</h2>
-
-    <ul>
-      <li class="next">
-        <code>flex-basis: <mark>auto<sup>*</sup></mark> | content | width;</code> - определяет начальный размер flex-элемента перед тем, как свободное пространство будет распределено с учетом flex-фактора.
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/full/bRJGjy/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Определяем порядок следования flex элементов</h2>
-
-    <ul>
-      <li class="next">
-        <code>order: <mark>0<sup>*</sup></mark> | integer;</code> - определяет в каком порядке будут появляться flex-элементы внутри flex-контейнера. <strong>Может принимать отрицательные значения</strong>
-        <hr/>
-        <mark><sup>*</sup></mark> - значение по умолчанию
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/full/jwROQE/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>UI шаблоны (patterns)</h2>
+    <h2>Как начать использовать <mark>viewport</mark></h2>
 
     <ul>
       <li>
-        Блоки одинаковой высоты. [&nbsp;<a href="https://codepen.io/var-bin/full/gRyrxm/" target="_blank">Пример</a>&nbsp;].
-      </li>
-      <li>
-        Вертикальное центрирование контента. [&nbsp;<a href="https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/" target="_blank">Пример</a>&nbsp;].
-      </li>
-      <li>
-        Медиа контент (картинки, видео). [&nbsp;<a href="https://philipwalton.github.io/solved-by-flexbox/demos/media-object/" target="_blank">Пример</a>&nbsp;].
-      </li>
-      <li>
-        Sticky (прилипающий к контенту) футер. [&nbsp;<a href="https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/" target="_blank">Пример</a>&nbsp;]
-      </li>
-      <li>
-        Колоночный шаблон
+        Какие еще свойства можно задавать для <mark>viewport</mark>
+        <ol>
+          <li class="next">
+            <code>minimum-scale</code> - устанавливает минимальное значение <strong>zoom</strong>
+          </li>
+          <li class="next">
+            <code>maximum-scale</code> - устанавливает максимальное значение <strong>zoom</strong>
+          </li>
+          <li class="next">
+            <code>height</code> - можно привязываться к высоте, но смысла от этого немного больше, чем <code>0</code>
+          </li>
+          <li class="next">
+            <code>user-scalable</code> - определяет, доступна ли возможность <strong>zoom</strong>. Если равно <code>no</code>, то пользователь не сможет исрользовать возможность <strong>zoom</strong>. Используйте <mark class="text-uc"><b>только</b></mark> тогда, когда это реально нужно
+          </li>
+        </ol>
       </li>
     </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как начать использовать <mark>viewport</mark></h2>
+
+    <div class="slide_repo-links">
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+        <figcaption>
+          Без <code>user-scalable</code>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+        <figcaption>
+          C <code>user-scalable</code>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Медиазапросы <mark>@media</mark></h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Медиазапросы - это своего рода фильтры, которые применяют те или иные правила CSS, основываясь на характеристиках устройства. Эти характеристики могут включать: тип экрана; ширину, высоту, ориентацию устройства; разрешение.
+        </p>
+      </blockquote>
+      <a href="https://www.w3.org/TR/css3-mediaqueries" target="_blank" class="text-uc">w3c</a>,&nbsp;
+      <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank">Media Queries Level 4 <span class="text-uc">w3c</span></a>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Медиазапросы <mark>@media</mark></h2>
+
+    <pre class="next">
+      <code class="comment">&lt;!-- html --&gt;</code>
+      <code>&lt;link rel="stylesheet" href="print.css" <mark>media="print"</mark>/&gt;</code>
+    </pre>
+    <pre class="next">
+      <code class="comment">/* css */</code>
+      <code><mark>@media print</mark> {</code>
+      <code>  /* print style sheets go here */</code>
+      <code>}</code>
+    </pre>
+    <pre class="next">
+      <code class="comment">/* css */</code>
+      <code>@import url(print.css) <mark>print</mark>;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Медиазапросы <mark>@media</mark></h2>
+
+    <em>
+      Применяем стили на основе размера <mark>viewport</mark>
+    </em>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Параметр</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>min-width</td>
+          <td>Правила применяются для любого браузера/устройства, когда <mark>width</mark> больше, чем определенно в запросе</td>
+        </tr>
+        <tr>
+          <td>max-width</td>
+          <td>Правила применяются для любого браузера/устройства, когда <mark>width</mark> меньше, чем определенно в запросе</td>
+        </tr>
+        <tr>
+          <td>min-height</td>
+          <td>Правила применяются для любого браузера/устройства, когда <mark>height</mark> больше, чем определенно в запросе</td>
+        </tr>
+        <tr>
+          <td>max-height</td>
+          <td>Правила применяются для любого браузера/устройства, когда <mark>height</mark> меньше, чем определенно в запросе</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Медиазапросы <mark>@media</mark></h2>
+
+    <em>
+      Применяем стили на основе размера <mark>viewport</mark>
+    </em>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Параметр</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>orientation=portrait</td>
+          <td>Правила применяются для любого браузера/устройства, когда <mark>height</mark> больше или равен <mark>width</mark></td>
+        </tr>
+        <tr>
+          <td>orientation=landscape</td>
+          <td>Правила применяются для любого браузера/устройства, когда <mark>width</mark> больше чем <mark>height</mark></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Медиазапросы <mark>@media</mark>. Практика</h2>
+
+    <div class="slide_repo-links">
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides"/>
+        <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html" target="_blank">Без @media</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides"/>
+        <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html" target="_blank">C @media</a>
+        </figcaption>
+      </figure>
+    </div>
+
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд. Домашнее задание</h2>
