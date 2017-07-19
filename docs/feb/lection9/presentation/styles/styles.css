@@ -132,6 +132,11 @@
   font-size: 80px;
 }
 
+.slide_repo-links figcaption a {
+  font-size: 40px;
+}
+
+
 /* lection2
 ----------------------------------------------- */
 #cover .slide_lection-title {
@@ -182,4 +187,10 @@
 .att {
   line-height: 1.4;
   font-weight: 900;
+}
+
+.table th:first-child,
+.table td:first-child {
+  width: 30%;
+  padding: 0 0.3em;
 }
