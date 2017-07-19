@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>With viewport</title>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      /* Disable font boosting */
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+    }
+
+    body {
+      background-image: url(checker.png);
+      margin: 2em;
+    }
+
+    article {
+      width: 100%;
+      color: #ccc;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    b {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1><code>viewport</code> set</h1>
+
+      <p>
+        This page <b>DOES</b> have the <code>meta
+        viewport</code> set.
+      </p>
+
+      <p>
+        This is a test to show how the <code>meta viewport</code> tag
+        affects a page. To simplify this example as much as possible,
+        font boosting has been disabled.
+      </p>
+
+      <p>
+        <b>Note:</b> each box on the background is 50px wide.
+      </p>
+    </article>
+  </main>
+</body>
+</html>
