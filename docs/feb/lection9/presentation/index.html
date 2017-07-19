@@ -244,15 +244,13 @@
 
     <div class="slide_repo-links">
       <figure>
-        <img src="./pictures/chart.png" alt="link to slides">
-        <figcaption>
-          Без <mark>viewport</mark>
+        <img src="../examples/viewport/no-viewport.png" alt="link to slides">
+        <figcaption><a href="../examples/viewport/no-viewport.html" target="_blank">Без viewport</a>
         </figcaption>
       </figure>
       <figure>
-        <img src="./pictures/chart.png" alt="link to slides">
-        <figcaption>
-          C <mark>viewport</mark>
+        <img src="../examples/viewport/with-viewport.png" alt="link to slides">
+        <figcaption><a href="../examples/viewport/with-viewport.html" target="_blank">C viewport</a>
         </figcaption>
       </figure>
     </div>
@@ -285,15 +283,13 @@
 
     <div class="slide_repo-links">
       <figure>
-        <img src="./pictures/chart.png" alt="link to slides">
-        <figcaption>
-          Без <code>user-scalable</code>
+        <img src="../examples/viewport/no-user-scalable.png" alt="link to slides">
+        <figcaption><a href="../examples/viewport/no-user-scalable.html" target="_blank">Без user-scalable</a>
         </figcaption>
       </figure>
       <figure>
-        <img src="./pictures/chart.png" alt="link to slides">
-        <figcaption>
-          C <code>user-scalable</code>
+        <img src="../examples/viewport/with-user-scalable.png" alt="link to slides">
+        <figcaption><a href="../examples/viewport/with-user-scalable.html" target="_blank">C user-scalable</a>
         </figcaption>
       </figure>
     </div>
@@ -390,6 +386,44 @@
     </table>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
+    <h2>Преобразование железобетонных пикселей в пропорциональные значения: <code>px</code> vs. <code>em</code> vs. <code>rem</code></h2>
+
+    <pre>
+      <code class="next">font-size: 100%;</code>
+      <code class="next">font-size: 16px;</code>
+      <code class="next">font-size: 1em;</code>
+      <code class="next">font-size: 1rem;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Преобразование железобетонных пикселей в пропорциональные значения: <code>px</code> vs. <code>em</code> vs. <code>rem</code></h2>
+
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>em</mark> = итоговое значение <code>font-size</code> элемента в котором применяется данная единица измерения.
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="https://www.w3.org/TR/css3-values/#em" target="_blank" class="text-uc">w3c</a>
+      </figcaption>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>rem</mark> = итоговое значение <code>font-size</code> <mark>root</mark> элемента (<code>html, :root</code>).
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="https://www.w3.org/TR/css3-values/#em" target="_blank" class="text-uc">w3c</a>
+      </figcaption>
+    </figure>
+
+    <a href="https://codepen.io/var-bin/pen/rwEYLR?editors=1100#0"  class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
     <h2>Медиазапросы <mark>@media</mark>. Практика</h2>
 
     <div class="slide_repo-links">
@@ -410,12 +444,7 @@
     <h2>Это последний слайд. Домашнее задание</h2>
 
     <ul>
-      <li>
-        Сверстать <a href="../examples/1498363185787-form.jpg" target="_blank">данную форму</a> при помощи flexbox.
-      </li>
-      <li>
-        Пройти игру <a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a> и прислать <strong>скрин до какого уровня вы дошли</strong>.
-      </li>
+      <li></li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -426,25 +455,16 @@
         Полезные ресурсы:
         <ul>
           <li>
-            <a href="https://www.w3.org/TR/css-flexbox-1" target="_blank">CSS Flexible Box Layout Module Level 1</a>&nbsp;<span class="text-uc">w3c</span>
+            <a href="https://alistapart.com/article/responsive-web-design" target="_blank">Responsive Web Design</a>
           </li>
           <li>
-            <a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a> (игра)
+            <a href="https://www.w3.org/TR/css3-mediaqueries/" target="_blank">Media Queries</a>&nbsp;<span class="text-uc">w3c</span>
           </li>
           <li>
-            <a href="http://flexboxzombies.com" target="_blank">Flexbox Zombies </a> (игра)
+            <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank">Media Queries Level 4</a>&nbsp;<span class="text-uc">w3c</span>
           </li>
           <li>
-            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a>
-          </li>
-          <li>
-            <a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank">Solved by Flexbox</a>
-          </li>
-          <li>
-            <a href="http://css-live.ru/articles/vizualnoe-rukovodstvo-po-svojstvam-flexbox-iz-css3.html" target="_blank">Визуальное руководство по свойствам Flexbox из CSS3</a>
-          </li>
-          <li>
-            <a href="http://css-live.ru/articles-css/shpargalka-po-shpargalke-po-flexbox.html" target="_blank">Шпаргалка по шпаргалке по Flexbox</a>
+            <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">Media Queries for Standard Devices</a>
           </li>
         </ul>
       </li>
@@ -461,17 +481,18 @@
       <li>
         Полезные ресурсы:
         <ul>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">Flexbox</a>&nbsp;<span class="text-uc">mdn</span>
-          </li>
-          <li>
-            Все примеры к <a href="https://codepen.io/collection/DrWdmG" target="_blank">lection8</a>
-          </li>
-          <li>
-            <a href="http://css-live.ru/articles/obzor-inlajnovyj-kontekst-formatirovaniya.html" target="_blank">Инлайновый контекст форматирования</a> (Не про flexbox, но тоже очень важный материал).
-          </li>
-          <li>
-            <a href="https://stackoverflow.blog/2017/06/15/developers-use-spaces-make-money-use-tabs/" target="_blank">Разработчики, которые используют пробелы вместо табуляции для отступов зарабатывают больше $</a>.
+          <li>PX vs. EM vs. REM
+            <ul>
+              <li>
+                <a href="https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984" target="_blank">Comprehensive Guide: When to Use Em vs. Rem</a>
+              </li>
+              <li>
+                <a href="https://zellwk.com/blog/rem-vs-em/" target="_blank">REM vs EM – The Great Debate</a>
+              </li>
+              <li>
+                <a href="https://zellwk.com/blog/media-query-units/" target="_blank">PX, EM or REM Media Queries?</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </li>
