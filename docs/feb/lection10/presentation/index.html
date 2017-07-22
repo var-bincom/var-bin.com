@@ -16,7 +16,7 @@
   </header>
   <section class="slide slide_pt" id="cover">
     <h2>Front-End Basic</h2>
-    <h2 class="slide_lection-title">Адаптивность. Responsive. Media queries</h2>
+    <h2 class="slide_lection-title">Transition, transform, animation</h2>
     <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
     <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
     <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
@@ -42,101 +42,7 @@
     <h2>Вопросы</h2>
 
     <ul>
-      <li class="next">Какое из этих правил не работает с flex-элементами:
-        <ol class="next">
-          <li>
-            <code>float</code>
-          </li>
-          <li>
-            <code>::first-line</code>
-          </li>
-          <li>
-            <code>clear</code>
-          </li>
-        </ol>
-      </li>
-      <li class="next">Какое из этих правил определяет, будет ли flex-контейнер однострочный или многострочный, а также направление по поперечнай оси:
-        <ol class="next">
-          <li>
-            <code>flex-wrap</code>
-          </li>
-          <li>
-            <code>flex-direction</code>
-          </li>
-          <li>
-            <code>flex-flow</code>
-          </li>
-        </ol>
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Вопросы</h2>
-
-    <ul>
-      <li class="next">Какое из этих правил выравнивает все flex-элементы внутри flex-контейнера, включая анонимные flex-элементы:
-        <ol class="next">
-          <li>
-            <code>align-items</code>
-          </li>
-          <li>
-            <code>align-self</code>
-          </li>
-          <li>
-            <code>align-content</code>
-          </li>
-        </ol>
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Вопросы</h2>
-
-    <ul>
-      <li class="next">Какое из этих правил позволяет задавать выравнивание для flex-линий внутри flex-контейнера относительно поперечной оси, если есть свободное пространство:
-        <ol class="next">
-          <li>
-            <code>align-content</code>
-          </li>
-          <li>
-            <code>justify-content</code>
-          </li>
-          <li>
-            <code>align-items</code>
-          </li>
-        </ol>
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Вопросы</h2>
-
-    <ul>
-      <li class="next">Какое из этих правил определяет как flex-элемент(ы) будет увеличиваться относительно других flex-элементов:
-        <ol class="next">
-          <li>
-            <code>flex-grow</code>
-          </li>
-          <li>
-            <code>flex-shrink</code>
-          </li>
-          <li>
-            <code>flex-basis</code>
-          </li>
-        </ol>
-      </li>
-      <li class="next">Какое из этих правил определяет начальный размер flex-элемента:
-        <ol class="next">
-          <li>
-            <code>flex-grow</code>
-          </li>
-          <li>
-            <code>flex-shrink</code>
-          </li>
-          <li>
-            <code>flex-basis</code>
-          </li>
-        </ol>
+      <li class="next">За что отвечает свойство <code>minimum-scale</code> для viewport?
       </li>
     </ul>
   </section>
@@ -144,116 +50,295 @@
     <h2>План</h2>
 
     <ul>
-      <li class="next">Как появился термин <mark>Responsive</mark></li>
-      <li class="next"><em>Адаптивность</em> vs. <em>Responsive</em>. В чем разница</li>
-      <li class="next">Медиазапросы <code>@media</code> и <strong>viewport</strong> браузера</li>
-      <li class="next">Преобразование железобетонных пикселей в пропорциональные значения: <code>px</code> vs. <code>em</code> vs. <code>rem</code></li>
-      <li class="next"><code>max-width</code>, <code>min-width</code>, <code>width</code></li>
-      <li class="next"><em>Резиновые</em> изображения</li>
-      <li class="next">Инструменты браузера для проверки работы медиазапросов и не только</li>
-      <li class="next">Онлайн инструменты для проверки работы медиазапросов и не только</li>
+      <li class="next">Transition
+        <ul>
+          <li>
+            transition-property
+          </li>
+          <li>
+            transition-duration
+          </li>
+          <li>
+            transition-timing-function
+          </li>
+          <li>
+            transition-delay
+          </li>
+          <li>
+            transition
+          </li>
+        </ul>
+      </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как появился термин <mark>Responsive</mark></h2>
-
-    <figure>
-      <blockquote>
-        <p>
-          Fluid grids, flexible images, and media queries are the three technical ingredients for responsive web design, but it also requires a different way of thinking.
-        </p>
-      </blockquote>
-      <figcaption>
-        <a href="https://alistapart.com/article/responsive-web-design" target="_blank">Responsive Web Design</a> by <a href="https://alistapart.com/author/emarcotte">Ethan Marcotte</a>&nbsp;<time>May 25, 2010</time>
-      </figcaption>
-    </figure>
+    <h2>План</h2>
 
     <ul>
-      <li class="next">
-        Макет гибкой сетки
-      </li>
-      <li class="next">
-        Медиазапросы
-      </li>
-      <li class="next">
-        Гибкие изображения
-      </li>
-      <li class="next">
-        Flexbox
+      <li class="next slide__list">Transform
+        <ul>
+          <li>
+            translateX()
+          </li>
+          <li>
+            translateY()
+          </li>
+          <li>
+            translate()
+          </li>
+          <li>
+            scaleX()
+          </li>
+          <li>
+            scaleY()
+          </li>
+          <li>
+            scale()
+          </li>
+          <li>
+            rotateX()
+          </li>
+        </ul>
+        <ul>
+          <li>
+            rotateY()
+          </li>
+          <li>
+            rotate()
+          </li>
+          <li>
+            skewX()
+          </li>
+          <li>
+            skewY()
+          </li>
+        </ul>
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Почему важно поддерживать мобильные устройства, а не устаревшие <del>IE</del> браузеры</h2>
+    <h2>План</h2>
 
-    <figure class="slide__box-model">
-      <a href="http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank">
-        <img src="./pictures/StatCounter-comparison-ww-monthly-201606-201706.png" alt="StatCounter-comparison-ww-monthly"/>
-      </a>
-      <figcaption></figcaption>
-    </figure>
+    <ul>
+      <li class="next slide__list">Animation
+        <ul>
+          <li>
+            animation-name
+          </li>
+          <li>
+            animation-duration
+          </li>
+          <li>
+            animation-timing-function
+          </li>
+          <li>
+            animation-iteration-count
+          </li>
+          <li>
+            animation-direction
+          </li>
+        </ul>
+        <ul>
+          <li>
+            animation-play-state
+          </li>
+          <li>
+            animation-delay
+          </li>
+          <li>
+            animation-fill-mode
+          </li>
+          <li>
+            animation
+          </li>
+          <li>
+            @keyframes
+          </li>
+        </ul>
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2><em>Адаптивность</em> vs. <em>Responsive</em>. В чем разница</h2>
+    <h2>Transition</h2>
 
-    <figure class="slide__box-model">
-      <img src="./pictures/01_Responsive-vs-Adaptive.gif" alt="Адаптивность vs. Responsive">
-      <figcaption><a href="http://blog.froont.com/9-basic-principles-of-responsive-web-design/">9 basic principles of responsive web design</a></figcaption>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Что такое <mark>viewport</mark></h2>
-
-    <pre>
-      <code>&lt;meta <mark>name="viewport"</mark> <mark class="important">content="width=device-width,</mark></code>
-      <code><mark class="important"> initial-scale=1"</mark>&gt;</code>
-    </pre>
-
-    <figure>
+    <figure class="next">
       <blockquote>
         <p>
-          <code>&lt;meta name="viewport"&gt;</code> тег позволяет задавать браузеру инструкции как контролировать размеры страницы и масштабирование.
+          <code>transition-property</code> - указываем к какому CSS свойству примернить <mark>transition</mark>. Если не указать конкретное значение, то будет <code>all</code>.
         </p>
       </blockquote>
-      <figcaption>
-        <a href="https://www.quirksmode.org/mobile/metaviewport/" target="_blank">quirksmode.org</a>
-      </figcaption>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>transition-duration</code> - определяет сколько времени длиться <mark>transition</mark>. Если не указать конкретное значение, то будет <code>0</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>transition-timing-function</code> - определяет как будут вычислены промежуточные значения, используемые в <mark>transition</mark>. Может принимать значения: <code>ease</code> | <code>linear</code> | <code>ease-in</code> | <code>ease-out</code> | <code>ease-in-out</code> | <code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code>. Если не указать конкретное значение, то будет <code>ease</code>.
+        </p>
+      </blockquote>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как начать использовать <mark>viewport</mark></h2>
+    <h2>Transition</h2>
 
-    <pre>
-      <code>&lt;meta name="viewport"content="width=device-width,</code>
-      <code> initial-scale=1"&gt;</code>
-    </pre>
-    <ol>
-      <li class="next">
-        Добавить <code>&lt;meta name="viewport"&gt;</code> тег в секцию <mark>&lt;head&gt;</mark>.
-      </li>
-      <li class="next">
-        Добавить <code>width=device-width</code> тег в тег <mark>viewport</mark>, чтобы ширина экрана соответствовала ширине <strong>viewport'а</strong> устройства на котором открывается данная страница.
-      </li>
-      <li class="next">
-        Добавить <code>initial-scale=1</code> тег в тег <mark>viewport</mark>, чтобы задать начальный zoom и ширину <strong>viewport'а</strong> устройства на котором открывается данная страница.
-      </li>
-    </ol>
+    <figure class="figure figure_tm">
+      <img src="./pictures/TimingFunction.png" alt="The timing function is a smooth curve from
+   point P0 = (0,0) to point P3 = (1,1). The length and orientation of the
+   line segment P0-P1 determines the tangent and the curvature of the curve
+   at P0 and the line segment P2-P3 does the same at P3.">
+      <figcaption>Управляющие точки <mark>transition-timing-function</mark></figcaption>
+    </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как начать использовать <mark>viewport</mark></h2>
+    <h2>Transition</h2>
 
-    <div class="slide_repo-links">
-      <figure>
-        <img src="../examples/viewport/no-viewport.png" alt="link to slides">
-        <figcaption><a href="../examples/viewport/no-viewport.html" target="_blank">Без viewport</a>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="../examples/viewport/with-viewport.png" alt="link to slides">
-        <figcaption><a href="../examples/viewport/with-viewport.html" target="_blank">C viewport</a>
-        </figcaption>
-      </figure>
+    <code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code>
+
+    <pre>
+      <code><mark>ease</mark> = cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>
+      <code><mark>linear</mark> = cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>
+      <code><mark>ease-in</mark> = cubic-bezier(0.42, 0, 1.0, 1.0)</code>
+      <code><mark>ease-out</mark> = cubic-bezier(0, 0, 0.58, 1.0)</code>
+      <code><mark>ease-in-out</mark> = cubic-bezier(0.42, 0, 0.58, 1.0)</code>
+    </pre>
+    <code>cubic-bezier</code> принимает значения <a href="https://goo.gl/gu4oWc">Кривой Безье</a>
+    <div><a href="http://cubic-bezier.com" target="_blank">Ресурс</a> для создания Кривых Безье</div>
+    <a href="https://codepen.io/var-bin/full/MvgObQ/" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transition</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>transition-delay</code> - определяет через сколько будет начинаться transition. Если не указать конкретное значение, то будет <code>0</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <code>transition</code> - сокращение для удобного указания переходов. Если какой-то параметр не указан, то подставляется значение по умолчанию для этого параметра.
+        </p>
+      </blockquote>
+    </figure>
+
+    <pre class="next">
+      <code>transition: transition-property || transition-duration ||</code>
+      <code>           transition-timing-function || transition-delay;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transition</h2>
+
+    <pre>
+      <code>button {</code>
+      <code>  background-color: #00a0d6;</code>
+      <code class="mark">  transition: background-color 4s, color 4s;</code>
+      <code>}</code>
+      <code class="comment">/* ... */</code>
+      <code>button:hover {</code>
+      <code>  background-color: #f00;</code>
+      <code>}</code>
+    </pre>
+    <div><a href="https://codepen.io/var-bin/pen/XarMOd?editors=1100" target="_blank">Пример</a></div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <figure class="figure figure_tm">
+      <img src="./pictures/coordinates.svg" alt="Demonstration of the initial coordinate space">
+      <figcaption>Начальные координаты</figcaption>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>матрица преобразований</mark> - матрица, которая конвертирует значения из одной системы координат в другую.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>Виды трансформации:</h3>
+    <div class="slide__list">
+      <ul>
+        <li>2D
+          <ul>
+            <li>
+              rotate()
+            </li>
+            <li>
+              scale()
+            </li>
+            <li>
+              translate()
+            </li>
+            <li>
+              skew()
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>3D
+          <ul>
+            <li>
+              rotateX()
+            </li>
+            <li>
+              rotateY()
+            </li>
+            <li>
+              scaleX()
+            </li>
+            <li>
+              scaleY()
+            </li>
+            <li>
+              translateX()
+            </li>
+            <li>
+              translateY()
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          skewX()
+        </li>
+        <li>
+          skewY()
+        </li>
+      </ul>
     </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>rotate</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="mark">  transform: rotate(<mark>360deg</mark>);</code>
+      <code>}</code>
+      <code class="comment">/* === */</code>
+      <code>button {</code>
+      <code class="mark">  transform: rotate(<mark>1turn</mark>);</code>
+      <code>}</code>
+    </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Как начать использовать <mark>viewport</mark></h2>
