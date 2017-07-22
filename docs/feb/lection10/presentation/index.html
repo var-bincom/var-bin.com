@@ -32,7 +32,7 @@
     <h2>Ссылка на слайды</h2>
 
     <div class="slide_repo-links">
-      <a href="https://goo.gl/AxZZxL" target="_blank">goo.gl/AxZZxL</a>
+      <a href="https://goo.gl/MvJmEP" target="_blank">goo.gl/MvJmEP</a>
       <figure>
         <img src="./pictures/chart.png" alt="link to slides">
       </figure>
@@ -44,13 +44,21 @@
     <ul>
       <li class="next">За что отвечает свойство <code>minimum-scale</code> для viewport?
       </li>
+      <li class="next">Для чего нужно добавлять <code>width=device-width</code> в тег viewport?
+      </li>
+      <li class="next">За что отвечает свойство <code>maximum-scale</code> для viewport?
+      </li>
+      <li class="next">Для чего нужно добавлять <code>initial-scale=1</code> в тег viewport?
+      </li>
+      <li class="next">Какие есть способы для задания медиа запросов?
+      </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
 
     <ul>
-      <li class="next">Transition
+      <li>Transition
         <ul>
           <li>
             transition-property
@@ -75,7 +83,7 @@
     <h2>План</h2>
 
     <ul>
-      <li class="next slide__list">Transform
+      <li class="slide__list">Transform
         <ul>
           <li>
             translateX()
@@ -120,7 +128,7 @@
     <h2>План</h2>
 
     <ul>
-      <li class="next slide__list">Animation
+      <li class="slide__list">Animation
         <ul>
           <li>
             animation-name
@@ -156,6 +164,19 @@
           </li>
         </ul>
       </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transition, transform, animation</h2>
+
+    <em>
+      Три разных спецификации \0/
+    </em>
+
+    <ul>
+      <li class="next"><a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/" target="_blank">CSS Transitions Module Level 3</a> <span class="text-uc">w3c</span></li>
+      <li class="next"><a href="https://www.w3.org/TR/css-transforms-1/" target="_blank">CSS Transforms Module Level 1</a> <span class="text-uc">w3c</span></li>
+      <li class="next"><a href="https://www.w3.org/TR/css3-animations/" target="_blank">CSS Animations</a> <span class="text-uc">w3c</span></li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -202,11 +223,11 @@
     <code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code>
 
     <pre>
-      <code><mark>ease</mark> = cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>
-      <code><mark>linear</mark> = cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>
-      <code><mark>ease-in</mark> = cubic-bezier(0.42, 0, 1.0, 1.0)</code>
-      <code><mark>ease-out</mark> = cubic-bezier(0, 0, 0.58, 1.0)</code>
-      <code><mark>ease-in-out</mark> = cubic-bezier(0.42, 0, 0.58, 1.0)</code>
+      <code><mark>ease</mark> === cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>
+      <code><mark>linear</mark> === cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>
+      <code><mark>ease-in</mark> === cubic-bezier(0.42, 0, 1.0, 1.0)</code>
+      <code><mark>ease-out</mark> === cubic-bezier(0, 0, 0.58, 1.0)</code>
+      <code><mark>ease-in-out</mark> === cubic-bezier(0.42, 0, 0.58, 1.0)</code>
     </pre>
     <code>cubic-bezier</code> принимает значения <a href="https://goo.gl/gu4oWc">Кривой Безье</a>
     <div><a href="http://cubic-bezier.com" target="_blank">Ресурс</a> для создания Кривых Безье</div>
@@ -249,7 +270,14 @@
       <code>  background-color: #f00;</code>
       <code>}</code>
     </pre>
-    <div><a href="https://codepen.io/var-bin/pen/XarMOd?editors=1100" target="_blank">Пример</a></div>
+    <div><a href="https://codepen.io/var-bin/full/yoBPVp/" target="_blank">Пример</a></div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transition</h2>
+
+    <h3>
+      Практика
+    </h3>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Transform</h2>
@@ -327,12 +355,12 @@
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Transform</h2>
 
-    <h3>rotate</h3>
+    <h3>rotate - вращение</h3>
     <hr/>
 
     <pre>
       <code>button {</code>
-      <code class="mark">  transform: rotate(<mark>360deg</mark>);</code>
+      <code class="mark">  transform: scale(<mark>360deg</mark>);</code>
       <code>}</code>
       <code class="comment">/* === */</code>
       <code>button {</code>
@@ -341,275 +369,279 @@
     </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как начать использовать <mark>viewport</mark></h2>
+    <h2>Transform</h2>
+
+    <h3>scale - растягивает элемент</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="comment">/* Увеличиваем в 2 раза */</code>
+      <code class="mark">  transform: scale(<mark>2</mark>);</code>
+      <code>}</code>
+      <code class="comment">/* По горизонтали в 4, по вертикали в 2 раза раза */</code>
+      <code>button {</code>
+      <code class="mark">  transform: scale(<mark>4, 2</mark>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>translate - двигаем элемент</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="comment">/* Сдвинуть вправо на 3px */</code>
+      <code class="mark">  transform: translate(<mark>3px</mark>);</code>
+      <code>}</code>
+      <code>button {</code>
+      <code class="comment">/* Сдвинуть вправо и вниз на 3px */</code>
+      <code class="mark">  transform: translate(<mark>3px, 3px</mark>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>skew - искажаем элемент</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="comment">/* Второй параметр = 0 */</code>
+      <code class="mark">  transform: skew(<mark>10deg</mark>);</code>
+      <code>}</code>
+      <code class="comment">/* ... */</code>
+      <code>button {</code>
+      <code class="mark">  transform: skew(<mark>10deg</mark>, <mark>15deg</mark>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>rotate(), scale(), translate(), skew()</h3>
+    <hr/>
+    <a href="https://codepen.io/var-bin/full/QMLQdw/" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>
+      Практика
+    </h3>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-name</mark> - определяет набор анимаций, которые будут применяться к элементу. Если не указать, то будет иметь значение <code>none</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-duration</mark> - определяет сколько времение будет длиться один цикл анимации. Если не указать, то будет иметь значение <code>0s</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-timing-function</mark> - определяет какая временная функция будет применена. Смотрите <a href="http://var-bin.com/feb/lection10/presentation/#7" target="_blank">transition-timing-function</a>. Если не указать, то будет иметь значение <code>ease</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-iteration-count</mark> - определяет сколько раз будет повторен цикл анимации. Если не указать, то будет иметь значение <code>1</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-direction</mark> - определяет должна ли анимации выполняться в обратном порядке или нет. Может принимать значения: <code>normal</code> | <code>reverse</code> | <code>alternate</code> | <code>alternate-reverse</code>. Если не указать, то будет иметь значение <code>normal</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-play-state</mark> - определяет должна ли анимации выполняться или остановиться. Может принимать значения: <code>running</code> | <code>paused</code>. Если не указать, то будет иметь значение <code>running</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-delay</mark> - определяет через сколько времени начнется анимация. Если не указать, то будет иметь значение <code>0s</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-fill-mode</mark> - определяет какие значения применяются анимацией за пределами времени ее выполнения. Может принимать значения: <code>none</code> | <code>forwards</code> | <code>backwards</code> | <code>both</code>. Если не указать, то будет иметь значение <code>none</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <pre>
+      <code>animation: animation-name || animation-duration ||</code>
+      <code>           animation-timing-function || animation-delay ||</code>
+      <code>           animation-iteration-count || animation-direction ||</code>
+      <code>           animation-fill-mode || animation-play-state</code>
+    </pre>
+
+    <figure class="next">
+      <blockquote>
+        <p>Если не указать какое-то свойство, то будет применяться значение по умолчанию для этого свойства. Значение <mark>animation-duration</mark> должно идти перед значением <mark>animation-delay</mark>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <figure class="next">
+      <blockquote>
+        <p><mark>@keyframes</mark> определяет поведение анимации в течении одного цикла.
+        </p>
+      </blockquote>
+    </figure>
+
+    <pre class="next">
+      <code><mark>@keyframes</mark> &lt;animation-name&gt; {</code>
+      <code>  &lt;step1&gt; {</code>
+      <code>    &lt;property&gt;: &lt;value&gt;;</code>
+      <code>  }</code>
+      <code>  &lt;step2&gt; {</code>
+      <code>    &lt;property&gt;: &lt;value&gt;;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Определяем анимацию</h3>
+    <pre class="next">
+      <code><mark>@keyframes</mark> example {</code>
+      <code>  from { transform: rotate(0); }</code>
+      <code>  to { transform: rotate(45deg); }</code>
+      <code>}</code>
+    </pre>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>from</mark> - ключевое слово для <code>0%</code>.
+        </p>
+        <p>
+          <mark>to</mark> - ключевое слово для <code>100%</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Используем анимацию</h3>
+    <pre class="next">
+      <code>#someElement {</code>
+      <code class="comment">          /* name  duration       timing func */</code>
+      <code class="mark">  animation: example 2s 0s infinite ease;</code>
+      <code class="comment">                    /* delay  iteration */</code>
+      <code>}</code>
+    </pre>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>duration</mark> должно идти перед значением <mark>delay</mark>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Делаем больше шагов</h3>
+
+    <pre class="next">
+      <code><mark>@keyframes</mark> example2 {</code>
+      <code>  0% { transform: rotate(0); }</code>
+      <code class="mark">  10% { transform: rotate(10deg); }</code>
+      <code class="mark">  20% { transform: rotate(10deg); }</code>
+      <code>  40% { transform: rotate(40deg); }</code>
+      <code>  80% { transform: rotate(80deg); }</code>
+      <code>  100% { transform: rotate(120deg); }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Делаем больше шагов</h3>
+
+    <pre class="next">
+      <code><mark>@keyframes</mark> example2 {</code>
+      <code>  0% { transform: rotate(0); }</code>
+      <code class="mark">  10%, 20% { transform: rotate(10deg); }</code>
+      <code>  40% { transform: rotate(40deg); }</code>
+      <code>  80% { transform: rotate(80deg); }</code>
+      <code>  100% { transform: rotate(120deg); }</code>
+      <code>}</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/full/PpQJRL/" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation.</h2>
+
+    <h3>
+      Практика
+    </h3>
+
+    <a href="http://animista.net/" target="_blank">Крутой ресурс с анимациями</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд</h2>
 
     <ul>
       <li>
-        Какие еще свойства можно задавать для <mark>viewport</mark>
-        <ol>
-          <li class="next">
-            <code>minimum-scale</code> - устанавливает минимальное значение <strong>zoom</strong>
+        Полезные ресурсы:
+        <ul>
+          <li>
+            <a href="#" target="_blank"></a>
           </li>
-          <li class="next">
-            <code>maximum-scale</code> - устанавливает максимальное значение <strong>zoom</strong>
-          </li>
-          <li class="next">
-            <code>height</code> - можно привязываться к высоте, но смысла от этого немного больше, чем <code>0</code>
-          </li>
-          <li class="next">
-            <code>user-scalable</code> - определяет, доступна ли возможность <strong>zoom</strong>. Если равно <code>no</code>, то пользователь не сможет исрользовать возможность <strong>zoom</strong>. Используйте <mark class="text-uc"><b>только</b></mark> тогда, когда это реально нужно
-          </li>
-        </ol>
+        </ul>
       </li>
     </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Как начать использовать <mark>viewport</mark></h2>
-
-    <div class="slide_repo-links">
-      <figure>
-        <img src="../examples/viewport/no-user-scalable.png" alt="link to slides">
-        <figcaption><a href="../examples/viewport/no-user-scalable.html" target="_blank">Без user-scalable</a>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="../examples/viewport/with-user-scalable.png" alt="link to slides">
-        <figcaption><a href="../examples/viewport/with-user-scalable.html" target="_blank">C user-scalable</a>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Медиазапросы <mark>@media</mark></h2>
-
-    <figure>
-      <blockquote>
-        <p>
-          Медиазапросы - это своего рода фильтры, которые применяют те или иные правила CSS, основываясь на характеристиках устройства. Эти характеристики могут включать: тип экрана; ширину, высоту, ориентацию устройства; разрешение.
-        </p>
-      </blockquote>
-      <a href="https://www.w3.org/TR/css3-mediaqueries" target="_blank" class="text-uc">w3c</a>,&nbsp;
-      <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank">Media Queries Level 4 <span class="text-uc">w3c</span></a>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Медиазапросы <mark>@media</mark></h2>
-
-    <pre class="next">
-      <code class="comment">&lt;!-- html --&gt;</code>
-      <code>&lt;link rel="stylesheet" href="print.css" <mark>media="print"</mark>/&gt;</code>
-    </pre>
-    <pre class="next">
-      <code class="comment">/* css */</code>
-      <code><mark>@media print</mark> {</code>
-      <code>  /* print style sheets go here */</code>
-      <code>}</code>
-    </pre>
-    <pre class="next">
-      <code class="comment">/* css */</code>
-      <code>@import url(print.css) <mark>print</mark>;</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Медиазапросы <mark>@media</mark></h2>
-
-    <em>
-      Применяем стили на основе размера <mark>viewport</mark>
-    </em>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Параметр</th>
-          <th>Описание</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>min-width</td>
-          <td>Правила применяются для любого браузера/устройства, когда <mark>width</mark> больше, чем определенно в запросе</td>
-        </tr>
-        <tr>
-          <td>max-width</td>
-          <td>Правила применяются для любого браузера/устройства, когда <mark>width</mark> меньше, чем определенно в запросе</td>
-        </tr>
-        <tr>
-          <td>min-height</td>
-          <td>Правила применяются для любого браузера/устройства, когда <mark>height</mark> больше, чем определенно в запросе</td>
-        </tr>
-        <tr>
-          <td>max-height</td>
-          <td>Правила применяются для любого браузера/устройства, когда <mark>height</mark> меньше, чем определенно в запросе</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Медиазапросы <mark>@media</mark></h2>
-
-    <em>
-      Применяем стили на основе размера <mark>viewport</mark>
-    </em>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Параметр</th>
-          <th>Описание</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>orientation=portrait</td>
-          <td>Правила применяются для любого браузера/устройства, когда <mark>height</mark> больше или равен <mark>width</mark></td>
-        </tr>
-        <tr>
-          <td>orientation=landscape</td>
-          <td>Правила применяются для любого браузера/устройства, когда <mark>width</mark> больше чем <mark>height</mark></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Преобразование железобетонных пикселей в пропорциональные значения: <code>px</code> vs. <code>em</code> vs. <code>rem</code></h2>
-
-    <pre>
-      <code class="next">font-size: 100%;</code>
-      <code class="next">font-size: 16px;</code>
-      <code class="next">font-size: 1em;</code>
-      <code class="next">font-size: 1rem;</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Преобразование железобетонных пикселей в пропорциональные значения: <code>px</code> vs. <code>em</code> vs. <code>rem</code></h2>
-
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>em</mark> = итоговое значение <code>font-size</code> элемента в котором применяется данная единица измерения.
-        </p>
-      </blockquote>
-      <figcaption>
-        <a href="https://www.w3.org/TR/css3-values/#em" target="_blank" class="text-uc">w3c</a>
-      </figcaption>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>rem</mark> = итоговое значение <code>font-size</code> <mark>root</mark> элемента (<code>html, :root</code>).
-        </p>
-      </blockquote>
-      <figcaption>
-        <a href="https://www.w3.org/TR/css3-values/#em" target="_blank" class="text-uc">w3c</a>
-      </figcaption>
-    </figure>
-
-    <a href="https://codepen.io/var-bin/pen/rwEYLR?editors=1100#0" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Медиазапросы <mark>@media</mark>. Практика</h2>
-
-    <div class="slide_repo-links">
-      <figure>
-        <img src="./pictures/chart.png" alt="link to slides"/>
-        <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html" target="_blank">Без @media</a>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="./pictures/chart.png" alt="link to slides"/>
-        <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html" target="_blank">C @media</a>
-        </figcaption>
-      </figure>
-    </div>
-
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд. Домашнее задание</h2>
 
-    <ul>
-      <li>Нужно адаптировать <a href="../examples/ht/ht.html" target="_blank">данный файл</a> к следующему виду при помощи <mark>@media</mark> запросов:</li>
-      <ul>
-        <li>
-          <a href="../examples/1500497040454-full-w.jpg" target="_blank">Обычное отображение</a>
-        </li>
-        <li><a href="../examples/1500496978113-mob.jpg" target="_blank">Отображение на моб устройствах</a></li>
-        <li>
-          Реализовать в двух вариантах:
-          <ul>
-            <li>
-              Указав <code>@media</code> в css файле.
-            </li>
-            <li>
-              Указав <code>media</code> в теге <mark>link</mark>.
-            </li>
-          </ul>
-        </li>
-        <li>
-          P.S. Для самых смелых: заменить ширину/высоту в <code>px</code> на <code>%</code>; <code>px</code> для <code>font-size</code> в <code>em</code>.
-        </li>
-      </ul>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Это последний слайд</h2>
-
-    <ul>
-      <li>
-        Полезные ресурсы:
-        <ul>
-          <li>
-            <a href="https://alistapart.com/article/responsive-web-design" target="_blank">Responsive Web Design</a>
-          </li>
-          <li>
-            <a href="https://www.w3.org/TR/css3-mediaqueries/" target="_blank">Media Queries</a>&nbsp;<span class="text-uc">w3c</span>
-          </li>
-          <li>
-            <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank">Media Queries Level 4</a>&nbsp;<span class="text-uc">w3c</span>
-          </li>
-          <li>
-            <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">Media Queries for Standard Devices</a>
-          </li>
-          <li>
-            <a href="https://www.quirksmode.org/mobile/metaviewport/" target="_blank">Meta viewport</a> на quirksmode.org
-          </li>
-          <li><a href="https://habrahabr.ru/company/ruvds/blog/317776/" target="_blank">CSS-стили для печати</a></li>
-          <li>Все примеры к <a href="https://codepen.io/collection/nNbYOd/" target="_blank">lection9</a></li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Это последний слайд</h2>
-
-    <ul>
-      <li>
-        Полезные ресурсы:
-        <ul>
-          <li>
-            Как тестировать <mark>@media</mark> в браузере:
-            <ul>
-              <li><a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports" target="_blank">Test Responsive and Device-specific Viewports</a> в Chrome</li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Style_Editor" target="_blank">Style Editor</a> в Firefox</li>
-            </ul>
-          </li>
-          <li>PX vs. EM vs. REM
-            <ul>
-              <li>
-                <a href="https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984" target="_blank">Comprehensive Guide: When to Use Em vs. Rem</a>
-              </li>
-              <li>
-                <a href="https://zellwk.com/blog/rem-vs-em/" target="_blank">REM vs EM – The Great Debate</a>
-              </li>
-              <li>
-                <a href="https://zellwk.com/blog/media-query-units/" target="_blank">PX, EM or REM Media Queries?</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд</h2>
@@ -623,19 +655,6 @@
         Полезные ресурсы:
         <ul>
           <li>
-            Online инструменты:
-            <ul>
-              <li>
-                <a href="http://retinize.it/" target="_blank">Retinize It</a>
-              </li>
-              <li>
-                <a href="https://sizzy.co/" target="_blank">Sizzy</a> инструмент для разработки responsive верстки.
-              </li>
-              <li>
-                <a href="https://sizzy.co/" target="_blank">Screenfly</a> позволяет просматривать как выглядит ваш сайл на множестве экранова и разрешений.
-              </li>
-              <li><a href="http://screensiz.es" target="_blank">screensiz.es</a> мониторы устройств, их размеры и множество других параметров</li>
-            </ul>
           </li>
         </ul>
       </li>
