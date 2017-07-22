@@ -1,0 +1,13 @@
+/* variables */
+:root {
+  --cover-title-font_size: 4.2em;
+  --cover-p-font_size: 2em;
+
+  /* fonts */
+  --photographer-credit-font_family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+
+  /* colors */
+  --black: #000;
+  --white: #fff;
+  --link-color: #222;
+}
