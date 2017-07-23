@@ -57,114 +57,115 @@
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
 
+    <h3>Transition:</h3>
+    <hr/>
+
     <ul>
-      <li>Transition
-        <ul>
-          <li>
-            transition-property
-          </li>
-          <li>
-            transition-duration
-          </li>
-          <li>
-            transition-timing-function
-          </li>
-          <li>
-            transition-delay
-          </li>
-          <li>
-            transition
-          </li>
-        </ul>
+      <li>
+        transition-property
+      </li>
+      <li>
+        transition-duration
+      </li>
+      <li>
+        transition-timing-function
+      </li>
+      <li>
+        transition-delay
+      </li>
+      <li>
+        transition
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
 
-    <ul>
-      <li class="slide__list">Transform
-        <ul>
-          <li>
-            translateX()
-          </li>
-          <li>
-            translateY()
-          </li>
-          <li>
-            translate()
-          </li>
-          <li>
-            scaleX()
-          </li>
-          <li>
-            scaleY()
-          </li>
-          <li>
-            scale()
-          </li>
-          <li>
-            rotateX()
-          </li>
-        </ul>
-        <ul>
-          <li>
-            rotateY()
-          </li>
-          <li>
-            rotate()
-          </li>
-          <li>
-            skewX()
-          </li>
-          <li>
-            skewY()
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <h3>Transform:</h3>
+    <hr/>
+
+    <div class="slide__list">
+      <ul>
+        <li>
+          translateX()
+        </li>
+        <li>
+          translateY()
+        </li>
+        <li>
+          translate()
+        </li>
+        <li>
+          scaleX()
+        </li>
+        <li>
+          scaleY()
+        </li>
+        <li>
+          scale()
+        </li>
+        <li>
+          rotateX()
+        </li>
+      </ul>
+      <ul>
+        <li>
+          rotateY()
+        </li>
+        <li>
+          rotate()
+        </li>
+        <li>
+          skewX()
+        </li>
+        <li>
+          skewY()
+        </li>
+      </ul>
+    </div>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
 
-    <ul>
-      <li class="slide__list">Animation
-        <ul>
-          <li>
-            animation-name
-          </li>
-          <li>
-            animation-duration
-          </li>
-          <li>
-            animation-timing-function
-          </li>
-          <li>
-            animation-iteration-count
-          </li>
-          <li>
-            animation-direction
-          </li>
-        </ul>
-        <ul>
-          <li>
-            animation-play-state
-          </li>
-          <li>
-            animation-delay
-          </li>
-          <li>
-            animation-fill-mode
-          </li>
-          <li>
-            animation
-          </li>
-          <li>
-            @keyframes
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <h3>Animation</h3>
+    <hr/>
+
+    <div class="slide__list">
+      <ul>
+        <li>
+          animation-name
+        </li>
+        <li>
+          animation-duration
+        </li>
+        <li>
+          animation-timing-function
+        </li>
+        <li>
+          animation-iteration-count
+        </li>
+        <li>
+          animation-direction
+        </li>
+      </ul>
+      <ul>
+        <li>
+          animation-play-state
+        </li>
+        <li>
+          animation-delay
+        </li>
+        <li>
+          animation-fill-mode
+        </li>
+        <li>
+          animation
+        </li>
+        <li>
+          @keyframes
+        </li>
+      </ul>
+    </div>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Transition, transform, animation</h2>
@@ -360,7 +361,7 @@
 
     <pre>
       <code>button {</code>
-      <code class="mark">  transform: scale(<mark>360deg</mark>);</code>
+      <code class="mark">  transform: rotate(<mark>360deg</mark>);</code>
       <code>}</code>
       <code class="comment">/* === */</code>
       <code>button {</code>
@@ -455,7 +456,7 @@
     <figure class="next">
       <blockquote>
         <p>
-          <mark>animation-timing-function</mark> - определяет какая временная функция будет применена. Смотрите <a href="http://var-bin.com/feb/lection10/presentation/#7" target="_blank">transition-timing-function</a>. Если не указать, то будет иметь значение <code>ease</code>.
+          <mark>animation-timing-function</mark> - определяет какая временная функция будет применена. Смотрите <a href="http://var-bin.com/feb/lection10/presentation/#8" target="_blank">transition-timing-function</a>. Если не указать, то будет иметь значение <code>ease</code>.
         </p>
       </blockquote>
     </figure>
@@ -466,7 +467,7 @@
     <figure class="next">
       <blockquote>
         <p>
-          <mark>animation-iteration-count</mark> - определяет сколько раз будет повторен цикл анимации. Если не указать, то будет иметь значение <code>1</code>.
+          <mark>animation-iteration-count</mark> - определяет сколько раз будет повторен цикл анимации. Может принимать значения: <code>infinite</code> | <code>number</code>. Если не указать, то будет иметь значение <code>1</code>.
         </p>
       </blockquote>
     </figure>
@@ -478,6 +479,9 @@
         </p>
       </blockquote>
     </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
 
     <figure class="next">
       <blockquote>
@@ -486,9 +490,6 @@
         </p>
       </blockquote>
     </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation</h2>
 
     <figure class="next">
       <blockquote>
@@ -579,7 +580,7 @@
     <figure class="next">
       <blockquote>
         <p>
-          <mark>duration</mark> должно идти перед значением <mark>delay</mark>
+          Значение <mark>duration</mark> должно идти перед значением <mark>delay</mark>
       </blockquote>
     </figure>
   </section>
@@ -614,7 +615,7 @@
       <code>}</code>
     </pre>
 
-    <a href="https://codepen.io/var-bin/full/PpQJRL/" target="_blank">Пример</a>
+    <a href="https://codepen.io/var-bin/full/PpQJRL/" target="_blank" class="next">Пример</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Animation.</h2>
@@ -626,22 +627,52 @@
     <a href="http://animista.net/" target="_blank">Крутой ресурс с анимациями</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Это последний слайд</h2>
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    Нужно анимировать <a href="https://codepen.io/var-bin/pen/yoBdNX?editors=0100#0" target="_blank">элементы</a>, чтобы поведение было как на <a href="http://take.ms/G4NY5" target="_blank">примере</a>.
+
+    <strong>Обратите внимание:</strong>
+
+    <ul>
+      <li>В заготовке присутствуют все анимации и стили.</li>
+      <li>Вам нужно <strong>ТОЛЬКО</strong> правильно применить анимации.</li>
+      <li>Когда справитесь, сделайте чтобы по ховеру смена цвета текста, бордера и фонового цвета происходила плавно.</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд</h2>
 
     <ul>
       <li>
         Полезные ресурсы:
         <ul>
           <li>
-            <a href="#" target="_blank"></a>
+            <a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/" target="_blank">CSS Transitions Module Level 3</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/css-transforms-1/" target="_blank">CSS Transforms Module Level 1</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/css3-animations/" target="_blank">CSS Animations</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/#properties-from-css-" target="_blank">Какие свойства можно анимировать</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="http://easings.net/ru" target="_blank">Набор Easing functions</a>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/transition" target="_blank">transition</a>&nbsp;<span class="text-uc">ru</span>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/transform" target="_blank">transform</a>&nbsp;<span class="text-uc">ru</span>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/animation" target="_blank">animation</a>&nbsp;<span class="text-uc">ru</span>
           </li>
         </ul>
       </li>
     </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Это последний слайд. Домашнее задание</h2>
-
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд</h2>
@@ -655,6 +686,16 @@
         Полезные ресурсы:
         <ul>
           <li>
+            <a href="http://cubic-bezier.com/" target="_blank">Ресурс</a> для создания Кривых Безье
+          </li>
+          <li>
+            <a href="http://animista.net/" target="_blank">Ресурс</a> для создания CSS анимаций
+          </li>
+          <li>
+            <a href="https://daneden.github.io/animate.css/" target="_blank">Маленькая библиотека</a> с набором CSS анимаций
+          </li>
+          <li>
+            <a href="http://animista.net/" target="_blank">Все примеры</a> к lection10
           </li>
         </ul>
       </li>
