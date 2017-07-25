@@ -198,3 +198,10 @@
 .figure_tm {
   text-align: center;
 }
+
+.svg-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+}
