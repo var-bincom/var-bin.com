@@ -16,7 +16,7 @@
   </header>
   <section class="slide slide_pt" id="cover">
     <h2>Front-End Basic</h2>
-    <h2 class="slide_lection-title">Transition, transform, animation</h2>
+    <h2 class="slide_lection-title text-uc">svg</h2>
     <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
     <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
     <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
@@ -32,7 +32,7 @@
     <h2>Ссылка на слайды</h2>
 
     <div class="slide_repo-links">
-      <a href="https://goo.gl/MvJmEP" target="_blank">goo.gl/MvJmEP</a>
+      <a href="#" target="_blank">#</a>
       <figure>
         <img src="./pictures/chart.png" alt="link to slides">
       </figure>
@@ -42,259 +42,197 @@
     <h2>Вопросы</h2>
 
     <ul>
-      <li class="next">За что отвечает свойство <code>minimum-scale</code> для viewport?
-      </li>
-      <li class="next">Для чего нужно добавлять <code>width=device-width</code> в тег viewport?
-      </li>
-      <li class="next">За что отвечает свойство <code>maximum-scale</code> для viewport?
-      </li>
-      <li class="next">Для чего нужно добавлять <code>initial-scale=1</code> в тег viewport?
-      </li>
-      <li class="next">Какие есть способы для задания медиа запросов?
+      <li class="next">
+        <code>transition: 0.3s;</code> чему будут равны остальные значения для <mark>transition</mark>?
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
-
-    <h3>Transition:</h3>
-    <hr/>
 
     <ul>
       <li>
-        transition-property
+        Что такое <mark class="text-uc">svg</mark>, какие его отличия от других форматов (<mark>jpeg</mark>, <mark>png</mark>, <mark>gif</mark>)?
       </li>
       <li>
-        transition-duration
+        Как использовать <mark class="text-uc">svg</mark>?
       </li>
       <li>
-        transition-timing-function
+        Базовые фигуры, которые можно рисовать с помощью <mark class="text-uc">svg</mark>
       </li>
       <li>
-        transition-delay
+        <mark>Path</mark> элемент, зачем он нужен?
       </li>
       <li>
-        transition
+        Пишем текст при помощи <mark class="text-uc">svg</mark>
+      </li>
+      <li>
+        Фильтры в <mark class="text-uc">svg</mark>
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>План</h2>
+    <h2>Что такое <mark class="text-uc">svg</mark></h2>
 
-    <h3>Transform:</h3>
-    <hr/>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark class="text-uc">svg</mark> - Scalable Vector Graphics <img src="./pictures/svg-logo-v.svg" alt="svg logo" class="svg-logo"/>
+        </p>
+      </blockquote>
+    </figure>
 
-    <div class="slide__list">
-      <ul>
-        <li>
-          translateX()
-        </li>
-        <li>
-          translateY()
-        </li>
-        <li>
-          translate()
-        </li>
-        <li>
-          scaleX()
-        </li>
-        <li>
-          scaleY()
-        </li>
-        <li>
-          scale()
-        </li>
-        <li>
-          rotateX()
-        </li>
-      </ul>
-      <ul>
-        <li>
-          rotateY()
-        </li>
-        <li>
-          rotate()
-        </li>
-        <li>
-          skewX()
-        </li>
-        <li>
-          skewY()
-        </li>
-      </ul>
+    <div class="next">
+      <h3>Почему SVG?</h3>
+      <hr/>
     </div>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>План</h2>
-
-    <h3>Animation</h3>
-    <hr/>
-
-    <div class="slide__list">
-      <ul>
-        <li>
-          animation-name
-        </li>
-        <li>
-          animation-duration
-        </li>
-        <li>
-          animation-timing-function
-        </li>
-        <li>
-          animation-iteration-count
-        </li>
-        <li>
-          animation-direction
-        </li>
-      </ul>
-      <ul>
-        <li>
-          animation-play-state
-        </li>
-        <li>
-          animation-delay
-        </li>
-        <li>
-          animation-fill-mode
-        </li>
-        <li>
-          animation
-        </li>
-        <li>
-          @keyframes
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transition, transform, animation</h2>
-
-    <em>
-      Три разных спецификации \0/
-    </em>
 
     <ul>
-      <li class="next"><a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/" target="_blank">CSS Transitions Module Level 3</a> <span class="text-uc">w3c</span></li>
-      <li class="next"><a href="https://www.w3.org/TR/css-transforms-1/" target="_blank">CSS Transforms Module Level 1</a> <span class="text-uc">w3c</span></li>
-      <li class="next"><a href="https://www.w3.org/TR/css3-animations/" target="_blank">CSS Animations</a> <span class="text-uc">w3c</span></li>
+      <li class="next">
+        Маленький размер файла, который хорошо сжимается
+      </li>
+      <li class="next">
+        Масштабируется на любые размеры без потери качества
+      </li>
+      <li class="next">
+        Отличный выбор для retina-экранов
+      </li>
+      <li class="next">
+        Можно редактировать в любом текстовом редакторе
+      </li>
+      <li class="next">
+        Анимация и фильтры
+      </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transition</h2>
+    <h2>Поддержка <mark class="text-uc">svg</mark></h2>
 
-    <figure class="next">
-      <blockquote>
-        <p>
-          <code>transition-property</code> - указываем к какому CSS свойству примернить <mark>transition</mark>. Если не указать конкретное значение, то будет <code>all</code>.
-        </p>
-      </blockquote>
-    </figure>
+    <figure class="slide__box-model">
+      <a href="http://caniuse.com/#search=svg" target="_blank">
+        <img src="./pictures/1501001105415-svg-basic-support.jpg" alt="Поддержка SVG"/>
+      </a>
 
-    <figure class="next">
-      <blockquote>
-        <p>
-          <code>transition-duration</code> - определяет сколько времени длиться <mark>transition</mark>. Если не указать конкретное значение, то будет <code>0</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <code>transition-timing-function</code> - определяет как будут вычислены промежуточные значения, используемые в <mark>transition</mark>. Может принимать значения: <code>ease</code> | <code>linear</code> | <code>ease-in</code> | <code>ease-out</code> | <code>ease-in-out</code> | <code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code>. Если не указать конкретное значение, то будет <code>ease</code>.
-        </p>
-      </blockquote>
+      <figcaption>SVG (basic support)</figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transition</h2>
+    <h2>Базовые фигуры, которые можно рисовать с помощью SVG</h2>
 
-    <figure class="figure figure_tm">
-      <img src="./pictures/TimingFunction.png" alt="The timing function is a smooth curve from
-   point P0 = (0,0) to point P3 = (1,1). The length and orientation of the
-   line segment P0-P1 determines the tangent and the curvature of the curve
-   at P0 and the line segment P2-P3 does the same at P3.">
-      <figcaption>Управляющие точки <mark>transition-timing-function</mark></figcaption>
-    </figure>
+    <ul>
+      <li class="next">
+        circle
+      </li>
+      <li class="next">
+        rect
+      </li>
+      <li class="next">
+        polygon
+      </li>
+      <li class="next">
+        polyline
+      </li>
+      <li class="next">
+        line
+      </li>
+      <li class="next">
+        ellipse
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transition</h2>
-
-    <code>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code>
+    <h2>Базовые фигуры. Circle</h2>
 
     <pre>
-      <code><mark>ease</mark> === cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>
-      <code><mark>linear</mark> === cubic-bezier(0.0, 0.0, 1.0, 1.0)</code>
-      <code><mark>ease-in</mark> === cubic-bezier(0.42, 0, 1.0, 1.0)</code>
-      <code><mark>ease-out</mark> === cubic-bezier(0, 0, 0.58, 1.0)</code>
-      <code><mark>ease-in-out</mark> === cubic-bezier(0.42, 0, 0.58, 1.0)</code>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;circle r="50" cx="50%" cy="50%" fill="orange"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
     </pre>
-    <code>cubic-bezier</code> принимает значения <a href="https://goo.gl/gu4oWc">Кривой Безье</a>
-    <div><a href="http://cubic-bezier.com" target="_blank">Ресурс</a> для создания Кривых Безье</div>
-    <a href="https://codepen.io/var-bin/full/MvgObQ/" target="_blank">Пример</a>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>r</mark> - Задает радиус круга. Если не указывать единицы измерения, то по умолчанию будут <code>px</code>. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>круг не будет отображен</strong>.
+      </li>
+      <li class="next">
+        <mark>cx</mark> - Задает координаты оси X относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>cy</mark> - Задает координаты оси Y относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transition</h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <code>transition-delay</code> - определяет через сколько будет начинаться transition. Если не указать конкретное значение, то будет <code>0</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <code>transition</code> - сокращение для удобного указания переходов. Если какой-то параметр не указан, то подставляется значение по умолчанию для этого параметра.
-        </p>
-      </blockquote>
-    </figure>
-
-    <pre class="next">
-      <code>transition: transition-property || transition-duration ||</code>
-      <code>           transition-timing-function || transition-delay;</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transition</h2>
+    <h2>Базовые фигуры. Rect</h2>
 
     <pre>
-      <code>button {</code>
-      <code>  background-color: #00a0d6;</code>
-      <code class="mark">  transition: background-color 4s, color 4s;</code>
-      <code>}</code>
-      <code class="comment">/* ... */</code>
-      <code>button:hover {</code>
-      <code>  background-color: #f00;</code>
-      <code>}</code>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;rect width="50%" height="100" fill="yellowgreen" x="25%" </code>
+      <code class="mark">  y="25" stroke="grey" stroke-width="10"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
     </pre>
-    <div><a href="https://codepen.io/var-bin/full/yoBPVp/" target="_blank">Пример</a></div>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>width</mark> - Задает ширину прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
+      </li>
+      <li class="next">
+        <mark>height</mark> - Задает высоту прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transition</h2>
+    <h2>Базовые фигуры. Rect</h2>
 
-    <h3>
-      Практика
-    </h3>
+    <ul class="info-list">
+      <li class="next">
+        <mark>x</mark> - Задает координаты оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>y</mark> - Задает координаты оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>rx</mark> - Задает скругление углов по оси X. Если не указать <code>ry</code>, то значение этого атрибута будет равно <code>rx</code>.
+      </li>
+      <li class="next">
+        <mark>ry</mark> - Задает скругление углов по оси Y. Если не указать <code>rx</code>, то значение этого атрибута будет равно <code>ry</code>.
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
+    <h2>Базовые фигуры. Polygon</h2>
 
-    <figure class="figure figure_tm">
-      <img src="./pictures/coordinates.svg" alt="Demonstration of the initial coordinate space">
-      <figcaption>Начальные координаты</figcaption>
-    </figure>
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;polygon fill="red" stroke="yellowgreen" stroke-width="10" </code>
+      <code class="mark">    points="350,75 379,161 469,161 397,215 423,301 350,250</code>
+      <code class="mark">           277,301 303,215 231,161 321,161"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
 
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>матрица преобразований</mark> - матрица, которая конвертирует значения из одной системы координат в другую.
-        </p>
-      </blockquote>
-    </figure>
+    <ul class="info-list">
+      <li class="next">
+        <mark>points</mark> - набор точек, которые задают многоугольник.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Polyline</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;polyline fill="none" stroke="purple" stroke-width="10" </code>
+      <code class="mark">    points="50,375 150,375 150,325 250,325 250,375
+      350,375 350,250 450,250 450,375 550,375 550,175 650,175
+      650,375 750,375 750,100 850,100 850,375 950,375 950,25
+      1050,25 1050,375 1150,375"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>points</mark> - набор точек, которые задают ломаную линию.
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Transform</h2>
