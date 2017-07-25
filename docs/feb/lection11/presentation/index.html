@@ -32,7 +32,7 @@
     <h2>Ссылка на слайды</h2>
 
     <div class="slide_repo-links">
-      <a href="#" target="_blank">#</a>
+      <a href="https://goo.gl/FBKgSi" target="_blank">goo.gl/FBKgSi</a>
       <figure>
         <img src="./pictures/chart.png" alt="link to slides">
       </figure>
@@ -52,16 +52,16 @@
 
     <ul>
       <li>
-        Что такое <mark class="text-uc">svg</mark>, какие его отличия от других форматов (<mark>jpeg</mark>, <mark>png</mark>, <mark>gif</mark>)?
+        Что такое <mark class="text-uc">svg</mark>, какие его отличия от других форматов (<mark>jpeg</mark>, <mark>png</mark>, <mark>gif</mark>)
       </li>
       <li>
-        Как использовать <mark class="text-uc">svg</mark>?
+        Как использовать <mark class="text-uc">svg</mark>
       </li>
       <li>
         Базовые фигуры, которые можно рисовать с помощью <mark class="text-uc">svg</mark>
       </li>
       <li>
-        <mark>Path</mark> элемент, зачем он нужен?
+        <mark>Path</mark> элемент, зачем он нужен
       </li>
       <li>
         Пишем текст при помощи <mark class="text-uc">svg</mark>
@@ -235,382 +235,222 @@
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
-
-    <h3>Виды трансформации:</h3>
-    <div class="slide__list">
-      <ul>
-        <li>2D
-          <ul>
-            <li>
-              rotate()
-            </li>
-            <li>
-              scale()
-            </li>
-            <li>
-              translate()
-            </li>
-            <li>
-              skew()
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul>
-        <li>3D
-          <ul>
-            <li>
-              rotateX()
-            </li>
-            <li>
-              rotateY()
-            </li>
-            <li>
-              scaleX()
-            </li>
-            <li>
-              scaleY()
-            </li>
-            <li>
-              translateX()
-            </li>
-            <li>
-              translateY()
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          skewX()
-        </li>
-        <li>
-          skewY()
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
-
-    <h3>rotate - вращение</h3>
-    <hr/>
+    <h2>Базовые фигуры. Line</h2>
 
     <pre>
-      <code>button {</code>
-      <code class="mark">  transform: rotate(<mark>360deg</mark>);</code>
-      <code>}</code>
-      <code class="comment">/* === */</code>
-      <code>button {</code>
-      <code class="mark">  transform: rotate(<mark>1turn</mark>);</code>
-      <code>}</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
-
-    <h3>scale - растягивает элемент</h3>
-    <hr/>
-
-    <pre>
-      <code>button {</code>
-      <code class="comment">/* Увеличиваем в 2 раза */</code>
-      <code class="mark">  transform: scale(<mark>2</mark>);</code>
-      <code>}</code>
-      <code class="comment">/* По горизонтали в 4, по вертикали в 2 раза раза */</code>
-      <code>button {</code>
-      <code class="mark">  transform: scale(<mark>4, 2</mark>);</code>
-      <code>}</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
-
-    <h3>translate - двигаем элемент</h3>
-    <hr/>
-
-    <pre>
-      <code>button {</code>
-      <code class="comment">/* Сдвинуть вправо на 3px */</code>
-      <code class="mark">  transform: translate(<mark>3px</mark>);</code>
-      <code>}</code>
-      <code>button {</code>
-      <code class="comment">/* Сдвинуть вправо и вниз на 3px */</code>
-      <code class="mark">  transform: translate(<mark>3px, 3px</mark>);</code>
-      <code>}</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
-
-    <h3>skew - искажаем элемент</h3>
-    <hr/>
-
-    <pre>
-      <code>button {</code>
-      <code class="comment">/* Второй параметр = 0 */</code>
-      <code class="mark">  transform: skew(<mark>10deg</mark>);</code>
-      <code>}</code>
-      <code class="comment">/* ... */</code>
-      <code>button {</code>
-      <code class="mark">  transform: skew(<mark>10deg</mark>, <mark>15deg</mark>);</code>
-      <code>}</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
-
-    <h3>rotate(), scale(), translate(), skew()</h3>
-    <hr/>
-    <a href="https://codepen.io/var-bin/full/QMLQdw/" target="_blank">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Transform</h2>
-
-    <h3>
-      Практика
-    </h3>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation</h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-name</mark> - определяет набор анимаций, которые будут применяться к элементу. Если не указать, то будет иметь значение <code>none</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-duration</mark> - определяет сколько времение будет длиться один цикл анимации. Если не указать, то будет иметь значение <code>0s</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-timing-function</mark> - определяет какая временная функция будет применена. Смотрите <a href="http://var-bin.com/feb/lection10/presentation/#8" target="_blank">transition-timing-function</a>. Если не указать, то будет иметь значение <code>ease</code>.
-        </p>
-      </blockquote>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation</h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-iteration-count</mark> - определяет сколько раз будет повторен цикл анимации. Может принимать значения: <code>infinite</code> | <code>number</code>. Если не указать, то будет иметь значение <code>1</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-direction</mark> - определяет должна ли анимации выполняться в обратном порядке или нет. Может принимать значения: <code>normal</code> | <code>reverse</code> | <code>alternate</code> | <code>alternate-reverse</code>. Если не указать, то будет иметь значение <code>normal</code>.
-        </p>
-      </blockquote>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation</h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-play-state</mark> - определяет должна ли анимации выполняться или остановиться. Может принимать значения: <code>running</code> | <code>paused</code>. Если не указать, то будет иметь значение <code>running</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-delay</mark> - определяет через сколько времени начнется анимация. Если не указать, то будет иметь значение <code>0s</code>.
-        </p>
-      </blockquote>
-    </figure>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>animation-fill-mode</mark> - определяет какие значения применяются анимацией за пределами времени ее выполнения. Может принимать значения: <code>none</code> | <code>forwards</code> | <code>backwards</code> | <code>both</code>. Если не указать, то будет иметь значение <code>none</code>.
-        </p>
-      </blockquote>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation</h2>
-
-    <pre>
-      <code>animation: animation-name || animation-duration ||</code>
-      <code>           animation-timing-function || animation-delay ||</code>
-      <code>           animation-iteration-count || animation-direction ||</code>
-      <code>           animation-fill-mode || animation-play-state</code>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;line x1="10" y1="300" x2="100" y2="10" stroke-width="5"/&gt; </code>
+      <code>&lt;/svg&gt;</code>
     </pre>
 
-    <figure class="next">
-      <blockquote>
-        <p>Если не указать какое-то свойство, то будет применяться значение по умолчанию для этого свойства. Значение <mark>animation-duration</mark> должно идти перед значением <mark>animation-delay</mark>.
-        </p>
-      </blockquote>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation. <code>@keyframes</code></h2>
-
-    <figure class="next">
-      <blockquote>
-        <p><mark>@keyframes</mark> определяет поведение анимации в течении одного цикла.
-        </p>
-      </blockquote>
-    </figure>
-
-    <pre class="next">
-      <code><mark>@keyframes</mark> &lt;animation-name&gt; {</code>
-      <code>  &lt;step1&gt; {</code>
-      <code>    &lt;property&gt;: &lt;value&gt;;</code>
-      <code>  }</code>
-      <code>  &lt;step2&gt; {</code>
-      <code>    &lt;property&gt;: &lt;value&gt;;</code>
-      <code>  }</code>
-      <code>}</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation. <code>@keyframes</code></h2>
-
-    <h3>Определяем анимацию</h3>
-    <pre class="next">
-      <code><mark>@keyframes</mark> example {</code>
-      <code>  from { transform: rotate(0); }</code>
-      <code>  to { transform: rotate(45deg); }</code>
-      <code>}</code>
-    </pre>
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>from</mark> - ключевое слово для <code>0%</code>.
-        </p>
-        <p>
-          <mark>to</mark> - ключевое слово для <code>100%</code>.
-        </p>
-      </blockquote>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation. <code>@keyframes</code></h2>
-
-    <h3>Используем анимацию</h3>
-    <pre class="next">
-      <code>#someElement {</code>
-      <code class="comment">          /* name  duration       timing func */</code>
-      <code class="mark">  animation: example 2s 0s infinite ease;</code>
-      <code class="comment">                    /* delay  iteration */</code>
-      <code>}</code>
-    </pre>
-    <figure class="next">
-      <blockquote>
-        <p>
-          Значение <mark>duration</mark> должно идти перед значением <mark>delay</mark>
-      </blockquote>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation. <code>@keyframes</code></h2>
-
-    <h3>Делаем больше шагов</h3>
-
-    <pre class="next">
-      <code><mark>@keyframes</mark> example2 {</code>
-      <code>  0% { transform: rotate(0); }</code>
-      <code class="mark">  10% { transform: rotate(10deg); }</code>
-      <code class="mark">  20% { transform: rotate(10deg); }</code>
-      <code>  40% { transform: rotate(40deg); }</code>
-      <code>  80% { transform: rotate(80deg); }</code>
-      <code>  100% { transform: rotate(120deg); }</code>
-      <code>}</code>
-    </pre>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation. <code>@keyframes</code></h2>
-
-    <h3>Делаем больше шагов</h3>
-
-    <pre class="next">
-      <code><mark>@keyframes</mark> example2 {</code>
-      <code>  0% { transform: rotate(0); }</code>
-      <code class="mark">  10%, 20% { transform: rotate(10deg); }</code>
-      <code>  40% { transform: rotate(40deg); }</code>
-      <code>  80% { transform: rotate(80deg); }</code>
-      <code>  100% { transform: rotate(120deg); }</code>
-      <code>}</code>
-    </pre>
-
-    <a href="https://codepen.io/var-bin/full/PpQJRL/" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Animation.</h2>
-
-    <h3>
-      Практика
-    </h3>
-
-    <a href="http://animista.net/" target="_blank">Крутой ресурс с анимациями</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Это последний слайд. Домашнее задание</h2>
-
-    Нужно анимировать <a href="https://codepen.io/var-bin/pen/yoBdNX?editors=0100#0" target="_blank">элементы</a>, чтобы поведение было как на <a href="http://take.ms/G4NY5" target="_blank">примере</a>.
-
-    <strong>Обратите внимание:</strong>
-
-    <ul>
-      <li>В заготовке присутствуют все анимации и стили.</li>
-      <li>Вам нужно <strong>ТОЛЬКО</strong> правильно применить анимации.</li>
-      <li>Когда справитесь, сделайте чтобы по ховеру смена цвета текста, бордера и фонового цвета происходила плавно.</li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Это НЕ последний слайд</h2>
-
-    <ul>
-      <li>
-        Полезные ресурсы:
-        <ul>
-          <li>
-            <a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/" target="_blank">CSS Transitions Module Level 3</a>&nbsp;<span class="text-uc">w3c</span>
-          </li>
-          <li>
-            <a href="https://www.w3.org/TR/css-transforms-1/" target="_blank">CSS Transforms Module Level 1</a>&nbsp;<span class="text-uc">w3c</span>
-          </li>
-          <li>
-            <a href="https://www.w3.org/TR/css3-animations/" target="_blank">CSS Animations</a>&nbsp;<span class="text-uc">w3c</span>
-          </li>
-          <li>
-            <a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/#properties-from-css-" target="_blank">Какие свойства можно анимировать</a>&nbsp;<span class="text-uc">w3c</span>
-          </li>
-          <li>
-            <a href="http://easings.net/ru" target="_blank">Набор Easing functions</a>
-          </li>
-          <li>
-            <a href="https://webref.ru/css/transition" target="_blank">transition</a>&nbsp;<span class="text-uc">ru</span>
-          </li>
-          <li>
-            <a href="https://webref.ru/css/transform" target="_blank">transform</a>&nbsp;<span class="text-uc">ru</span>
-          </li>
-          <li>
-            <a href="https://webref.ru/css/animation" target="_blank">animation</a>&nbsp;<span class="text-uc">ru</span>
-          </li>
-        </ul>
+    <ul class="info-list">
+      <li class="next">
+        <mark>x1</mark> - Задает координаты оси X относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>y1</mark> - Задает координаты оси Y относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>x2</mark> - Задает координаты оси X относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>y2</mark> - Задает координаты оси Y относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
       </li>
     </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Ellipse</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;ellipse cx="50%" rx="70" ry="30" fill="red"/&gt; </code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul>
+      <li class="next">
+        <mark>cx</mark> - Задает координаты оси X относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>cy</mark> - Задает координаты оси Y относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Ellipse</h2>
+
+    <ul>
+      <li class="next">
+        <mark>rx</mark> - Задает радиус относительно оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
+      </li>
+      <li class="next">
+        <mark>ry</mark> - Задает радиус относительно оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/pen/yoyeZw" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Практика</h2>
+
+    <figure>
+      <img src="./pictures/1501020097660-smile.jpg" alt="Нарисуйсте квадрат при помощи path">
+
+      <figcaption>
+        Нарисуйсте smile при помощи <mark>circle</mark>, <mark>line</mark>, <mark>rect</mark>
+      </figcaption>
+    </figure>
+
+    <p><strong>Для самых смелых:</strong> Нарисуйте подобные смайлы при помощи <mark>ellipse</mark>, <mark>polyline</mark>, <mark>polygon</mark>.</p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>path</mark> элемент используется для определения пути любой сложности
+        </p>
+      </blockquote>
+    </figure>
+
+    <ul>
+      <li class="next">
+        <mark>d</mark> - содержит параметры пути (координаты).
+      </li>
+    </ul>
+
+    <h3 class="next">Обозначения:</h3>
+    <ul>
+      <li class="next">
+        <mark>M</mark> - <code>"moveto"</code> команда, которая определяет новую точку.
+      </li>
+      <li class="next">
+        <mark>L</mark> - <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+      </li>
+      <li class="next">
+        <mark>H</mark> - горизонтальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+
+    <ul>
+      <li class="next">
+        <mark>V</mark> - вертикальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+      </li>
+      <li class="next">
+        ...
+      </li>
+      <li class="next">
+        <mark>Z</mark> - <code>"closepath"</code> завершает текущий подпуть и вызывает автоматическую прямую линию, которая будет нарисована от текущей точки до начальной точки текущего подпути.
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/pen/xLbzpg?editors=1000#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+
+    <h3>
+      Практика
+    </h3>
+    <hr/>
+
+    <figure>
+      <img src="./pictures/1501019596578-path-task.jpg" alt="Нарисуйсте квадрат при помощи path">
+
+      <figcaption>
+        <p>
+          Нарисуйсте квадрат при помощи <mark>path</mark>
+        </p>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>text</code></h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
+      <code class="mark">  fill="red"&gt;</code>
+      <code class="mark">    Hello, out there!</code>
+      <code class="mark">  &lt;/text&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul>
+      <li class="next">
+        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>text</code></h2>
+
+    <ul>
+      <li class="next">
+        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
+      </li>
+      <li class="next">
+        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>tspan</code></h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
+      <code class="mark">  fill="red"&gt;</code>
+      <code class="mark">    Hello,
+    <mark>&lt;tspan font-weight="bold" fill="blue"&gt;out&lt;/tspan&gt;</mark>
+    there!</code>
+      <code class="mark">  &lt;/text&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/pen/LjEBQg?editors=1000" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>tspan</code></h2>
+
+    <ul>
+      <li class="next">
+        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
+      </li>
+      <li class="next">
+        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
+      </li>
+      <li class="next">
+        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. Практика</h2>
+
+    <p>
+      Напишите текст <strong>"Front-End Basic"</strong>. Слово <strong>"Front"</strong> должно быть зеленого цвета. Слово <strong>"End"</strong> должно быть красного цвета. Слово <strong>"Basic"</strong> должно быть синего цвета. <strong>Коротное тире</strong> должно быть без заливки с обводкой в <code>2px</code>, цвет обводки <code>grey</code>.
+    </p>
+
+    <figure>
+      <img src="./pictures/1501025539986-text.jpg" alt="SVG. Пишем текст. Практика">
+
+      <figcaption>
+        Пример того, как должно получиться
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд. Домашнее задание</h2>
+
+    <em>
+      Скоро будет...
+    </em>
+
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд</h2>
@@ -624,16 +464,28 @@
         Полезные ресурсы:
         <ul>
           <li>
-            <a href="http://cubic-bezier.com/" target="_blank">Ресурс</a> для создания Кривых Безье
+            <a href="https://www.w3.org/TR/SVG/" target="_blank">Scalable Vector Graphics (SVG) 1.1 (Second Edition)&nbsp;<span class="text-uc">w3c</span></a>
           </li>
           <li>
-            <a href="http://animista.net/" target="_blank">Ресурс</a> для создания CSS анимаций
+            <a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">SVG&nbsp;<span class="text-uc">mdn</span></a>
           </li>
           <li>
-            <a href="https://daneden.github.io/animate.css/" target="_blank">Маленькая библиотека</a> с набором CSS анимаций
+            <a href="http://caniuse.com/#search=svg" target="_blank">Поддержка SVG</a>
           </li>
           <li>
-            <a href="http://animista.net/" target="_blank">Все примеры</a> к lection10
+            <a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">Online SVG optimizer</a>
+          </li>
+          <li>
+            <a href="https://testdrive-archive.azurewebsites.net/graphics/hands-on-css3/hands-on_svg-filter-effects.htm" target="_blank">Hands On: svg-filter-effects.</a>
+          </li>
+          <li>
+            <a href="http://css-live.ru/articles/karmannoe-rukovodstvo-po-napisaniyu-svg-vvedenie.html" target="_blank">Карманное руководство по написанию SVG</a> [ Рекомендую ]
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=RJnYkbm66ZI" target="_blank">Как сделать Инстаграм в браузере</a>
+          </li>
+          <li>
+            <a href="https://codepen.io/collection/DgLKPv/" target="_blank">Все примеры</a> к lection11
           </li>
         </ul>
       </li>
