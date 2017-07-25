@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title text-uc">svg</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="#" target="_blank">#</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">
+        <code>transition: 0.3s;</code> чему будут равны остальные значения для <mark>transition</mark>?
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li>
+        Что такое <mark class="text-uc">svg</mark>, какие его отличия от других форматов (<mark>jpeg</mark>, <mark>png</mark>, <mark>gif</mark>)?
+      </li>
+      <li>
+        Как использовать <mark class="text-uc">svg</mark>?
+      </li>
+      <li>
+        Базовые фигуры, которые можно рисовать с помощью <mark class="text-uc">svg</mark>
+      </li>
+      <li>
+        <mark>Path</mark> элемент, зачем он нужен?
+      </li>
+      <li>
+        Пишем текст при помощи <mark class="text-uc">svg</mark>
+      </li>
+      <li>
+        Фильтры в <mark class="text-uc">svg</mark>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что такое <mark class="text-uc">svg</mark></h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark class="text-uc">svg</mark> - Scalable Vector Graphics <img src="./pictures/svg-logo-v.svg" alt="svg logo" class="svg-logo"/>
+        </p>
+      </blockquote>
+    </figure>
+
+    <div class="next">
+      <h3>Почему SVG?</h3>
+      <hr/>
+    </div>
+
+    <ul>
+      <li class="next">
+        Маленький размер файла, который хорошо сжимается
+      </li>
+      <li class="next">
+        Масштабируется на любые размеры без потери качества
+      </li>
+      <li class="next">
+        Отличный выбор для retina-экранов
+      </li>
+      <li class="next">
+        Можно редактировать в любом текстовом редакторе
+      </li>
+      <li class="next">
+        Анимация и фильтры
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Поддержка <mark class="text-uc">svg</mark></h2>
+
+    <figure class="slide__box-model">
+      <a href="http://caniuse.com/#search=svg" target="_blank">
+        <img src="./pictures/1501001105415-svg-basic-support.jpg" alt="Поддержка SVG"/>
+      </a>
+
+      <figcaption>SVG (basic support)</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры, которые можно рисовать с помощью SVG</h2>
+
+    <ul>
+      <li class="next">
+        circle
+      </li>
+      <li class="next">
+        rect
+      </li>
+      <li class="next">
+        polygon
+      </li>
+      <li class="next">
+        polyline
+      </li>
+      <li class="next">
+        line
+      </li>
+      <li class="next">
+        ellipse
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Circle</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;circle r="50" cx="50%" cy="50%" fill="orange"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>r</mark> - Задает радиус круга. Если не указывать единицы измерения, то по умолчанию будут <code>px</code>. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>круг не будет отображен</strong>.
+      </li>
+      <li class="next">
+        <mark>cx</mark> - Задает координаты оси X относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>cy</mark> - Задает координаты оси Y относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Rect</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;rect width="50%" height="100" fill="yellowgreen" x="25%" </code>
+      <code class="mark">  y="25" stroke="grey" stroke-width="10"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>width</mark> - Задает ширину прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
+      </li>
+      <li class="next">
+        <mark>height</mark> - Задает высоту прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Rect</h2>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>x</mark> - Задает координаты оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>y</mark> - Задает координаты оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>rx</mark> - Задает скругление углов по оси X. Если не указать <code>ry</code>, то значение этого атрибута будет равно <code>rx</code>.
+      </li>
+      <li class="next">
+        <mark>ry</mark> - Задает скругление углов по оси Y. Если не указать <code>rx</code>, то значение этого атрибута будет равно <code>ry</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Polygon</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;polygon fill="red" stroke="yellowgreen" stroke-width="10" </code>
+      <code class="mark">    points="350,75 379,161 469,161 397,215 423,301 350,250</code>
+      <code class="mark">           277,301 303,215 231,161 321,161"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>points</mark> - набор точек, которые задают многоугольник.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Polyline</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;polyline fill="none" stroke="purple" stroke-width="10" </code>
+      <code class="mark">    points="50,375 150,375 150,325 250,325 250,375
+      350,375 350,250 450,250 450,375 550,375 550,175 650,175
+      650,375 750,375 750,100 850,100 850,375 950,375 950,25
+      1050,25 1050,375 1150,375"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>points</mark> - набор точек, которые задают ломаную линию.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>Виды трансформации:</h3>
+    <div class="slide__list">
+      <ul>
+        <li>2D
+          <ul>
+            <li>
+              rotate()
+            </li>
+            <li>
+              scale()
+            </li>
+            <li>
+              translate()
+            </li>
+            <li>
+              skew()
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>3D
+          <ul>
+            <li>
+              rotateX()
+            </li>
+            <li>
+              rotateY()
+            </li>
+            <li>
+              scaleX()
+            </li>
+            <li>
+              scaleY()
+            </li>
+            <li>
+              translateX()
+            </li>
+            <li>
+              translateY()
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          skewX()
+        </li>
+        <li>
+          skewY()
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>rotate - вращение</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="mark">  transform: rotate(<mark>360deg</mark>);</code>
+      <code>}</code>
+      <code class="comment">/* === */</code>
+      <code>button {</code>
+      <code class="mark">  transform: rotate(<mark>1turn</mark>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>scale - растягивает элемент</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="comment">/* Увеличиваем в 2 раза */</code>
+      <code class="mark">  transform: scale(<mark>2</mark>);</code>
+      <code>}</code>
+      <code class="comment">/* По горизонтали в 4, по вертикали в 2 раза раза */</code>
+      <code>button {</code>
+      <code class="mark">  transform: scale(<mark>4, 2</mark>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>translate - двигаем элемент</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="comment">/* Сдвинуть вправо на 3px */</code>
+      <code class="mark">  transform: translate(<mark>3px</mark>);</code>
+      <code>}</code>
+      <code>button {</code>
+      <code class="comment">/* Сдвинуть вправо и вниз на 3px */</code>
+      <code class="mark">  transform: translate(<mark>3px, 3px</mark>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>skew - искажаем элемент</h3>
+    <hr/>
+
+    <pre>
+      <code>button {</code>
+      <code class="comment">/* Второй параметр = 0 */</code>
+      <code class="mark">  transform: skew(<mark>10deg</mark>);</code>
+      <code>}</code>
+      <code class="comment">/* ... */</code>
+      <code>button {</code>
+      <code class="mark">  transform: skew(<mark>10deg</mark>, <mark>15deg</mark>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>rotate(), scale(), translate(), skew()</h3>
+    <hr/>
+    <a href="https://codepen.io/var-bin/full/QMLQdw/" target="_blank">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Transform</h2>
+
+    <h3>
+      Практика
+    </h3>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-name</mark> - определяет набор анимаций, которые будут применяться к элементу. Если не указать, то будет иметь значение <code>none</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-duration</mark> - определяет сколько времение будет длиться один цикл анимации. Если не указать, то будет иметь значение <code>0s</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-timing-function</mark> - определяет какая временная функция будет применена. Смотрите <a href="http://var-bin.com/feb/lection10/presentation/#8" target="_blank">transition-timing-function</a>. Если не указать, то будет иметь значение <code>ease</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-iteration-count</mark> - определяет сколько раз будет повторен цикл анимации. Может принимать значения: <code>infinite</code> | <code>number</code>. Если не указать, то будет иметь значение <code>1</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-direction</mark> - определяет должна ли анимации выполняться в обратном порядке или нет. Может принимать значения: <code>normal</code> | <code>reverse</code> | <code>alternate</code> | <code>alternate-reverse</code>. Если не указать, то будет иметь значение <code>normal</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-play-state</mark> - определяет должна ли анимации выполняться или остановиться. Может принимать значения: <code>running</code> | <code>paused</code>. Если не указать, то будет иметь значение <code>running</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-delay</mark> - определяет через сколько времени начнется анимация. Если не указать, то будет иметь значение <code>0s</code>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>animation-fill-mode</mark> - определяет какие значения применяются анимацией за пределами времени ее выполнения. Может принимать значения: <code>none</code> | <code>forwards</code> | <code>backwards</code> | <code>both</code>. Если не указать, то будет иметь значение <code>none</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation</h2>
+
+    <pre>
+      <code>animation: animation-name || animation-duration ||</code>
+      <code>           animation-timing-function || animation-delay ||</code>
+      <code>           animation-iteration-count || animation-direction ||</code>
+      <code>           animation-fill-mode || animation-play-state</code>
+    </pre>
+
+    <figure class="next">
+      <blockquote>
+        <p>Если не указать какое-то свойство, то будет применяться значение по умолчанию для этого свойства. Значение <mark>animation-duration</mark> должно идти перед значением <mark>animation-delay</mark>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <figure class="next">
+      <blockquote>
+        <p><mark>@keyframes</mark> определяет поведение анимации в течении одного цикла.
+        </p>
+      </blockquote>
+    </figure>
+
+    <pre class="next">
+      <code><mark>@keyframes</mark> &lt;animation-name&gt; {</code>
+      <code>  &lt;step1&gt; {</code>
+      <code>    &lt;property&gt;: &lt;value&gt;;</code>
+      <code>  }</code>
+      <code>  &lt;step2&gt; {</code>
+      <code>    &lt;property&gt;: &lt;value&gt;;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Определяем анимацию</h3>
+    <pre class="next">
+      <code><mark>@keyframes</mark> example {</code>
+      <code>  from { transform: rotate(0); }</code>
+      <code>  to { transform: rotate(45deg); }</code>
+      <code>}</code>
+    </pre>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>from</mark> - ключевое слово для <code>0%</code>.
+        </p>
+        <p>
+          <mark>to</mark> - ключевое слово для <code>100%</code>.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Используем анимацию</h3>
+    <pre class="next">
+      <code>#someElement {</code>
+      <code class="comment">          /* name  duration       timing func */</code>
+      <code class="mark">  animation: example 2s 0s infinite ease;</code>
+      <code class="comment">                    /* delay  iteration */</code>
+      <code>}</code>
+    </pre>
+    <figure class="next">
+      <blockquote>
+        <p>
+          Значение <mark>duration</mark> должно идти перед значением <mark>delay</mark>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Делаем больше шагов</h3>
+
+    <pre class="next">
+      <code><mark>@keyframes</mark> example2 {</code>
+      <code>  0% { transform: rotate(0); }</code>
+      <code class="mark">  10% { transform: rotate(10deg); }</code>
+      <code class="mark">  20% { transform: rotate(10deg); }</code>
+      <code>  40% { transform: rotate(40deg); }</code>
+      <code>  80% { transform: rotate(80deg); }</code>
+      <code>  100% { transform: rotate(120deg); }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation. <code>@keyframes</code></h2>
+
+    <h3>Делаем больше шагов</h3>
+
+    <pre class="next">
+      <code><mark>@keyframes</mark> example2 {</code>
+      <code>  0% { transform: rotate(0); }</code>
+      <code class="mark">  10%, 20% { transform: rotate(10deg); }</code>
+      <code>  40% { transform: rotate(40deg); }</code>
+      <code>  80% { transform: rotate(80deg); }</code>
+      <code>  100% { transform: rotate(120deg); }</code>
+      <code>}</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/full/PpQJRL/" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Animation.</h2>
+
+    <h3>
+      Практика
+    </h3>
+
+    <a href="http://animista.net/" target="_blank">Крутой ресурс с анимациями</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд. Домашнее задание</h2>
+
+    Нужно анимировать <a href="https://codepen.io/var-bin/pen/yoBdNX?editors=0100#0" target="_blank">элементы</a>, чтобы поведение было как на <a href="http://take.ms/G4NY5" target="_blank">примере</a>.
+
+    <strong>Обратите внимание:</strong>
+
+    <ul>
+      <li>В заготовке присутствуют все анимации и стили.</li>
+      <li>Вам нужно <strong>ТОЛЬКО</strong> правильно применить анимации.</li>
+      <li>Когда справитесь, сделайте чтобы по ховеру смена цвета текста, бордера и фонового цвета происходила плавно.</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li>
+            <a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/" target="_blank">CSS Transitions Module Level 3</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/css-transforms-1/" target="_blank">CSS Transforms Module Level 1</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/css3-animations/" target="_blank">CSS Animations</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="https://www.w3.org/TR/2009/WD-css3-transitions-20091201/#properties-from-css-" target="_blank">Какие свойства можно анимировать</a>&nbsp;<span class="text-uc">w3c</span>
+          </li>
+          <li>
+            <a href="http://easings.net/ru" target="_blank">Набор Easing functions</a>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/transition" target="_blank">transition</a>&nbsp;<span class="text-uc">ru</span>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/transform" target="_blank">transform</a>&nbsp;<span class="text-uc">ru</span>
+          </li>
+          <li>
+            <a href="https://webref.ru/css/animation" target="_blank">animation</a>&nbsp;<span class="text-uc">ru</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li>
+            <a href="http://cubic-bezier.com/" target="_blank">Ресурс</a> для создания Кривых Безье
+          </li>
+          <li>
+            <a href="http://animista.net/" target="_blank">Ресурс</a> для создания CSS анимаций
+          </li>
+          <li>
+            <a href="https://daneden.github.io/animate.css/" target="_blank">Маленькая библиотека</a> с набором CSS анимаций
+          </li>
+          <li>
+            <a href="http://animista.net/" target="_blank">Все примеры</a> к lection10
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
