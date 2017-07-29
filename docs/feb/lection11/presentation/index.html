@@ -16,7 +16,7 @@
   </header>
   <section class="slide slide_pt" id="cover">
     <h2>Front-End Basic</h2>
-    <h2 class="slide_lection-title text-uc">svg</h2>
+    <h2 class="slide_lection-title">CSS Фреймворки</h2>
     <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
     <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
     <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
@@ -29,442 +29,315 @@
     </a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Ссылка на слайды</h2>
-
-    <div class="slide_repo-links">
-      <a href="https://goo.gl/FBKgSi" target="_blank">goo.gl/FBKgSi</a>
-      <figure>
-        <img src="./pictures/chart.png" alt="link to slides">
-      </figure>
-    </div>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
     <h2>Вопросы</h2>
 
     <ul>
       <li class="next">
-        <code>transition: 0.3s;</code> чему будут равны остальные значения для <mark>transition</mark>?
+        Как поменять цвет заливки любого <mark class="text-uc">svg</mark> элемента?
       </li>
-      <li class="next">
-        Как оптимизировать данные <a href="../example/styles.css" target="_blank">стили</a>?
-      </li>
-      <li class="next">
-        <code>transform: rotate(0.25turn);</code> чему будут равно значение <mark>rotate</mark> в градусах?
-      </li>
-      <li class="next">
-        Какое свойство отвечает за то, сколько раз будет повторяться анимация?
-      </li>
+
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
 
     <ul>
-      <li>
-        Что такое <mark class="text-uc">svg</mark>, какие его отличия от других форматов (<mark>jpeg</mark>, <mark>png</mark>, <mark>gif</mark>)
+      <li class="next">
+        Отличие фреймворка от библиотеки
       </li>
-      <li>
-        Как использовать <mark class="text-uc">svg</mark>
+      <li class="next">
+        Зачем нужны фреймворки
       </li>
-      <li>
-        Базовые фигуры, которые можно рисовать с помощью <mark class="text-uc">svg</mark>
+      <li class="next">
+        <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset.css</a> vs. <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
       </li>
-      <li>
-        <mark>Path</mark> элемент, зачем он нужен
+      <li class="next">
+        CSS Фреймворки
       </li>
-      <li>
-        Пишем текст при помощи <mark class="text-uc">svg</mark>
+      <li class="next">
+        <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> vs. <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap v4-alpha</a>
       </li>
-      <li>
-        Фильтры в <mark class="text-uc">svg</mark>
+      <li class="next">
+        Bootstrap CSS
+      </li>
+      <li class="next">
+        Bootstrap Компоненты
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Что такое <mark class="text-uc">svg</mark></h2>
+    <h2>Отличие фреймворка от библиотеки</h2>
 
     <figure class="next">
       <blockquote>
         <p>
-          <mark class="text-uc">svg</mark> - Scalable Vector Graphics <img src="./pictures/svg-logo-v.svg" alt="svg logo" class="svg-logo"/>
+          <mark>Фреймворк</mark> отличается от понятия <mark>библиотеки</mark> тем, что <mark>библиотека</mark> может быть использована в программном продукте просто как <strong>набор подпрограмм близкой функциональности</strong>, не влияя на архитектуру программного продукта и не накладывая на неё никаких ограничений. В то время как <mark>фреймворк</mark> <strong>диктует правила построения архитектуры приложения, задавая на начальном этапе разработки поведение по умолчанию</strong> — «каркас», который нужно будет расширять и изменять, согласно указанным требованиям.
         </p>
       </blockquote>
+      <figcaption>
+        <a href="https://goo.gl/gbSJdk" target="_blank">wikipedia</a>
+      </figcaption>
     </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Зачем нужны фреймворки</h2>
+
+    <h3 class="next">Плюсы:</h3>
+    <ul>
+      <li class="next">
+        Решает типичные задачи наилучшим способом
+      </li>
+      <li class="next">
+        При написании фреймворка использовались <strong>best practices</strong>
+      </li>
+      <li class="next">
+        Кодовая база написана такими же разработчиками как и вы
+      </li>
+      <li class="next">
+        Кроссбраузерность/Кроссплатформенность
+      </li>
+      <li class="next">
+        Тесты
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Зачем нужны фреймворки</h2>
+
+    <h3 class="next">Недостатки:</h3>
+    <ul>
+      <li class="next">
+        Вы хотели только банан, а тяните к себе на проект и обезьяну и все джунгли
+      </li>
+      <li class="next">
+        Должны следовать требованиям в документации
+      </li>
+      <li class="next">
+        Переход на новую версию фреймворка может быть трудозатратным, а иногда и невозможным
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Reset.css vs. Normalize.css</h2>
+
+    <h3>Reset CSS</h3>
+
+    <figure class="next slide__box-model">
+      <img src="./pictures/1501348204752-reset-css.jpg" alt="Reset.css">
+
+      <figcaption>
+        <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Reset.css vs. Normalize.css</h2>
+
+    <h3>Normalize.css</h3>
+
+    <ul>
+      <li class="next">
+        Сохраняет полезные значения по умолчанию, в отличие от многих сбросов CSS.
+      </li>
+      <li class="next">
+        Нормализует стили для широкого диапазона элементов.
+      </li>
+      <li class="next">
+        Исправляет ошибки и общие несовместимости браузера.
+      </li>
+      <li class="next">
+        Подробно документированный код
+      </li>
+    </ul>
+
+    <a href="https://necolas.github.io/normalize.css/" target="_blank" class="next">Normalize.css</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Reset.css vs. Normalize.css</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <p>
+      Подключите к своему блогу сначала <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a> и посмотрите как изменилось отображение вашего блога. После этого удалите <mark>Reset CSS</mark> и подключите <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>. Проверьте результат после подключения <mark>Normalize.css</mark>.
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>CSS Фреймворки</h2>
+
+    <em>
+      CSS Фреймворков много...
+    </em>
+
+    <ul>
+      <li class="next"><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+      <li class="next"><a href="http://foundation.zurb.com/sites.html" target="_blank">Foundation for Sites</a></li>
+      <li class="next"><a href="https://getmdl.io/" target="_blank">Material Design Lite</a></li>
+      <li class="next"><a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
+      <li class="next"><a href="https://purecss.io/" target="_blank">PureCSS</a></li>
+      <li class="next"><a href="http://bulma.io/" target="_blank">Bulma</a></li>
+      <li class="next"><a href="http://materializecss.com/" target="_blank">Materialize CSS</a></li>
+      <li class="next"><a href="https://metroui.org.ua/" target="_blank">Metro UI CSS</a></li>
+      <li class="next">...</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap</h2>
+
+    <h3>Немного истории</h3>
+    <hr/>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Был создан в Twitter в середине 2010 года силами дизайнера (<a href="https://twitter.com/mdo" target="_blank">@mdo</a>) и разработчика (<a href="https://twitter.com/fat" target="_blank">@fat</a>). Bootstrap стал самым популярным front-end фреймворком и open source проектом в мире.
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="http://getbootstrap.com/about/" target="_blank">Bootstrap History</a>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
+
+    <ul>
+      <li class="next">
+        Текущая версия <a href="http://getbootstrap.com/" target="_blank">v3.3.7</a>
+      </li>
+      <li class="next">
+        Доступен <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap v4 в альфе</a>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
 
     <div class="next">
-      <h3>Почему SVG?</h3>
+      <h3>Основные изменения в Bootstrap v4-alpha</h3>
       <hr/>
     </div>
 
     <ul>
       <li class="next">
-        Маленький размер файла, который хорошо сжимается
+        Переход на flexbox
       </li>
       <li class="next">
-        Масштабируется на любые размеры без потери качества
+        Во всех компонентах используются преимущества flexbox, а не <code>display: table</code> и <code>float</code> хаки.
       </li>
       <li class="next">
-        Отличный выбор для retina-экранов
+        <a href="https://github.com/twbs/bootstrap/pull/21389" target="_blank">Поддержка IE10+</a>
       </li>
       <li class="next">
-        Можно редактировать в любом текстовом редакторе
+        Доработан grid компонент
       </li>
       <li class="next">
-        Анимация и фильтры
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Поддержка <mark class="text-uc">svg</mark></h2>
-
-    <figure class="slide__box-model">
-      <a href="http://caniuse.com/#search=svg" target="_blank">
-        <img src="./pictures/1501001105415-svg-basic-support.jpg" alt="Поддержка SVG"/>
-      </a>
-
-      <figcaption>SVG (basic support)</figcaption>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Какое основное отличия <mark class="text-uc">svg</mark>от других форматов (jpeg, png, gif)</h2>
-
-    <figure class="slide__box-model">
-      <img src="./pictures/09_Vectors-vs-Images-1.gif" alt="основное отличия SVG от других форматов"/>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры, которые можно рисовать с помощью SVG</h2>
-
-    <ul>
-      <li class="next">
-        circle
-      </li>
-      <li class="next">
-        rect
-      </li>
-      <li class="next">
-        polygon
-      </li>
-      <li class="next">
-        polyline
-      </li>
-      <li class="next">
-        line
-      </li>
-      <li class="next">
-        ellipse
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Circle</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;circle r="50" cx="50%" cy="50%" fill="orange"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>r</mark> - Задает радиус круга. Если не указывать единицы измерения, то по умолчанию будут <code>px</code>. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>круг не будет отображен</strong>.
-      </li>
-      <li class="next">
-        <mark>cx</mark> - Задает координаты оси X относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>cy</mark> - Задает координаты оси Y относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Rect</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;rect width="50%" height="100" fill="yellowgreen" x="25%" </code>
-      <code class="mark">  y="25" stroke="grey" stroke-width="10"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>width</mark> - Задает ширину прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
-      </li>
-      <li class="next">
-        <mark>height</mark> - Задает высоту прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Rect</h2>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>x</mark> - Задает координаты оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>y</mark> - Задает координаты оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>rx</mark> - Задает скругление углов по оси X. Если не указать <code>ry</code>, то значение этого атрибута будет равно <code>rx</code>.
-      </li>
-      <li class="next">
-        <mark>ry</mark> - Задает скругление углов по оси Y. Если не указать <code>rx</code>, то значение этого атрибута будет равно <code>ry</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Polygon</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;polygon fill="red" stroke="yellowgreen" stroke-width="10" </code>
-      <code class="mark">    points="350,75 379,161 469,161 397,215 423,301 350,250</code>
-      <code class="mark">           277,301 303,215 231,161 321,161"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>points</mark> - набор точек, которые задают многоугольник.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Polyline</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;polyline fill="none" stroke="purple" stroke-width="10" </code>
-      <code class="mark">    points="50,375 150,375 150,325 250,325 250,375
-      350,375 350,250 450,250 450,375 550,375 550,175 650,175
-      650,375 750,375 750,100 850,100 850,375 950,375 950,25
-      1050,25 1050,375 1150,375"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>points</mark> - набор точек, которые задают ломаную линию.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Line</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;line x1="10" y1="300" x2="100" y2="10" stroke-width="5"/&gt; </code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>x1</mark> - Задает координаты оси X относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>y1</mark> - Задает координаты оси Y относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>x2</mark> - Задает координаты оси X относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>y2</mark> - Задает координаты оси Y относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Ellipse</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;ellipse cx="50%" rx="70" ry="30" fill="red"/&gt; </code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul>
-      <li class="next">
-        <mark>cx</mark> - Задает координаты оси X относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>cy</mark> - Задает координаты оси Y относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Ellipse</h2>
-
-    <ul>
-      <li class="next">
-        <mark>rx</mark> - Задает радиус относительно оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
-      </li>
-      <li class="next">
-        <mark>ry</mark> - Задает радиус относительно оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/pen/yoyeZw" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Практика</h2>
-
-    <figure>
-      <img src="./pictures/1501020097660-smile.jpg" alt="Нарисуйсте квадрат при помощи path">
-
-      <figcaption>
-        Нарисуйсте smile при помощи <mark>circle</mark>, <mark>line</mark>, <mark>rect</mark>
-      </figcaption>
-    </figure>
-
-    <p><strong>Для самых смелых:</strong> Нарисуйте подобные смайлы при помощи <mark>ellipse</mark>, <mark>polyline</mark>, <mark>polygon</mark>.</p>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>path</mark> элемент используется для определения пути любой сложности
-        </p>
-      </blockquote>
-    </figure>
-
-    <ul>
-      <li class="next">
-        <mark>d</mark> - содержит параметры пути (координаты).
-      </li>
-    </ul>
-
-    <h3 class="next">Обозначения:</h3>
-    <ul>
-      <li class="next">
-        <mark>M</mark> - <code>"moveto"</code> команда, которая определяет новую точку.
-      </li>
-      <li class="next">
-        <mark>L</mark> - <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
-      </li>
-      <li class="next">
-        <mark>H</mark> - горизонтальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>V</mark> - вертикальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+        Обновлен navbar компонент
       </li>
       <li class="next">
         ...
       </li>
-      <li class="next">
-        <mark>Z</mark> - <code>"closepath"</code> завершает текущий подпуть и вызывает автоматическую прямую линию, которая будет нарисована от текущей точки до начальной точки текущего подпути.
-      </li>
     </ul>
-
-    <a href="https://codepen.io/var-bin/pen/xLbzpg?editors=1000#0" target="_blank" class="next">Пример</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+    <h2>Bootstrap v3.3.7</h2>
 
-    <h3>
-      Практика
-    </h3>
+    <h3>Глобальный CSS, стили для основных HTML элементов, сетки</h3>
+
+    <ul class="info-list">
+      <li class="next"><a href="http://getbootstrap.com/css/#grid" target="_blank">Grid system</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#type" target="_blank">Typography</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#code" target="_blank">Code</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#tables" target="_blank">Tables</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#forms" target="_blank">Forms</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#buttons" target="_blank">Buttons</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#images" target="_blank">Images</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#helper-classes" target="_blank">Helper classes</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#responsive-utilities" target="_blank">Responsive utilities</a></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Grid system</h2>
+
+    <h3>Как построить сетку</h3>
+
+    <ul>
+      <li class="next">
+        Столбцы должны быть помещены в элемент с классом <code>.container</code> (fixed-width) или <code>.container-fluid</code> (full-width)
+      </li>
+      <li class="next">
+        Чтобы создать горизонтальные группы колонок используйте столбцы.
+      </li>
+      <li class="next">
+        Контент должен быть помещен в колонках. Только колонки могут быть "детьми" столбцов.
+      </li>
+      <li class="next">
+        Для быстрого создания сеточного макета используйте готовые классы: <code>.row</code>, <code>.col-xs-4</code>, и другие.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Grid system</h2>
+
+    <h3>Как построить сетку</h3>
+
+    <ul>
+      <li class="next">
+        Колонки сетки создаются при помощи <code>.col-{size}-{number}</code>, где:
+        <ul>
+          <li>
+            <code>{size}</code> - размер экрана
+          </li>
+          <li>
+            <code>{number}</code> - номер от 1 - 12
+          </li>
+          <li>
+            <strong>Пример: </strong><code>.col-xs-4</code>
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        Если колонок больше, чем 12, то остальные колонки переносятся на слудующую строку.
+      </li>
+      <li class="next">
+        Можно переопределять поведение сетки для разных размеров экранов при помощи классов: <code>.col-md-*</code>, <code>.col-lg-*</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Grid system</h2>
+
+    <h3>Практика</h3>
     <hr/>
 
-    <figure>
-      <img src="./pictures/1501019596578-path-task.jpg" alt="Нарисуйсте квадрат при помощи path">
-
-      <figcaption>
-        <p>
-          Нарисуйсте квадрат при помощи <mark>path</mark>
-        </p>
-      </figcaption>
-    </figure>
+    <p>
+      Скачайте себе <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap</a>. Подключите его на станичку. Используя <a href="http://getbootstrap.com/css/#grid-options" target="_blank">данную таблицу</a> и <a href="http://getbootstrap.com/css/#grid-example-basic" target="_blank">пример</a> сделайте сетку для <strong>Medium devices Desktops (≥992px)</strong>. Добавьте тест. Должно получиться примерно так: [ <a href="http://take.ms/SeFhr" target="_blank">1</a> ].
+    </p>
+    <p>
+      <strong>P.S.</strong> <code>padding</code>, <code>border</code> на ваше усмотрение.
+    </p>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>text</code></h2>
+    <h2>Bootstrap v3.3.7</h2>
 
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
-      <code class="mark">  fill="red"&gt;</code>
-      <code class="mark">    Hello, out there!</code>
-      <code class="mark">  &lt;/text&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul>
-      <li class="next">
-        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>text</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
-      </li>
-      <li class="next">
-        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>tspan</code></h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
-      <code class="mark">  fill="red"&gt;</code>
-      <code class="mark">    Hello,
-    <mark>&lt;tspan font-weight="bold" fill="blue"&gt;out&lt;/tspan&gt;</mark>
-    there!</code>
-      <code class="mark">  &lt;/text&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <a href="https://codepen.io/var-bin/pen/LjEBQg?editors=1000" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>tspan</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
-      </li>
-      <li class="next">
-        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
-      </li>
-      <li class="next">
-        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. Практика</h2>
+    <h3>Практика</h3>
+    <hr/>
 
     <p>
-      Напишите текст <strong>"Front-End Basic"</strong>. Слово <strong>"Front"</strong> должно быть зеленого цвета. Слово <strong>"End"</strong> должно быть красного цвета. Слово <strong>"Basic"</strong> должно быть синего цвета. <strong>Коротное тире</strong> должно быть без заливки с обводкой в <code>2px</code>, цвет обводки <code>grey</code>.
+      Используя <a href="http://getbootstrap.com/css" target="_blank">данную страницу</a> в качестве справочной информации, создайте страничку, которая будет содержать три и более разных компонентов. <a href="https://codepen.io/var-bin/full/NvxdmK/" target="_blank">Пример</a>
     </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Компоненты</h2>
 
-    <figure>
-      <img src="./pictures/1501025539986-text.jpg" alt="SVG. Пишем текст. Практика">
 
-      <figcaption>
-        Пример того, как должно получиться
-      </figcaption>
-    </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это НЕ последний слайд. Домашнее задание</h2>
 
-    Выполнить практические задания по <mark class="text-uc">svg</mark>, которые вы не сделали на занятии и выложить результат на <a href="https://codepen.io/" target="_blank">codepen</a>
-
+    <em>
+      Скоро будет...
+    </em>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд</h2>
@@ -477,30 +350,7 @@
       <li>
         Полезные ресурсы:
         <ul>
-          <li>
-            <a href="https://www.w3.org/TR/SVG/" target="_blank">Scalable Vector Graphics (SVG) 1.1 (Second Edition)&nbsp;<span class="text-uc">w3c</span></a>
-          </li>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">SVG&nbsp;<span class="text-uc">mdn</span></a>
-          </li>
-          <li>
-            <a href="http://caniuse.com/#search=svg" target="_blank">Поддержка SVG</a>
-          </li>
-          <li>
-            <a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">Online SVG optimizer</a>
-          </li>
-          <li>
-            <a href="https://testdrive-archive.azurewebsites.net/graphics/hands-on-css3/hands-on_svg-filter-effects.htm" target="_blank">Hands On: svg-filter-effects.</a>
-          </li>
-          <li>
-            <a href="http://css-live.ru/articles/karmannoe-rukovodstvo-po-napisaniyu-svg-vvedenie.html" target="_blank">Карманное руководство по написанию SVG</a> [ Рекомендую ]
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=RJnYkbm66ZI" target="_blank">Как сделать Инстаграм в браузере</a>
-          </li>
-          <li>
-            <a href="https://codepen.io/collection/DgLKPv/" target="_blank">Все примеры</a> к lection11
-          </li>
+          <li></li>
         </ul>
       </li>
     </ul>
