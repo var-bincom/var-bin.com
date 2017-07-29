@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">CSS Фреймворки</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">
+        Как поменять цвет заливки любого <mark class="text-uc">svg</mark> элемента?
+      </li>
+
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next">
+        Отличие фреймворка от библиотеки
+      </li>
+      <li class="next">
+        Зачем нужны фреймворки
+      </li>
+      <li class="next">
+        <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset.css</a> vs. <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
+      </li>
+      <li class="next">
+        CSS Фреймворки
+      </li>
+      <li class="next">
+        <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> vs. <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap v4-alpha</a>
+      </li>
+      <li class="next">
+        Bootstrap CSS
+      </li>
+      <li class="next">
+        Bootstrap Компоненты
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Отличие фреймворка от библиотеки</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>Фреймворк</mark> отличается от понятия <mark>библиотеки</mark> тем, что <mark>библиотека</mark> может быть использована в программном продукте просто как <strong>набор подпрограмм близкой функциональности</strong>, не влияя на архитектуру программного продукта и не накладывая на неё никаких ограничений. В то время как <mark>фреймворк</mark> <strong>диктует правила построения архитектуры приложения, задавая на начальном этапе разработки поведение по умолчанию</strong> — «каркас», который нужно будет расширять и изменять, согласно указанным требованиям.
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="https://goo.gl/gbSJdk" target="_blank">wikipedia</a>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Зачем нужны фреймворки</h2>
+
+    <h3 class="next">Плюсы:</h3>
+    <ul>
+      <li class="next">
+        Решает типичные задачи наилучшим способом
+      </li>
+      <li class="next">
+        При написании фреймворка использовались <strong>best practices</strong>
+      </li>
+      <li class="next">
+        Кодовая база написана такими же разработчиками как и вы
+      </li>
+      <li class="next">
+        Кроссбраузерность/Кроссплатформенность
+      </li>
+      <li class="next">
+        Тесты
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Зачем нужны фреймворки</h2>
+
+    <h3 class="next">Недостатки:</h3>
+    <ul>
+      <li class="next">
+        Вы хотели только банан, а тяните к себе на проект и обезьяну и все джунгли
+      </li>
+      <li class="next">
+        Должны следовать требованиям в документации
+      </li>
+      <li class="next">
+        Переход на новую версию фреймворка может быть трудозатратным, а иногда и невозможным
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Reset.css vs. Normalize.css</h2>
+
+    <h3>Reset CSS</h3>
+
+    <figure class="next slide__box-model">
+      <img src="./pictures/1501348204752-reset-css.jpg" alt="Reset.css">
+
+      <figcaption>
+        <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Reset.css vs. Normalize.css</h2>
+
+    <h3>Normalize.css</h3>
+
+    <ul>
+      <li class="next">
+        Сохраняет полезные значения по умолчанию, в отличие от многих сбросов CSS.
+      </li>
+      <li class="next">
+        Нормализует стили для широкого диапазона элементов.
+      </li>
+      <li class="next">
+        Исправляет ошибки и общие несовместимости браузера.
+      </li>
+      <li class="next">
+        Подробно документированный код
+      </li>
+    </ul>
+
+    <a href="https://necolas.github.io/normalize.css/" target="_blank" class="next">Normalize.css</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Reset.css vs. Normalize.css</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <p>
+      Подключите к своему блогу сначала <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a> и посмотрите как изменилось отображение вашего блога. После этого удалите <mark>Reset CSS</mark> и подключите <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>. Проверьте результат после подключения <mark>Normalize.css</mark>.
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>CSS Фреймворки</h2>
+
+    <em>
+      CSS Фреймворков много...
+    </em>
+
+    <ul>
+      <li class="next"><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+      <li class="next"><a href="http://foundation.zurb.com/sites.html" target="_blank">Foundation for Sites</a></li>
+      <li class="next"><a href="https://getmdl.io/" target="_blank">Material Design Lite</a></li>
+      <li class="next"><a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
+      <li class="next"><a href="https://purecss.io/" target="_blank">PureCSS</a></li>
+      <li class="next"><a href="http://bulma.io/" target="_blank">Bulma</a></li>
+      <li class="next"><a href="http://materializecss.com/" target="_blank">Materialize CSS</a></li>
+      <li class="next"><a href="https://metroui.org.ua/" target="_blank">Metro UI CSS</a></li>
+      <li class="next">...</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap</h2>
+
+    <h3>Немного истории</h3>
+    <hr/>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          Был создан в Twitter в середине 2010 года силами дизайнера (<a href="https://twitter.com/mdo" target="_blank">@mdo</a>) и разработчика (<a href="https://twitter.com/fat" target="_blank">@fat</a>). Bootstrap стал самым популярным front-end фреймворком и open source проектом в мире.
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="http://getbootstrap.com/about/" target="_blank">Bootstrap History</a>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
+
+    <ul>
+      <li class="next">
+        Текущая версия <a href="http://getbootstrap.com/" target="_blank">v3.3.7</a>
+      </li>
+      <li class="next">
+        Доступен <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap v4 в альфе</a>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
+
+    <div class="next">
+      <h3>Основные изменения в Bootstrap v4-alpha</h3>
+      <hr/>
+    </div>
+
+    <ul>
+      <li class="next">
+        Переход на flexbox
+      </li>
+      <li class="next">
+        Во всех компонентах используются преимущества flexbox, а не <code>display: table</code> и <code>float</code> хаки.
+      </li>
+      <li class="next">
+        <a href="https://github.com/twbs/bootstrap/pull/21389" target="_blank">Поддержка IE10+</a>
+      </li>
+      <li class="next">
+        Доработан grid компонент
+      </li>
+      <li class="next">
+        Обновлен navbar компонент
+      </li>
+      <li class="next">
+        ...
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7</h2>
+
+    <h3>Глобальный CSS, стили для основных HTML элементов, сетки</h3>
+
+    <ul class="info-list">
+      <li class="next"><a href="http://getbootstrap.com/css/#grid" target="_blank">Grid system</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#type" target="_blank">Typography</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#code" target="_blank">Code</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#tables" target="_blank">Tables</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#forms" target="_blank">Forms</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#buttons" target="_blank">Buttons</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#images" target="_blank">Images</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#helper-classes" target="_blank">Helper classes</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#responsive-utilities" target="_blank">Responsive utilities</a></li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Grid system</h2>
+
+    <h3>Как построить сетку</h3>
+
+    <ul>
+      <li class="next">
+        Столбцы должны быть помещены в элемент с классом <code>.container</code> (fixed-width) или <code>.container-fluid</code> (full-width)
+      </li>
+      <li class="next">
+        Чтобы создать горизонтальные группы колонок используйте столбцы.
+      </li>
+      <li class="next">
+        Контент должен быть помещен в колонках. Только колонки могут быть "детьми" столбцов.
+      </li>
+      <li class="next">
+        Для быстрого создания сеточного макета используйте готовые классы: <code>.row</code>, <code>.col-xs-4</code>, и другие.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Grid system</h2>
+
+    <h3>Как построить сетку</h3>
+
+    <ul>
+      <li class="next">
+        Колонки сетки создаются при помощи <code>.col-{size}-{number}</code>, где:
+        <ul>
+          <li>
+            <code>{size}</code> - размер экрана
+          </li>
+          <li>
+            <code>{number}</code> - номер от 1 - 12
+          </li>
+          <li>
+            <strong>Пример: </strong><code>.col-xs-4</code>
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        Если колонок больше, чем 12, то остальные колонки переносятся на слудующую строку.
+      </li>
+      <li class="next">
+        Можно переопределять поведение сетки для разных размеров экранов при помощи классов: <code>.col-md-*</code>, <code>.col-lg-*</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Grid system</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <p>
+      Скачайте себе <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap</a>. Подключите его на станичку. Используя <a href="http://getbootstrap.com/css/#grid-options" target="_blank">данную таблицу</a> и <a href="http://getbootstrap.com/css/#grid-example-basic" target="_blank">пример</a> сделайте сетку для <strong>Medium devices Desktops (≥992px)</strong>. Добавьте тест. Должно получиться примерно так: [ <a href="http://take.ms/SeFhr" target="_blank">1</a> ].
+    </p>
+    <p>
+      <strong>P.S.</strong> <code>padding</code>, <code>border</code> на ваше усмотрение.
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <p>
+      Используя <a href="http://getbootstrap.com/css" target="_blank">данную страницу</a> в качестве справочной информации, создайте страничку, которая будет содержать три и более разных компонентов. <a href="https://codepen.io/var-bin/full/NvxdmK/" target="_blank">Пример</a>
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Компоненты</h2>
+
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд. Домашнее задание</h2>
+
+    <em>
+      Скоро будет...
+    </em>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
