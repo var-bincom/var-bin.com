@@ -243,180 +243,101 @@
     <h2>Bootstrap v3.3.7</h2>
 
     <h3>Глобальный CSS, стили для основных HTML элементов, сетки</h3>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Ellipse</h2>
 
-    <ul>
-      <li class="next">
-        <mark>rx</mark> - Задает радиус относительно оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
-      </li>
-      <li class="next">
-        <mark>ry</mark> - Задает радиус относительно оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
-      </li>
+    <ul class="info-list">
+      <li class="next"><a href="http://getbootstrap.com/css/#grid" target="_blank">Grid system</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#type" target="_blank">Typography</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#code" target="_blank">Code</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#tables" target="_blank">Tables</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#forms" target="_blank">Forms</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#buttons" target="_blank">Buttons</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#images" target="_blank">Images</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#helper-classes" target="_blank">Helper classes</a></li>
+      <li class="next"><a href="http://getbootstrap.com/css/#responsive-utilities" target="_blank">Responsive utilities</a></li>
     </ul>
-
-    <a href="https://codepen.io/var-bin/pen/yoyeZw" target="_blank" class="next">Пример</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Практика</h2>
+    <h2>Bootstrap v3.3.7. Grid system</h2>
 
-    <figure>
-      <img src="./pictures/1501020097660-smile.jpg" alt="Нарисуйсте квадрат при помощи path">
-
-      <figcaption>
-        Нарисуйсте smile при помощи <mark>circle</mark>, <mark>line</mark>, <mark>rect</mark>
-      </figcaption>
-    </figure>
-
-    <p><strong>Для самых смелых:</strong> Нарисуйте подобные смайлы при помощи <mark>ellipse</mark>, <mark>polyline</mark>, <mark>polygon</mark>.</p>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>path</mark> элемент используется для определения пути любой сложности
-        </p>
-      </blockquote>
-    </figure>
+    <h3>Как построить сетку</h3>
 
     <ul>
       <li class="next">
-        <mark>d</mark> - содержит параметры пути (координаты).
-      </li>
-    </ul>
-
-    <h3 class="next">Обозначения:</h3>
-    <ul>
-      <li class="next">
-        <mark>M</mark> - <code>"moveto"</code> команда, которая определяет новую точку.
+        Столбцы должны быть помещены в элемент с классом <code>.container</code> (fixed-width) или <code>.container-fluid</code> (full-width)
       </li>
       <li class="next">
-        <mark>L</mark> - <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+        Чтобы создать горизонтальные группы колонок используйте столбцы.
       </li>
       <li class="next">
-        <mark>H</mark> - горизонтальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+        Контент должен быть помещен в колонках. Только колонки могут быть "детьми" столбцов.
+      </li>
+      <li class="next">
+        Для быстрого создания сеточного макета используйте готовые классы: <code>.row</code>, <code>.col-xs-4</code>, и другие.
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+    <h2>Bootstrap v3.3.7. Grid system</h2>
+
+    <h3>Как построить сетку</h3>
 
     <ul>
       <li class="next">
-        <mark>V</mark> - вертикальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+        Колонки сетки создаются при помощи <code>.col-{size}-{number}</code>, где:
+        <ul>
+          <li>
+            <code>{size}</code> - размер экрана
+          </li>
+          <li>
+            <code>{number}</code> - номер от 1 - 12
+          </li>
+          <li>
+            <strong>Пример: </strong><code>.col-xs-4</code>
+          </li>
+        </ul>
       </li>
       <li class="next">
-        ...
+        Если колонок больше, чем 12, то остальные колонки переносятся на слудующую строку.
       </li>
       <li class="next">
-        <mark>Z</mark> - <code>"closepath"</code> завершает текущий подпуть и вызывает автоматическую прямую линию, которая будет нарисована от текущей точки до начальной точки текущего подпути.
+        Можно переопределять поведение сетки для разных размеров экранов при помощи классов: <code>.col-md-*</code>, <code>.col-lg-*</code>.
       </li>
     </ul>
-
-    <a href="https://codepen.io/var-bin/pen/xLbzpg?editors=1000#0" target="_blank" class="next">Пример</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+    <h2>Bootstrap v3.3.7. Grid system</h2>
 
-    <h3>
-      Практика
-    </h3>
+    <h3>Практика</h3>
     <hr/>
 
-    <figure>
-      <img src="./pictures/1501019596578-path-task.jpg" alt="Нарисуйсте квадрат при помощи path">
-
-      <figcaption>
-        <p>
-          Нарисуйсте квадрат при помощи <mark>path</mark>
-        </p>
-      </figcaption>
-    </figure>
+    <p>
+      Скачайте себе <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap</a>. Подключите его на станичку. Используя <a href="http://getbootstrap.com/css/#grid-options" target="_blank">данную таблицу</a> и <a href="http://getbootstrap.com/css/#grid-example-basic" target="_blank">пример</a> сделайте сетку для <strong>Medium devices Desktops (≥992px)</strong>. Добавьте тест. Должно получиться примерно так: [ <a href="http://take.ms/SeFhr" target="_blank">1</a> ].
+    </p>
+    <p>
+      <strong>P.S.</strong> <code>padding</code>, <code>border</code> на ваше усмотрение.
+    </p>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>text</code></h2>
+    <h2>Bootstrap v3.3.7</h2>
 
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
-      <code class="mark">  fill="red"&gt;</code>
-      <code class="mark">    Hello, out there!</code>
-      <code class="mark">  &lt;/text&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul>
-      <li class="next">
-        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>text</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
-      </li>
-      <li class="next">
-        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>tspan</code></h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
-      <code class="mark">  fill="red"&gt;</code>
-      <code class="mark">    Hello,
-    <mark>&lt;tspan font-weight="bold" fill="blue"&gt;out&lt;/tspan&gt;</mark>
-    there!</code>
-      <code class="mark">  &lt;/text&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <a href="https://codepen.io/var-bin/pen/LjEBQg?editors=1000" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>tspan</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
-      </li>
-      <li class="next">
-        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
-      </li>
-      <li class="next">
-        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. Практика</h2>
+    <h3>Практика</h3>
+    <hr/>
 
     <p>
-      Напишите текст <strong>"Front-End Basic"</strong>. Слово <strong>"Front"</strong> должно быть зеленого цвета. Слово <strong>"End"</strong> должно быть красного цвета. Слово <strong>"Basic"</strong> должно быть синего цвета. <strong>Коротное тире</strong> должно быть без заливки с обводкой в <code>2px</code>, цвет обводки <code>grey</code>.
+      Используя <a href="http://getbootstrap.com/css" target="_blank">данную страницу</a> в качестве справочной информации, создайте страничку, которая будет содержать три и более разных компонентов. <a href="https://codepen.io/var-bin/full/NvxdmK/" target="_blank">Пример</a>
     </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Bootstrap v3.3.7. Компоненты</h2>
 
-    <figure>
-      <img src="./pictures/1501025539986-text.jpg" alt="SVG. Пишем текст. Практика">
 
-      <figcaption>
-        Пример того, как должно получиться
-      </figcaption>
-    </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это НЕ последний слайд. Домашнее задание</h2>
 
-    Выполнить практические задания по <mark class="text-uc">svg</mark>, которые вы не сделали на занятии и выложить результат на <a href="https://codepen.io/" target="_blank">codepen</a>
-
+    <em>
+      Скоро будет...
+    </em>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд</h2>
@@ -429,30 +350,7 @@
       <li>
         Полезные ресурсы:
         <ul>
-          <li>
-            <a href="https://www.w3.org/TR/SVG/" target="_blank">Scalable Vector Graphics (SVG) 1.1 (Second Edition)&nbsp;<span class="text-uc">w3c</span></a>
-          </li>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">SVG&nbsp;<span class="text-uc">mdn</span></a>
-          </li>
-          <li>
-            <a href="http://caniuse.com/#search=svg" target="_blank">Поддержка SVG</a>
-          </li>
-          <li>
-            <a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">Online SVG optimizer</a>
-          </li>
-          <li>
-            <a href="https://testdrive-archive.azurewebsites.net/graphics/hands-on-css3/hands-on_svg-filter-effects.htm" target="_blank">Hands On: svg-filter-effects.</a>
-          </li>
-          <li>
-            <a href="http://css-live.ru/articles/karmannoe-rukovodstvo-po-napisaniyu-svg-vvedenie.html" target="_blank">Карманное руководство по написанию SVG</a> [ Рекомендую ]
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=RJnYkbm66ZI" target="_blank">Как сделать Инстаграм в браузере</a>
-          </li>
-          <li>
-            <a href="https://codepen.io/collection/DgLKPv/" target="_blank">Все примеры</a> к lection11
-          </li>
+          <li></li>
         </ul>
       </li>
     </ul>
