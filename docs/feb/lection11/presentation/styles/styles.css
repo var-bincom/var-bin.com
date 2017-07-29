@@ -179,9 +179,13 @@
   margin-left: 100px;
 }
 
+.slide__box-model {
+  height: 60%;
+}
+
 .slide__box-model img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .att {
@@ -193,15 +197,4 @@
 .table td:first-child {
   width: 30%;
   padding: 0 0.3em;
-}
-
-.figure_tm {
-  text-align: center;
-}
-
-.svg-logo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100px;
-  height: 100px;
 }
