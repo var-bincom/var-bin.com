@@ -19,31 +19,13 @@ body {
   display: inline-block;
 }
 
-.user-info__header {
-  position: absolute;
-  margin-top: 10px;
-  left: 230px;
-  top: 0;
-  margin-left: 20px;
-}
-
-.user-info__description {
-  position: absolute;
-  left: 230px;
-  bottom: 80px;
-  margin-left: 20px;
-}
-
 .user-info__icons {
-  position: relative;
+  position: absolute;
   background-color: #222;
   padding: 3px;
   border-radius: 3px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  right: 2px;
-  bottom: 67px;
-  width: 14%;
+  bottom: 10px;
+  left: 10px;
 }
 
 .user-info {
@@ -64,9 +46,17 @@ body {
   background-color: #ffff8d;
 }
 
-.user-info__photo figure {
+.user-info__photo {
   width: 220px;
   height: 220px;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+}
+
+.user-info__photo figure {
+  width: 100%;
+  height: 100%;
   margin: 0;
 }
 
@@ -115,13 +105,16 @@ body {
   height: 20px;
   border-radius: 50%;
   border: 2px solid #222;
-  position: relative;
-  bottom: 220px;
-  left: 192px;
-  margin-top: 10px;
-  margin-right: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .user-info__status_online {
   background-color: #76ff03;
+}
+
+.user-info__header h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
