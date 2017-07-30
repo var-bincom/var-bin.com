@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lection8 Flexbox</title>
+</head>
+
+<body>
+  <div class="flex-container popup">
+    <h1 class="fletter">create a new account</h1>
+    <h3 class="fletter">it's free and always will be</h3>
+    <form action="#" method="POST">
+
+      <div class="flex-container__inner-1">
+        <label for="fname">
+          <input type="text" id="fname" required minlength="3" placeholder="First name" class="facade-input flex-container__inner-1__width-input-1" />
+        </label>
+        <div class="inner-1-1">
+          <label for="lname">
+            <input type="text" id="lname" required minlength="3" placeholder="Last name" class="facade-input flex-container__inner-1__width-input-1" />
+          </label>
+        </div>
+      </div>
+
+      <div class="flex-container__inner-2">
+        <label for="text">
+          <input type="text" id="text" placeholder="Mobile number or email" class="facade-input flex-container__inner-1__width-input-2">
+        </label>
+      </div>
+      <div>
+        <label for="password">
+          <input type="password" id="password" maxlength="20" minlength="8" pattern="[0-9][a-zA-Z]" placeholder="New password" class="facade-input flex-container__inner-1__width-input-2" />
+        </label>
+      </div>
+
+      <div class="flex-container__inner-3">
+        <h3 class="fletter">birthday</h3>
+        <div class="flex-container__inner-3__date">
+          <select id="month">
+            <option>Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>Marth</option>
+          </select>
+          <select id="day">
+            <option>Day</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+          <select id="year">
+            <option>Year</option>
+            <option>1985</option>
+            <option>1984</option>
+            <option>1983</option>
+          </select>
+
+          <div class="flex-container__inner-3__date__question"><a href="#">Why do I need to provide my birthday?</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-container__inner-4">
+        <label for="female">
+          <span>Female</span>
+          <input type="radio" name="gender" id="female" required/>
+        </label>
+        <label for="male">
+          <span>Male</span>
+          <input type="radio" name="gender" id="male" required/>
+        </label>
+      </div>
+
+      <div class="flex-container__inner-5">
+        <p class="fletter">by clicing Create Account, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data policy</a>, including our <a href="#">Cookie Use</a>. You may receive CMS Notification from Facebook and opt out any time.
+        </p>
+        <div>
+          <button type="submit"><span>Create Account</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

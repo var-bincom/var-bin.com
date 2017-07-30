@@ -1,0 +1,9 @@
+@media (max-width: 64rem) {
+  aside,
+  section {
+    width: 100%;
+    margin-left: 0;
+  }
+  article {
+    width: inherit;
+  }

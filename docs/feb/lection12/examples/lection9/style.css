@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial;
+}
+
+header,
+aside,
+section,
+footer {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1em;
+  margin-top: 0.3em;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+header {
+  background-color: #f44336;
+  margin-top: 0;
+}
+
+aside {
+  background-color: #e91e63;
+  float: left;
+  width: 24%;
+}
+
+article {
+  overflow: hidden;
+  margin-right: -0.3em;
+  font-size: 0;
+  width: 76%;
+}
+
+section {
+  background-color: #2196f3;
+  display: inline-block;
+  vertical-align: top;
+  width: 24%;
+  margin-left: 0.3em;
+}
+
+footer {
+  background-color: #009688;
+}
+
+main {
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+}
