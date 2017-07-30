@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+.user {
+  display: inline-block;
+}
+
+.user-info__header {
+  position: absolute;
+  margin-top: 10px;
+  left: 230px;
+  top: 0;
+  margin-left: 20px;
+}
+
+.user-info__description {
+  position: absolute;
+  left: 230px;
+  bottom: 80px;
+  margin-left: 20px;
+}
+
+.user-info__icons {
+  position: relative;
+  background-color: #222;
+  padding: 3px;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  right: 2px;
+  bottom: 67px;
+  width: 14%;
+}
+
+.user-info {
+  width: 600px;
+  background-color: #ccc;
+  padding: 1em;
+  border: 3px solid #3e2723;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.user-info_super {
+  border: 3px solid #ff9800;
+  background-color: #ffff8d;
+}
+
+.user-info__photo figure {
+  width: 220px;
+  height: 220px;
+  margin: 0;
+}
+
+.user-info__photo img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.user-info__icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.user-info__icon_count-photo::before {
+  content: "";
+  background: url(https://icon.now.sh/camera_alt/f44336) no-repeat 0 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.user-info__icon_device::before {
+  content: "";
+  background: url(https://icon.now.sh/laptop/f44336) no-repeat 0 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.user-info__icon_smile::before {
+  content: "";
+  background: url(https://icon.now.sh/tag_faces/f44336) no-repeat 0 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.user-info__status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  position: relative;
+  bottom: 220px;
+  left: 192px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.user-info__status_online {
+  background-color: #76ff03;
+}
