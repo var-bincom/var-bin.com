@@ -10,36 +10,31 @@
 </head>
 
 <body>
-  <div class="flex-container popup">
-    <h1 class="fletter">create a new account</h1>
-    <h3 class="fletter">it's free and always will be</h3>
+  <div class="l-form-holder">
+    <h1>
+      Create a new account
+    </h1>
+    <h3>
+      It's free and always will be
+    </h3>
+
     <form action="#" method="POST">
-
-      <div class="flex-container__inner-1">
-        <label for="fname">
-          <input type="text" id="fname" required minlength="3" placeholder="First name" class="facade-input flex-container__inner-1__width-input-1" />
-        </label>
-        <div class="inner-1-1">
-          <label for="lname">
-            <input type="text" id="lname" required minlength="3" placeholder="Last name" class="facade-input flex-container__inner-1__width-input-1" />
-          </label>
-        </div>
+      <div class="flex-container__item flex-container__item_user-name">
+        <input type="text" id="fname" required minlength="3" placeholder="First name" />
+        <input type="text" id="lname" required minlength="3" placeholder="Last name"  />
+      </div>
+      <div class="flex-container__item flex-container__item_mob">
+        <input type="text" id="text" placeholder="Mobile number or email"/>
+      </div>
+      <div class="flex-container__item">
+        <input type="password" id="password" maxlength="20" minlength="8" pattern="[0-9][a-zA-Z]" placeholder="New password" />
       </div>
 
-      <div class="flex-container__inner-2">
-        <label for="text">
-          <input type="text" id="text" placeholder="Mobile number or email" class="facade-input flex-container__inner-1__width-input-2">
-        </label>
-      </div>
-      <div>
-        <label for="password">
-          <input type="password" id="password" maxlength="20" minlength="8" pattern="[0-9][a-zA-Z]" placeholder="New password" class="facade-input flex-container__inner-1__width-input-2" />
-        </label>
-      </div>
-
-      <div class="flex-container__inner-3">
-        <h3 class="fletter">birthday</h3>
-        <div class="flex-container__inner-3__date">
+      <div class="flex-container__item flex-container__item_birthday">
+        <h3>
+          Birthday
+        </h3>
+        <div class="flex-container__item">
           <select id="month">
             <option>Month</option>
             <option>January</option>
@@ -58,34 +53,38 @@
             <option>1984</option>
             <option>1983</option>
           </select>
-
-          <div class="flex-container__inner-3__date__question"><a href="#">Why do I need to provide my birthday?</a>
-          </div>
+          <a href="#" class="question">
+            Why do I need to provide my birthday?
+          </a>
         </div>
       </div>
 
-      <div class="flex-container__inner-4">
+      <div class="flex-container__item flex-container__item_gender">
         <label for="female">
-          <span>Female</span>
+          <span>
+            Female
+          </span>
           <input type="radio" name="gender" id="female" required/>
         </label>
         <label for="male">
-          <span>Male</span>
+          <span>
+            Male
+          </span>
           <input type="radio" name="gender" id="male" required/>
         </label>
       </div>
 
-      <div class="flex-container__inner-5">
-        <p class="fletter">by clicing Create Account, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data policy</a>, including our <a href="#">Cookie Use</a>. You may receive CMS Notification from Facebook and opt out any time.
+      <div class="flex-container__item flex-container__item_submit">
+        <p>
+          By clicing Create Account, you agree to our <a href="#">Terms</a> and that you have read our <a href="#">Data policy</a>, including our <a href="#">Cookie Use</a>. You may receive CMS Notification from Facebook and opt out any time.
         </p>
         <div>
-          <button type="submit"><span>Create Account</span>
+          <button type="submit">
+            Create Account
           </button>
         </div>
       </div>
     </form>
   </div>
-
 </body>
-
 </html>
