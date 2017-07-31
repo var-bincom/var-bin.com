@@ -40,7 +40,7 @@ a {
   --l-feb-calendar-main-header-height: 6em;
 
   height: var(--l-feb-calendar-main-header-height);
-  background: url("../images/2017-06-23 11.39.09-w2d8z-feb_min.png") no-repeat 0 15%;
+  background: url("../images/2017-06-23 11.39.09-w2d8z-feb.min.jpg") no-repeat 0 15%;
   box-shadow: 0 2px 1px var(--l-feb-calendar-main-header-box_shadow);
   margin-bottom: 3px;
   background-size: cover;
