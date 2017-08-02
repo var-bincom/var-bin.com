@@ -29,43 +29,37 @@
     </a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="#" target="_blank">#</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Календарь</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/1FNwD6" target="_blank">goo.gl/1FNwD6</a>
+      <figure>
+        <img src="./pictures/chart-calendar.png" alt="link to calendar">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
     <h2>Вопросы</h2>
 
     <ul>
       <li class="next">
-        Как поменять цвет заливки любого <mark class="text-uc">svg</mark> элемента?
+        Какими правилами вы будете руководствоваться при выборе фреймворка?
       </li>
       <li class="next">
-        Какие преимущества у <mark class="text-uc">svg</mark> по сравнению с другими форматами графики?
+        Какие преимущества при использовании любого фреймворка?
       </li>
       <li class="next">
-        Какая из этих фигур не является базовой фигурой <mark class="text-uc">svg</mark>?
-        <ol>
-          <li>
-            circle
-          </li>
-          <li>
-            rect
-          </li>
-          <li>
-            triangle
-          </li>
-        </ol>
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Разбор ДЗ</h2>
-
-    <ul>
-      <li>
-        <a href="http://var-bin.com/feb/lection7/presentation/#11" target="_blank">ДЗ по lection7</a>
-      </li>
-      <li>
-        <a href="http://var-bin.com/feb/lection8/presentation/#24" target="_blank">ДЗ по lection8</a>
-      </li>
-      <li>
-        <a href="http://var-bin.com/feb/lection9/presentation/#23" target="_blank">ДЗ по lection9</a>
+        Какие недостатки при использовании любого фреймворка?
       </li>
     </ul>
   </section>
@@ -74,342 +68,588 @@
 
     <ul>
       <li class="next">
-        Отличие фреймворка от библиотеки
+        Что такое препроцессоры
       </li>
       <li class="next">
-        Зачем нужны фреймворки
+        Немного истории
       </li>
       <li class="next">
-        <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset.css</a> vs. <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
+        Некоторые проблемы CSS
       </li>
       <li class="next">
-        CSS Фреймворки
+        Преимущества использования препроцессоров
       </li>
       <li class="next">
-        <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> vs. <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap v4-alpha</a>
+        Недостатки использования препроцессоров
       </li>
       <li class="next">
-        Bootstrap CSS
+        Sass/SCSS
       </li>
       <li class="next">
-        Bootstrap Компоненты
+        Что умеет Sass
+      </li>
+      <li class="next">
+        Полезные фреймворки на базе <mark>Sass</mark>
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Отличие фреймворка от библиотеки</h2>
+    <h2>Что такое препроцессоры</h2>
 
     <figure class="next">
       <blockquote>
         <p>
-          <mark>Фреймворк</mark> отличается от понятия <mark>библиотеки</mark> тем, что <mark>библиотека</mark> может быть использована в программном продукте просто как <strong>набор подпрограмм близкой функциональности</strong>, не влияя на архитектуру программного продукта и не накладывая на неё никаких ограничений. В то время как <mark>фреймворк</mark> <strong>диктует правила построения архитектуры приложения, задавая на начальном этапе разработки поведение по умолчанию</strong> — «каркас», который нужно будет расширять и изменять, согласно указанным требованиям.
+          <mark>Препроцессор</mark> — это программа, которая берёт один тип данных и преобразует его в другой тип данных.
         </p>
       </blockquote>
       <figcaption>
-        <a href="https://goo.gl/gbSJdk" target="_blank">wikipedia</a>
+        <a href="https://webref.ru/layout/advanced-html-css/preprocessors" target="_blank">webref.ru</a>
       </figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Зачем нужны фреймворки</h2>
+    <h2>Что такое препроцессоры</h2>
 
-    <h3 class="next">Плюсы:</h3>
-    <ul>
-      <li class="next">
-        Решает типичные задачи наилучшим способом
-      </li>
-      <li class="next">
-        При написании фреймворка использовались <strong>best practices</strong>
-      </li>
-      <li class="next">
-        Кодовая база написана такими же разработчиками как и вы
-      </li>
-      <li class="next">
-        Кроссбраузерность/Кроссплатформенность
-      </li>
-      <li class="next">
-        Тесты
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Зачем нужны фреймворки</h2>
-
-    <h3 class="next">Недостатки:</h3>
-    <ul>
-      <li class="next">
-        Вы хотели только банан, а тяните к себе на проект и обезьяну и все джунгли
-      </li>
-      <li class="next">
-        Должны следовать требованиям в документации
-      </li>
-      <li class="next">
-        Переход на новую версию фреймворка может быть трудозатратным, а иногда и невозможным
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Reset.css vs. Normalize.css</h2>
-
-    <h3>Reset CSS</h3>
-
-    <figure class="next slide__box-model">
-      <img src="./pictures/1501348204752-reset-css.jpg" alt="Reset.css">
-
-      <figcaption>
-        <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a>
-      </figcaption>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Reset.css vs. Normalize.css</h2>
-
-    <h3>Normalize.css</h3>
-
-    <ul>
-      <li class="next">
-        Сохраняет полезные значения по умолчанию, в отличие от многих сбросов CSS.
-      </li>
-      <li class="next">
-        Нормализует стили для широкого диапазона элементов.
-      </li>
-      <li class="next">
-        Исправляет ошибки и общие несовместимости браузера.
-      </li>
-      <li class="next">
-        Подробно документированный код.
-      </li>
-    </ul>
-
-    <a href="https://necolas.github.io/normalize.css/" target="_blank" class="next">Normalize.css</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Reset.css vs. Normalize.css</h2>
-
-    <h3>Практика</h3>
-    <hr/>
-
-    <p>
-      Подключите к своему блогу сначала <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a> и посмотрите как изменилось отображение вашего блога. После этого удалите <mark>Reset CSS</mark> и подключите <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>. Проверьте результат после подключения <mark>Normalize.css</mark>.
-    </p>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>CSS Фреймворки</h2>
-
-    <em>
-      CSS Фреймворков много...
-    </em>
-
-    <ul>
-      <li class="next"><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-      <li class="next"><a href="http://foundation.zurb.com/sites.html" target="_blank">Foundation for Sites</a></li>
-      <li class="next"><a href="https://getmdl.io/" target="_blank">Material Design Lite</a></li>
-      <li class="next"><a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
-      <li class="next"><a href="https://purecss.io/" target="_blank">PureCSS</a></li>
-      <li class="next"><a href="http://bulma.io/" target="_blank">Bulma</a></li>
-      <li class="next"><a href="http://materializecss.com/" target="_blank">Materialize CSS</a></li>
-      <li class="next"><a href="https://metroui.org.ua/" target="_blank">Metro UI CSS</a></li>
-      <li class="next">...</li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap</h2>
-
-    <h3>Немного истории</h3>
-    <hr/>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          Был создан в Twitter в середине 2010 года силами дизайнера (<a href="https://twitter.com/mdo" target="_blank">@mdo</a>) и разработчика (<a href="https://twitter.com/fat" target="_blank">@fat</a>). Bootstrap стал самым популярным front-end фреймворком и open source проектом в мире.
-        </p>
-      </blockquote>
-      <figcaption>
-        <a href="http://getbootstrap.com/about/" target="_blank">Bootstrap History</a>
-      </figcaption>
-    </figure>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
-
-    <ul>
-      <li class="next">
-        Текущая версия <a href="http://getbootstrap.com/" target="_blank">v3.3.7</a>
-      </li>
-      <li class="next">
-        Доступен <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap v4 в альфе</a>
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
-
-    <div class="next">
-      <h3>Основные изменения в Bootstrap v4-alpha</h3>
-      <hr/>
-    </div>
-
-    <ul>
-      <li class="next">
-        Переход на flexbox
-      </li>
-      <li class="next">
-        Во всех компонентах используются преимущества flexbox, а не <code>display: table</code> и <code>float</code> хаки.
-      </li>
-      <li class="next">
-        <a href="https://github.com/twbs/bootstrap/pull/21389" target="_blank">Поддержка IE10+</a>
-      </li>
-      <li class="next">
-        Доработан grid компонент
-      </li>
-      <li class="next">
-        Обновлен navbar компонент
-      </li>
-      <li class="next">
-        ...
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7</h2>
-
-    <h3>Глобальный CSS, стили для основных HTML элементов, сетки:</h3>
-    <hr/>
-
-    <ul class="info-list">
-      <li class="next"><a href="http://getbootstrap.com/css/#grid" target="_blank">Grid system</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#type" target="_blank">Typography</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#code" target="_blank">Code</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#tables" target="_blank">Tables</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#forms" target="_blank">Forms</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#buttons" target="_blank">Buttons</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#images" target="_blank">Images</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#helper-classes" target="_blank">Helper classes</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#responsive-utilities" target="_blank">Responsive utilities</a></li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7. Grid system</h2>
-
-    <h3>Как построить сетку:</h3>
-    <hr/>
-
-    <ul>
-      <li class="next">
-        Столбцы должны быть помещены в элемент с классом <code>.container</code> (fixed-width) или <code>.container-fluid</code> (full-width)
-      </li>
-      <li class="next">
-        Чтобы создать горизонтальные группы колонок используйте столбцы.
-      </li>
-      <li class="next">
-        Контент должен быть помещен в колонках. Только колонки могут быть "детьми" столбцов.
-      </li>
-      <li class="next">
-        Для быстрого создания сеточного макета используйте готовые классы: <code>.row</code>, <code>.col-xs-4</code>, и другие.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7. Grid system</h2>
-
-    <h3>Как построить сетку:</h3>
-    <hr/>
-
-    <ul>
-      <li class="next">
-        Колонки сетки создаются при помощи <code>.col-{size}-{number}</code>, где:
-        <ul>
-          <li>
-            <code>{size}</code> - размер экрана
-          </li>
-          <li>
-            <code>{number}</code> - номер от 1 - 12
-          </li>
-          <li>
-            <strong>Пример: </strong><code>.col-xs-4</code>
-          </li>
-        </ul>
-      </li>
-      <li class="next">
-        Если колонок больше, чем 12, то остальные колонки переносятся на слудующую строку.
-      </li>
-      <li class="next">
-        Можно переопределять поведение сетки для разных размеров экранов при помощи классов: <code>.col-md-*</code>, <code>.col-lg-*</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7. Grid system</h2>
-
-    <h3>Практика</h3>
-    <hr/>
-
-    <p>
-      Скачайте себе <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap</a>. Подключите его на станичку. Используя <a href="http://getbootstrap.com/css/#grid-options" target="_blank">данную таблицу</a> и <a href="http://getbootstrap.com/css/#grid-example-basic" target="_blank">пример</a> сделайте сетку для <strong>Medium devices Desktops (≥992px)</strong>. Добавьте тест. Должно получиться примерно так: [ <a href="http://take.ms/SeFhr" target="_blank">1</a> ].
-    </p>
-    <p>
-      <strong>P.S.</strong> <code>padding</code>, <code>border</code> на ваше усмотрение.
-    </p>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7</h2>
-
-    <h3>Практика</h3>
-    <hr/>
-
-    <p>
-      Используя <a href="http://getbootstrap.com/css" target="_blank">данную страницу</a> в качестве справочной информации, создайте страничку, которая будет содержать три и более разных компонентов из глобального CSS.
-    </p>
-
-    <a href="https://codepen.io/var-bin/full/NvxdmK/" target="_blank">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7</h2>
-
-    <h3>Компоненты:</h3>
+    <h3>Препроцессоров много:</h3>
     <hr/>
 
     <div class="slide__list">
-      <ul class="info-list">
-        <li class="next"><a href="http://getbootstrap.com/components/#glyphicons" target="_blank">Glyphicons</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#dropdowns" target="_blank">Dropdowns</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#btn-groups" target="_blank">Button groups</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#btn-dropdowns" target="_blank">Button dropdowns</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#input-groups" target="_blank">Input groups</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#nav" target="_blank">Navs</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#navbar" target="_blank">Navbar</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#breadcrumbs" target="_blank">Breadcrumbs</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#pagination" target="_blank">Pagination</a></li>
-      </ul>
-      <ul class="info-list">
-        <li class="next"><a href="http://getbootstrap.com/components/#labels" target="_blank">Labels</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#badges" target="_blank">Badges</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#jumbotron" target="_blank">Jumbotron</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#page-header" target="_blank">Page header</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#thumbnails" target="_blank">Thumbnails</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#alerts" target="_blank">Alerts</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#progress" target="_blank">Progress bars</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#media" target="_blank">Media object</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#list-group" target="_blank">List group</a></li>
-      </ul>
       <ul>
-        <li class="next"><a href="http://getbootstrap.com/components/#panels" target="_blank">Panels</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#responsive-embed" target="_blank">Responsive embed</a></li>
+        <li><span class="text-uc">html</span>
+          <ul>
+            <li>
+              <a href="http://haml.info/" target="_blank">Haml</a>
+            </li>
+            <li>
+              <a href="http://jadelang.net" target="_blank">Jade</a>
+            </li>
+            <li>
+              <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a>
+            </li>
+            <li>
+              <a href="https://mustache.github.io/" target="_blank">Mustache</a>
+            </li>
+            <li>
+              <a href="http://www.embeddedjs.com/" target="_blank" class="text-uc">ejs</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <span class="text-uc">css</span>
+          <ul>
+            <li>
+              <a href="http://sass-lang.com" target="_blank">Sass</a>
+            </li>
+            <li>
+              <a href="http://lesscss.org/" target="_blank">Less</a>
+            </li>
+            <li>
+              <a href="http://stylus-lang.com/" target="_blank">Stylus</a>
+            </li>
+            <li>
+              <a href="http://postcss.org/" target="_blank">PostCSS</a>
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7 Компоненты</h2>
+    <h2>Немного истории</h2>
+
+    <ul>
+      <li class="next">
+        Октябрь 2005 - Sass CSS pre-processor
+      </li>
+      <li class="next">
+        Август 2009 - Less CSS pre-processor
+      </li>
+      <li class="next">
+        Январь 2011 - Stylus CSS pre-processor
+      </li>
+      <li class="next">
+        Декабрь 2013 - PostCSS
+      </li>
+      <li class="next">
+        <a href="https://www.w3.org/Style/CSS20/" target="_blank">20 Years of CSS</a>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Некоторые проблемы CSS</h2>
+
+    <ul>
+      <li class="next">
+        В таблицах стилей очень много повторений
+      </li>
+      <li class="next">
+        Цвета, шрифты, часто используемые группы свойств и т.п.
+      </li>
+      <li class="next">
+        Никакого объектно-ориентированного подхода
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Преимущества использования препроцессоров</h2>
+
+    <ul>
+      <li class="next">
+        Переменные
+      </li>
+      <li class="next">
+        Повторное использование кода (<a href="https://goo.gl/q5Q2fK" target="_blank">DRY</a>)
+      </li>
+      <li class="next">
+        Возможность дробить большие файлы стилей на маленькие независимые компоненты
+      </li>
+      <li class="next">
+        Скорость написания кода возрастает в несколько раз
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Недостатки использования препроцессоров</h2>
+
+    <ul>
+      <li class="next">
+        Вся "магия", которую умеют препроцессоры недоступна после компиляции
+      </li>
+      <li class="next">
+        Непонимание конечного результата
+      </li>
+      <li class="next">
+        На больших проектах компиляция стилей занимает много времени
+      </li>
+      <li class="next">
+        Перейти на "чистый" CSS трудозатратно
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Sass/SCSS - два расширения</h2>
+
+    <em>
+      В чем разница
+    </em>
+
+    <h3>
+      <mark>Syntactically Awesome StyleSheets</mark>
+    </h3>
+
+    <pre>
+      <code>$font-stack:    Helvetica, sans-serif</code>
+      <code>$primary-color: #333</code>
+      <code>&nbsp;</code>
+      <code>body </code>
+      <code>  font: 100% $font-stack</code>
+      <code>  color: $primary-color</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Sass/SCSS - два расширения</h2>
+
+    <em>
+      В чем разница
+    </em>
+
+    <h3>
+      <mark>Sassy CSS</mark>
+    </h3>
+
+    <pre>
+      <code>$font-stack:    Helvetica, sans-serif;</code>
+      <code>$primary-color: #333;</code>
+      <code>&nbsp;</code>
+      <code>body {</code>
+      <code>  font: 100% $font-stack;</code>
+      <code>  color: $primary-color;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass</h2>
+
+    <ul>
+      <li class="next">
+        Переменные
+      </li>
+      <li class="next">
+        Вложенность
+      </li>
+      <li class="next">
+        Partials
+      </li>
+      <li class="next">
+        Импорты
+      </li>
+      <li class="next">
+        Примеси (Миксины)
+      </li>
+      <li class="next">
+        Расширение и наследование
+      </li>
+      <li class="next">
+        Математические операции
+      </li>
+      <li class="next">
+        Полезные встроенные функции
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Переменные</h2>
+
+    <pre>
+      <code>$font-stack:    Arial, Helvetica, sans-serif;</code>
+      <code>$font-base:     1em;</code>
+      <code>$primary-color: #333;</code>
+      <code>$img-url:       "../images";</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Переменные</h2>
 
     <h3>Практика</h3>
     <hr/>
+
+    <ol>
+      <li>
+        Установите расширение для своего редактора:
+        <ul>
+          <li>
+            <a href="https://packagecontrol.io/packages/SASS%20Build" target="_blank">Sublime Text</a>
+          </li>
+          <li>
+            <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">VS Code</a>
+          </li>
+        </ul>
+      </li>
+      <li>Создайте файл <mark>styles.scss</mark></li>
+      <li>Создайте несколько переменных и примените их в стилях</li>
+      <li>Скомпилируйте стили</li>
+      <li>Проверьте итоговый результат</li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность</h2>
+
+    <pre>
+      <code>&lt;nav&gt;</code>
+      <code>  &lt;ul&gt;</code>
+      <code>    &lt;li&gt;</code>
+      <code>      &lt;a href="#"&gt;some link text&lt;/a&gt;</code>
+      <code>    &lt;/li&gt;</code>
+      <code class="comment">    &lt;!-- ... --&gt;</code>
+      <code>  &lt;/ul&gt;</code>
+      <code>&lt;/nav&gt;</code>
+    </pre>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность</h2>
+
+    <pre>
+      <code>nav {</code>
+      <code>  ul {</code>
+      <code>    margin: 0;</code>
+      <code>    padding: 0;</code>
+      <code>    list-style: none;</code>
+      <code>  }</code>
+      <code>  li { display: inline-block; }</code>
+      <code>  a { display: block; }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность</h2>
+
+    <pre>
+      <code>div {</code>
+      <code>  font: {</code>
+      <code>    family: Arial, Helvetica, sans-serif;</code>
+      <code>    style: italic;</code>
+      <code>    weight: normal;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность. Родительский селектор <mark>&amp;</mark></h2>
+
+    <pre>
+      <code>a {</code>
+      <code>  color: blue;</code>
+      <code>&nbsp;</code>
+      <code>  &amp;:hover {</code>
+      <code>    text-decoration: none;</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Комментарии</h2>
+
+    <pre>
+      <code>/*</code>
+      <code> * This comment is</code>
+      <code> * several lines long.</code>
+      <code> * since it uses the CSS comment syntax,</code>
+      <code> * it will appear in the CSS output.</code>
+      <code> */</code>
+      <code>body {</code>
+      <code>  color: black;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Комментарии</h2>
+
+    <pre>
+      <code>// These comments are only one line long each.</code>
+      <code>// They won't appear in the CSS output,</code>
+      <code>// since they use the single-line comment syntax.</code>
+      <code>a {</code>
+      <code>  color: green;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Комментарии</h2>
+
+    <pre>
+      <code>$version: "1.2.3";</code>
+      <code>&nbsp;</code>
+      <code>/* This CSS is generated by My Snazzy Framework</code>
+      <code> version <mark>#{$version}</mark>. */</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность и Комментарии</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <ol class="info-list">
+      <li>
+        Создайте навигационное меню для сайта из пяти пунктов. <strong>За пример, можно взять меню из <a href="var-bin.com/feb/lection6/examples/blog/minimo.jpg" target="_blank">своего блога</a></strong>
+      </li>
+      <li>Примените стили к этому меню используя вложенность</li>
+      <li>Добавьте несколько многострочных комментариев</li>
+      <li>Добавьте несколько однострочных комментариев</li>
+      <li>Используйте переменные</li>
+      <li>Скомпилируйте стили</li>
+      <li>Проверьте итоговый результат</li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Partials</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          <mark>Partials</mark> - это возможность создавать файлы маленького размера с CSS заготовками и/или переменными и включать их в другие Sass файлы. <strong>Для таких файлов не будет создан результатирующий CSS файл</strong>.
+        </p>
+      </blockquote>
+    </figure>
+
+    <ul>
+      <li class="next">
+        Имена таких файлов начинаются с нижнего подчеркивания <code>_</code>
+      </li>
+      <li class="next">
+        Такие файлы используются вместе с <code>@import</code>
+      </li>
+      <li class="next">
+        Пример имени: <code>_partial.scss</code>
+      </li>
+      <li class="next">
+        Пример подключения: <code>@import "partial";</code>
+      </li>
+    </ul>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Импорты</h2>
+
+    <h3>В чем отличие от обычного <code>@import</code> в CSS?</h3>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          В Sass для <mark>@import</mark> не создается отдельный HTTP request в отличии от CSS. Вместо этого, Sass включает содержимое импортируемого файла в итоговый файл стилей.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Импорты</h2>
+
+    <pre>
+      <code class="comment">// reset.scss</code>
+      <code>html, body, ul, ol {</code>
+      <code>  margin:  0;</code>
+      <code>  padding: 0;</code>
+      <code>}</code>
+      <code class="comment">// base.scss</code>
+      <code>@import "reset;</code>
+      <code>body {</code>
+      <code>  font: 100% Helvetica, sans-serif;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Импорты</h2>
+
+    <h3>
+      Вложенные <mark>@import</mark>
+    </h3>
+    <hr/>
+
+    <pre>
+      <code class="comment">// example.scss</code>
+      <code>.example {</code>
+      <code>  color: red;</code>
+      <code>}</code>
+      <code class="comment">// main.scss</code>
+      <code>#main {</code>
+      <code>  @import "example";</code>
+      <code>}</code>
+    </pre>
+  </section>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Импорты и Partials</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <ol>
+      <li>
+        Создайте файл <mark>normalize.scss</mark>. Пропишите в него <a href="https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css" target="_blank">стили</a>
+      </li>
+      <li>Создайте файл <mark>_variables.scss</mark>. Пропишите в него <a href="../examples/ex1/_variables.scss" target="_blank">переменные</a></li>
+      <li>Подключите эти оба файла в <mark>styles.scss</mark></li>
+      <li>Используйте переменные для задания стилей для <mark>body</mark></li>
+      <li>Скомпилируйте стили</li>
+      <li>Проверьте итоговый результат</li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          <mark>Примеси (Миксины)</mark> предлагают простой способ создания шаблонов свойств и значений, а затем обмениваться ими между разными селекторами и файлами.
+        </p>
+      </blockquote>
+    </figure>
+
+    <pre class="next">
+      <code><mark>@mixin</mark> silly-links {</code>
+      <code>  a {</code>
+      <code>    color: blue;</code>
+      <code>  }</code>
+      <code>}</code>
+      <code>p { <mark>@include silly-links;</mark> }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <h3>
+      Примеси (Миксины) c аргументами
+    </h3>
+    <hr/>
+
+    <pre class="next">
+      <code>@mixin silly-links(<mark>$color, $bg</mark>) {</code>
+      <code>  a {</code>
+      <code>    color: <mark>$color</mark>;</code>
+      <code>    background-color: <mark>$bg</mark>;</code>
+      <code>  }</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>p { <mark>@include silly-links(blue, red);</mark> }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <h3>
+      Примеси (Миксины) c аргументами и значением по умолчанию
+    </h3>
+    <hr/>
+
+    <pre class="next">
+      <code>@mixin silly-links(<mark>$color, $bg: red</mark>) {</code>
+      <code>  a {</code>
+      <code>    color: <mark>$color</mark>;</code>
+      <code>    background-color: <mark>$bg</mark>;</code>
+      <code>  }</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>p { <mark>@include silly-links(blue);</mark> }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <pre>
+      <code>@mixin border-radius($radius) {</code>
+      <code>  -webkit-border-radius: $radius;</code>
+      <code>     -moz-border-radius: $radius;</code>
+      <code>      -ms-border-radius: $radius;</code>
+      <code>          border-radius: $radius;</code>
+      <code>  }</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>p { <mark>@include border-radius(10px);</mark> }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <h3>
+      Примеси (Миксины) c неизвестным количеством аргументов
+    </h3>
+    <hr/>
+
+    <pre class="next">
+      <code>@mixin box-shadow(<mark>$shadows...</mark>) {</code>
+      <code>  -webkit-box-shadow: $shadows;</code>
+      <code>     -moz-box-shadow: $shadows;</code>
+      <code>          box-shadow: $shadows;</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>p { <mark>box-shadow(0px 4px 5px #666, 2px 6px 10px #999);</mark> }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <ol>
+      <li>Создайте файл <mark>_mixins.scss</mark></li>
+      <li>Добавьте в него несколько миксинов. Например: <code>box-shadow</code>; <code>border-radius</code>. Один, два придумайте сами</li>
+      <li>Подключите <mark>_mixins.scss</mark> в <mark>styles.scss</mark></li>
+      <li>Используйте миксины</li>
+      <li>Скомпилируйте стили</li>
+      <li>Проверьте итоговый результат</li>
+    </ol>
 
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это НЕ последний слайд. Домашнее задание</h2>
 
     <p>
-      Сделайте <a href="../examples/blog/minimo.jpg" target="_blank">свой блог</a> при помощи <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>. Это должна быть отдельная версия блога. Сравните результат, который получился с тем, где вы не использовали <mark>Bootstrap</mark>.
+      Перепишите стили для <a href="../examples/blog/minimo.jpg" target="_blank">своего блога</a> при помощи <a href="http://sass-lang.com" target="_blank">Sass</a>. Это должна быть отдельная версия блога. Используйте все то, что мы рассмотрели: переменные, импорты, примеси (миксины), partials, комментарии. Можете доавить что-то свое, что мы не успели рассмотреть. Сравните результат, который получился с тем, где вы не использовали <mark>Sass</mark>.
     </p>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
