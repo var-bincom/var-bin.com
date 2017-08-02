@@ -1,0 +1,13 @@
+$selector: ".header";
+$attr: "border";
+$img-url: "../images";
+
+#{$selector} {
+  background: url("#{$img-url}/some-image.jpg") no-repeat 0 0;
+
+  #{$attr}: {
+    width: 1px;
+    style: double;
+    color: #369;
+  }
+}
