@@ -3,3 +3,6 @@ examples/**/*.map
 
 # examples/**/*.css
 examples/**/*.css
+
+# *.config
+*.config
