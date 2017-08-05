@@ -1,0 +1,36 @@
+// @extend
+
+.error {
+  border: 1px solid #f00;
+  background-color: #fdd;
+}
+
+.serious-error {
+  @extend .error;
+  border-width: 3px;
+}
+
+.error.intrusion {
+  background-image: url("/images/hacked.png");
+}
+
+.btn {
+  border: 0;
+  padding: 15px;
+  background-color: #0f0;
+  color: #fff;
+
+  &:hover {
+    background-color: #f00;
+  }
+
+  &:active {
+    background-color: #00f;
+  }
+}
+
+.btn-pay {
+  @extend .btn;
+
+  border: 1px solid gold;
+}

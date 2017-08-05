@@ -227,6 +227,9 @@
       <li class="next">
         Перейти на "чистый" CSS трудозатратно
       </li>
+      <li class="next">
+        Разработчики пытаются программировать на препроцессорах
+      </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -237,8 +240,9 @@
     </em>
 
     <h3>
-      <mark>Syntactically Awesome StyleSheets</mark>
+      <mark>Syntactically Awesome StyleSheets(.sass)</mark>
     </h3>
+    <hr/>
 
     <pre>
       <code>$font-stack:    Helvetica, sans-serif</code>
@@ -257,8 +261,9 @@
     </em>
 
     <h3>
-      <mark>Sassy CSS</mark>
+      <mark>Sassy CSS(.scss)</mark>
     </h3>
+    <hr/>
 
     <pre>
       <code>$font-stack:    Helvetica, sans-serif;</code>
@@ -269,6 +274,33 @@
       <code>  color: $primary-color;</code>
       <code>}</code>
     </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Sass/SCSS компиляция</h2>
+
+    <h3>Расширения для редакторов</h3>
+    <hr/>
+    <ul>
+      <li>
+        <a href="https://packagecontrol.io/packages/SASS%20Build" target="_blank">Sublime Text</a>
+      </li>
+      <li>
+        <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass" target="_blank">VS Code</a>
+      </li>
+    </ul>
+    <h3>GUI</h3>
+    <hr/>
+    <ul>
+      <li>
+        <a href="http://koala-app.com/" target="_blank">Koala</a>
+      </li>
+      <li>
+        <a href="https://prepros.io/" target="_blank">Prepros</a><sup>*</sup>
+      </li>
+      <li>
+        <a href="http://scout-app.io/" target="_blank">Scout-App</a>
+      </li>
+    </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Что умеет Sass</h2>
@@ -304,10 +336,15 @@
     <h2>Что умеет Sass. Переменные</h2>
 
     <pre>
-      <code>$font-stack:    Arial, Helvetica, sans-serif;</code>
-      <code>$font-base:     1em;</code>
-      <code>$primary-color: #333;</code>
+      <code><mark>$font-stack:    Arial, Helvetica, sans-serif;</mark></code>
+      <code><mark>$font-base:     1em;</mark></code>
+      <code><mark>$primary-color: #333;</mark></code>
       <code>$img-url:       "../images";</code>
+      <code>&nbsp;</code>
+      <code>body {</code>
+      <code>  font: <mark>$font-base</mark> <mark>$font-stack</mark>;</code>
+      <code>  color: <mark>$primary-color</mark>;</code>
+      <code>}</code>
     </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -350,7 +387,23 @@
 
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Что умеет Sass. Вложенность</h2>
+    <h2>Что умеет Sass. Вложенность. CSS подход</h2>
+
+    <pre>
+      <code>nav ul {</code>
+      <code>  margin: 0;</code>
+      <code>  padding: 0;</code>
+      <code>  list-style: none;</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>nav li { display: inline-block; }</code>
+      <code>&nbsp;</code>
+      <code>nav a { display: block; }</code>
+    </pre>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность. Sass подход</h2>
 
     <pre>
       <code>nav {</code>
@@ -365,26 +418,51 @@
     </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Что умеет Sass. Вложенность</h2>
+    <h2>Что умеет Sass. Вложенность. CSS подход</h2>
 
     <pre>
       <code>div {</code>
-      <code>  font: {</code>
-      <code>    family: Arial, Helvetica, sans-serif;</code>
-      <code>    style: italic;</code>
-      <code>    weight: normal;</code>
-      <code>  }</code>
+      <code>  font-family: Arial, Helvetica, sans-serif;</code>
+      <code>  font-style: italic;</code>
+      <code>  font-weight: normal;</code>
       <code>}</code>
     </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Что умеет Sass. Вложенность. Родительский селектор <mark>&amp;</mark></h2>
+    <h2>Что умеет Sass. Вложенность. Sass подход</h2>
+
+    <pre>
+      <code>div {</code>
+      <code>  <mark>font: {</mark></code>
+      <code>    <mark>family: Arial, Helvetica, sans-serif;</mark></code>
+      <code>    <mark>style: italic;</mark></code>
+      <code>    <mark>weight: normal;</mark></code>
+      <code>  <mark>}</mark></code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность. CSS подход</h2>
+
+    <pre>
+      <code>a {</code>
+      <code>  color: blue;</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>a:hover {</code>
+      <code>  text-decoration: none;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Вложенность. Родительский селектор <mark>&amp;</mark>. Sass подход</h2>
 
     <pre>
       <code>a {</code>
       <code>  color: blue;</code>
       <code>&nbsp;</code>
-      <code>  &amp;:hover {</code>
+      <code>  <mark>&amp;:hover</mark> {</code>
       <code>    text-decoration: none;</code>
       <code>  }</code>
       <code>}</code>
@@ -495,7 +573,26 @@
       <code>  padding: 0;</code>
       <code>}</code>
       <code class="comment">// base.scss</code>
-      <code>@import "reset;</code>
+      <code><mark>@import "reset";</mark></code>
+      <code>body {</code>
+      <code>  font: 100% Helvetica, sans-serif;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Импорты</h2>
+
+    <h3>
+      Результат CSS
+    </h3>
+    <hr/>
+
+    <pre>
+      <code class="comment">/* base.css */</code>
+      <code>html, body, ul, ol {</code>
+      <code>  margin:  0;</code>
+      <code>  padding: 0;</code>
+      <code>}</code>
       <code>body {</code>
       <code>  font: 100% Helvetica, sans-serif;</code>
       <code>}</code>
@@ -516,10 +613,24 @@
       <code>}</code>
       <code class="comment">// main.scss</code>
       <code>#main {</code>
-      <code>  @import "example";</code>
+      <code>  <mark>@import "example";</mark></code>
       <code>}</code>
     </pre>
   </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Импорты</h2>
+
+    <h3>
+      Вложенные <mark>@import</mark>. Результат CSS
+    </h3>
+    <hr/>
+
+    <pre>
+      <code class="comment">// main.css</code>
+      <code>#main .example {</code>
+      <code>  color: red;</code>
+      <code>}</code>
+    </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Что умеет Sass. Импорты и Partials</h2>
@@ -559,6 +670,18 @@
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Что умеет Sass. Примеси (Миксины)</h2>
 
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code>p a {</code>
+      <code>  color: blue;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
     <h3>
       Примеси (Миксины) c аргументами
     </h3>
@@ -573,6 +696,19 @@
       <code>}</code>
       <code>&nbsp;</code>
       <code>p { <mark>@include silly-links(blue, red);</mark> }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code>p a {</code>
+      <code>  color: <mark>blue</mark>;</code>
+      <code>  background-color: <mark>red</mark>;</code>
+      <code>}</code>
     </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -597,6 +733,19 @@
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Что умеет Sass. Примеси (Миксины)</h2>
 
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code>p a {</code>
+      <code>  color: <mark>blue</mark>;</code>
+      <code>  background-color: <mark>red</mark>;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
     <pre>
       <code>@mixin border-radius($radius) {</code>
       <code>  -webkit-border-radius: $radius;</code>
@@ -607,6 +756,21 @@
       <code>}</code>
       <code>&nbsp;</code>
       <code>p { <mark>@include border-radius(10px);</mark> }</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code>p {</code>
+      <code>  -webkit-border-radius: <mark>10px</mark>;</code>
+      <code>     -moz-border-radius: <mark>10px</mark>;</code>
+      <code>      -ms-border-radius: <mark>10px</mark>;</code>
+      <code>          border-radius: <mark>10px</mark>;</code>
+      <code>}</code>
     </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -623,8 +787,23 @@
       <code>     -moz-box-shadow: $shadows;</code>
       <code>          box-shadow: $shadows;</code>
       <code>}</code>
-      <code>&nbsp;</code>
-      <code>p { <mark>box-shadow(0px 4px 5px #666, 2px 6px 10px #999);</mark> }</code>
+      <code>p { </code>
+      <code>  <mark>@include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);</mark></code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Примеси (Миксины)</h2>
+
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code>p {</code>
+      <code>  -webkit-box-shadow: <mark>0px 4px 5px #666, 2px 6px 10px #999</mark>;</code>
+      <code>     -moz-box-shadow: <mark>0px 4px 5px #666, 2px 6px 10px #999</mark>;</code>
+      <code>          box-shadow: <mark>0px 4px 5px #666, 2px 6px 10px #999</mark>;</code>
+      <code>}</code>
     </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
@@ -642,6 +821,202 @@
       <li>Проверьте итоговый результат</li>
     </ol>
 
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Расширение и наследование</h2>
+
+    <figure>
+      <blockquote>
+        <p>
+          Часто бывает нужно, чтобы один класс имел все стили другого класса, а также имел собственные стили. Наиболее распространенным способом решить данную задачу является использование одного общего класса и одного конкретного класса в HTML. Например, предположим, что у нас есть конструкция для нормальной ошибки, а также для серьезной ошибки.
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_extend__extend" target="_blank">@extend</a>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Расширение и наследование</h2>
+
+    <pre>
+      <code>.error {</code>
+      <code>  border: 1px solid #f00;</code>
+      <code>  background-color: #fdd;</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>.serious-error {</code>
+      <code>  <mark>@extend .error;</mark></code>
+      <code>  border-width: 3px;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Расширение и наследование</h2>
+
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code><mark>.error, .serious-error</mark> {</code>
+      <code>  border: 1px solid #f00;</code>
+      <code>  background-color: #fdd;</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code><mark>.serious-error</mark> {</code>
+      <code>  border-width: 3px;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Расширение и наследование</h2>
+
+    <pre>
+      <code>.error {</code>
+      <code>  border: 1px solid #f00;</code>
+      <code>}</code>
+      <code>.error.intrusion {</code>
+      <code>   background-image: url("/image/hacked.png");</code>
+      <code> }</code>
+      <code>.serious-error {</code>
+      <code>  <mark>@extend .error;</mark></code>
+      <code>  border-width: 3px;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Расширение и наследование</h2>
+
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code><mark>.error, .serious-error</mark> {</code>
+      <code>  border: 1px solid #f00;</code>
+      <code>}</code>
+      <code><mark>.error.intrusion, .serious-error.intrusion</mark> {</code>
+      <code>  background-image: url("/image/hacked.png");</code>
+      <code>}</code>
+      <code><mark>.serious-error</mark> {</code>
+      <code>  border-width: 3px;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Математические операции</h2>
+
+    <h3>Деление</h3>
+    <hr/>
+    <pre>
+      <code>p {</code>
+      <code>  <mark class="important">font: 10px/8px; // Plain CSS, no division</mark></code>
+      <code>  $width: 1000px;</code>
+      <code>  <mark>width: $width/2; // Uses a variable, does division</mark></code>
+      <code>  <mark>height: (500px/2); // Uses parentheses, does division</mark></code>
+      <code>  <mark>margin-left: 5px + 8px/2px; // Uses +, does division</mark></code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Математические операции</h2>
+
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code>p {</code>
+      <code>  font: 10px/8px;</code>
+      <code>  width: 500px;</code>
+      <code>  height: 250px;</code>
+      <code>  margin-left: 9px;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Математические операции</h2>
+
+    <h3>Деление</h3>
+    <hr/>
+    <figure>
+      <blockquote>
+        <p>
+          Если вы хотите использовать переменные, но при этом не хотите, чтобы выполнялось деление, нужно использовать следующий синтаксис: <code>#{}</code>
+        </p>
+      </blockquote>
+    </figure>
+    <pre>
+      <code>p {</code>
+      <code>  $font-size: 12px;</code>
+      <code>  $line-height: 30px;</code>
+      <code>  font: <mark>#{$font-size}/#{$line-height}</mark>;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Математические операции</h2>
+
+    <h3>Результат CSS</h3>
+    <hr/>
+
+    <pre>
+      <code>p {</code>
+      <code>  font: 12px/30px;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Математические операции</h2>
+
+    <h3>Умножение</h3>
+    <hr/>
+
+    <pre>
+      <code>p {</code>
+      <code>  font: <mark>10px * 8</mark>;</code>
+      <code>}</code>
+    </pre>
+
+    <h3>Сложение</h3>
+    <hr/>
+
+    <pre>
+      <code>p {</code>
+      <code>  font: <mark>10px + 8px</mark>;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Математические операции</h2>
+
+    <h3>Вычитание</h3>
+    <hr/>
+
+    <pre>
+      <code>p {</code>
+      <code>  font: <mark>10px - 8px</mark>;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Расширение и наследование. Математические операции</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <p>
+      Есть стандартная кнопка с классом <code>.btn</code>. Стили вы дожны придумать ей сами. Есть вторая кнопка с классом <code>.btn-pay</code>. Она должна повторять стили кнопки с классом <code>.btn</code>, а также иметь какие-то свои стили. Используйте для решения данной задачи <code>@extend</code>.
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что умеет Sass. Полезные встроенные функции</h2>
+
+    <em>
+      Полезных встроенных функций много...
+    </em>
+
+    <p>
+      <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html" target="_blank">Полезные встроенные функции</a>
+    </p>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это НЕ последний слайд. Домашнее задание</h2>
@@ -664,6 +1039,25 @@
           <li><a href="http://koala-app.com/" target="_blank">Koala</a>  - GUI application for Less, Sass, Compass and CoffeeScript compilation</li>
           <li><a href="https://www.gitbook.com/book/anotheruiguy/sassintherealworld_book-i/details" target="_blank">Sass in the Real World: book 1 of 4</a></li>
           <li><a href="http://thesassway.com/beginner/how-to-structure-a-sass-project" target="_blank">How to structure a Sass project</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li>GUI для Sass/SCSS компиляции:
+            <ul>
+              <li><a href="http://koala-app.com/" target="_blank">Koala</a></li>
+              <li><a href="https://prepros.io/" target="_blank">Prepros</a><sup>*</sup></li>
+              <li><a href="http://scout-app.io/" target="_blank">Scout-App</a></li>
+            </ul>
+          </li>
+          <li><a href="http://sass-lang.com/styleguide" target="_blank">Sass Style Guide</a></li>
         </ul>
       </li>
     </ul>

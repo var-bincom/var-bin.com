@@ -4,6 +4,7 @@ $img-url: "../images";
 
 #{$selector} {
   background: url("#{$img-url}/some-image.jpg") no-repeat 0 0;
+  color: #000;
 
   #{$attr}: {
     width: 1px;
