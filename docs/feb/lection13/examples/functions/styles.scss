@@ -1,0 +1,37 @@
+// functions
+
+$black: #000;
+$color1: #369;
+
+a {
+  color: rgba($black, 0.5);
+  background-color: rgba($color1, 0.3);
+}
+
+p {
+  color: rgba(red($black), green(#00f), blue($color1), 0.4);
+}
+
+button {
+  $btn-color: opacity(rgba(mix($black, $color1), 0.5));
+
+  color: rgba($black, $btn-color);
+}
+
+$str: "Hello, world!";
+$str1: "HELLO, WORLD!";
+
+div::before {
+  content: to-lower-case((unquote($str1)));
+}
+
+$selector: ".header";
+$attr: "color";
+$width: 52.525252522525252;
+
+#{$selector} {
+  #{$attr}: $black;
+  border-#{$attr}: $color1;
+  background-#{$attr}: green;
+  width: ceil($width);
+}
