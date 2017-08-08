@@ -1,0 +1,10 @@
+a {
+  display: flex;
+  box-shadow: 0 4px 2px #000;
+}
+
+span {
+  display: block;
+  transform: rotate(90deg);
+  transition: .3s;
+}

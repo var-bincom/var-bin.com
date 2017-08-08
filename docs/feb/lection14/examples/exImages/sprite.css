@@ -1,0 +1,15 @@
+a {
+  background: url("../images/newspaper.png") no-repeat 0 0;
+}
+
+span {
+  background: url("../images/dice.png") no-repeat 0 0;
+}
+
+input {
+  background: url("../images/office.png") no-repeat 0 0;
+}
+
+main {
+  background: url("../images/pacman.png") no-repeat 0 0;
+}
