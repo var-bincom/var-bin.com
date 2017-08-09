@@ -45,7 +45,7 @@
         <mark>npm</mark> - Что? Где? Когда?
       </li>
       <li class="next">
-        Компиляция Sass через CLI
+        Компиляция Sass через <mark>CLI</mark>
       </li>
       <li class="next">
         Что такое постпроцессоры
@@ -53,323 +53,338 @@
       <li class="next">
         Как работают постпроцессоры
       </li>
+      <li class="next">
+        Примеры постпроцессоров
+      </li>
+      <li class="next">
+        PostCSS
+      </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Отличие фреймворка от библиотеки</h2>
+    <h2><mark>npm</mark> - Что? Где? Когда?</h2>
 
     <figure class="next">
       <blockquote>
         <p>
-          <mark>Фреймворк</mark> отличается от понятия <mark>библиотеки</mark> тем, что <mark>библиотека</mark> может быть использована в программном продукте просто как <strong>набор подпрограмм близкой функциональности</strong>, не влияя на архитектуру программного продукта и не накладывая на неё никаких ограничений. В то время как <mark>фреймворк</mark> <strong>диктует правила построения архитектуры приложения, задавая на начальном этапе разработки поведение по умолчанию</strong> — «каркас», который нужно будет расширять и изменять, согласно указанным требованиям.
+          <a href="https://www.npmjs.com/" target="_blank">npm</a> - самый большой реестр пакетов для JavaScript разработчиков на все случаи жизни. Он также содержит подробное описание для каждого из пакетов: как пользоваться, авторы, ссылки на github и т.д.
         </p>
       </blockquote>
-      <figcaption>
-        <a href="https://goo.gl/gbSJdk" target="_blank">wikipedia</a>
-      </figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Зачем нужны фреймворки</h2>
+    <h2>Как установить npm</h2>
 
-    <h3 class="next">Плюсы:</h3>
-    <ul>
+    <ol>
       <li class="next">
-        Решает типичные задачи наилучшим способом
+        Cкачать и установить <a href="https://nodejs.org/en/download/" target="_blank">Nodejs</a>
       </li>
       <li class="next">
-        При написании фреймворка использовались <strong>best practices</strong>
+        Cкачать и установить <a href="https://conemu.github.io/" target="_blank">ConEmu</a>. Этот пункт не обязательный. Можно пользоваться и стандартной консолью Windows, но она жутко неудобная.
       </li>
       <li class="next">
-        Кодовая база написана такими же разработчиками как и вы
+        Запустить <mark>ConEmu</mark> и выполнить следующие команды:
       </li>
-      <li class="next">
-        Кроссбраузерность/Кроссплатформенность
-      </li>
-      <li class="next">
-        Тесты
-      </li>
-    </ul>
+    </ol>
+    <pre class="next">
+      <code>node -v <span class="comment">// выведет версию <mark>nodejs</mark></span></code>
+      <code>npm -v <span class="comment">// выведет версию <mark>npm</mark></span></code>
+      <code>sass -v <span class="comment">// выведет версию <mark>sass</mark></span></code>
+    </pre>
+    <em class="next">Если первые две команды ничего не вывели, у вас проблемы с установкой</em>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Зачем нужны фреймворки</h2>
+    <h2>Базовые команды <span class="text-uc">cli</span></h2>
 
-    <h3 class="next">Недостатки:</h3>
-    <ul>
-      <li class="next">
-        Вы хотели только банан, а тяните к себе на проект и обезьяну и все джунгли
-      </li>
-      <li class="next">
-        Должны следовать требованиям в документации
-      </li>
-      <li class="next">
-        Переход на новую версию фреймворка может быть трудозатратным, а иногда и невозможным
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Reset.css vs. Normalize.css</h2>
-
-    <h3>Reset CSS</h3>
-
-    <figure class="next slide__box-model">
-      <img src="./pictures/1501348204752-reset-css.jpg" alt="Reset.css">
-
-      <figcaption>
-        <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a>
-      </figcaption>
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark class="text-uc">cli</mark> - <strong>Интерфейс командной строки</strong>, разновидность текстового интерфейса между человеком и компьютером, в котором инструкции компьютеру даются в основном путём ввода с клавиатуры текстовых строк (команд), в UNIX-системах возможно применение мыши. Также известен под названиями <strong>"консоль"</strong> и <strong>"терминал"</strong>.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://goo.gl/LVySxf" target="_blank">wikipedia</a></figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Reset.css vs. Normalize.css</h2>
+    <h2>Базовые команды CLI</h2>
 
-    <h3>Normalize.css</h3>
-
-    <ul>
-      <li class="next">
-        Сохраняет полезные значения по умолчанию, в отличие от многих сбросов CSS.
-      </li>
-      <li class="next">
-        Нормализует стили для широкого диапазона элементов.
-      </li>
-      <li class="next">
-        Исправляет ошибки и общие несовместимости браузера.
-      </li>
-      <li class="next">
-        Подробно документированный код.
-      </li>
-    </ul>
-
-    <a href="https://necolas.github.io/normalize.css/" target="_blank" class="next">Normalize.css</a>
+    <pre>
+      <code class="comment">// сменить директорию</code>
+      <code>cd &lt;path&gt;</code>
+      <code class="comment">// вывести на экран путь к текущей директории</code>
+      <code>pwd</code>
+      <code class="comment">// очистить экран</code>
+      <code>clear</code>
+      <code class="comment">// вывести на экран все содержимое текущей директории</code>
+      <code>ls -la</code>
+    </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Reset.css vs. Normalize.css</h2>
+    <h2>Базовые команды npm</h2>
 
-    <h3>Практика</h3>
-    <hr/>
+    <pre>
+      <code class="comment">// инициализация проекта</code>
+      <code>npm init</code>
+      <code class="comment">// установить пакет</code>
+      <code>npm <mark>i</mark>nstall &lt;package-name&gt;</code>
+      <code class="comment">// установить и сохранить пакет в "dependencies"</code>
+      <code>npm <mark>i</mark>nstall <mark>-S</mark> &lt;package-name&gt;</code>
+      <code class="comment">// установить и сохранить пакет в "devDependencies"</code>
+      <code>npm <mark>i</mark>nstall <mark>-D</mark> &lt;package-name&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды npm</h2>
+
+    <pre>
+      <code class="comment">// установить пакет глобально</code>
+      <code>npm <mark>i</mark>nstall <mark>-g</mark> &lt;package-name&gt;</code>
+      <code class="comment">// удалить пакет</code>
+      <code>npm <mark>un</mark>install &lt;package-name&gt;</code>
+      <code class="comment">// удалить пакет и убрать зависимость в "dependencies"</code>
+      <code>npm <mark>un</mark>install <mark>-S</mark> &lt;package-name&gt;</code>
+      <code class="comment">// удалить пакет и убрать зависимость в "devDependencies"</code>
+      <code>npm <mark>un</mark>install <mark>-D</mark> &lt;package-name&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды npm</h2>
 
     <p>
-      Подключите к своему блогу сначала <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a> и посмотрите как изменилось отображение вашего блога. После этого удалите <mark>Reset CSS</mark> и подключите <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>. Проверьте результат после подключения <mark>Normalize.css</mark>.
+      <mark>"dependencies"</mark> - эти пакеты подключаются вашим приложением для нормальной работы у конечного пользователя (<strong>production</strong>).
+    </p>
+    <p>
+      <mark>"devDependencies"</mark> - эти пакеты нужны <strong class="text-uc">только</strong> при разработке и тестировании приложения.
     </p>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>CSS Фреймворки</h2>
+    <h2>Базовые команды <span class="text-uc">cli</span> и npm</h2>
+
+    <h3>
+      Практика
+    </h3>
+    <hr/>
+
+    <ol>
+      <li>
+        Cкачайте и установите <a href="https://nodejs.org/en/download/" target="_blank">Nodejs</a>
+      </li>
+      <li>
+        Cкачайте и установите <a href="https://conemu.github.io/" target="_blank">ConEmu</a>. Этот пункт не обязательный. Можно пользоваться и стандартной консолью Windows, но она жутко неудобная.
+      </li>
+      <li>
+        Запустить <mark>ConEmu</mark> и выполнить следующие команды:
+      </li>
+    </ol>
+    <pre>
+      <code>node -v <span class="comment">// выведет версию <mark>nodejs</mark></span></code>
+      <code>npm -v <span class="comment">// выведет версию <mark>npm</mark></span></code>
+      <code>sass -v <span class="comment">// выведет версию <mark>sass</mark></span></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды <span class="text-uc">cli</span> и npm</h2>
+
+    <h3>
+      Практика
+    </h3>
+    <hr/>
+
+    <ol>
+      <li>
+        Перейдите в директорию (если ее нет - создайте) со своим проектом
+      </li>
+      <li>
+        Создайте файл <mark>styles.scss</mark>
+      </li>
+      <li>
+        Добавьте в него стили, миксины, переменные и т.д.
+      </li>
+      <li>
+        Скомпилируйте данный файл при помощи <mark class="text-uc">cli</mark>:
+      </li>
+    </ol>
+    <pre>
+      <code>sass [options] [INPUT] [OUTPUT]</code>
+      <code>sass styles.scss styles.css</code>
+    </pre>
+    <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Using_Sass" target="_blank">Документация</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что такое постпроцессоры</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>Постпроцессоры</mark> - это библиотека которая принимает на вход CSS, выполняет с ним какие-то "магические" преобразования и возвращает новый CSS.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что такое постпроцессоры</h2>
 
     <em>
-      CSS Фреймворков много...
+      Как работают постпроцессоры
     </em>
 
-    <ul>
-      <li class="next"><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-      <li class="next"><a href="http://foundation.zurb.com/sites.html" target="_blank">Foundation for Sites</a></li>
-      <li class="next"><a href="https://getmdl.io/" target="_blank">Material Design Lite</a></li>
-      <li class="next"><a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
-      <li class="next"><a href="https://purecss.io/" target="_blank">PureCSS</a></li>
-      <li class="next"><a href="http://bulma.io/" target="_blank">Bulma</a></li>
-      <li class="next"><a href="http://materializecss.com/" target="_blank">Materialize CSS</a></li>
-      <li class="next"><a href="https://metroui.org.ua/" target="_blank">Metro UI CSS</a></li>
-      <li class="next">...</li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap</h2>
-
-    <h3>Немного истории</h3>
-    <hr/>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          Был создан в Twitter в середине 2010 года силами дизайнера (<a href="https://twitter.com/mdo" target="_blank">@mdo</a>) и разработчика (<a href="https://twitter.com/fat" target="_blank">@fat</a>). Bootstrap стал самым популярным front-end фреймворком и open source проектом в мире.
-        </p>
-      </blockquote>
-      <figcaption>
-        <a href="http://getbootstrap.com/about/" target="_blank">Bootstrap History</a>
-      </figcaption>
+    <figure class="slide__box-model">
+      <img src="./pictures/1502261310316-postprocessing.jpg" alt="postprocessing"/>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
+    <h2>Примеры постпроцессоров</h2>
 
     <ul>
-      <li class="next">
-        Текущая версия <a href="http://getbootstrap.com/" target="_blank">v3.3.7</a>
-      </li>
-      <li class="next">
-        Доступен <a href="https://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap v4 в альфе</a>
-      </li>
+      <li><a href="https://github.com/css/csso" target="_blank">CSSO</a> – минификация css</li>
+      <li><a href="http://csscomb.com/" target="_blank">CSSComb</a> – изменение порядка выбора правил</li>
+      <li><a href="http://csscomb.com/" target="_blank">cssrb</a> – библиотека для замены ссылок на ресурсы в css файлах</li>
+      <li><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> – автоматическое добавление вендорных префиксов</li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap vs. Bootstrap v4-alpha</h2>
+    <h2>Примеры постпроцессоров</h2>
 
-    <div class="next">
-      <h3>Основные изменения в Bootstrap v4-alpha</h3>
-      <hr/>
-    </div>
-
-    <ul>
-      <li class="next">
-        Переход на flexbox
-      </li>
-      <li class="next">
-        Во всех компонентах используются преимущества flexbox, а не <code>display: table</code> и <code>float</code> хаки.
-      </li>
-      <li class="next">
-        <a href="https://github.com/twbs/bootstrap/pull/21389" target="_blank">Поддержка IE10+</a>
-      </li>
-      <li class="next">
-        Доработан grid компонент
-      </li>
-      <li class="next">
-        Обновлен navbar компонент
-      </li>
-      <li class="next">
-        ...
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7</h2>
-
-    <h3>Глобальный CSS, стили для основных HTML элементов, сетки:</h3>
+    <h3>
+      Практика
+    </h3>
     <hr/>
 
-    <ul class="info-list">
-      <li class="next"><a href="http://getbootstrap.com/css/#grid" target="_blank">Grid system</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#type" target="_blank">Typography</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#code" target="_blank">Code</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#tables" target="_blank">Tables</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#forms" target="_blank">Forms</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#buttons" target="_blank">Buttons</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#images" target="_blank">Images</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#helper-classes" target="_blank">Helper classes</a></li>
-      <li class="next"><a href="http://getbootstrap.com/css/#responsive-utilities" target="_blank">Responsive utilities</a></li>
-    </ul>
+    <ol>
+      <li>Установите <a href="https://github.com/csscomb/csscomb.js" target="_blank">CSSComb</a></li>
+      <li>Создайте <mark>.csscomb.json</mark> через специальный <a href="http://csscomb.com/config" target="_blank">сервис</a></li>
+      <li>Поместите <mark>.csscomb.json</mark> в директорию с проектом</li>
+      <li>Выполните следующую команду: <code>csscomb styles.css</code></li>
+       <li>Проверьте результат</li>
+    </ol>
+    <a href="http://csscomb.com/online" target="_blank">CSSComb online</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7. Grid system</h2>
+    <h2>Постпроцессоры</h2>
 
-    <h3>Как построить сетку:</h3>
-    <hr/>
-
-    <ul>
-      <li class="next">
-        Столбцы должны быть помещены в элемент с классом <code>.container</code> (fixed-width) или <code>.container-fluid</code> (full-width)
-      </li>
-      <li class="next">
-        Чтобы создать горизонтальные группы колонок используйте столбцы.
-      </li>
-      <li class="next">
-        Контент должен быть помещен в колонках. Только колонки могут быть "детьми" столбцов.
-      </li>
-      <li class="next">
-        Для быстрого создания сеточного макета используйте готовые классы: <code>.row</code>, <code>.col-xs-4</code>, и другие.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7. Grid system</h2>
-
-    <h3>Как построить сетку:</h3>
-    <hr/>
-
-    <ul>
-      <li class="next">
-        Колонки сетки создаются при помощи <code>.col-{size}-{number}</code>, где:
+    <ol>
+      <li><a href="https://github.com/reworkcss/rework" target="_blank">Rework</a>:
         <ul>
-          <li>
-            <code>{size}</code> - размер экрана
-          </li>
-          <li>
-            <code>{number}</code> - номер от 1 - 12
-          </li>
-          <li>
-            <strong>Пример: </strong><code>.col-xs-4</code>
-          </li>
+          <li>первый</li>
+          <li>проще, меньше</li>
         </ul>
       </li>
-      <li class="next">
-        Если колонок больше, чем 12, то остальные колонки переносятся на слудующую строку.
+      <li><a href="http://postcss.org/" target="_blank">PostCSS</a>:
+        <ul>
+          <li>более умный парсер</li>
+          <li>лучше поддержка карт кода</li>
+          <li>сохраняет форматирование</li>
+          <li>удобнее API</li>
+        </ul>
       </li>
-      <li class="next">
-        Можно переопределять поведение сетки для разных размеров экранов при помощи классов: <code>.col-md-*</code>, <code>.col-lg-*</code>.
-      </li>
-    </ul>
+    </ol>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7. Grid system</h2>
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <ol>
+      <li>Установить глобально <a href="https://github.com/postcss/postcss-cli" target="_blank">postcss-cli</a></li>
+      <li>Установить глобально <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></li>
+      <li>Пример использования вместе с <mark>autoprefixer</mark>:</li>
+    </ol>
+    <pre>
+      <code>postcss *.css --use autoprefixer -d build/</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3><mark>postcss.config.js</mark> - настройки для PostCSS</h3>
+    <hr/>
+
+    <pre>
+      <code>module.exports = {</code>
+      <code>  <mark>map: false</mark>,</code>
+      <code>  plugins: [</code>
+      <code>    <mark>require("autoprefixer")()</mark></code>
+      <code>  ]</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3>Плагины</h3>
+    <hr/>
+
+    <a href="https://www.postcss.parts/" target="_blank">PostCSS.parts</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
 
     <h3>Практика</h3>
     <hr/>
 
-    <p>
-      Скачайте себе <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" target="_blank">Bootstrap</a>. Подключите его на станичку. Используя <a href="http://getbootstrap.com/css/#grid-options" target="_blank">данную таблицу</a> и <a href="http://getbootstrap.com/css/#grid-example-basic" target="_blank">пример</a> сделайте сетку для <strong>Medium devices Desktops (≥992px)</strong>. Добавьте тест. Должно получиться примерно так: [ <a href="http://take.ms/SeFhr" target="_blank">1</a> ].
-    </p>
-    <p>
-      <strong>P.S.</strong> <code>padding</code>, <code>border</code> на ваше усмотрение.
-    </p>
+    <ol>
+      <li>Установить глобально <a href="https://github.com/postcss/postcss-cli" target="_blank">postcss-cli</a></li>
+      <li>Создайте <mark>postcss.config.js</mark></li>
+      <li>Добавьте <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a> в секцию <mark>plugins</mark> postcss.config.js</li>
+      <li>Разместите <mark>postcss.config.js</mark> в директории с проектом</li>
+      <li>Создайте <mark>styles.css</mark></li>
+      <li>Добавьте в него стили, которые плохо поддерживаются без вендорных префиксов. Пример: <code>dispay: flex;</code></li>
+    </ol>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7</h2>
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
 
     <h3>Практика</h3>
     <hr/>
 
+    <ol>
+      <li>Выполните следующую команду:</li>
+    </ol>
+    <pre>
+      <code>postcss styles.css -c postcss.config.js -d build/</code>
+    </pre>
     <p>
-      Используя <a href="http://getbootstrap.com/css" target="_blank">данную страницу</a> в качестве справочной информации, создайте страничку, которая будет содержать три и более разных компонентов из глобального CSS.
+      Если все сделали верно, в файл <mark>styles.css</mark> будут автоматически добавлены вендорные префиксы.
     </p>
-
-    <a href="https://codepen.io/var-bin/full/NvxdmK/" target="_blank">Пример</a>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7</h2>
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
 
-    <h3>Компоненты:</h3>
+    <h3>Другие полезные команды</h3>
     <hr/>
 
-    <div class="slide__list">
-      <ul class="info-list">
-        <li class="next"><a href="http://getbootstrap.com/components/#glyphicons" target="_blank">Glyphicons</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#dropdowns" target="_blank">Dropdowns</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#btn-groups" target="_blank">Button groups</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#btn-dropdowns" target="_blank">Button dropdowns</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#input-groups" target="_blank">Input groups</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#nav" target="_blank">Navs</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#navbar" target="_blank">Navbar</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#breadcrumbs" target="_blank">Breadcrumbs</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#pagination" target="_blank">Pagination</a></li>
-      </ul>
-      <ul class="info-list">
-        <li class="next"><a href="http://getbootstrap.com/components/#labels" target="_blank">Labels</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#badges" target="_blank">Badges</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#jumbotron" target="_blank">Jumbotron</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#page-header" target="_blank">Page header</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#thumbnails" target="_blank">Thumbnails</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#alerts" target="_blank">Alerts</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#progress" target="_blank">Progress bars</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#media" target="_blank">Media object</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#list-group" target="_blank">List group</a></li>
-      </ul>
-      <ul>
-        <li class="next"><a href="http://getbootstrap.com/components/#panels" target="_blank">Panels</a></li>
-        <li class="next"><a href="http://getbootstrap.com/components/#responsive-embed" target="_blank">Responsive embed</a></li>
-      </ul>
-    </div>
+    <pre>
+      <code class="comment">// Multiple files</code>
+      <code>postcss <mark>examples/ex1/*.css</mark> -c postcss.config.js <mark>-r</mark></code>
+      <code>postcss <mark>examples/**/*.css</mark> -c postcss.config.js <mark>-r</mark></code>
+      <code class="comment">// Watch mode</code>
+      <code>postcss examples/**/*.css -c postcss.config.js <mark>-r</mark> <mark>-w</mark></code>
+    </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Bootstrap v3.3.7 Компоненты</h2>
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
 
-    <h3>Практика</h3>
+    <h3>Другие полезные команды</h3>
     <hr/>
 
+    <pre>
+      <code class="comment">// Watch mode + copy to result directory</code>
+      <code>postcss examples/ex*/*.css -c postcss.config.js
+  <mark>-d</mark> examples/result/ <mark>-w</mark></code>
+      <code class="comment">// Get help</code>
+      <code>postcss <mark>-h</mark></code>
+    </pre>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это НЕ последний слайд. Домашнее задание</h2>
 
-    <p>
-      Сделайте <a href="../examples/blog/minimo.jpg" target="_blank">свой блог</a> при помощи <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>. Это должна быть отдельная версия блога. Сравните результат, который получился с тем, где вы не использовали <mark>Bootstrap</mark>.
-    </p>
+    <ol>
+      <li>
+        Установите себе несколько других плагинов PostCSS, например: <a href="https://github.com/lahmatiy/postcss-csso" target="_blank">postcss-csso</a>, <a href="https://github.com/2createStudio/postcss-sprites" target="_blank">postcss-sprites</a>.
+      </li>
+      <li>
+        Настройте эти плагины. Примените <mark>postcss-cli</mark> c этими плагинами к своему проекту.
+      </li>
+    </ol>
+
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это НЕ последний слайд</h2>
@@ -378,14 +393,14 @@
       <li>
         Полезные ресурсы:
         <ul>
-          <li><a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset CSS</a></li>
-          <li><a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a></li>
-          <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
-          <li><a href="http://foundation.zurb.com/sites.html" target="_blank">Foundation for Sites</a></li>
-          <li><a href="https://getmdl.io/" target="_blank">Material Design Lite</a></li>
-          <li><a href="https://semantic-ui.com/" target="_blank">Semantic UI</a></li>
-          <li><a href="https://purecss.io/" target="_blank">PureCSS</a></li>
-          <li><a href="http://bulma.io/" target="_blank">Bulma</a></li>
+          <li><a href="https://nodejs.org/en/download/" target="_blank">Nodejs</a></li>
+          <li><a href="http://npmjs.com" target="_blank">npm</a></li>
+          <li><a href="https://docs.npmjs.com/" target="_blank">Документация по npm</a></li>
+          <li><a href="https://github.com/css/csso" target="_blank">CSSO</a></li>
+          <li><a href="http://csscomb.com/" target="_blank">CSSComb</a></li>
+          <li><a href="https://github.com/afelix/cssrb" target="_blank">cssrb</a></li>
+          <li><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a></li>
+          <li><a href="http://postcss.org/" target="_blank">PostCSS</a></li>
         </ul>
       </li>
     </ul>
@@ -397,22 +412,11 @@
       <li>
         Полезные ресурсы:
         <ul>
-          <li><a href="http://materializecss.com/" target="_blank">Materialize CSS</a></li>
-          <li><a href="https://metroui.org.ua/" target="_blank">Metro UI CSS</a></li>
-          <li><a href="https://jenil.github.io/bulmaswatch/" target="_blank">Bulmaswatch</a></li>
-          <li>Рассмотренные примеры ДЗ:
-            <ul>
-              <li>
-                <a href="../examples/lection7/index.html" target="_blank">lection7</a>
-              </li>
-              <li>
-                <a href="../examples/lection8/index.html" target="_blank">lection8</a>
-              </li>
-              <li>
-                <a href="../examples/lection9/index.html" target="_blank">lection9</a>
-              </li>
-            </ul>
-          </li>
+          <li><a href="https://github.com/postcss/postcss-cli" target="_blank">PostCSS CLI</a></li>
+          <li><a href="https://www.youtube.com/watch?v=t8Td3Oq47yE" target="_blank">Доклад Ситника о PostCSS</a></li>
+          <li><a href="https://github.com/reworkcss/rework" target="_blank">Rework</a></li>
+          <li><a href="http://pleeease.io/" target="_blank">pleeease</a></li>
+          <li><a href="https://conemu.github.io/" target="_blank">ConEmu</a></li>
         </ul>
       </li>
     </ul>
@@ -428,18 +432,21 @@
       <li>
         Полезные ресурсы:
         <ul>
-          <li>Рассмотренные примеры Bootstrap:
+          <li>Статьи про консоль:
             <ul>
               <li>
-                <a href="../examples/ex1/index.html" target="_blank">1й пример</a>
+                <a href="https://habrahabr.ru/post/317534/" target="_blank">Консоль в массы. Переход на светлую сторону. Часть первая.</a>
               </li>
               <li>
-                <a href="../examples/ex2/index.html" target="_blank">2й пример</a>
+                <a href="https://habrahabr.ru/post/318376/" target="_blank">Консоль в массы. Переход на светлую сторону. Часть вторая.</a>
+              </li>
+              <li>
+                <a href="https://habrahabr.ru/post/319670/" target="_blank">Консоль в массы. Переход на светлую сторону. Bash.</a>
+              </li>
+              <li>
+                <a href="https://habrahabr.ru/post/321928/" target="_blank">Консоль в массы. Переход на светлую сторону. Автоматизация рутинных задач.</a>
               </li>
             </ul>
-          </li>
-          <li>
-            Примеры на <a href="https://codepen.io/collection/AYpjwJ/" target="_blank">codepen</a> к lection12
           </li>
         </ul>
       </li>
