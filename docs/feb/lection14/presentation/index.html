@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">Постпроцессоры</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">
+        Как поменять цвет заливки любого <mark class="text-uc">svg</mark> элемента?
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li class="next">
+        <mark>npm</mark> - Что? Где? Когда?
+      </li>
+      <li class="next">
+        Компиляция Sass через <mark>CLI</mark>
+      </li>
+      <li class="next">
+        Что такое постпроцессоры
+      </li>
+      <li class="next">
+        Как работают постпроцессоры
+      </li>
+      <li class="next">
+        Примеры постпроцессоров
+      </li>
+      <li class="next">
+        PostCSS
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2><mark>npm</mark> - Что? Где? Когда?</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <a href="https://www.npmjs.com/" target="_blank">npm</a> - самый большой реестр пакетов для JavaScript разработчиков на все случаи жизни. Он также содержит подробное описание для каждого из пакетов: как пользоваться, авторы, ссылки на github и т.д.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Как установить npm</h2>
+
+    <ol>
+      <li class="next">
+        Cкачать и установить <a href="https://nodejs.org/en/download/" target="_blank">Nodejs</a>
+      </li>
+      <li class="next">
+        Cкачать и установить <a href="https://conemu.github.io/" target="_blank">ConEmu</a>. Этот пункт не обязательный. Можно пользоваться и стандартной консолью Windows, но она жутко неудобная.
+      </li>
+      <li class="next">
+        Запустить <mark>ConEmu</mark> и выполнить следующие команды:
+      </li>
+    </ol>
+    <pre class="next">
+      <code>node -v <span class="comment">// выведет версию <mark>nodejs</mark></span></code>
+      <code>npm -v <span class="comment">// выведет версию <mark>npm</mark></span></code>
+      <code>sass -v <span class="comment">// выведет версию <mark>sass</mark></span></code>
+    </pre>
+    <em class="next">Если первые две команды ничего не вывели, у вас проблемы с установкой</em>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды <span class="text-uc">cli</span></h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark class="text-uc">cli</mark> - <strong>Интерфейс командной строки</strong>, разновидность текстового интерфейса между человеком и компьютером, в котором инструкции компьютеру даются в основном путём ввода с клавиатуры текстовых строк (команд), в UNIX-системах возможно применение мыши. Также известен под названиями <strong>"консоль"</strong> и <strong>"терминал"</strong>.
+        </p>
+      </blockquote>
+      <figcaption><a href="https://goo.gl/LVySxf" target="_blank">wikipedia</a></figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды CLI</h2>
+
+    <pre>
+      <code class="comment">// сменить директорию</code>
+      <code>cd &lt;path&gt;</code>
+      <code class="comment">// вывести на экран путь к текущей директории</code>
+      <code>pwd</code>
+      <code class="comment">// очистить экран</code>
+      <code>clear</code>
+      <code class="comment">// вывести на экран все содержимое текущей директории</code>
+      <code>ls -la</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды npm</h2>
+
+    <pre>
+      <code class="comment">// инициализация проекта</code>
+      <code>npm init</code>
+      <code class="comment">// установить пакет</code>
+      <code>npm <mark>i</mark>nstall &lt;package-name&gt;</code>
+      <code class="comment">// установить и сохранить пакет в "dependencies"</code>
+      <code>npm <mark>i</mark>nstall <mark>-S</mark> &lt;package-name&gt;</code>
+      <code class="comment">// установить и сохранить пакет в "devDependencies"</code>
+      <code>npm <mark>i</mark>nstall <mark>-D</mark> &lt;package-name&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды npm</h2>
+
+    <pre>
+      <code class="comment">// установить пакет глобально</code>
+      <code>npm <mark>i</mark>nstall <mark>-g</mark> &lt;package-name&gt;</code>
+      <code class="comment">// удалить пакет</code>
+      <code>npm <mark>un</mark>install &lt;package-name&gt;</code>
+      <code class="comment">// удалить пакет и убрать зависимость в "dependencies"</code>
+      <code>npm <mark>un</mark>install <mark>-S</mark> &lt;package-name&gt;</code>
+      <code class="comment">// удалить пакет и убрать зависимость в "devDependencies"</code>
+      <code>npm <mark>un</mark>install <mark>-D</mark> &lt;package-name&gt;</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды npm</h2>
+
+    <p>
+      <mark>"dependencies"</mark> - эти пакеты подключаются вашим приложением для нормальной работы у конечного пользователя (<strong>production</strong>).
+    </p>
+    <p>
+      <mark>"devDependencies"</mark> - эти пакеты нужны <strong class="text-uc">только</strong> при разработке и тестировании приложения.
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды <span class="text-uc">cli</span> и npm</h2>
+
+    <h3>
+      Практика
+    </h3>
+    <hr/>
+
+    <ol>
+      <li>
+        Cкачайте и установите <a href="https://nodejs.org/en/download/" target="_blank">Nodejs</a>
+      </li>
+      <li>
+        Cкачайте и установите <a href="https://conemu.github.io/" target="_blank">ConEmu</a>. Этот пункт не обязательный. Можно пользоваться и стандартной консолью Windows, но она жутко неудобная.
+      </li>
+      <li>
+        Запустить <mark>ConEmu</mark> и выполнить следующие команды:
+      </li>
+    </ol>
+    <pre>
+      <code>node -v <span class="comment">// выведет версию <mark>nodejs</mark></span></code>
+      <code>npm -v <span class="comment">// выведет версию <mark>npm</mark></span></code>
+      <code>sass -v <span class="comment">// выведет версию <mark>sass</mark></span></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые команды <span class="text-uc">cli</span> и npm</h2>
+
+    <h3>
+      Практика
+    </h3>
+    <hr/>
+
+    <ol>
+      <li>
+        Перейдите в директорию (если ее нет - создайте) со своим проектом
+      </li>
+      <li>
+        Создайте файл <mark>styles.scss</mark>
+      </li>
+      <li>
+        Добавьте в него стили, миксины, переменные и т.д.
+      </li>
+      <li>
+        Скомпилируйте данный файл при помощи <mark class="text-uc">cli</mark>:
+      </li>
+    </ol>
+    <pre>
+      <code>sass [options] [INPUT] [OUTPUT]</code>
+      <code>sass styles.scss styles.css</code>
+    </pre>
+    <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Using_Sass" target="_blank">Документация</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что такое постпроцессоры</h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>Постпроцессоры</mark> - это библиотека которая принимает на вход CSS, выполняет с ним какие-то "магические" преобразования и возвращает новый CSS.
+        </p>
+      </blockquote>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что такое постпроцессоры</h2>
+
+    <em>
+      Как работают постпроцессоры
+    </em>
+
+    <figure class="slide__box-model">
+      <img src="./pictures/1502261310316-postprocessing.jpg" alt="postprocessing"/>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Примеры постпроцессоров</h2>
+
+    <ul>
+      <li><a href="https://github.com/css/csso" target="_blank">CSSO</a> – минификация css</li>
+      <li><a href="http://csscomb.com/" target="_blank">CSSComb</a> – изменение порядка выбора правил</li>
+      <li><a href="http://csscomb.com/" target="_blank">cssrb</a> – библиотека для замены ссылок на ресурсы в css файлах</li>
+      <li><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> – автоматическое добавление вендорных префиксов</li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Примеры постпроцессоров</h2>
+
+    <h3>
+      Практика
+    </h3>
+    <hr/>
+
+    <ol>
+      <li>Установите <a href="https://github.com/csscomb/csscomb.js" target="_blank">CSSComb</a></li>
+      <li>Создайте <mark>.csscomb.json</mark> через специальный <a href="http://csscomb.com/config" target="_blank">сервис</a></li>
+      <li>Поместите <mark>.csscomb.json</mark> в директорию с проектом</li>
+      <li>Выполните следующую команду: <code>csscomb styles.css</code></li>
+       <li>Проверьте результат</li>
+    </ol>
+    <a href="http://csscomb.com/online" target="_blank">CSSComb online</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Постпроцессоры</h2>
+
+    <ol>
+      <li><a href="https://github.com/reworkcss/rework" target="_blank">Rework</a>:
+        <ul>
+          <li>первый</li>
+          <li>проще, меньше</li>
+        </ul>
+      </li>
+      <li><a href="http://postcss.org/" target="_blank">PostCSS</a>:
+        <ul>
+          <li>более умный парсер</li>
+          <li>лучше поддержка карт кода</li>
+          <li>сохраняет форматирование</li>
+          <li>удобнее API</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <ol>
+      <li>Установить глобально <a href="https://github.com/postcss/postcss-cli" target="_blank">postcss-cli</a></li>
+      <li>Установить глобально <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></li>
+      <li>Пример использования вместе с <mark>autoprefixer</mark>:</li>
+    </ol>
+    <pre>
+      <code>postcss *.css --use autoprefixer -d build/</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3><mark>postcss.config.js</mark> - настройки для PostCSS</h3>
+    <hr/>
+
+    <pre>
+      <code>module.exports = {</code>
+      <code>  <mark>map: false</mark>,</code>
+      <code>  plugins: [</code>
+      <code>    <mark>require("autoprefixer")()</mark></code>
+      <code>  ]</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3>Плагины</h3>
+    <hr/>
+
+    <a href="https://www.postcss.parts/" target="_blank">PostCSS.parts</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <ol>
+      <li>Установить глобально <a href="https://github.com/postcss/postcss-cli" target="_blank">postcss-cli</a></li>
+      <li>Создайте <mark>postcss.config.js</mark></li>
+      <li>Добавьте <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a> в секцию <mark>plugins</mark> postcss.config.js</li>
+      <li>Разместите <mark>postcss.config.js</mark> в директории с проектом</li>
+      <li>Создайте <mark>styles.css</mark></li>
+      <li>Добавьте в него стили, которые плохо поддерживаются без вендорных префиксов. Пример: <code>dispay: flex;</code></li>
+    </ol>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3>Практика</h3>
+    <hr/>
+
+    <ol>
+      <li>Выполните следующую команду:</li>
+    </ol>
+    <pre>
+      <code>postcss styles.css -c postcss.config.js -d build/</code>
+    </pre>
+    <p>
+      Если все сделали верно, в файл <mark>styles.css</mark> будут автоматически добавлены вендорные префиксы.
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3>Другие полезные команды</h3>
+    <hr/>
+
+    <pre>
+      <code class="comment">// Multiple files</code>
+      <code>postcss <mark>examples/ex1/*.css</mark> -c postcss.config.js <mark>-r</mark></code>
+      <code>postcss <mark>examples/**/*.css</mark> -c postcss.config.js <mark>-r</mark></code>
+      <code class="comment">// Watch mode</code>
+      <code>postcss examples/**/*.css -c postcss.config.js <mark>-r</mark> <mark>-w</mark></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>PostCSS. Используем в качестве CLI инструмента</h2>
+
+    <h3>Другие полезные команды</h3>
+    <hr/>
+
+    <pre>
+      <code class="comment">// Watch mode + copy to result directory</code>
+      <code>postcss examples/ex*/*.css -c postcss.config.js
+  <mark>-d</mark> examples/result/ <mark>-w</mark></code>
+      <code class="comment">// Get help</code>
+      <code>postcss <mark>-h</mark></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд. Домашнее задание</h2>
+
+    <ol>
+      <li>
+        Установите себе несколько других плагинов PostCSS, например: <a href="https://github.com/lahmatiy/postcss-csso" target="_blank">postcss-csso</a>, <a href="https://github.com/2createStudio/postcss-sprites" target="_blank">postcss-sprites</a>.
+      </li>
+      <li>
+        Настройте эти плагины. Примените <mark>postcss-cli</mark> c этими плагинами к своему проекту.
+      </li>
+    </ol>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li><a href="https://nodejs.org/en/download/" target="_blank">Nodejs</a></li>
+          <li><a href="http://npmjs.com" target="_blank">npm</a></li>
+          <li><a href="https://docs.npmjs.com/" target="_blank">Документация по npm</a></li>
+          <li><a href="https://github.com/css/csso" target="_blank">CSSO</a></li>
+          <li><a href="http://csscomb.com/" target="_blank">CSSComb</a></li>
+          <li><a href="https://github.com/afelix/cssrb" target="_blank">cssrb</a></li>
+          <li><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a></li>
+          <li><a href="http://postcss.org/" target="_blank">PostCSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд</h2>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li><a href="https://github.com/postcss/postcss-cli" target="_blank">PostCSS CLI</a></li>
+          <li><a href="https://www.youtube.com/watch?v=t8Td3Oq47yE" target="_blank">Доклад Ситника о PostCSS</a></li>
+          <li><a href="https://github.com/reworkcss/rework" target="_blank">Rework</a></li>
+          <li><a href="http://pleeease.io/" target="_blank">pleeease</a></li>
+          <li><a href="https://conemu.github.io/" target="_blank">ConEmu</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li>Статьи про консоль:
+            <ul>
+              <li>
+                <a href="https://habrahabr.ru/post/317534/" target="_blank">Консоль в массы. Переход на светлую сторону. Часть первая.</a>
+              </li>
+              <li>
+                <a href="https://habrahabr.ru/post/318376/" target="_blank">Консоль в массы. Переход на светлую сторону. Часть вторая.</a>
+              </li>
+              <li>
+                <a href="https://habrahabr.ru/post/319670/" target="_blank">Консоль в массы. Переход на светлую сторону. Bash.</a>
+              </li>
+              <li>
+                <a href="https://habrahabr.ru/post/321928/" target="_blank">Консоль в массы. Переход на светлую сторону. Автоматизация рутинных задач.</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-89569652-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
