@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title text-uc">svg</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/FBKgSi" target="_blank">goo.gl/FBKgSi</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">
+        <code>transition: 0.3s;</code> чему будут равны остальные значения для <mark>transition</mark>?
+      </li>
+      <li class="next">
+        Как оптимизировать данные <a href="../example/styles.css" target="_blank">стили</a>?
+      </li>
+      <li class="next">
+        <code>transform: rotate(0.25turn);</code> чему будут равно значение <mark>rotate</mark> в градусах?
+      </li>
+      <li class="next">
+        Какое свойство отвечает за то, сколько раз будет повторяться анимация?
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li>
+        Что такое <mark class="text-uc">svg</mark>, какие его отличия от других форматов (<mark>jpeg</mark>, <mark>png</mark>, <mark>gif</mark>)
+      </li>
+      <li>
+        Как использовать <mark class="text-uc">svg</mark>
+      </li>
+      <li>
+        Базовые фигуры, которые можно рисовать с помощью <mark class="text-uc">svg</mark>
+      </li>
+      <li>
+        <mark>Path</mark> элемент, зачем он нужен
+      </li>
+      <li>
+        Пишем текст при помощи <mark class="text-uc">svg</mark>
+      </li>
+      <li>
+        Фильтры в <mark class="text-uc">svg</mark>
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Что такое <mark class="text-uc">svg</mark></h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark class="text-uc">svg</mark> - Scalable Vector Graphics <img src="./pictures/svg-logo-v.svg" alt="svg logo" class="svg-logo"/>
+        </p>
+      </blockquote>
+    </figure>
+
+    <div class="next">
+      <h3>Почему SVG?</h3>
+      <hr/>
+    </div>
+
+    <ul>
+      <li class="next">
+        Маленький размер файла, который хорошо сжимается
+      </li>
+      <li class="next">
+        Масштабируется на любые размеры без потери качества
+      </li>
+      <li class="next">
+        Отличный выбор для retina-экранов
+      </li>
+      <li class="next">
+        Можно редактировать в любом текстовом редакторе
+      </li>
+      <li class="next">
+        Анимация и фильтры
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Поддержка <mark class="text-uc">svg</mark></h2>
+
+    <figure class="slide__box-model">
+      <a href="http://caniuse.com/#search=svg" target="_blank">
+        <img src="./pictures/1501001105415-svg-basic-support.jpg" alt="Поддержка SVG"/>
+      </a>
+
+      <figcaption>SVG (basic support)</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Какое основное отличия <mark class="text-uc">svg</mark>от других форматов (jpeg, png, gif)</h2>
+
+    <figure class="slide__box-model">
+      <img src="./pictures/09_Vectors-vs-Images-1.gif" alt="основное отличия SVG от других форматов"/>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры, которые можно рисовать с помощью SVG</h2>
+
+    <ul>
+      <li class="next">
+        circle
+      </li>
+      <li class="next">
+        rect
+      </li>
+      <li class="next">
+        polygon
+      </li>
+      <li class="next">
+        polyline
+      </li>
+      <li class="next">
+        line
+      </li>
+      <li class="next">
+        ellipse
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Circle</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;circle r="50" cx="50%" cy="50%" fill="orange"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>r</mark> - Задает радиус круга. Если не указывать единицы измерения, то по умолчанию будут <code>px</code>. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>круг не будет отображен</strong>.
+      </li>
+      <li class="next">
+        <mark>cx</mark> - Задает координаты оси X относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>cy</mark> - Задает координаты оси Y относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Rect</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;rect width="50%" height="100" fill="yellowgreen" x="25%" </code>
+      <code class="mark">  y="25" stroke="grey" stroke-width="10"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>width</mark> - Задает ширину прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
+      </li>
+      <li class="next">
+        <mark>height</mark> - Задает высоту прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Rect</h2>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>x</mark> - Задает координаты оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>y</mark> - Задает координаты оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>rx</mark> - Задает скругление углов по оси X. Если не указать <code>ry</code>, то значение этого атрибута будет равно <code>rx</code>.
+      </li>
+      <li class="next">
+        <mark>ry</mark> - Задает скругление углов по оси Y. Если не указать <code>rx</code>, то значение этого атрибута будет равно <code>ry</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Polygon</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;polygon fill="red" stroke="yellowgreen" stroke-width="10" </code>
+      <code class="mark">    points="350,75 379,161 469,161 397,215 423,301 350,250</code>
+      <code class="mark">           277,301 303,215 231,161 321,161"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>points</mark> - набор точек, которые задают многоугольник.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Polyline</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;polyline fill="none" stroke="purple" stroke-width="10" </code>
+      <code class="mark">    points="50,375 150,375 150,325 250,325 250,375
+      350,375 350,250 450,250 450,375 550,375 550,175 650,175
+      650,375 750,375 750,100 850,100 850,375 950,375 950,25
+      1050,25 1050,375 1150,375"/&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>points</mark> - набор точек, которые задают ломаную линию.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Line</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;line x1="10" y1="300" x2="100" y2="10" stroke-width="5"/&gt; </code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul class="info-list">
+      <li class="next">
+        <mark>x1</mark> - Задает координаты оси X относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>y1</mark> - Задает координаты оси Y относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>x2</mark> - Задает координаты оси X относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>y2</mark> - Задает координаты оси Y относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Ellipse</h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;ellipse cx="50%" rx="70" ry="30" fill="red"/&gt; </code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul>
+      <li class="next">
+        <mark>cx</mark> - Задает координаты оси X относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+      <li class="next">
+        <mark>cy</mark> - Задает координаты оси Y относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Ellipse</h2>
+
+    <ul>
+      <li class="next">
+        <mark>rx</mark> - Задает радиус относительно оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
+      </li>
+      <li class="next">
+        <mark>ry</mark> - Задает радиус относительно оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/pen/yoyeZw" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Базовые фигуры. Практика</h2>
+
+    <figure>
+      <img src="./pictures/1501020097660-smile.jpg" alt="Нарисуйсте квадрат при помощи path">
+
+      <figcaption>
+        Нарисуйсте smile при помощи <mark>circle</mark>, <mark>line</mark>, <mark>rect</mark>
+      </figcaption>
+    </figure>
+
+    <p><strong>Для самых смелых:</strong> Нарисуйте подобные смайлы при помощи <mark>ellipse</mark>, <mark>polyline</mark>, <mark>polygon</mark>.</p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+
+    <figure class="next">
+      <blockquote>
+        <p>
+          <mark>path</mark> элемент используется для определения пути любой сложности
+        </p>
+      </blockquote>
+    </figure>
+
+    <ul>
+      <li class="next">
+        <mark>d</mark> - содержит параметры пути (координаты).
+      </li>
+    </ul>
+
+    <h3 class="next">Обозначения:</h3>
+    <ul>
+      <li class="next">
+        <mark>M</mark> - <code>"moveto"</code> команда, которая определяет новую точку.
+      </li>
+      <li class="next">
+        <mark>L</mark> - <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+      </li>
+      <li class="next">
+        <mark>H</mark> - горизонтальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+
+    <ul>
+      <li class="next">
+        <mark>V</mark> - вертикальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
+      </li>
+      <li class="next">
+        ...
+      </li>
+      <li class="next">
+        <mark>Z</mark> - <code>"closepath"</code> завершает текущий подпуть и вызывает автоматическую прямую линию, которая будет нарисована от текущей точки до начальной точки текущего подпути.
+      </li>
+    </ul>
+
+    <a href="https://codepen.io/var-bin/pen/xLbzpg?editors=1000#0" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
+
+    <h3>
+      Практика
+    </h3>
+    <hr/>
+
+    <figure>
+      <img src="./pictures/1501019596578-path-task.jpg" alt="Нарисуйсте квадрат при помощи path">
+
+      <figcaption>
+        <p>
+          Нарисуйсте квадрат при помощи <mark>path</mark>
+        </p>
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>text</code></h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
+      <code class="mark">  fill="red"&gt;</code>
+      <code class="mark">    Hello, out there!</code>
+      <code class="mark">  &lt;/text&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <ul>
+      <li class="next">
+        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>text</code></h2>
+
+    <ul>
+      <li class="next">
+        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
+      </li>
+      <li class="next">
+        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>tspan</code></h2>
+
+    <pre>
+      <code>&lt;svg&gt;</code>
+      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
+      <code class="mark">  fill="red"&gt;</code>
+      <code class="mark">    Hello,
+    <mark>&lt;tspan font-weight="bold" fill="blue"&gt;out&lt;/tspan&gt;</mark>
+    there!</code>
+      <code class="mark">  &lt;/text&gt;</code>
+      <code>&lt;/svg&gt;</code>
+    </pre>
+
+    <a href="https://codepen.io/var-bin/pen/LjEBQg?editors=1000" target="_blank" class="next">Пример</a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. <code>tspan</code></h2>
+
+    <ul>
+      <li class="next">
+        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
+      </li>
+      <li class="next">
+        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
+      </li>
+      <li class="next">
+        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>SVG. Пишем текст. Практика</h2>
+
+    <p>
+      Напишите текст <strong>"Front-End Basic"</strong>. Слово <strong>"Front"</strong> должно быть зеленого цвета. Слово <strong>"End"</strong> должно быть красного цвета. Слово <strong>"Basic"</strong> должно быть синего цвета. <strong>Коротное тире</strong> должно быть без заливки с обводкой в <code>2px</code>, цвет обводки <code>grey</code>.
+    </p>
+
+    <figure>
+      <img src="./pictures/1501025539986-text.jpg" alt="SVG. Пишем текст. Практика">
+
+      <figcaption>
+        Пример того, как должно получиться
+      </figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это НЕ последний слайд. Домашнее задание</h2>
+
+    Выполнить практические задания по <mark class="text-uc">svg</mark>, которые вы не сделали на занятии и выложить результат на <a href="https://codepen.io/" target="_blank">codepen</a>
+
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul>
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li>
+            <a href="https://www.w3.org/TR/SVG/" target="_blank">Scalable Vector Graphics (SVG) 1.1 (Second Edition)&nbsp;<span class="text-uc">w3c</span></a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">SVG&nbsp;<span class="text-uc">mdn</span></a>
+          </li>
+          <li>
+            <a href="http://caniuse.com/#search=svg" target="_blank">Поддержка SVG</a>
+          </li>
+          <li>
+            <a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">Online SVG optimizer</a>
+          </li>
+          <li>
+            <a href="https://testdrive-archive.azurewebsites.net/graphics/hands-on-css3/hands-on_svg-filter-effects.htm" target="_blank">Hands On: svg-filter-effects.</a>
+          </li>
+          <li>
+            <a href="http://css-live.ru/articles/karmannoe-rukovodstvo-po-napisaniyu-svg-vvedenie.html" target="_blank">Карманное руководство по написанию SVG</a> [ Рекомендую ]
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=RJnYkbm66ZI" target="_blank">Как сделать Инстаграм в браузере</a>
+          </li>
+          <li>
+            <a href="https://codepen.io/collection/DgLKPv/" target="_blank">Все примеры</a> к lection11
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-89569652-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
