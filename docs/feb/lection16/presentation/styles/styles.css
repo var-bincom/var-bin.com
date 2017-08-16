@@ -205,3 +205,112 @@
   width: 100px;
   height: 100px;
 }
+
+/* lection16
+----------------------------------------------- */
+.slide__box-model_bg a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide__box-model_bg-elements {
+  background: url("../pictures/elements.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-console {
+  background: url("../pictures/console-panel.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-sources {
+  background: url("../pictures/sources.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-network {
+  background: url("../pictures/network.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-performance {
+  background: url("../pictures/performance.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-memory {
+  background: url("../pictures/memory.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-application {
+  background: url("../pictures/application.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-network-monitor-ff {
+  background: url("../pictures/1-new-overview-small.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-storage-ff {
+  background: url("../pictures/1-storage-inspector-open.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-security {
+  background: url("../pictures/security.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-gcli-ff {
+  background: url("../pictures/gcli-annotated.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-domexplorer {
+  background: url("../pictures/edge_domexplorer.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-console {
+  background: url("../pictures/edge_console.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-debugger {
+  background: url("../pictures/edge_debugger.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-network {
+  background: url("../pictures/edge_network_details.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-performance {
+  background: url("../pictures/edge_performance.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-memory {
+  background: url("../pictures/edge_memory.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-emulation {
+  background: url("../pictures/edge_emulation.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg {
+  background-size: contain;
+  height: 70%;
+  width: auto;
+}
+
+.slide__box-model_ff {
+  height: 60%;
+  width: auto;
+}
+
+.slide__box-model_ff a {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide__box-model_ff-eye {
+  text-align: center;
+}
+
+.slide__box-model_ff-eye figcaption {
+  text-align: left;
+}
+
+.slide__box-model_ff-eye img {
+  width: auto;
+}
