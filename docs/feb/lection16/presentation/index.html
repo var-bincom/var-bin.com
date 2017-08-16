@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <section class="slide slide_pt" id="cover">
+    <h2>Front-End Basic</h2>
+    <h2 class="slide_lection-title">Устройство браузера</h2>
+    <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
+    <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
+    <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+        </svg>
+      </span>
+      <span >Raphael Rychetsky</span>
+    </a>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Ссылка на слайды</h2>
+
+    <div class="slide_repo-links">
+      <a href="https://goo.gl/FBKgSi" target="_blank">goo.gl/FBKgSi</a>
+      <figure>
+        <img src="./pictures/chart.png" alt="link to slides">
+      </figure>
+    </div>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Вопросы</h2>
+
+    <ul>
+      <li class="next">
+        В чем особенность работы <code>position: fixed;</code>?
+      </li>
+      <li class="next">
+        При помощи какого свойства можно сделать flex-конетейнер многострочным?
+      </li>
+      <li class="next">
+        Чему равен <mark>font-size</mark> в браузере по умолчанию?
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Пример для практики</h2>
+
+    <p>
+      Скачайте себе <a href="../examples/blog.zip" target="_blank">архив</a> и разархивируйте. Сохраните его на диск <mark>D:</mark>.
+    </p>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>План</h2>
+
+    <ul>
+      <li>
+        Chrome DevTools
+      </li>
+      <li>
+        Firefox Developer Tools
+      </li>
+      <li>
+        Microsoft Edge DevTools
+      </li>
+      <li>
+        Chrome Canary
+      </li>
+      <li>
+        Firefox Developer Edition
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools</h2>
+
+    <ul>
+      <li>
+        Device Mode
+      </li>
+      <li>
+        Elements panel
+      </li>
+      <li>
+        Console panel
+      </li>
+      <li>
+        Sources panel
+      </li>
+      <li>
+        Network panel
+      </li>
+      <li>
+        Performance panel (previously Timeline panel)
+      </li>
+      <li>
+        Memory panel (previously Profiles panel)
+      </li>
+      <li>
+        Application panel
+      </li>
+      <li>
+        Security panel
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Device Mode</h2>
+
+    <figure class="slide__box-model">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/" target="_blank">
+        <img src="./pictures/device-mode-initial-view.png" alt="Device Mode"/>
+      </a>
+
+      <figcaption>Симуляция мобидьных устройств в режиме устройств</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Elements panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-elements">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#elements" target="_blank">
+      </a>
+
+      <figcaption>Панель Elements</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Console panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-console">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#console" target="_blank">
+      </a>
+
+      <figcaption>Панель Console</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Sources panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-sources">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#sources" target="_blank">
+      </a>
+
+      <figcaption>Панель Sources</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Network panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-network">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#network" target="_blank">
+      </a>
+
+      <figcaption>Панель Network</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Performance panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-performance">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#performance" target="_blank">
+      </a>
+
+      <figcaption>Панель Performance</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Memory panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-memory">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#memory" target="_blank">
+      </a>
+
+      <figcaption>Панель Memory</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Application panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-application">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#application" target="_blank">
+      </a>
+
+      <figcaption>Панель Application</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Security panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-security">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#security" target="_blank">
+      </a>
+
+      <figcaption>Панель Security</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools</h2>
+
+    <ul>
+      <li>
+        Web Console
+      </li>
+      <li>
+        Page Inspector
+      </li>
+      <li>
+        JavaScript Debugger
+      </li>
+      <li>
+        Network Monitor
+      </li>
+      <li>
+        Storage Inspector
+      </li>
+      <li>
+        Developer Toolbar
+      </li>
+      <li>
+        Eyedropper
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Web Console</h2>
+
+    <figure class="slide__box-model slide__box-model_ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" target="_blank">
+        <img src="./pictures/console-ff.png" alt="Web Console">
+      </a>
+
+      <figcaption>Web Console</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Page Inspector</h2>
+
+    <figure class="slide__box-model slide__box-model_ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector" target="_blank">
+        <img src="./pictures/breadcrumbs-pageinspector-ff.png" alt="Page Inspector">
+      </a>
+
+      <figcaption>Page Inspector</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. JavaScript Debugger</h2>
+
+    <figure class="slide__box-model slide__box-model_ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger" target="_blank">
+        <img src="./pictures/split-console-js-debug-ff.png" alt="JavaScript Debugger">
+      </a>
+
+      <figcaption>JavaScript Debugger</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Network Monitor</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-network-monitor-ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor" target="_blank">
+      </a>
+
+      <figcaption>Network Monitor</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Storage Inspector</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-storage-ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector" target="_blank">
+      </a>
+
+      <figcaption>Storage Inspector</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Developer Toolbar</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-gcli-ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/GCLI" target="_blank"></a>
+
+      <figcaption>Developer Toolbar</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Eyedropper</h2>
+
+    <figure class="slide__box-model slide__box-model_ff slide__box-model_ff-eye">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Eyedropper" target="_blank">
+        <img src="./pictures/eyedropper.png" alt="Eyedropper">
+      </a>
+
+      <figcaption>Eyedropper</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools</h2>
+
+    <ul>
+      <li>
+        DOM Explorer
+      </li>
+      <li>
+        Console tool
+      </li>
+      <li>
+        Debugger tool
+      </li>
+      <li>
+        Network tool
+      </li>
+      <li>
+        Performance Tool
+      </li>
+      <li>
+        Memory tool
+      </li>
+      <li>
+        Emulation tool
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. DOM Explorer</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-domexplorer">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer" target="_blank"></a>
+
+      <figcaption>DOM Explorer</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Console tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-console">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/console" target="_blank"></a>
+
+      <figcaption>Console tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Debugger tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-debugger">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/debugger" target="_blank"></a>
+
+      <figcaption>Debugger tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Network tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-network">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/network" target="_blank"></a>
+
+      <figcaption>Network tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Performance Tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-performance">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/performance" target="_blank"></a>
+
+      <figcaption>Performance Tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Memory tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-memory">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/memory" target="_blank"></a>
+
+      <figcaption>Memory tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Emulation tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-emulation">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/emulation" target="_blank"></a>
+
+      <figcaption>Emulation tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Это последний слайд</h2>
+
+    <em>
+      Все, кина на будет...
+    </em>
+
+    <ul class="info-list">
+      <li>
+        Полезные ресурсы:
+        <ul>
+          <li>
+            <a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank">Chrome DevTools</a>
+          </li>
+          <li>
+            <a href="https://www.google.com/chrome/browser/canary.html" target="_blank">Chrome Canary</a>
+          </li>
+          <li>
+            <a href="https://developers.google.com/web/tools/chrome-devtools/shortcuts" target="_blank">Chrome DevTools Keyboard Shortcuts Reference</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/son/docs/Tools" target="_blank">Firefox Developer Tools</a>
+          </li>
+          <li>
+            <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank">Firefox Developer Edition</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/tools/Keyboard_shortcuts" target="_blank">Firefox Developer Tools Keyboard Shortcuts Reference</a>
+          </li>
+          <li>
+            <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide" target="_blank">Microsoft Edge F12 Dev Tools</a>
+          </li>
+          <li>
+            <a href="https://github.com/ademilter/chrome-css-grid-highlighter" target="_blank">Css Grid Highlighter for Chrome</a>
+          </li>
+          <li>
+            <a href="https://tinypng.com/" target="_blank">Онлайн ресурс для сжатия .png, .jpg</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove "progress" element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-89569652-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
