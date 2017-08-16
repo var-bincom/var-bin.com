@@ -16,7 +16,7 @@
   </header>
   <section class="slide slide_pt" id="cover">
     <h2>Front-End Basic</h2>
-    <h2 class="slide_lection-title text-uc">svg</h2>
+    <h2 class="slide_lection-title">Устройство браузера</h2>
     <p>Brought to you by <a class="author" href="http://var-bin.com">Vitalii Rybka</a></p>
     <img src="pictures/raphael-rychetsky-215186.jpg" alt="cover" class="cover cover_full-width">
     <a class="photographer-credit" href="http://unsplash.com/@raphaelfyi?utm_campaign=photographer-credit" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Raphael Rychetsky">
@@ -43,428 +43,357 @@
 
     <ul>
       <li class="next">
-        <code>transition: 0.3s;</code> чему будут равны остальные значения для <mark>transition</mark>?
+        В чем особенность работы <code>position: fixed;</code>?
       </li>
       <li class="next">
-        Как оптимизировать данные <a href="../example/styles.css" target="_blank">стили</a>?
+        При помощи какого свойства можно сделать flex-конетейнер многострочным?
       </li>
       <li class="next">
-        <code>transform: rotate(0.25turn);</code> чему будут равно значение <mark>rotate</mark> в градусах?
-      </li>
-      <li class="next">
-        Какое свойство отвечает за то, сколько раз будет повторяться анимация?
+        Чему равен <mark>font-size</mark> в браузере по умолчанию?
       </li>
     </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Пример для практики</h2>
+
+    <p>
+      Скачайте себе <a href="../examples/blog.zip" target="_blank">архив</a> и разархивируйте. Сохраните его на диск <mark>D:</mark>.
+    </p>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>План</h2>
 
     <ul>
       <li>
-        Что такое <mark class="text-uc">svg</mark>, какие его отличия от других форматов (<mark>jpeg</mark>, <mark>png</mark>, <mark>gif</mark>)
+        Chrome DevTools
       </li>
       <li>
-        Как использовать <mark class="text-uc">svg</mark>
+        Firefox Developer Tools
       </li>
       <li>
-        Базовые фигуры, которые можно рисовать с помощью <mark class="text-uc">svg</mark>
+        Microsoft Edge DevTools
       </li>
       <li>
-        <mark>Path</mark> элемент, зачем он нужен
+        Chrome Canary
       </li>
       <li>
-        Пишем текст при помощи <mark class="text-uc">svg</mark>
-      </li>
-      <li>
-        Фильтры в <mark class="text-uc">svg</mark>
+        Firefox Developer Edition
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Что такое <mark class="text-uc">svg</mark></h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark class="text-uc">svg</mark> - Scalable Vector Graphics <img src="./pictures/svg-logo-v.svg" alt="svg logo" class="svg-logo"/>
-        </p>
-      </blockquote>
-    </figure>
-
-    <div class="next">
-      <h3>Почему SVG?</h3>
-      <hr/>
-    </div>
+    <h2>Chrome DevTools</h2>
 
     <ul>
-      <li class="next">
-        Маленький размер файла, который хорошо сжимается
+      <li>
+        Device Mode
       </li>
-      <li class="next">
-        Масштабируется на любые размеры без потери качества
+      <li>
+        Elements panel
       </li>
-      <li class="next">
-        Отличный выбор для retina-экранов
+      <li>
+        Console panel
       </li>
-      <li class="next">
-        Можно редактировать в любом текстовом редакторе
+      <li>
+        Sources panel
       </li>
-      <li class="next">
-        Анимация и фильтры
+      <li>
+        Network panel
+      </li>
+      <li>
+        Performance panel (previously Timeline panel)
+      </li>
+      <li>
+        Memory panel (previously Profiles panel)
+      </li>
+      <li>
+        Application panel
+      </li>
+      <li>
+        Security panel
       </li>
     </ul>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Поддержка <mark class="text-uc">svg</mark></h2>
+    <h2>Chrome DevTools. Device Mode</h2>
 
     <figure class="slide__box-model">
-      <a href="http://caniuse.com/#search=svg" target="_blank">
-        <img src="./pictures/1501001105415-svg-basic-support.jpg" alt="Поддержка SVG"/>
+      <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/" target="_blank">
+        <img src="./pictures/device-mode-initial-view.png" alt="Device Mode"/>
       </a>
 
-      <figcaption>SVG (basic support)</figcaption>
+      <figcaption>Симуляция мобидьных устройств в режиме устройств</figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Какое основное отличия <mark class="text-uc">svg</mark>от других форматов (jpeg, png, gif)</h2>
+    <h2>Chrome DevTools. Elements panel</h2>
 
-    <figure class="slide__box-model">
-      <img src="./pictures/09_Vectors-vs-Images-1.gif" alt="основное отличия SVG от других форматов"/>
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-elements">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#elements" target="_blank">
+      </a>
+
+      <figcaption>Панель Elements</figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры, которые можно рисовать с помощью SVG</h2>
+    <h2>Chrome DevTools. Console panel</h2>
 
-    <ul>
-      <li class="next">
-        circle
-      </li>
-      <li class="next">
-        rect
-      </li>
-      <li class="next">
-        polygon
-      </li>
-      <li class="next">
-        polyline
-      </li>
-      <li class="next">
-        line
-      </li>
-      <li class="next">
-        ellipse
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Circle</h2>
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-console">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#console" target="_blank">
+      </a>
 
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;circle r="50" cx="50%" cy="50%" fill="orange"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>r</mark> - Задает радиус круга. Если не указывать единицы измерения, то по умолчанию будут <code>px</code>. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>круг не будет отображен</strong>.
-      </li>
-      <li class="next">
-        <mark>cx</mark> - Задает координаты оси X относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>cy</mark> - Задает координаты оси Y относительно центра круга. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Rect</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;rect width="50%" height="100" fill="yellowgreen" x="25%" </code>
-      <code class="mark">  y="25" stroke="grey" stroke-width="10"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>width</mark> - Задает ширину прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
-      </li>
-      <li class="next">
-        <mark>height</mark> - Задает высоту прямоугольника. Не может принимать отрицательные значения. Если значение этого атрибута равно <code>0</code> - <strong>прямоугольник не будет отображен</strong>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Rect</h2>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>x</mark> - Задает координаты оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>y</mark> - Задает координаты оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>rx</mark> - Задает скругление углов по оси X. Если не указать <code>ry</code>, то значение этого атрибута будет равно <code>rx</code>.
-      </li>
-      <li class="next">
-        <mark>ry</mark> - Задает скругление углов по оси Y. Если не указать <code>rx</code>, то значение этого атрибута будет равно <code>ry</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Polygon</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;polygon fill="red" stroke="yellowgreen" stroke-width="10" </code>
-      <code class="mark">    points="350,75 379,161 469,161 397,215 423,301 350,250</code>
-      <code class="mark">           277,301 303,215 231,161 321,161"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>points</mark> - набор точек, которые задают многоугольник.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Polyline</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;polyline fill="none" stroke="purple" stroke-width="10" </code>
-      <code class="mark">    points="50,375 150,375 150,325 250,325 250,375
-      350,375 350,250 450,250 450,375 550,375 550,175 650,175
-      650,375 750,375 750,100 850,100 850,375 950,375 950,25
-      1050,25 1050,375 1150,375"/&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>points</mark> - набор точек, которые задают ломаную линию.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Line</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;line x1="10" y1="300" x2="100" y2="10" stroke-width="5"/&gt; </code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul class="info-list">
-      <li class="next">
-        <mark>x1</mark> - Задает координаты оси X относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>y1</mark> - Задает координаты оси Y относительно начала линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>x2</mark> - Задает координаты оси X относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>y2</mark> - Задает координаты оси Y относительно конца линии. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Ellipse</h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;ellipse cx="50%" rx="70" ry="30" fill="red"/&gt; </code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <ul>
-      <li class="next">
-        <mark>cx</mark> - Задает координаты оси X относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-      <li class="next">
-        <mark>cy</mark> - Задает координаты оси Y относительно центра элипса. Если не указать этот атрибут, то его значение будет равно <code>0</code>.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Ellipse</h2>
-
-    <ul>
-      <li class="next">
-        <mark>rx</mark> - Задает радиус относительно оси X. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
-      </li>
-      <li class="next">
-        <mark>ry</mark> - Задает радиус относительно оси Y. Если не указать этот атрибут, то его значение будет равно <code>0</code>. Не может принимать отрицательные значения.
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/pen/yoyeZw" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>Базовые фигуры. Практика</h2>
-
-    <figure>
-      <img src="./pictures/1501020097660-smile.jpg" alt="Нарисуйсте квадрат при помощи path">
-
-      <figcaption>
-        Нарисуйсте smile при помощи <mark>circle</mark>, <mark>line</mark>, <mark>rect</mark>
-      </figcaption>
-    </figure>
-
-    <p><strong>Для самых смелых:</strong> Нарисуйте подобные смайлы при помощи <mark>ellipse</mark>, <mark>polyline</mark>, <mark>polygon</mark>.</p>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
-
-    <figure class="next">
-      <blockquote>
-        <p>
-          <mark>path</mark> элемент используется для определения пути любой сложности
-        </p>
-      </blockquote>
-    </figure>
-
-    <ul>
-      <li class="next">
-        <mark>d</mark> - содержит параметры пути (координаты).
-      </li>
-    </ul>
-
-    <h3 class="next">Обозначения:</h3>
-    <ul>
-      <li class="next">
-        <mark>M</mark> - <code>"moveto"</code> команда, которая определяет новую точку.
-      </li>
-      <li class="next">
-        <mark>L</mark> - <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
-      </li>
-      <li class="next">
-        <mark>H</mark> - горизонтальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>V</mark> - вертикальная <code>"lineto"</code> команда, которая "рисует" прямую линию с текущей точки в новую точку.
-      </li>
-      <li class="next">
-        ...
-      </li>
-      <li class="next">
-        <mark>Z</mark> - <code>"closepath"</code> завершает текущий подпуть и вызывает автоматическую прямую линию, которая будет нарисована от текущей точки до начальной точки текущего подпути.
-      </li>
-    </ul>
-
-    <a href="https://codepen.io/var-bin/pen/xLbzpg?editors=1000#0" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG Path - <code>&lt;path/&gt;</code></h2>
-
-    <h3>
-      Практика
-    </h3>
-    <hr/>
-
-    <figure>
-      <img src="./pictures/1501019596578-path-task.jpg" alt="Нарисуйсте квадрат при помощи path">
-
-      <figcaption>
-        <p>
-          Нарисуйсте квадрат при помощи <mark>path</mark>
-        </p>
-      </figcaption>
+      <figcaption>Панель Console</figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>text</code></h2>
+    <h2>Chrome DevTools. Sources panel</h2>
 
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
-      <code class="mark">  fill="red"&gt;</code>
-      <code class="mark">    Hello, out there!</code>
-      <code class="mark">  &lt;/text&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-sources">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#sources" target="_blank">
+      </a>
 
-    <ul>
-      <li class="next">
-        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>text</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
-      </li>
-      <li class="next">
-        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>tspan</code></h2>
-
-    <pre>
-      <code>&lt;svg&gt;</code>
-      <code class="mark">  &lt;text x="15%" y="60%" font-family="Arial" font-size="55"</code>
-      <code class="mark">  fill="red"&gt;</code>
-      <code class="mark">    Hello,
-    <mark>&lt;tspan font-weight="bold" fill="blue"&gt;out&lt;/tspan&gt;</mark>
-    there!</code>
-      <code class="mark">  &lt;/text&gt;</code>
-      <code>&lt;/svg&gt;</code>
-    </pre>
-
-    <a href="https://codepen.io/var-bin/pen/LjEBQg?editors=1000" target="_blank" class="next">Пример</a>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. <code>tspan</code></h2>
-
-    <ul>
-      <li class="next">
-        <mark>x</mark> - Если одно значение, то задает координаты по оси X для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси X.
-      </li>
-      <li class="next">
-        <mark>y</mark> - Если одно значение, то задает координаты по оси Y для первого глифа. Если значения указаны через запятую или через пробел, то каждое значение задает позицию для каждого отдельно взятого глифа по оси Y.
-      </li>
-      <li class="next">
-        <mark>rotate</mark> - позволяет "вращать" текст. Если значения указаны через запятую или через пробел, то каждое значение задает "вращение" для каждого отдельно взятого глифа.
-      </li>
-    </ul>
-  </section>
-  <section class="slide slide_hillel-bg slide_pt">
-    <h2>SVG. Пишем текст. Практика</h2>
-
-    <p>
-      Напишите текст <strong>"Front-End Basic"</strong>. Слово <strong>"Front"</strong> должно быть зеленого цвета. Слово <strong>"End"</strong> должно быть красного цвета. Слово <strong>"Basic"</strong> должно быть синего цвета. <strong>Коротное тире</strong> должно быть без заливки с обводкой в <code>2px</code>, цвет обводки <code>grey</code>.
-    </p>
-
-    <figure>
-      <img src="./pictures/1501025539986-text.jpg" alt="SVG. Пишем текст. Практика">
-
-      <figcaption>
-        Пример того, как должно получиться
-      </figcaption>
+      <figcaption>Панель Sources</figcaption>
     </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
-    <h2>Это НЕ последний слайд. Домашнее задание</h2>
+    <h2>Chrome DevTools. Network panel</h2>
 
-    Выполнить практические задания по <mark class="text-uc">svg</mark>, которые вы не сделали на занятии и выложить результат на <a href="https://codepen.io/" target="_blank">codepen</a>
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-network">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#network" target="_blank">
+      </a>
 
+      <figcaption>Панель Network</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Performance panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-performance">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#performance" target="_blank">
+      </a>
+
+      <figcaption>Панель Performance</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Memory panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-memory">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#memory" target="_blank">
+      </a>
+
+      <figcaption>Панель Memory</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Application panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-application">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#application" target="_blank">
+      </a>
+
+      <figcaption>Панель Application</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Chrome DevTools. Security panel</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-security">
+      <a href="https://developers.google.com/web/tools/chrome-devtools/#security" target="_blank">
+      </a>
+
+      <figcaption>Панель Security</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools</h2>
+
+    <ul>
+      <li>
+        Web Console
+      </li>
+      <li>
+        Page Inspector
+      </li>
+      <li>
+        JavaScript Debugger
+      </li>
+      <li>
+        Network Monitor
+      </li>
+      <li>
+        Storage Inspector
+      </li>
+      <li>
+        Developer Toolbar
+      </li>
+      <li>
+        Eyedropper
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Web Console</h2>
+
+    <figure class="slide__box-model slide__box-model_ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" target="_blank">
+        <img src="./pictures/console-ff.png" alt="Web Console">
+      </a>
+
+      <figcaption>Web Console</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Page Inspector</h2>
+
+    <figure class="slide__box-model slide__box-model_ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector" target="_blank">
+        <img src="./pictures/breadcrumbs-pageinspector-ff.png" alt="Page Inspector">
+      </a>
+
+      <figcaption>Page Inspector</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. JavaScript Debugger</h2>
+
+    <figure class="slide__box-model slide__box-model_ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger" target="_blank">
+        <img src="./pictures/split-console-js-debug-ff.png" alt="JavaScript Debugger">
+      </a>
+
+      <figcaption>JavaScript Debugger</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Network Monitor</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-network-monitor-ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor" target="_blank">
+      </a>
+
+      <figcaption>Network Monitor</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Storage Inspector</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-storage-ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector" target="_blank">
+      </a>
+
+      <figcaption>Storage Inspector</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Developer Toolbar</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-gcli-ff">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/GCLI" target="_blank"></a>
+
+      <figcaption>Developer Toolbar</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Firefox Developer Tools. Eyedropper</h2>
+
+    <figure class="slide__box-model slide__box-model_ff slide__box-model_ff-eye">
+      <a href="https://developer.mozilla.org/en-US/docs/Tools/Eyedropper" target="_blank">
+        <img src="./pictures/eyedropper.png" alt="Eyedropper">
+      </a>
+
+      <figcaption>Eyedropper</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools</h2>
+
+    <ul>
+      <li>
+        DOM Explorer
+      </li>
+      <li>
+        Console tool
+      </li>
+      <li>
+        Debugger tool
+      </li>
+      <li>
+        Network tool
+      </li>
+      <li>
+        Performance Tool
+      </li>
+      <li>
+        Memory tool
+      </li>
+      <li>
+        Emulation tool
+      </li>
+    </ul>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. DOM Explorer</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-domexplorer">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer" target="_blank"></a>
+
+      <figcaption>DOM Explorer</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Console tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-console">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/console" target="_blank"></a>
+
+      <figcaption>Console tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Debugger tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-debugger">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/debugger" target="_blank"></a>
+
+      <figcaption>Debugger tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Network tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-network">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/network" target="_blank"></a>
+
+      <figcaption>Network tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Performance Tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-performance">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/performance" target="_blank"></a>
+
+      <figcaption>Performance Tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Memory tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-memory">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/memory" target="_blank"></a>
+
+      <figcaption>Memory tool</figcaption>
+    </figure>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>Microsoft Edge F12 Dev Tools. Emulation tool</h2>
+
+    <figure class="slide__box-model slide__box-model_bg slide__box-model_bg-edge-emulation">
+      <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/emulation" target="_blank"></a>
+
+      <figcaption>Emulation tool</figcaption>
+    </figure>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд</h2>
@@ -473,33 +402,36 @@
       Все, кина на будет...
     </em>
 
-    <ul>
+    <ul class="info-list">
       <li>
         Полезные ресурсы:
         <ul>
           <li>
-            <a href="https://www.w3.org/TR/SVG/" target="_blank">Scalable Vector Graphics (SVG) 1.1 (Second Edition)&nbsp;<span class="text-uc">w3c</span></a>
+            <a href="https://developers.google.com/web/tools/chrome-devtools/" target="_blank">Chrome DevTools</a>
           </li>
           <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">SVG&nbsp;<span class="text-uc">mdn</span></a>
+            <a href="https://www.google.com/chrome/browser/canary.html" target="_blank">Chrome Canary</a>
           </li>
           <li>
-            <a href="http://caniuse.com/#search=svg" target="_blank">Поддержка SVG</a>
+            <a href="https://developers.google.com/web/tools/chrome-devtools/shortcuts" target="_blank">Chrome DevTools Keyboard Shortcuts Reference</a>
           </li>
           <li>
-            <a href="http://petercollingridge.appspot.com/svg-optimiser" target="_blank">Online SVG optimizer</a>
+            <a href="https://developer.mozilla.org/son/docs/Tools" target="_blank">Firefox Developer Tools</a>
           </li>
           <li>
-            <a href="https://testdrive-archive.azurewebsites.net/graphics/hands-on-css3/hands-on_svg-filter-effects.htm" target="_blank">Hands On: svg-filter-effects.</a>
+            <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank">Firefox Developer Edition</a>
           </li>
           <li>
-            <a href="http://css-live.ru/articles/karmannoe-rukovodstvo-po-napisaniyu-svg-vvedenie.html" target="_blank">Карманное руководство по написанию SVG</a> [ Рекомендую ]
+            <a href="https://developer.mozilla.org/en-US/docs/tools/Keyboard_shortcuts" target="_blank">Firefox Developer Tools Keyboard Shortcuts Reference</a>
           </li>
           <li>
-            <a href="https://www.youtube.com/watch?v=RJnYkbm66ZI" target="_blank">Как сделать Инстаграм в браузере</a>
+            <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide" target="_blank">Microsoft Edge F12 Dev Tools</a>
           </li>
           <li>
-            <a href="https://codepen.io/collection/DgLKPv/" target="_blank">Все примеры</a> к lection11
+            <a href="https://github.com/ademilter/chrome-css-grid-highlighter" target="_blank">Css Grid Highlighter for Chrome</a>
+          </li>
+          <li>
+            <a href="https://tinypng.com/" target="_blank">Онлайн ресурс для сжатия .png, .jpg</a>
           </li>
         </ul>
       </li>
