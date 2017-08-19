@@ -1,13 +1,13 @@
 @font-face {
-	font-family: "playfairdisplay-regular-demo";
-	src: url("playfairdisplay-regular-demo.woff2") format("woff2"), url("playfairdisplay-regular-demo.woff") format("woff");
+	font-family: "Playfairdisplay";
+	src: url("fonts/playfairdisplay-regular-webfont.woff2") format("woff2"), url("fonts/playfairdisplay-regular-webfont.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "ubuntu-regular-demo";
-	src: url("ubuntu-regular-demo.woff2") format("woff2"), url("ubuntu-regular-demo.woff") format("woff");
+	font-family: "Ubuntu";
+	src: url("fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("fonts/ubuntu-regular-webfont.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -269,12 +269,11 @@ footer {
 	margin-left: 150px;
 	float: left;
 	overflow: hidden;
-	
+
 }
 
 .leftcol a {
 	color: black;
-	
 }
 
 .rightcol {
