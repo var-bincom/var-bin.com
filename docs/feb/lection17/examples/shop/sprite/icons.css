@@ -1,0 +1,127 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.ic-ic_accessibility_black_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px 0px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_accessibility_black_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -26px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_accessibility_white_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -76px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_accessibility_white_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -102px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_account_balance_wallet_black_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -152px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_account_balance_wallet_black_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -178px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_account_balance_wallet_white_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -228px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_account_balance_wallet_white_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -254px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_alarm_on_black_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -304px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_alarm_on_black_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -330px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_alarm_on_white_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -380px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_alarm_on_white_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -406px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_android_black_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -456px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_android_black_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -482px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_android_white_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -532px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_android_white_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -558px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_done_all_black_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -608px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_done_all_black_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -634px;
+  width: 48px;
+  height: 48px;
+}
+.ic-ic_done_all_white_24dp_1x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -684px;
+  width: 24px;
+  height: 24px;
+}
+.ic-ic_done_all_white_24dp_2x:before {
+  background-image: url(sprite/sprite.png);
+  background-position: 0px -710px;
+  width: 48px;
+  height: 48px;
+}
