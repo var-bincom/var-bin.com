@@ -1,0 +1,316 @@
+/* custom styles */
+
+.slide::after {
+  background-image: url("../pictures/ribbon-180.svg");
+  top: auto;
+  right: 30px;
+  bottom: -35px;
+}
+
+.slide .photographer-credit {
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: 4px 6px;
+  font: bold 12px/1.2 var(--photographer-credit-font_family);
+  border-radius: 3px;
+  position: absolute;
+  left: 2em;
+  bottom: 2em;
+}
+
+.photographer-credit span {
+  display: inline-block;
+  padding:2px 3px;
+}
+
+.photographer-credit svg {
+  height: 12px;
+  width: auto;
+  position: relative;
+  vertical-align: middle;
+  top: -1px;
+  fill: var(--white);
+}
+
+.cover_full-width {
+  width: 100%;
+}
+
+#cover h2 {
+  font-size: var(--cover-title-font_size);
+  text-align: center;
+}
+
+#cover p {
+  font-size: var(--cover-p-font_size);
+  text-align: center;
+}
+
+#cover .author {
+  color: var(--link-color);
+}
+
+.slide_teacher-info {
+  padding-right: 40px;
+  padding-left: 30px;
+}
+
+.slide__teacher-info-holder,
+.slide__tools-list,
+.slide__list {
+  display: flex;
+}
+
+.slide__teacher-ava {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  position: relative;
+  background: url("../pictures/18278816_424770587886899_2217567506193454567_o.jpg") no-repeat 50% 12%;
+  background-size: 400%;
+  flex-shrink: 0;
+}
+
+.slide__teacher-ava figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0 6px;
+}
+
+.info-list {
+  font-size: 26px;
+  line-height: 1.65;
+}
+
+.slide__teacher-info-list {
+  margin-left: 2em;
+}
+.slide__teacher-info-list.info-list {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.slide__teacher-info-list li {
+  margin-bottom: 1em;
+}
+
+.slide_hillel-bg {
+  background: url("../pictures/cover-h.jpg") no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.slide_pt {
+  padding-top: 50px;
+}
+
+.slide__tools-list {
+  justify-content: space-around;
+}
+
+.slide__list ul {
+  flex: 1 0 0;
+}
+
+.slide .slide__list ol + ol {
+  margin-left: 2em;
+  counter-reset: list 9;
+}
+
+.slide_repo-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide_repo-links a {
+  font-size: 80px;
+}
+
+.slide_repo-links figcaption a {
+  font-size: 40px;
+}
+
+
+/* lection2
+----------------------------------------------- */
+#cover .slide_lection-title {
+  color: var(--white);
+}
+
+.shower.shower_color-inversion {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.shower.shower_color-inversion .slide {
+  color: inherit;
+}
+
+.slide_repo-links figure {
+  width: 50%;
+}
+
+.slide_repo-links img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide__list a + .text-uc {
+  margin-left: 1em;
+}
+
+.text-uc {
+  text-transform: uppercase;
+}
+
+.slide_fonts ul {
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+.slide__list pre:not(:first-child) {
+  margin-left: 100px;
+}
+
+.slide__box-model img {
+  width: 100%;
+  height: auto;
+}
+
+.att {
+  line-height: 1.4;
+  font-weight: 900;
+}
+
+.table th:first-child,
+.table td:first-child {
+  width: 30%;
+  padding: 0 0.3em;
+}
+
+.figure_tm {
+  text-align: center;
+}
+
+.svg-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+}
+
+/* lection16
+----------------------------------------------- */
+.slide__box-model_bg a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide__box-model_bg-elements {
+  background: url("../pictures/elements.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-console {
+  background: url("../pictures/console-panel.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-sources {
+  background: url("../pictures/sources.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-network {
+  background: url("../pictures/network.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-performance {
+  background: url("../pictures/performance.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-memory {
+  background: url("../pictures/memory.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-application {
+  background: url("../pictures/application.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-network-monitor-ff {
+  background: url("../pictures/1-new-overview-small.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-storage-ff {
+  background: url("../pictures/1-storage-inspector-open.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-security {
+  background: url("../pictures/security.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-gcli-ff {
+  background: url("../pictures/gcli-annotated.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-domexplorer {
+  background: url("../pictures/edge_domexplorer.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-console {
+  background: url("../pictures/edge_console.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-debugger {
+  background: url("../pictures/edge_debugger.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-network {
+  background: url("../pictures/edge_network_details.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-performance {
+  background: url("../pictures/edge_performance.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-memory {
+  background: url("../pictures/edge_memory.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg-edge-emulation {
+  background: url("../pictures/edge_emulation.png") no-repeat 50% 50%;
+}
+
+.slide__box-model_bg {
+  background-size: contain;
+  height: 70%;
+  width: auto;
+}
+
+.slide__box-model_ff {
+  height: 60%;
+  width: auto;
+}
+
+.slide__box-model_ff a {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide__box-model_ff-eye {
+  text-align: center;
+}
+
+.slide__box-model_ff-eye figcaption {
+  text-align: left;
+}
+
+.slide__box-model_ff-eye img {
+  width: auto;
+}
