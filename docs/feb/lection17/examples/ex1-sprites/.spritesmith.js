@@ -3,10 +3,10 @@
 const util = require("util");
 
 module.exports = {
-  src: "./client/img/icons/**/*.{png,jpg}",
-  destImage: ".bin/public/img/icons.png",
-  destCSS: "client/css/generated/icons.css",
-  imgPath: "/img/icons.png",
+  src: "./examples/ex1/images/**/*.{png,jpg}",
+  destImage: "./examples/ex1/sprite/sprite.png",
+  destCSS: "./examples/ex1/sprite/icons.css",
+  imgPath: "examples/ex1/sprite/sprite.png",
   padding: 2,
   algorithm: "top-down",
   algorithmOpts: { sort: false },
