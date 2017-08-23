@@ -17,3 +17,24 @@ body {
     @include sprite($button-submit-icon);
   }
 }
+
+.social-icon {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-icon-fb {
+  @include sprite($fb-icon);
+}
+
+.social-icon-tw {
+  @include sprite($tw-icon);
+}
+
+.social-icon-inst {
+  @include sprite($inst-icon);
+}
+
+.text-uc {
+  text-transform: uppercase;
+}
