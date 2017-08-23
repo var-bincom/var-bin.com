@@ -1,0 +1,8 @@
+// _variables.scss
+
+$fonts-url: "../fonts";
+$main-font_family: "Playfairdisplay";
+$second-font_family: "Ubuntu";
+$base-font_size: 100%;
+$base-line_height: 1.2;
+$main-font: #{$base-font_size}/#{$base-line_height} #{$main-font_family};

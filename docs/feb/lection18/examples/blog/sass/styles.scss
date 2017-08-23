@@ -1,0 +1,11 @@
+//  styles.scss
+
+@import "variables";
+@import "fonts";
+
+@import "normalize/styles";
+
+body {
+  font: $main-font;
+  display: flex;
+}
