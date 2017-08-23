@@ -3,16 +3,11 @@
 const util = require("util");
 
 module.exports = {
-  src: "./examples/ex1/images/**/*.{png,jpg}",
-  destImage: "./examples/ex1/sprite/sprite.png",
-  destCSS: "./examples/ex1/sprite/icons.css",
-  imgPath: "examples/ex1/sprite/sprite.png",
+  src: "images/**/*.{png,jpg}",
+  destImage: "images/sprite/sprite.png",
+  destCSS: "images/sprite/icons.css",
+  imgPath: "sprite.png",
   padding: 2,
   algorithm: "top-down",
-  algorithmOpts: { sort: false },
-  cssOpts: {
-    cssClass: function (item) {
-      return util.format(".ic-%s:before", item.name);
-    }
-  }
+  algorithmOpts: { sort: false }
 };
