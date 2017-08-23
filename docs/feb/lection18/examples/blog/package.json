@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --style=expanded --sourcemap=file sass/styles.scss css/styles.css",
+    "sass-prod": "sass --style=compressed --sourcemap=none sass/styles.scss css/styles.min.css",
+    "autoprefixer": "postcss -c postcss.config.js css/*.css -d css -r",
+    "del": "rimraf css/*.css",
+    "dev": "npm run sass-dev && npm run autoprefixer",
+    "prod": "npm run sass-prod && npm run autoprefixer",
+    "sprite": "node ./node_modules/spritesmith-cli/bin/spritesmith -rc .spritesmith.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "postcss-cli": "^4.1.0",
+    "rimraf": "^2.6.1",
+    "spritesmith-cli": "^1.1.2"
+  }
+}

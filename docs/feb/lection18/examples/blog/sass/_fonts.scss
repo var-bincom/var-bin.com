@@ -1,0 +1,17 @@
+// _fonts.scss
+
+@font-face {
+  font-family: "Playfairdisplay";
+  src: url("#{$fonts-url}/playfairdisplay-regular-webfont.woff2") format("woff2"),
+       url("#{$fonts-url}/playfairdisplay-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("#{$fonts-url}/ubuntu-regular-webfont.woff2") format("woff2"),
+       url("#{$fonts-url}/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
