@@ -66,9 +66,24 @@
     <h3>Пример</h3>
     <hr>
 
-    <p>
-      Скачайте себе <a href="../examples/ex1.zip" target="_blank">архив</a> и разархивируйте. Сохраните его на диск <mark>D:</mark>.
-    </p>
+    <ol>
+      <li>
+        Скачайте себе <a href="../examples/ex1.zip" target="_blank">архив</a> и разархивируйте. Сохраните его на диск <mark>D:</mark>
+      </li>
+      <li>
+        Перейдите в директорию <mark>ex1</mark>
+      </li>
+      <li>
+        Выполните команду <code>npm init</code>
+      </li>
+      <li>
+        Выполните команду <code>npm install -D spritesmith-cli</code>
+      </li>
+      <li>
+        Выполните команду <code>spritesmith -rc .spritesmith.js</code>
+      </li>
+    </ol>
+    <strong>Путь к <mark>spritesmith</mark> нужно указывать относительно папки <mark>node_modules</mark>: </strong><code>./node_modules/spritesmith-cli/bin/spritesmith</code>
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Полезные команды <mark>sass</mark></h2>
@@ -113,6 +128,66 @@
       <code>};</code>
     </pre>
     Больше информации по <mark>postcss-cli</mark> плагину <a href="https://github.com/postcss/postcss-cli" target="_blank">тут</a>.
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2><mark>npm</mark> скрипты</h2>
+
+    <pre>
+      <code class="comment">// &lt;script-name&gt; - имя скрипта</code>
+      <code class="comment">// определенного в секции <mark>"scripts"</mark></code>
+      <code>npm <mark>run</mark> &lt;script-name&gt;</code>
+    </pre>
+
+    Больше информации по <code>npm run &lt;script-name&gt;</code> <a href="https://docs.npmjs.com/cli/run-script" target="_blank">тут</a>.
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2><mark>npm</mark> скрипты</h2>
+
+    <h3>Пример</h3>
+    <hr>
+    <pre>
+      <code>"scripts": {</code>
+      <code>  "sass-dev": "sass --style=expanded --sourcemap=file
+              sass/styles.scss css/styles.css"</code>
+      <code>}</code>
+    </pre>
+
+    <pre>
+      <code class="comment">// вызов скрипта</code>
+      <code>npm run <mark>sass-dev</mark></code>
+    </pre>
+  </section>
+  <section class="slide slide_hillel-bg slide_pt">
+    <h2>My first awesome blog</h2>
+
+    <h3>
+      Пришло время вернуться к нашему <a href="../examples/blog/minimo.jpg" target="_blank">блогу</a>.
+    </h3>
+    <hr>
+
+    <ol>
+      <li>
+        Скачайте себе <a href="#" target="_blank">архив</a> и разархивируйте. Сохраните его на диск <mark>D:</mark> в директорию <mark>blog</mark>
+      </li>
+      <li>
+        Перейдите в директорию <mark>blog</mark>
+      </li>
+      <li>
+        Выполните команду <code>npm install</code>
+      </li>
+      <li>
+        Проверьте команды:
+        <ul>
+          <li>
+            <code>npm run dev</code>
+          </li>
+          <li>
+            <code>npm run prod</code>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
   </section>
   <section class="slide slide_hillel-bg slide_pt">
     <h2>Это последний слайд</h2>
