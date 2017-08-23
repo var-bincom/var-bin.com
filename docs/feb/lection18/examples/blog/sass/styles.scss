@@ -2,10 +2,18 @@
 
 @import "variables";
 @import "fonts";
+@import "icons";
 
 @import "normalize/styles";
 
 body {
   font: $main-font;
-  display: flex;
+}
+
+.button-load-more {
+  &::before {
+    content: "";
+    display: inline-block;
+    @include sprite($button-submit-icon);
+  }
 }
