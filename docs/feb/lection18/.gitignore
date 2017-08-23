@@ -1,2 +1,8 @@
-# examples/blog*.css
-examples/blog/**/*.css
+# examples/blog/css
+examples/blog/css
+
+# sprite.png
+sprite.png
+
+# _icons.scss
+_icons.scss
