@@ -10,13 +10,13 @@ body {
   font: $main-font;
 }
 
-.button-load-more {
+/* .button-load-more {
   &::before {
     content: "";
     display: inline-block;
     @include sprite($button-submit-icon);
   }
-}
+} */
 
 .social-icon {
   display: inline-block;
@@ -35,6 +35,191 @@ body {
   @include sprite($inst-icon);
 }
 
+.main-header,
+main {
+  width: $main-width;
+  margin: 0 auto;
+}
+
 .text-uc {
   text-transform: uppercase;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo a {
+  display: inline-block;
+  vertical-align: top;
+  color: $logo-color;
+  font: 30px/1.2 $logo-font_family;
+}
+
+.main-nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: $main-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content-type {
+  color: $second-color;
+  font-family: $second-font_family;
+
+  margin-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.content-item {
+  margin-bottom: 100px;
+  flex-basis: 420px;
+  &.content-item-full-width {
+    flex-basis: 100%;
+  }
+}
+
+.main-content {
+  color: $main-color;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.content-leave-comment {
+  color: $second-color;
+}
+
+.main-image {
+  margin-bottom: 100px;
+}
+
+.content-title {
+  margin-bottom: 30px;
+}
+
+.main-footer {
+  display: flex;
+  height: 100px;
+  background-color: $footer-bg;
+  color: $black;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.footer-nav-legal {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-nav-social-title,
+.footer-nav-social {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-nav-social {
+  margin-left: 20px;
+
+  a {
+    margin-right: 10px;
+  }
+}
+
+.content-load-more {
+  display: flex;
+  justify-content: center;
+
+  .button-load-more {
+    border: 1px solid $second-color;
+    padding: 20px;
+    color: $second-color;
+  }
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: $form-bg;
+    z-index: 5;
+  }
+
+  .form {
+    width: 30%;
+    position: relative;
+    z-index: 10;
+    padding: 50px 30px;
+  }
+}
+
+.button-submit-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    @include sprite($button-submit-icon);
+  }
+}
+
+.form-control {
+  position: relative;
+  border-bottom: 1px solid $black;
+}
+
+.input-email {
+  border: 0;
+  background-color: $form-bg;
 }
