@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>l1</title>
+
+  <script>
+    function onLoadHandler() {
+      alert("onLoadHandler");
+    }
+
+    function addToStarage() {}
+
+    function removeFromStorage() {}
+
+    function clearStorage() {}
+
+    function loadFromStorage() {}
+
+    window.addEventListener("load", onLoadHandler, false);
+  </script>
+</head>
+
+<body>
+  <form action="#">
+    <section>
+      Key: <input type="text" id="toStorageKey" />
+    </section>
+    <section>
+      Value: <input type="text" id="toStorageValue" />
+    </section>
+    <section>
+      <button type="button" id="btnAdd">
+        Add To Storage
+      </button>
+      <button type="button" id="btnRemove">
+        Remove from Storage
+      </button>
+      <button type="button" id="btnClear">
+        Clear Storage
+      </button>
+    </section>
+    <div id="storage">
+      <p>
+        Current Storage Contents
+      </p>
+    </div>
+  </form>
+</body>
+
+</html>
