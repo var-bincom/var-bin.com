@@ -2,13 +2,13 @@ CACHE MANIFEST
 
 # Cache Section. All Cached items.
 CACHE:
-blog.html
-about.html
+/70480/l2/blog.html
+/70480/l2/about.html
 
 # Required Network resources
 NETWORK:
-login.html
+/70480/l2/login.html
 
 # Fallback items.
 FALLBACK:
-login.html fallback-login.html
+/70480/l2/login.html /70480/l2/fallback-login.html
