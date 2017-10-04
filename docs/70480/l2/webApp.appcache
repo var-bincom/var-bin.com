@@ -2,8 +2,8 @@ CACHE MANIFEST
 
 # Cache Section. All Cached items.
 CACHE:
-/blog.html
-/about.html
+blog.html
+about.html
 
 # Required Network resources
 NETWORK:
