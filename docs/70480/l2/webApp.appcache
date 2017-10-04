@@ -7,8 +7,8 @@ CACHE:
 
 # Required Network resources
 NETWORK:
-/70480/l2/login.html
+login.html
 
 # Fallback items.
 FALLBACK:
-/70480/l2/login.html /70480/l2/fallback-login.html
+login.html /70480/l2/fallback-login.html
