@@ -20,8 +20,14 @@
       console.log("cache successfully downloaded.", e)
     }
 
+    function updateready(e) {
+      console.log("The resources listed in the manifest have been newly redownloaded, and the swapCache method might be called.");
+      appCache.swapCache();
+    }
+
     appCache.onchecking = checkChache;
     appCache.oncached = cached;
+    appCache.onupdateready = updateready;
   }
 
   global.addEventListener("load", onLoadHandler, false);
