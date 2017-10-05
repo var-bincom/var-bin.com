@@ -11,4 +11,4 @@ NETWORK:
 
 # Fallback items.
 FALLBACK:
-login.html /70480/l2/fallback-login.html
+/70480/l2/login.html /70480/l2/fallback-login.html
