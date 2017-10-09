@@ -3,7 +3,6 @@
 (function(global) {
 
   function onLoadHandler() {
-    //alert("onLoadHandler");
     console.info("onLoadHandler");
 
     appCacheHandler();
