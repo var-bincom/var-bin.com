@@ -1,5 +1,8 @@
 // main.js
+
 (function(global) {
+  "use strict";
+
   function onLoadHandler() {
     console.info("onLoadHandler");
 
