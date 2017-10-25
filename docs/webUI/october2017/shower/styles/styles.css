@@ -57,14 +57,11 @@
   width: 100%;
 }
 
-.figure.console2.bash {
-  height: 100%;
-  width: auto;
-  text-align: center;
-  background: #000;
+.css-grid-support {
+  display: block;
 }
 
-.figure.console2.bash img {
+.css-grid-support img {
   height: auto;
   width: 100%;
 }
@@ -189,15 +186,6 @@ ul.tree-view::before {
 
 .shower.is-black .slide code, .slide kbd, .slide samp {
   background: rgba(88,90,94,.5);
-}
-
-.slide.slide__video h2 {
-  margin-bottom: 15px;
-}
-
-.slide.slide__video video {
-  width: 100%;
-  height: 85%;
 }
 
 .slide .slide_author {
