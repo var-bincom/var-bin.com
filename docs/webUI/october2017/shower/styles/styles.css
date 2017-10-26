@@ -57,6 +57,10 @@
   width: 100%;
 }
 
+.why-css-grid {
+  text-align: center;
+}
+
 .css-grid-support {
   display: block;
 }
@@ -273,6 +277,16 @@ ul.al-list .al-link.al-link__shower::before {
 
 .article-links_link-holder_icon.icon__icon-codepen {
   margin: 20px 0 0;
+}
+
+.icon__icon-kharkivcss {
+  width: 48px;
+  height: 48px;
+}
+
+.icon__icon-kharkivcss img {
+  width: 100%;
+  height: auto;
 }
 
 .not-cover {
