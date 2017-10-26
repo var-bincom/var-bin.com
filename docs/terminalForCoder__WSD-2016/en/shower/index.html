@@ -614,21 +614,31 @@
 	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
 	<!-- Photos by John Carey, fiftyfootshadows.net -->
 	<script>
-	var videoAfter = document.getElementById("videoAfter");
+		var videoAfter = document.getElementById("videoAfter");
 
-	function playPause(videoId) {
-		if (videoId.paused) {
-			videoId.play();
-		} else {
-			videoId.pause();
+		function playPause(videoId) {
+			if (videoId.paused) {
+				videoId.play();
+			} else {
+				videoId.pause();
+			}
 		}
-	}
 
-	function playVideoAfter() {
-		playPause(videoAfter);
-	}
+		function playVideoAfter() {
+			playPause(videoAfter);
+		}
 
-	videoAfter.addEventListener("click", playVideoAfter);
+		videoAfter.addEventListener("click", playVideoAfter);
+	</script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-89569652-1', 'auto');
+		ga('send', 'pageview');
+
 	</script>
 </body>
 </html>
