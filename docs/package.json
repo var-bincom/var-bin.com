@@ -1,0 +1,27 @@
+{
+  "name": "var-bin.com",
+  "version": "1.0.0",
+  "description": "personal blog var-bin.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/var-bin/var-bin.com.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Webpack",
+    "Angular",
+    "Front-End"
+  ],
+  "author": "Vitalii Rybka, @var_bincom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/var-bin/var-bin.com/issues"
+  },
+  "homepage": "https://github.com/var-bin/var-bin.com#readme"
+}
