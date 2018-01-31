@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/var-bin/var-bin.com/issues"
   },
-  "homepage": "https://github.com/var-bin/var-bin.com#readme"
+  "homepage": "https://github.com/var-bin/var-bin.com#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1"
+  }
 }
