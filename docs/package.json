@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/var-bin/var-bin.com#readme",
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1"
   }
