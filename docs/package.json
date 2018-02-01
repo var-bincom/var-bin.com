@@ -26,11 +26,15 @@
   },
   "homepage": "https://github.com/var-bin/var-bin.com#readme",
   "devDependencies": {
+    "autoprefixer": "^7.2.5",
     "browser-sync": "^2.23.6",
     "eslint": "^4.16.0",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
     "gulp-htmlmin": "^4.0.0",
-    "gulp-rename": "^1.2.2"
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "less": "^2.7.3"
   }
 }
