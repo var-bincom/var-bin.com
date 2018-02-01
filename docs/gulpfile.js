@@ -4,15 +4,18 @@ const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const path = require("path");
 
-const BASE_DIR = path.resolve("./assets");
-const INDEX = path.resolve("./index.html");
+const ASSETS_DIR = path.resolve(__dirname, "./assets");
+const INDEX = path.resolve(__dirname, "./index.html");
+const BASE_DIR = path.resolve("./");
 
 // Static server
 gulp.task("browser-sync", () => {
   browserSync.init({
-    server: {
-      baseDir: BASE_DIR,
-      index: INDEX
-    }
+    server: BASE_DIR,
+    files: [
+      ASSETS_DIR,
+      INDEX
+    ],
+    open: false
   });
 });
