@@ -4,7 +4,8 @@
   "description": "personal blog var-bin.com",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp browser-sync"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/var-bin/var-bin.com#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
+    "eslint": "^4.16.0",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1"
   }
