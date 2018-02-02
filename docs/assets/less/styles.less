@@ -1,0 +1,32 @@
+@import (inline) "./normalize/styles.less";
+@import (reference) "variables";
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("@{fonts-path}/opensans-regular-webfont.woff2") format("woff2"),
+       url("@{fonts-path}/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font: @base-fontSize/1.2 "open_sansregular";
+}
+
+h1 {
+  font-size: @h1-fontSize;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: @h3-fontSize;
+}
+
+header {
+  display: flex;
+  padding: 0.3em;
+}
+
+main {
+  padding: 0.5em;
+}
