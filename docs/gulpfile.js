@@ -62,3 +62,7 @@ gulp.task("cssmin", () => {
 });
 
 gulp.task("styles", gulp.series("css", "cssmin"));
+
+gulp.task("dev", gulp.series("css", "htmlmin"));
+
+gulp.task("prod", gulp.series("styles", "htmlmin"));
