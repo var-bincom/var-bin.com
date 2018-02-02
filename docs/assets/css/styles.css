@@ -450,3 +450,28 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font: 16px/1.2 "open_sansregular";
+}
+h1 {
+  font-size: 4.5em;
+  letter-spacing: -0.02em;
+}
+h3 {
+  font-size: 3em;
+}
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.3em;
+}
+main {
+  padding: 0.5em;
+}
