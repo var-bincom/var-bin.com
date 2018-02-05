@@ -10,6 +10,7 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
+const watch = require("gulp-watch");
 
 const ASSETS_DIR = path.resolve(__dirname, "./assets");
 const INDEX = path.resolve(__dirname, "./index.html");
@@ -62,6 +63,21 @@ gulp.task("cssmin", () => {
 });
 
 gulp.task("styles", gulp.series("css", "cssmin"));
+
+// watch Less files
+gulp.task("watchLess", () => {
+  const lessFiles = "./assets/less/**/*.less";
+
+  watch(lessFiles, gulp.series("styles"));
+});
+
+// watch html template
+gulp.task("watchHtml", () => {
+  watch("./index.tpl.html", gulp.series("htmlmin"));
+});
+
+// watch
+gulp.task("watch", gulp.parallel("watchLess", "watchHtml"));
 
 gulp.task("dev", gulp.series("css", "htmlmin"));
 
