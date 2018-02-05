@@ -1,0 +1,20 @@
+// followMe
+
+@import (reference) "./variables";
+
+.btn__tw-follow {
+  padding: 1px 10px 1px 9px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: @followMe-bg;
+  color: @followMe-color;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent 0 0 no-repeat;
+    background-image: @followMe-icon;
+  }
+}
