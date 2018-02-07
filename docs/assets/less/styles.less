@@ -1,4 +1,5 @@
 @import (reference) "variables";
+@import (reference) "mixins";
 @import (inline) "./normalize/styles.less";
 
 @font-face {
@@ -9,20 +10,9 @@
   font-style: normal;
 }
 
-._generate-columns(@n, @i: 1) when (@i =< @n) {
-  @step: @i * 100% / @n;
-
-  @{step} {
-    background-color: extract(@body-bg-list, @i);
-  }
-
-  ._generate-columns(@n, (@i + 1));
-}
-
 @keyframes body {
-  ._generate-columns(@body-animation-steps);
+  ._generate-keyframes(@body-animation-steps);
 }
-
 
 html {
   font: @base-fontSize/1.2 "open_sansregular";
@@ -68,6 +58,7 @@ main {
   padding: 0.5em;
   flex-basis: 90%;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 header,
