@@ -29,6 +29,10 @@ gulp.task("browser-sync", (cb) => {
     open: false
   });
 
+  gulp.watch("./assets/less/**/*.less", gulp.series("styles", "htmlmin"));
+  gulp.watch("./index.tpl.html")
+    .on("change", gulp.series("htmlmin"));
+
   cb();
 });
 
@@ -79,6 +83,6 @@ gulp.task("watchHtml", () => {
 // watch
 gulp.task("watch", gulp.parallel("watchLess", "watchHtml"));
 
-gulp.task("dev", gulp.series("css", "htmlmin"));
+gulp.task("dev", gulp.series("watch"));
 
 gulp.task("prod", gulp.series("styles", "htmlmin"));
