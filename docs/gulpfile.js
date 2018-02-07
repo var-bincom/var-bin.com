@@ -87,6 +87,6 @@ gulp.task("watchHtml", () => {
 // watch
 gulp.task("watch", gulp.parallel("watchLess", "watchHtml"));
 
-gulp.task("dev", gulp.series("watch"));
+gulp.task("dev", gulp.series("styles", "htmlmin", "browser-sync"));
 
 gulp.task("prod", gulp.series("styles", "htmlmin"));
