@@ -36,7 +36,10 @@
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0",
     "less": "^2.7.3",
-    "postcss-csso": "^3.0.0"
+    "postcss-csso": "^3.0.0",
+    "postcss-uncss": "^0.16.1",
+    "uncss": "^0.16.1"
   }
 }

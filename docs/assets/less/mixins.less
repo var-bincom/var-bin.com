@@ -1,0 +1,9 @@
+._generate-keyframes(@n, @i: 1) when (@i =< @n) {
+  @step: @i * 100% / @n;
+
+  @{step} {
+    background-color: extract(@body-bg-list, @i);
+  }
+
+  ._generate-keyframes(@n, (@i + 1));
+}

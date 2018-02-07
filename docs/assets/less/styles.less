@@ -1,5 +1,7 @@
-@import (inline) "./normalize/styles.less";
 @import (reference) "variables";
+@import (reference) "mixins";
+@import (inline) "./normalize/styles.less";
+@import "./socialButtons/styles";
 
 @font-face {
   font-family: "open_sansregular";
@@ -9,8 +11,32 @@
   font-style: normal;
 }
 
+@keyframes body {
+  ._generate-keyframes(@body-animation-steps);
+}
+
 html {
   font: @base-fontSize/1.2 "open_sansregular";
+  animation: body 20s linear infinite;
+  box-sizing: border-box;
+  padding: 0.3em;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  background-color: @body-bg;
+  color: @body-color;
 }
 
 h1 {
@@ -20,13 +46,39 @@ h1 {
 
 h3 {
   font-size: @h3-fontSize;
+  letter-spacing: -0.01em;
 }
 
-header {
-  display: flex;
-  padding: 0.3em;
+h1,
+h3 {
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
 }
 
 main {
   padding: 0.5em;
+  flex-basis: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header,
+footer {
+  flex: 1 0 5%;
+  padding: 0 0.5em;
+  align-items: center;
+}
+
+header,
+footer,
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer {
+  p {
+    margin: 0;
+  }
 }
