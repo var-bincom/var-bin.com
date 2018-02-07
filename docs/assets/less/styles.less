@@ -9,8 +9,43 @@
   font-style: normal;
 }
 
+._generate-columns(@n, @i: 1) when (@i =< @n) {
+  @step: @i * 100% / @n;
+
+  @{step} {
+    background-color: extract(@body-bg-list, @i);
+  }
+
+  ._generate-columns(@n, (@i + 1));
+}
+
+@keyframes body {
+  ._generate-columns(@body-animation-steps);
+}
+
+
 html {
   font: @base-fontSize/1.2 "open_sansregular";
+  animation: body 20s linear infinite;
+  box-sizing: border-box;
+  padding: 0.3em;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  background-color: @body-bg;
+  color: @body-color;
 }
 
 h1 {
@@ -20,13 +55,38 @@ h1 {
 
 h3 {
   font-size: @h3-fontSize;
+  letter-spacing: -0.01em;
 }
 
-header {
-  display: flex;
-  padding: 0.3em;
+h1,
+h3 {
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
 }
 
 main {
   padding: 0.5em;
+  flex-basis: 90%;
+  flex-direction: column;
+}
+
+header,
+footer {
+  flex: 1 0 5%;
+  padding: 0 0.5em;
+  align-items: center;
+}
+
+header,
+footer,
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer {
+  p {
+    margin: 0;
+  }
 }
