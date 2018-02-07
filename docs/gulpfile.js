@@ -11,6 +11,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const watch = require("gulp-watch");
+const uncss = require("postcss-uncss");
 
 const ASSETS_DIR = path.resolve(__dirname, "./assets");
 const INDEX = path.resolve(__dirname, "./index.html");
@@ -31,7 +32,7 @@ gulp.task("browser-sync", (cb) => {
 
   gulp.watch("./assets/less/**/*.less", gulp.series("styles", "htmlmin"));
   gulp.watch("./index.tpl.html")
-    .on("change", gulp.series("htmlmin"));
+    .on("change", gulp.series("styles", "htmlmin"));
 
   cb();
 });
@@ -60,6 +61,9 @@ gulp.task("css", () => {
 gulp.task("cssmin", () => {
   return gulp.src(path.join(ASSETS_STYLES, "styles.css"))
     .pipe(postcss([
+      uncss({
+        html: ["./index.tpl.html"],
+      }),
       csso
     ]))
     .pipe(rename("styles.min.css"))
