@@ -101,7 +101,7 @@ gulp.task("sprite", () => {
   const cssFile = "less/sprite.less";
   const baseSize = 16;
   const preview = false;
-  const template = path.join(BASE_DIR, "sprite.css");
+  const template = path.join(BASE_DIR, "_sprite.tpl");
   const cssTemplate = require("fs").readFileSync(template, "utf-8");
   const notSpriteSVG = "!" + path.join(ASSETS_DIR, SVG_SPRITE);
 
