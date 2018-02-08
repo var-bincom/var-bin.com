@@ -28,6 +28,7 @@
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
     "eslint": "^4.16.0",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
@@ -37,6 +38,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprites": "^4.1.2",
+    "gulp-svgo": "^1.3.1",
     "gulp-watch": "^5.0.0",
     "less": "^2.7.3",
     "postcss-csso": "^3.0.0",
