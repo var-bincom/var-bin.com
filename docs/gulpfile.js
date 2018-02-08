@@ -12,6 +12,9 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const watch = require("gulp-watch");
 const uncss = require("postcss-uncss");
+const svgSprite = require("gulp-svg-sprites");
+const svgo = require("gulp-svgo");
+const del = require("del");
 
 const ASSETS_DIR = path.resolve(__dirname, "./assets");
 const INDEX = path.resolve(__dirname, "./index.html");
@@ -19,6 +22,8 @@ const INDEX_TPL = path.resolve(__dirname, "./index.tpl.html");
 const BASE_DIR = path.resolve("./");
 const STYLES = path.join(ASSETS_DIR, "less", "styles.less");
 const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
+const ASSETS_SVG = path.join(ASSETS_DIR, "images/*.svg");
+const SVG_SPRITE = "images/sprite.svg";
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -90,3 +95,31 @@ gulp.task("watch", gulp.parallel("watchLess", "watchHtml"));
 gulp.task("dev", gulp.series("styles", "htmlmin", "browser-sync"));
 
 gulp.task("prod", gulp.series("styles", "htmlmin"));
+
+// svg sprite
+gulp.task("sprite", () => {
+  const cssFile = "less/sprite.less";
+  const baseSize = 16;
+  const preview = false;
+  const template = path.join(BASE_DIR, "sprite.css");
+  const cssTemplate = require("fs").readFileSync(template, "utf-8");
+  const notSpriteSVG = "!" + path.join(ASSETS_DIR, SVG_SPRITE);
+
+  return gulp.src([
+    ASSETS_SVG,
+    notSpriteSVG
+  ])
+    .pipe(svgo())
+    .pipe(svgSprite({
+      templates: {
+        css: cssTemplate
+      },
+      baseSize,
+      cssFile,
+      preview,
+      svg: {
+        sprite: SVG_SPRITE
+      }
+    }))
+    .pipe(gulp.dest(ASSETS_DIR));
+});
