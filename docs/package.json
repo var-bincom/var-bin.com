@@ -33,6 +33,7 @@
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
     "gulp-htmlmin": "^4.0.0",
+    "gulp-inject": "^4.3.0",
     "gulp-less": "^3.4.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
