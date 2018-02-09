@@ -12,7 +12,6 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const watch = require("gulp-watch");
 const uncss = require("postcss-uncss");
-const svgSprite = require("gulp-svg-sprites");
 const svgStore  = require("gulp-svgstore");
 const svgo = require("gulp-svgo");
 const del = require("del");
@@ -98,37 +97,6 @@ gulp.task("watch", gulp.parallel("watchLess", "watchHtml"));
 gulp.task("dev", gulp.series("styles", "htmlmin", "browser-sync"));
 
 gulp.task("prod", gulp.series("styles", "htmlmin"));
-
-// svg sprite
-gulp.task("sprite", () => {
-  const cssFile = "less/sprite.less";
-  const baseSize = 16;
-  const preview = false;
-  const template = path.join(BASE_DIR, "_sprite.tpl");
-  const cssTemplate = require("fs").readFileSync(template, "utf-8");
-  const notSpriteSVG = "!" + path.join(ASSETS_DIR, SVG_SPRITE);
-  const mode = "symbols";
-
-  return gulp.src([
-    ASSETS_SVG,
-    notSpriteSVG
-  ])
-    .pipe(svgo())
-    .pipe(svgSprite({
-      preview,
-      mode
-    }))
-    .pipe(gulp.dest(ASSETS_IMAGES));
-});
-
-gulp.task("sprite:svgo", () => {
-  const svg = "./assets/images/svg/symbols.svg";
-
-  return gulp.src(svg)
-    .pipe(svgo())
-    .pipe(rename("defs.min.svg"))
-    .pipe(gulp.dest(path.join(ASSETS_IMAGES, "svg")));
-});
 
 // svgStore
 gulp.task("svgStore", () => {
