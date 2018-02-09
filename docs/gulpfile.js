@@ -13,6 +13,7 @@ const csso = require("postcss-csso");
 const watch = require("gulp-watch");
 const uncss = require("postcss-uncss");
 const svgSprite = require("gulp-svg-sprites");
+const svgStore  = require("gulp-svgstore");
 const svgo = require("gulp-svgo");
 const del = require("del");
 const inject = require("gulp-inject");
@@ -120,11 +121,28 @@ gulp.task("sprite", () => {
     .pipe(gulp.dest(ASSETS_IMAGES));
 });
 
-gulp.task("inject:svg", () => {
+gulp.task("sprite:svgo", () => {
   const svg = "./assets/images/svg/symbols.svg";
+
+  return gulp.src(svg)
+    .pipe(svgo())
+    .pipe(rename("defs.min.svg"))
+    .pipe(gulp.dest(path.join(ASSETS_IMAGES, "svg")));
+});
+
+// svgStore
+gulp.task("svgStore", () => {
+  return gulp.src(ASSETS_SVG)
+    .pipe(svgo())
+    .pipe(svgStore())
+    .pipe(gulp.dest(path.join(ASSETS_IMAGES, "sprite")));
+});
+
+gulp.task("inject:svg", () => {
+  const svg = path.join(ASSETS_IMAGES, "sprite", "images.svg");
   const starttag = "<!-- inject:svg -->";
 
-  return gulp.src(INDEX_TPL)
+  return gulp.src(INDEX)
     .pipe(inject(gulp.src(svg), {
       starttag,
       transform: (filePath, file) => {
@@ -135,4 +153,4 @@ gulp.task("inject:svg", () => {
     .pipe(gulp.dest(BASE_DIR));
 });
 
-gulp.task("sprite:inject", gulp.series("sprite", "inject:svg"));
+gulp.task("sprite:inject", gulp.series("svgStore", "htmlmin", "inject:svg"));
