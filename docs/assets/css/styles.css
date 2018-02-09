@@ -634,3 +634,8 @@ main {
 footer p {
   margin: 0;
 }
+@media (max-width: 1024px) {
+  html {
+    font-size: 60%;
+  }
+}
