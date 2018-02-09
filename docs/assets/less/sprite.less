@@ -1,0 +1,41 @@
+.icon {
+  font-size: 16px;
+}
+
+.icon::before {
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../images/sprite.svg");
+  background-repeat: no-repeat;
+  background-size: 25em 40.6875em;
+}
+
+.no-svg .icon::before {
+  content: none;
+}
+
+.icon.icon_M::before {
+  background-position: 0em 0em;
+  width: 12.1875em;
+  height: 12.1875em;
+}
+
+.icon.icon_Tw::before {
+  background-position: 0em -12.1875em;
+  width: 25em;
+  height: 25em;
+}
+
+.icon.icon_github::before {
+  background-position: 0em -37.1875em;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.icon.icon_habrahabr::before {
+  background-position: 0em -38.6875em;
+  width: 11.3125em;
+  height: 2em;
+}
+

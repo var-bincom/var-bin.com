@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp browser-sync"
+    "start": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -28,14 +28,19 @@
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "browser-sync": "^2.23.6",
+    "cheerio": "^1.0.0-rc.2",
+    "del": "^3.0.0",
     "eslint": "^4.16.0",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
     "gulp-htmlmin": "^4.0.0",
+    "gulp-inject": "^4.3.0",
     "gulp-less": "^3.4.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgo": "^1.3.1",
+    "gulp-svgstore": "^6.1.1",
     "gulp-watch": "^5.0.0",
     "less": "^2.7.3",
     "postcss-csso": "^3.0.0",

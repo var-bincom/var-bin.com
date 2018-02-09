@@ -1,6 +1,8 @@
 @import (reference) "variables";
 @import (reference) "mixins";
+
 @import (inline) "./normalize/styles.less";
+
 @import "./socialButtons/styles";
 
 @font-face {
@@ -13,6 +15,10 @@
 
 @keyframes body {
   ._generate-keyframes(@body-animation-steps);
+}
+
+.visuallyhidden {
+  ._visuallyhidden();
 }
 
 html {
@@ -80,5 +86,11 @@ main {
 footer {
   p {
     margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 60%;
   }
 }

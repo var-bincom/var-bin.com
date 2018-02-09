@@ -12,6 +12,10 @@ const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const watch = require("gulp-watch");
 const uncss = require("postcss-uncss");
+const svgStore  = require("gulp-svgstore");
+const svgo = require("gulp-svgo");
+const del = require("del");
+const inject = require("gulp-inject");
 
 const ASSETS_DIR = path.resolve(__dirname, "./assets");
 const INDEX = path.resolve(__dirname, "./index.html");
@@ -19,6 +23,9 @@ const INDEX_TPL = path.resolve(__dirname, "./index.tpl.html");
 const BASE_DIR = path.resolve("./");
 const STYLES = path.join(ASSETS_DIR, "less", "styles.less");
 const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
+const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
+const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
+const SVG_SPRITE = "images/sprite.svg";
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -87,6 +94,31 @@ gulp.task("watchHtml", () => {
 // watch
 gulp.task("watch", gulp.parallel("watchLess", "watchHtml"));
 
-gulp.task("dev", gulp.series("watch"));
+gulp.task("dev", gulp.series("styles", "htmlmin", "browser-sync"));
 
 gulp.task("prod", gulp.series("styles", "htmlmin"));
+
+// svgStore
+gulp.task("svgStore", () => {
+  return gulp.src(ASSETS_SVG)
+    .pipe(svgo())
+    .pipe(svgStore())
+    .pipe(gulp.dest(path.join(ASSETS_IMAGES, "sprite")));
+});
+
+gulp.task("inject:svg", () => {
+  const svg = path.join(ASSETS_IMAGES, "sprite", "images.svg");
+  const starttag = "<!-- inject:svg -->";
+
+  return gulp.src(INDEX)
+    .pipe(inject(gulp.src(svg), {
+      starttag,
+      transform: (filePath, file) => {
+        // return file contents as string
+        return file.contents.toString("utf8")
+      }
+    }))
+    .pipe(gulp.dest(BASE_DIR));
+});
+
+gulp.task("sprite:inject", gulp.series("svgStore", "htmlmin", "inject:svg"));
