@@ -14,7 +14,6 @@ const watch = require("gulp-watch");
 const uncss = require("postcss-uncss");
 const svgStore  = require("gulp-svgstore");
 const svgo = require("gulp-svgo");
-const del = require("del");
 const inject = require("gulp-inject");
 
 const ASSETS_DIR = path.resolve(__dirname, "./assets");
