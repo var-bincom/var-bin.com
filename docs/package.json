@@ -28,7 +28,6 @@
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "browser-sync": "^2.23.6",
-    "cheerio": "^1.0.0-rc.2",
     "del": "^3.0.0",
     "eslint": "^4.16.0",
     "gulp": "^4.0.0",
