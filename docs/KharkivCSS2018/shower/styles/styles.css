@@ -2,8 +2,9 @@
 
 #cover h2 {
   margin: 30px 0 0;
-  font-size: 100px;
+  font-size: 80px;
   color: #fff;
+  line-height: 1.2;
 }
 #cover p {
   margin: 10px 0 0;
@@ -13,8 +14,14 @@
 
 #cover h2,
 #cover p {
-  margin-left: 150px;
+  margin-left: 30px;
   text-shadow: 0 1px 1px #000;
+}
+
+#cover {
+  background: url(../pictures/stefan-stefancik-106115-unsplash.jpg) no-repeat 0 0;
+  background-size: cover;
+  background-clip: padding-box;
 }
 
 #cover p a {
