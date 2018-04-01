@@ -60,40 +60,6 @@
   line-height: 24px;
 }
 
-.figure.console2 img {
-  width: 100%;
-}
-
-.figure.console2.bash {
-  height: 100%;
-  width: auto;
-  text-align: center;
-  background: #000;
-}
-
-.figure.console2.bash img {
-  height: auto;
-  width: 100%;
-}
-
-.figure.conemu img {
-  width: 60%;
-}
-
-.figure.cygwin img,
-.figure.alias img {
-  width: 95%;
-}
-
-.figure.git img {
-  width: 50%;
-}
-
-.slide pre code.console2,
-.slide pre code.code__wsn {
-  white-space: normal;
-}
-
 .triple {
   -webkit-columns: 3;
   -moz-columns: 3;
@@ -133,55 +99,6 @@
   font-size: 80px;
 }
 
-ul.tree-view {
-  position: relative;
-}
-
-ul.tree-view::before {
-  position: absolute;
-  top: 0;
-  bottom: 1em;
-  left: 0;
-  content: "";
-  width: 2px;
-  background: #ccc;
-}
-
-.slide ul.tree-view ul.tree-view {
-  margin-left: 1.25em;
-}
-
-.slide ul.tree-view li {
-  text-indent: 2.3em;
-  position: relative;
-}
-
-.slide ul.tree-view li::before {
-  content: "";
-  height: 2px;
-  width: auto;
-  max-width: 2px;
-  background: #ccc;
-  position: absolute;
-  top: 1em;
-  left: 0;
-}
-
-.slide ul.tree-view li.is-directory::after {
-  width: 40px;
-  height: 40px;
-  background: #ccc;
-  border: 2px solid #000;
-  content: "";
-  position: absolute;
-  top: .3em;
-  left: .5em;
-  box-shadow: -9px -14px 0px -11px #ccc, -9px -14px 0 -9px #000;
-  text-align: center;
-  text-indent: 0;
-  line-height: 1.2;
-}
-
 .shower.is-black {
   color: #fff;
 }
@@ -205,6 +122,13 @@ ul.tree-view::before {
 .slide.slide__video video {
   width: 100%;
   height: 85%;
+}
+
+/* slide author info */
+.slide__author-info {
+  display: flex;
+  justify-content: space-between;
+  color: ;
 }
 
 .slide .slide_author {
