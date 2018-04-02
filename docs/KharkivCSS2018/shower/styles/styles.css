@@ -92,6 +92,11 @@
   text-align: center;
 }
 
+.f-video {
+  display: flex;
+  justify-content: center;
+}
+
 .mark_cross {
   text-decoration: line-through;
 }
