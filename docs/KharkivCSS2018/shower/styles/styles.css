@@ -7,7 +7,7 @@
 }
 
 #cover {
-  background: url(../pictures/stefan-stefancik-106115-unsplash.jpg) no-repeat 0 0;
+  background: url(../pictures/stefan-stefancik-106115-unsplash.min.jpg) no-repeat 0 0;
   background-size: cover;
   background-clip: padding-box;
 }
@@ -20,7 +20,8 @@
   text-shadow: var(--cover-text-shadow);
 }
 
-/* Slide #1
+/**
+ * Slide #1
  * Slide author info
  */
 .slide__content {
@@ -53,6 +54,20 @@
 .slide__date.author-divider::after {
   color: var(--transparent);
   text-shadow: none;
+}
+
+/**
+ * Slide #2
+ * Repo links
+ */
+.slide_repo-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide_repo-links a {
+  font-size: 65px;
 }
 
 .mark_cross {
@@ -116,16 +131,6 @@
   line-height: 1.18;
 }
 
-.slide_repo-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.slide_repo-links a {
-  font-size: 80px;
-}
-
 .shower.is-black {
   color: var(--white);
 }
@@ -178,7 +183,7 @@ ul.al-list .al-link.al-link__twitter {
 }
 
 ul.al-list .al-link.al-link__twitter::before {
-  background: url("../pictures/Twitter_Logo_Blue.svg") no-repeat center;
+  background: url("../pictures/Twitter_Logo_Blue.min.svg") no-repeat center;
   background-size: cover;
   margin: 0 -5px 0 -15px;
   width: 96px;
@@ -186,13 +191,13 @@ ul.al-list .al-link.al-link__twitter::before {
 }
 
 ul.al-list .al-link.al-link__github::before {
-  background: url("../pictures/GitHub-Mark-120px-plus.png") no-repeat center;
+  background: url("../pictures/GitHub-Mark-120px-plus.min.png") no-repeat center;
   background-size: cover;
   margin-right: 15px;
 }
 
 ul.al-list .al-link.al-link__shower::before {
-  background: url("../pictures/logo.svg") no-repeat center;
+  background: url("../pictures/logo.min.svg") no-repeat center;
   background-size: cover;
   margin-right: 15px;
 }
