@@ -6,6 +6,9 @@
   --cover-text-shadow: 0 1px 1px var(--black);
 }
 
+/**
+ * Common styles
+ */
 #cover {
   background: url(../pictures/stefan-stefancik-106115-unsplash.min.jpg) no-repeat 0 0;
   background-size: cover;
@@ -18,6 +21,15 @@
   color: var(--white);
   line-height: 1.2;
   text-shadow: var(--cover-text-shadow);
+}
+
+.slide {
+  padding-top: 80px;
+}
+
+.slide h2 {
+  margin-bottom: 25px;
+  font-size: 50px;
 }
 
 /**
@@ -70,17 +82,18 @@
   font-size: 65px;
 }
 
+/**
+ * Slide #3
+ * @TODO
+ * `quistion-mark_animated` - added styles for animations
+ */
+.quistion-mark {
+  font-size: 5em;
+  text-align: center;
+}
+
 .mark_cross {
   text-decoration: line-through;
-}
-
-.slide {
-  padding-top: 80px;
-}
-
-.slide h2 {
-  margin-bottom: 25px;
-  font-size: 50px;
 }
 
 .figure {
@@ -102,33 +115,12 @@
   line-height: 24px;
 }
 
-.triple {
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  columns: 3;
-  -webkit-column-gap: 15px;
-  -moz-column-gap: 15px;
-  column-gap: 15px
-}
-
-.slide ol.triple li {
-  text-indent: 0;
-}
-
 .stdout pre code {
   white-space: pre-wrap;
 }
 
 .slide .slide-comment {
   line-height: 1.4;
-}
-
-.slide .if-else-example {
-  line-height: 1.3;
-}
-
-.tree {
-  line-height: 1.18;
 }
 
 .shower.is-black {
