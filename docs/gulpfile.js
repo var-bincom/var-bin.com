@@ -15,6 +15,7 @@ const uncss = require("postcss-uncss");
 const svgStore  = require("gulp-svgstore");
 const svgo = require("gulp-svgo");
 const inject = require("gulp-inject");
+const image = require("gulp-image");
 
 const ASSETS_DIR = path.resolve(__dirname, "./assets");
 const INDEX = path.resolve(__dirname, "./index.html");
@@ -25,6 +26,8 @@ const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
 const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
 const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
 const SVG_SPRITE = "images/sprite.svg";
+const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets");
+const KharkivCssImages = path.join(__dirname, "KharkivCSS2018", "shower", "pictures");
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -121,3 +124,12 @@ gulp.task("inject:svg", () => {
 });
 
 gulp.task("sprite:inject", gulp.series("svgStore", "htmlmin", "inject:svg"));
+
+gulp.task("images:min", () => {
+  return gulp.src(path.join(KharkivCssImagesAssets, "/*.{png,jpg,jpeg,svg}"))
+    .pipe(image())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest(path.resolve(KharkivCssImages)));
+});
