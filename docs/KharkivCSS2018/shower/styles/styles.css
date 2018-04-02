@@ -97,6 +97,22 @@
   justify-content: center;
 }
 
+/**
+ * Slide with code editors
+ */
+.slide__code-editors {
+  display: flex;
+}
+
+.slide__code-editor-item {
+  flex: 1 1 50%;
+}
+
+.slide__code-editor-item img {
+  width: 100%;
+  height: auto;
+}
+
 .mark_cross {
   text-decoration: line-through;
 }
