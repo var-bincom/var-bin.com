@@ -113,6 +113,22 @@
   height: auto;
 }
 
+.slide__code-editors.slide__code-editors-row2 {
+  flex-wrap: wrap;
+}
+
+/**
+ * Special styles for Slide with spaces-vs-tabs
+ */
+.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child {
+  text-align: center;
+}
+
+.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child img {
+  width: auto;
+  height: 100%;
+}
+
 .mark_cross {
   text-decoration: line-through;
 }
