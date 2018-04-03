@@ -133,6 +133,10 @@
   text-decoration: line-through;
 }
 
+.blockquote-big-fs {
+  font-size: 1.45em;
+}
+
 .figure {
   max-width: 1000px;
   min-width: 300px;
