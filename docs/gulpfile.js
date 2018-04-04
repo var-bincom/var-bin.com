@@ -154,8 +154,6 @@ gulp.task("css:pres", () => {
 gulp.task("watch:pres", (cb) => {
   const styles = path.join(__dirname, "KharkivCSS2018", "assets", "styles", "styles.css");
   gulp.watch(styles, gulp.series("css:pres"));
-  gulp.watch(path.join(KharkivCssImagesAssets, "/*.{png,jpg,jpeg,svg}"))
-    .on("change", gulp.series("images:min", "css:pres"));
 
   cb();
 });
