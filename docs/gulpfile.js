@@ -26,7 +26,7 @@ const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
 const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
 const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
 const SVG_SPRITE = "images/sprite.svg";
-const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets");
+const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets", "images");
 const KharkivCssImages = path.join(__dirname, "KharkivCSS2018", "shower", "pictures");
 
 // Static server
@@ -125,6 +125,7 @@ gulp.task("inject:svg", () => {
 
 gulp.task("sprite:inject", gulp.series("svgStore", "htmlmin", "inject:svg"));
 
+// tasks for conferences' presentations
 gulp.task("images:min", () => {
   return gulp.src(path.join(KharkivCssImagesAssets, "/*.{png,jpg,jpeg,svg}"))
     .pipe(image())
@@ -132,4 +133,27 @@ gulp.task("images:min", () => {
       suffix: ".min"
     }))
     .pipe(gulp.dest(path.resolve(KharkivCssImages)));
+});
+
+gulp.task("css:pres", () => {
+  const stylesDest = path.join(__dirname, "KharkivCSS2018", "shower", "styles");
+  const styles = path.join(__dirname, "KharkivCSS2018", "assets", "styles", "styles.css");
+
+  return gulp.src(styles)
+    .pipe(postcss([
+      uncss({
+        html: [path.join(__dirname, "KharkivCSS2018", "shower", "index.html")],
+      }),
+      autoprefixer,
+      csso
+    ]))
+    .pipe(rename("styles.min.css"))
+    .pipe(gulp.dest(stylesDest));
+});
+
+gulp.task("watch:pres", (cb) => {
+  const styles = path.join(__dirname, "KharkivCSS2018", "assets", "styles", "styles.css");
+  gulp.watch(styles, gulp.series("css:pres"));
+
+  cb();
 });
