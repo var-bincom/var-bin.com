@@ -134,6 +134,40 @@
       </li>
     </ul>
   </section>
+  <!-- before start -->
+  <section class="slide">
+    <h2>Перед стартом. Замеры</h2>
+
+    <div>
+      <pre>
+        <code>grep -r font-size . | wc -l</code>
+      </pre>
+
+      <code>-r - рекурсивный обход</code><br/>
+      <code>. - текущая директория</code><br/>
+      <code>| - передаем результат grep в wc</code><br/>
+      <code>l - считаем количество совпадений</code><br/>
+
+      <p>Больше информации по работе с командной строкой: <a href="http://bit.ly/terminalForCoder" target="_blank" rel="noopener">terminalForCoder</a></p>
+    </div>
+  </section>
+  <section class="slide">
+    <h2>Перед стартом. Замеры</h2>
+
+    <ul>
+      <li>
+        <a href="https://cssstats.com" target="_blank" rel="noopener">CSS Stats</a>
+      </li>
+      <li>
+        <a href="https://github.com/davidtheclark/list-selectors" target="_blank" rel="noopener">list-selectors</a>
+      </li>
+      <li>
+        <a href="http://www.testmycss.com" target="_blank" rel="noopener">TestMyCSS</a>
+      </li>
+      <li>
+        <a href="https://github.com/addyosmani/psi" target="_blank" rel="noopener">PageSpeed Insights with reporting</a>
+    </ul>
+  </section>
   <!-- fail -->
   <section class="slide">
     <h2>Фальшстарт</h2>
@@ -268,6 +302,129 @@
       <div class="slide__code-editor-item">
         <img src="./pictures/1522870796471-css-global-scope1.min.jpg" alt="global scope in css">
       </div>
+    </figure>
+  </section>
+  <!-- inherit, specificity, cascade -->
+  <section class="slide">
+    <h2>Наследование, Специфичность, Каскад</h2>
+
+    <ul>
+      <li class="next">
+        Многие значения CSS свойств могут наследоваться от родителя
+      </li>
+      <li class="next">
+        Не стоит увлекаться повторение структуры DOM в CSS
+      </li>
+      <li class="next">
+        Убедитесь, что вы знаете о порядке загрузки стилей
+      </li>
+    </ul>
+  </section>
+  <!-- inherit, specificity, cascade -->
+  <section class="slide">
+    <h2>Наследование</h2>
+
+    <p data-height="439" data-theme-id="0" data-slug-hash="WzawqX" data-default-tab="result" data-user="var-bin" data-embed-version="2"
+      data-pen-title="Inherited styles" class="codepen">See the Pen
+      <a href="https://codepen.io/var-bin/pen/WzawqX/">Inherited styles</a> by Vitalii Rybka (
+      <a href="https://codepen.io/var-bin">@var-bin</a>) on
+      <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </section>
+  <section class="slide">
+    <h2>Специфичность</h2>
+
+    <p data-height="439" data-theme-id="0" data-slug-hash="dmgXpG" data-default-tab="html" data-user="var-bin" data-embed-version="2"
+      data-pen-title="Specificity" class="codepen">See the Pen
+      <a href="https://codepen.io/var-bin/pen/dmgXpG/">Specificity</a> by Vitalii Rybka (
+      <a href="https://codepen.io/var-bin">@var-bin</a>) on
+      <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </section>
+  <section class="slide">
+    <h2>Каскад</h2>
+
+    <ul>
+      <li>
+        UA -> <a href="https://html.spec.whatwg.org/multipage/rendering.html#the-css-user-agent-style-sheet-and-presentational-hints" target="_blank" rel="noopener"> default styles</a>
+      </li>
+      <li>
+        User styles
+      </li>
+      <li>
+        Author styles
+      </li>
+    </ul>
+  </section>
+  <!-- ID  -->
+  <section class="slide">
+    <h2>ID</h2>
+
+    <p data-height="466" data-theme-id="dark" data-slug-hash="WzdvdQ" data-default-tab="css,result" data-user="var-bin" data-embed-version="2"
+      data-pen-title="ID vs. 1000 classes" class="codepen">See the Pen
+      <a href="https://codepen.io/var-bin/pen/WzdvdQ/">ID vs. 1000 classes</a> by Vitalii Rybka (
+      <a href="https://codepen.io/var-bin">@var-bin</a>) on
+      <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </section>
+  <section class="slide">
+    <h2>ID (fix1)</h2>
+
+    <p data-height="348" data-theme-id="dark" data-slug-hash="YaeBLL" data-default-tab="css,result" data-user="var-bin" data-embed-version="2"
+      data-pen-title="ID vs. 1000 classes (Fix)" class="codepen">See the Pen
+      <a href="https://codepen.io/var-bin/pen/YaeBLL/">ID vs. 1000 classes (Fix)</a> by Vitalii Rybka (
+      <a href="https://codepen.io/var-bin">@var-bin</a>) on
+      <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </section>
+  <section class="slide">
+    <h2>ID (fix2)</h2>
+
+    <p data-height="370" data-theme-id="dark" data-slug-hash="XEZOPp" data-default-tab="css,result" data-user="var-bin" data-embed-version="2"
+      data-pen-title="ID as attribute vs. 1000 classes (Fix 2)" class="codepen">See the Pen
+      <a href="https://codepen.io/var-bin/pen/XEZOPp/">ID as attribute vs. 1000 classes (Fix 2)</a> by Vitalii Rybka (
+      <a href="https://codepen.io/var-bin">@var-bin</a>) on
+      <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </section>
+  <!-- !important -->
+  <section class="slide">
+    <h2>!important</h2>
+
+    <p data-height="323" data-theme-id="dark" data-slug-hash="JLpgVG" data-default-tab="css,result" data-user="var-bin" data-embed-version="2"
+      data-pen-title="!important vs. 1000 classes" class="codepen">See the Pen
+      <a href="https://codepen.io/var-bin/pen/JLpgVG/">!important vs. 1000 classes</a> by Vitalii Rybka (
+      <a href="https://codepen.io/var-bin">@var-bin</a>) on
+      <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </section>
+  <!-- style -->
+  <section class="slide">
+    <h2>style="color: red;"</h2>
+
+    <figure class="f-video">
+      <video src="./videos/inlineStyles.mp4" autoplay loop></video>
+    </figure>
+  </section>
+  <!-- variables -->
+  <section class="slide">
+    <h2>Переменные</h2>
+  </section>
+  <!-- z-index -->
+  <section class="slide">
+    <h2>z-index</h2>
+  </section>
+  <!-- vendor prefixes -->
+  <section class="slide">
+    <h2>Вендорные префиксы руками</h2>
+  </section>
+  <!-- who? -->
+  <section class="slide">
+    <h2>Кто должен писать CSS Style Guide?</h2>
+
+    <figure>
+      <img src="./pictures/eLw7m.min.gif" alt="who?">
     </figure>
   </section>
   <!-- About me -->
