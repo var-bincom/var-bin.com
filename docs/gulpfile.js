@@ -127,7 +127,7 @@ gulp.task("sprite:inject", gulp.series("svgStore", "htmlmin", "inject:svg"));
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
-  return gulp.src(path.join(KharkivCssImagesAssets, "/*.{png,jpg,jpeg,svg}"))
+  return gulp.src(path.join(KharkivCssImagesAssets, "/*.{png,jpg,jpeg,svg,gif}"))
     .pipe(image())
     .pipe(rename({
       suffix: ".min"
