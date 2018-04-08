@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp dev",
     "bs": "browser-sync start",
-    "css:lint": "stylelint"
+    "css:lint": "stylelint",
+    "css:fix": "stylelint --fix"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "gulp-svgo": "^1.3.1",
     "gulp-svgstore": "^6.1.1",
     "gulp-watch": "^5.0.0",
+    "husky": "^0.15.0-rc.13",
     "less": "^2.7.3",
     "postcss-csso": "^3.0.0",
     "postcss-uncss": "^0.16.1",
