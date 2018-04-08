@@ -8,7 +8,9 @@
     "start": "gulp dev",
     "bs": "browser-sync start",
     "css:lint": "stylelint",
-    "css:fix": "stylelint --fix"
+    "css:fix": "stylelint --fix",
+    "prettier": "prettier",
+    "prettier:fix": "prettier --write"
   },
   "repository": {
     "type": "git",
