@@ -176,16 +176,16 @@
     <h2>Перед стартом. Настройка редактора кода</h2>
 
     <pre>
-        <code># <a href="http://editorconfig.org/" target="_blank" rel="noopener">editorconfig.org</a></code>
-        <code>root = true</code>
-        <code>[*]</code>
-        <code>charset = utf-8</code>
-        <code>end_of_line = lf</code>
-        <code>indent_size = 2</code>
-        <code>indent_style = space</code>
-        <code>insert_final_newline = true</code>
-        <code>trim_trailing_whitespace = true</code>
-      </pre>
+      <code># <a href="http://editorconfig.org/" target="_blank" rel="noopener">editorconfig.org</a></code>
+      <code>root = true</code>
+      <code>[*]</code>
+      <code>charset = utf-8</code>
+      <code>end_of_line = lf</code>
+      <code>indent_size = 2</code>
+      <code>indent_style = space</code>
+      <code>insert_final_newline = true</code>
+      <code>trim_trailing_whitespace = true</code>
+    </pre>
   </section>
   <!-- start -->
   <section class="slide">
@@ -323,14 +323,59 @@
   <!-- variables -->
   <section class="slide">
     <h2>Переменные</h2>
+
+    <pre>
+      <code>/* <a href="https://drafts.csswg.org/css-variables" target="_blank" rel="noopener">CSS Custom Properties</a> */</code>
+      <code>--my-first-variable: #369;</code>
+      <code>/* <a href="http://lesscss.org" target="_blank" rel="noopener">Less</a> */</code>
+      <code>@my-first-variable:  #369; </code>
+      <code>/* <a href="https://sass-lang.com" target="_blank" rel="noopener">Sass</a> */</code>
+      <code>$my-first-variable:  #369;</code>
+      <code>/* <a href="http://stylus-lang.com" target="_blank" rel="noopener">Stylus</a> */</code>
+      <code>$my-first-variable = #369; </code>
+    </pre>
   </section>
   <!-- z-index -->
   <section class="slide">
     <h2>z-index</h2>
+
+    <pre>
+      <code>$zindex-dropdown: 1000 !default;</code>
+      <code>$zindex-sticky:   1020 !default;</code>
+      <code>$zindex-fixed:    1030 !default;</code>
+      <code>...</code>
+      <code>/* <a href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss" target="_blank" rel="noopener">_variables.scss bootstrap v4</a> */</code>
+    </pre>
   </section>
   <!-- vendor prefixes -->
   <section class="slide">
-    <h2>Вендорные префиксы руками</h2>
+    <h2>Уберите руки от вендорных префиксов</h2>
+
+    <pre>
+      <code>display: -webkit-box;</code>
+      <code>display: -ms-flexbox;</code>
+      <code>display: flex;</code>
+    </pre>
+
+    <ul>
+      <li>
+        <a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener">Autoprefixer</a>
+      </li>
+      <li>
+        <a href="http://leaverou.github.io/prefixfree/" target="_blank" rel="noopener">-prefix-free</a>
+      </li>
+    </ul>
+  </section>
+  <section class="slide">
+    <h2>Реальный пример</h2>
+
+    <div class="slide_repo-links">
+      <a href="http://bit.ly/KharkivCSS3TP" target="_blank" rel="noopener">bit.ly/KharkivCSS3TP</a>
+      <figure>
+        <img src="./pictures/chart-realExample.min.png" alt="link to the KharkivCSS3 Test Project">
+      </figure>
+    </div>
+    </section>
   </section>
   <!-- who? -->
   <section class="slide">
