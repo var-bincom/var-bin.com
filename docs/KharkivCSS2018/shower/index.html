@@ -241,22 +241,6 @@
   </section>
   <!-- inherit, specificity, cascade -->
   <section class="slide">
-    <h2>Наследование, Специфичность, Каскад</h2>
-
-    <ul>
-      <li class="next">
-        Многие значения CSS свойств могут наследоваться от родителя
-      </li>
-      <li class="next">
-        Не стоит увлекаться повторение структуры DOM в CSS
-      </li>
-      <li class="next">
-        Убедитесь, что вы знаете о порядке загрузки стилей
-      </li>
-    </ul>
-  </section>
-  <!-- inherit, specificity, cascade -->
-  <section class="slide">
     <h2>Специфичность</h2>
 
     <p data-height="439" data-theme-id="0" data-slug-hash="dmgXpG" data-default-tab="html" data-user="var-bin" data-embed-version="2"
@@ -277,27 +261,6 @@
       <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   </section>
-  <section class="slide">
-    <h2>ID (fix1)</h2>
-
-    <p data-height="348" data-theme-id="dark" data-slug-hash="YaeBLL" data-default-tab="css,result" data-user="var-bin" data-embed-version="2"
-      data-pen-title="ID vs. 1000 classes (Fix)" class="codepen">See the Pen
-      <a href="https://codepen.io/var-bin/pen/YaeBLL/">ID vs. 1000 classes (Fix)</a> by Vitalii Rybka (
-      <a href="https://codepen.io/var-bin">@var-bin</a>) on
-      <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-  </section>
-  <section class="slide">
-    <h2>ID (fix2)</h2>
-
-    <p data-height="370" data-theme-id="dark" data-slug-hash="XEZOPp" data-default-tab="css,result" data-user="var-bin" data-embed-version="2"
-      data-pen-title="ID as attribute vs. 1000 classes (Fix 2)" class="codepen">See the Pen
-      <a href="https://codepen.io/var-bin/pen/XEZOPp/">ID as attribute vs. 1000 classes (Fix 2)</a> by Vitalii Rybka (
-      <a href="https://codepen.io/var-bin">@var-bin</a>) on
-      <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-  </section>
   <!-- !important -->
   <section class="slide">
     <h2>!important</h2>
@@ -308,14 +271,6 @@
       <a href="https://codepen.io/var-bin">@var-bin</a>) on
       <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-  </section>
-  <!-- style -->
-  <section class="slide">
-    <h2>style="color: red;"</h2>
-
-    <figure class="f-video">
-      <video src="./videos/inlineStyles.mp4" autoplay loop></video>
-    </figure>
   </section>
   <!-- variables -->
   <section class="slide">
@@ -385,13 +340,74 @@
         <a href="https://prettier.io" target="_blank" rel="noopener">Prettier</a>
       </li>
       <li>
-        <a href="https://github.com/postcss/postcss-cli" target="_blank" rel="noopener">postcss-cli</a> + <a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener">autoprefixer</a>
+        <a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener">Autoprefixer</a>
       </li>
       <li>
         <a href="https://github.com/typicode/husky" target="_blank" rel="noopener">husky</a> + <a href="https://github.com/okonet/lint-staged" target="_blank" rel="noopener">lint-staged</a>
       </li>
     </ul>
   </section>
+  <section class="slide">
+    <h2>Настройка Stylelint</h2>
+
+    <blockquote>
+      Stylelint содержит порядка <b>150 правил</b> для линтинга CSS.
+    </blockquote>
+
+    <pre class="next">
+      <code>{</code>
+      <code>  <mark class="important"> "extends": "stylelint-config-standard"</mark>,</code>
+      <code class="mark">  "rules": {}</code>
+      <code>}</code>
+    </pre>
+
+    <p class="next"><a href="https://maximgatilin.github.io/stylelint-config"  target="_blank" rel="noopener">Stylelint Config Generator</a></p>
+  </section>
+  <section class="slide">
+    <h2>Настройка Stylelint. Плагины</h2>
+
+    <ul>
+      <li>
+        <a href="https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties" target="_blank" rel="noopener">stylelint-declaration-block-no-ignored-properties</a>
+      </li>
+      <li>
+        <a href="https://github.com/AndyOGo/stylelint-declaration-strict-value" target="_blank" rel="noopener">stylelint-declaration-strict-value</a>
+      </li>
+      <li>
+        <a href="https://github.com/Slamdunk/stylelint-no-browser-hacks" target="_blank" rel="noopener">stylelint-no-browser-hacks</a>
+      </li>
+      <li>
+        <a href="https://github.com/kristerkari/stylelint-z-index-value-constraint" target="_blank" rel="noopener">stylelint-z-index-value-constraint</a>
+      </li>
+    </ul>
+  </section>
+  <section class="slide">
+    <h2>Git Hooks. Husky</h2>
+
+    <pre>
+      <code>// package.json</code>
+      <code>{</code>
+      <code>  "husky": {</code>
+      <code>    "hooks": {</code>
+      <code class="mark">      "pre-commit": "npm test",</code>
+      <code class="mark">      "pre-push": "npm test"</code>
+      <code>    }</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Git Hooks. Husky + lint-staged</h2>
+
+    <pre>
+      <code>// package.json</code>
+      <code>"scripts": {</code>
+      <code>  "precommit": "lint-staged"</code>
+      <code>},</code>
+      <code class="mark">"lint-staged": {</code>
+      <code class="mark">  "*.css": ["stylelint --fix", "git add"]</code>
+      <code class="mark">}</code>
+    </pre>
   </section>
   <section class="slide">
     <h2>Подключаем CI</h2>
@@ -422,21 +438,12 @@
     <h2>About me</h2>
     <ul class="al-list slide_plan">
       <li class="al-list_item">
-        <a href="https://twitter.com/var_bincom" class="al-link al-link__twitter">var_bincom</a>
+        <a href="https://twitter.com/var_bincom" class="al-link al-link__twitter"  target="_blank" rel="noopener">var_bincom</a>
       </li>
       <li class="al-list_item">
-        <a href="https://github.com/var-bin" class="al-link al-link__github">var-bin</a>
-      </li>
-      <li class="al-list_item">
-        <a href="https://shwr.me/" class="al-link al-link__shower">shower</a>
+        <a href="https://github.com/var-bin" class="al-link al-link__github"  target="_blank" rel="noopener">var-bin</a>
       </li>
     </ul>
-  </section>
-  <section class="slide">
-    <h2>Это последний слайд</h2>
-    <em>
-      Все, кина на будет...
-    </em>
   </section>
   <p class="badge">
     <a href="https://github.com/shower/shower">Fork me on GitHub</a>
