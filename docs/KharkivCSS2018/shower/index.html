@@ -309,14 +309,6 @@
       <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   </section>
-  <!-- style -->
-  <section class="slide">
-    <h2>style="color: red;"</h2>
-
-    <figure class="f-video">
-      <video src="./videos/inlineStyles.mp4" autoplay loop></video>
-    </figure>
-  </section>
   <!-- variables -->
   <section class="slide">
     <h2>Переменные</h2>
@@ -385,13 +377,74 @@
         <a href="https://prettier.io" target="_blank" rel="noopener">Prettier</a>
       </li>
       <li>
-        <a href="https://github.com/postcss/postcss-cli" target="_blank" rel="noopener">postcss-cli</a> + <a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener">autoprefixer</a>
+        <a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener">Autoprefixer</a>
       </li>
       <li>
         <a href="https://github.com/typicode/husky" target="_blank" rel="noopener">husky</a> + <a href="https://github.com/okonet/lint-staged" target="_blank" rel="noopener">lint-staged</a>
       </li>
     </ul>
   </section>
+  <section class="slide">
+    <h2>Настройка Stylelint</h2>
+
+    <blockquote>
+      Stylelint содержит порядка <b>150 правил</b> для линтинга CSS.
+    </blockquote>
+
+    <pre class="next">
+      <code>{</code>
+      <code>  <mark class="important"> "extends": "stylelint-config-standard"</mark>,</code>
+      <code class="mark">  "rules": {}</code>
+      <code>}</code>
+    </pre>
+
+    <p class="next"><a href="https://maximgatilin.github.io/stylelint-config"  target="_blank" rel="noopener">Stylelint Config Generator</a></p>
+  </section>
+  <section class="slide">
+    <h2>Настройка Stylelint. Плагины</h2>
+
+    <ul>
+      <li>
+        <a href="https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties" target="_blank" rel="noopener">stylelint-declaration-block-no-ignored-properties</a>
+      </li>
+      <li>
+        <a href="https://github.com/AndyOGo/stylelint-declaration-strict-value" target="_blank" rel="noopener">stylelint-declaration-strict-value</a>
+      </li>
+      <li>
+        <a href="https://github.com/Slamdunk/stylelint-no-browser-hacks" target="_blank" rel="noopener">stylelint-no-browser-hacks</a>
+      </li>
+      <li>
+        <a href="https://github.com/kristerkari/stylelint-z-index-value-constraint" target="_blank" rel="noopener">stylelint-z-index-value-constraint</a>
+      </li>
+    </ul>
+  </section>
+  <section class="slide">
+    <h2>Git Hooks. Husky</h2>
+
+    <pre>
+      <code>// package.json</code>
+      <code>{</code>
+      <code>  "husky": {</code>
+      <code>    "hooks": {</code>
+      <code class="mark">      "pre-commit": "npm test",</code>
+      <code class="mark">      "pre-push": "npm test"</code>
+      <code>    }</code>
+      <code>  }</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Git Hooks. Husky + lint-staged</h2>
+
+    <pre>
+      <code>// package.json</code>
+      <code>"scripts": {</code>
+      <code>  "precommit": "lint-staged"</code>
+      <code>},</code>
+      <code class="mark">"lint-staged": {</code>
+      <code class="mark">  "*.css": ["stylelint --fix", "git add"]</code>
+      <code class="mark">}</code>
+    </pre>
   </section>
   <section class="slide">
     <h2>Подключаем CI</h2>
