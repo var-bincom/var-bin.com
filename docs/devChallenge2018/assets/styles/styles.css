@@ -305,3 +305,16 @@ ul.al-list .al-link.al-link__shower::before {
   width: auto;
   height: 85%;
 }
+
+.slide_css-lint {
+  padding-top: 0;
+}
+
+.slide_css-lint .f-video {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.slide_css-lint video {
+  width: 100%;
+}
