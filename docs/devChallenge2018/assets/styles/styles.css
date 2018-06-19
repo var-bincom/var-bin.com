@@ -318,3 +318,11 @@ ul.al-list .al-link.al-link__shower::before {
 .slide_css-lint video {
   width: 100%;
 }
+
+.slide_example-ci {
+  padding-top: 10px;
+}
+
+.slide_example-ci img {
+  width: 100%;
+}
