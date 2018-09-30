@@ -1,0 +1,335 @@
+/* styles.css */
+:root {
+  --white: #fff;
+  --black: #000;
+  --transparent: transparent;
+  --cover-text-shadow: 0 1px 1px var(--black);
+}
+
+/**
+ * Common styles
+ */
+#cover {
+  background: url(../pictures/stefan-stefancik-106115-unsplash.min.jpg) no-repeat 0 0;
+  background-size: cover;
+  background-clip: padding-box;
+}
+
+.slide h2 {
+  margin-bottom: 25px;
+  font-size: 50px;
+}
+
+.slide.slide__video h2 {
+  margin-bottom: 15px;
+}
+
+#cover h2 {
+  margin: 30px 0 0 28px;
+  font-size: 80px;
+  color: var(--white);
+  line-height: 1.2;
+  text-shadow: var(--cover-text-shadow);
+}
+
+.slide {
+  padding-top: 80px;
+}
+
+/**
+ * Slide #1
+ * Slide author info
+ */
+.slide__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
+  margin: 0 -20px;
+}
+
+.slide__author-info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  text-shadow: var(--cover-text-shadow);
+  margin-left: -10px;
+}
+
+.author-divider::after {
+  display: inline-block;
+  content: "|";
+}
+
+.slide__author,
+.slide__place,
+.slide__date {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 33%;
+}
+
+.slide__date.author-divider::after {
+  color: var(--transparent);
+  text-shadow: none;
+}
+
+.slide__date.author-divider {
+  flex-basis: 20%;
+  justify-content: flex-end;
+}
+
+/**
+ * Slide #2
+ * Repo links
+ */
+.slide_repo-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide_repo-links a {
+  font-size: 65px;
+}
+
+/**
+ * Slide #3
+ * @TODO
+ * `quistion-mark_animated` - added styles for animations
+ */
+.quistion-mark {
+  font-size: 5em;
+  text-align: center;
+}
+
+.f-video {
+  display: flex;
+  justify-content: center;
+}
+
+/**
+ * Slide with code editors
+ */
+.slide__code-editors {
+  display: flex;
+}
+
+.slide__code-editor-item {
+  flex: 1 1 50%;
+}
+
+.slide__code-editor-item img {
+  width: 100%;
+  height: auto;
+}
+
+.slide__code-editors_ci a {
+  background: var(--transparent);
+  color: var(--transparent);
+}
+
+.slide__code-editors.slide__code-editors-row2 {
+  flex-wrap: wrap;
+}
+
+.slide__code-editors.slide__code-editors_ci {
+  align-items: center;
+  height: 80%;
+  justify-content: space-between;
+}
+
+.slide__code-editors.slide__code-editors_ci .slide__code-editor-item {
+  flex-basis: 45%;
+  flex-grow: 0;
+}
+
+.slide__code-editors.slide__code-editors_ci .slide__code-editor-item:last-child {
+  background-color: var(--black);
+  padding: 0.5em;
+}
+
+.slide__code-editors.slide__code-editors_ci .slide__code-editor-item:last-child img {
+  vertical-align: middle;
+}
+
+/**
+ * Special styles for Slide with spaces-vs-tabs
+ */
+.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child {
+  text-align: center;
+}
+
+.figure img {
+  display: inline-block;
+}
+
+.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child img {
+  width: auto;
+  height: 100%;
+}
+
+.mark_cross {
+  text-decoration: line-through;
+}
+
+.blockquote-big-fs {
+  font-size: 1.45em;
+}
+
+.figure {
+  max-width: 1000px;
+  min-width: 300px;
+}
+
+.figure a {
+  display: block;
+  text-align: center;
+}
+
+.figure figcaption {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.stdout pre code {
+  white-space: pre-wrap;
+}
+
+.slide .slide-comment {
+  line-height: 1.4;
+}
+
+.shower.is-black {
+  color: var(--white);
+}
+
+.shower.is-black .slide {
+  background: var(--black);
+}
+
+.shower.is-black .slide code,
+.slide kbd,
+.slide samp {
+  background: rgba(88, 90, 94, 0.5);
+
+}
+
+.shower.is-black .slide pre code {
+  background: 0 0;
+}
+
+.slide.slide__video video {
+  width: 100%;
+  height: 85%;
+}
+
+.slide ul.al-list > .al-list_item::before {
+  content: none;
+}
+
+.slide ul.al-list .al-list_item {
+  text-indent: 0;
+}
+
+ul.al-list .al-link {
+  display: inline-block;
+  vertical-align: top;
+  background: none;
+}
+
+ul.al-list .al-link::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 64px;
+  height: 64px;
+}
+
+ul.al-list .al-link.al-link__twitter {
+  margin-bottom: -12px;
+}
+
+ul.al-list .al-link.al-link__twitter::before {
+  background: url(../pictures/Twitter_Logo_Blue.min.svg) no-repeat center;
+  background-size: cover;
+  margin: 0 -5px 0 -15px;
+  width: 96px;
+  height: 96px;
+}
+
+ul.al-list .al-link.al-link__github::before {
+  background: url(../pictures/GitHub-Mark-120px-plus.min.png) no-repeat center;
+  background-size: cover;
+  margin-right: 15px;
+}
+
+ul.al-list .al-link.al-link__shower::before {
+  background: url(../pictures/logo.min.svg) no-repeat center;
+  background-size: cover;
+  margin-right: 15px;
+}
+
+.slide_plan {
+  font-size: 50px;
+}
+
+.slide_pre-formated {
+  font-size: 30px;
+}
+
+.slide_works-on {
+  font-size: 38px;
+  margin-top: -20px;
+}
+
+.l-article-links {
+  margin-top: -15px;
+}
+
+.slide ul li.article-links_link-holder {
+  text-indent: 0;
+}
+
+.slide ul li.article-links_link-item {
+  line-height: 1.5;
+}
+
+.slide ul > li.article-links_link-holder::before {
+  content: none;
+}
+
+.article-links_link-holder_icon.icon__icon-habr .icon-svg_logo-habrahabr {
+  vertical-align: middle;
+}
+
+.article-links_link-holder_icon.icon__icon-codepen {
+  margin: 20px 0 0;
+}
+
+.not-cover {
+  display: inline-block;
+  width: auto;
+  height: 85%;
+}
+
+.slide_css-lint {
+  padding-top: 0;
+}
+
+.slide_css-lint .f-video {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.slide_css-lint video {
+  width: 100%;
+}
+
+.slide_example-ci {
+  padding-top: 10px;
+}
+
+.slide_example-ci img {
+  width: 100%;
+}
