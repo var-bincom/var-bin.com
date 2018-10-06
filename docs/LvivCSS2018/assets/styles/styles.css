@@ -3,14 +3,16 @@
   --white: #fff;
   --black: #000;
   --transparent: transparent;
-  --cover-text-shadow: 0 1px 1px var(--black);
+  --cover-text-shadow: 0 1px 1px #525252;
+  --cover-text-color: #369;
+  --author-text-color: var(--black);
 }
 
 /**
  * Common styles
  */
 #cover {
-  background: url(../pictures/stefan-stefancik-106115-unsplash.min.jpg) no-repeat 0 0;
+  background: url(../pictures/ivan-televny-447866-unsplash.min.jpg) no-repeat 0 0;
   background-size: cover;
   background-clip: padding-box;
 }
@@ -27,7 +29,7 @@
 #cover h2 {
   margin: 30px 0 0 28px;
   font-size: 80px;
-  color: var(--white);
+  color: var(--cover-text-color);
   line-height: 1.2;
   text-shadow: var(--cover-text-shadow);
 }
@@ -51,7 +53,7 @@
 .slide__author-info {
   display: flex;
   justify-content: space-between;
-  color: var(--white);
+  color: var(--author-text-color);
   text-shadow: var(--cover-text-shadow);
   margin-left: -10px;
 }
@@ -332,4 +334,54 @@ ul.al-list .al-link.al-link__shower::before {
 
 .slide_example-ci img {
   width: 100%;
+}
+
+.form-check-input_login {
+  position: relative;
+}
+
+.slide__pre {
+  overflow: hidden;
+}
+
+.col_ood {
+  border: 2px solid var(--white);
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 60px;
+}
+
+.col_ood-abstraction {
+  background-color: #6200ea;
+}
+
+.col_ood-encapsulatin {
+  background-color: #304ffe;
+}
+
+.col_ood-decomposition {
+  background-color: #bf360c;
+}
+
+.col_ood-generalization {
+  background-color: #263238;
+}
+
+.col_ood-encapsulatin,
+.col_ood-generalization {
+  border-left: 0;
+
+}
+
+.col_ood-decomposition,
+.col_ood-generalization {
+  border-top: 0;
+}
+
+.container_ood {
+  display: flex;
+  height: 80%;
 }
