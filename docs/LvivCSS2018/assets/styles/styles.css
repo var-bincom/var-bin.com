@@ -3,16 +3,16 @@
   --white: #fff;
   --black: #000;
   --transparent: transparent;
-  --cover-text-shadow: 0 1px 1px #525252;
-  --cover-text-color: #369;
-  --author-text-color: var(--black);
+  --cover-text-shadow: 0 1px 1px var(--black);
+  --cover-text-color: var(--white);
+  --author-text-color: var(--white);
 }
 
 /**
  * Common styles
  */
 #cover {
-  background: url(../pictures/ivan-televny-447866-unsplash.min.jpg) no-repeat 0 0;
+  background: url(../pictures/markus-spiske-763806-unsplash_tsldbl.min.jpg) no-repeat 0 0;
   background-size: cover;
   background-clip: padding-box;
 }
@@ -184,14 +184,14 @@
   min-width: 300px;
 }
 
-.figure a {
-  display: block;
-  text-align: center;
+.figure_well-css {
+  height: 400px;
 }
 
-.figure figcaption {
-  font-size: 20px;
-  line-height: 24px;
+.figure_well-css img {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 .stdout pre code {
@@ -341,7 +341,7 @@ ul.al-list .al-link.al-link__shower::before {
 }
 
 .slide__pre {
-  overflow: hidden;
+  overflow: initial;
 }
 
 .col_ood {
@@ -384,4 +384,8 @@ ul.al-list .al-link.al-link__shower::before {
 .container_ood {
   display: flex;
   height: 80%;
+}
+
+a:hover {
+  text-decoration: none;
 }
