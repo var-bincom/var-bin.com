@@ -118,7 +118,7 @@
 }
 
 .slide__code-editor-item {
-  flex: 1 1 50%;
+  margin: auto;
 }
 
 .slide__code-editor-item img {
@@ -126,49 +126,8 @@
   height: auto;
 }
 
-.slide__code-editors_ci a {
-  background: var(--transparent);
-  color: var(--transparent);
-}
-
-.slide__code-editors.slide__code-editors-row2 {
-  flex-wrap: wrap;
-}
-
-.slide__code-editors.slide__code-editors_ci {
-  align-items: center;
-  height: 80%;
-  justify-content: space-between;
-}
-
-.slide__code-editors.slide__code-editors_ci .slide__code-editor-item {
-  flex-basis: 45%;
-  flex-grow: 0;
-}
-
-.slide__code-editors.slide__code-editors_ci .slide__code-editor-item:last-child {
-  background-color: var(--black);
-  padding: 0.5em;
-}
-
-.slide__code-editors.slide__code-editors_ci .slide__code-editor-item:last-child img {
-  vertical-align: middle;
-}
-
-/**
- * Special styles for Slide with spaces-vs-tabs
- */
-.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child {
-  text-align: center;
-}
-
 .figure img {
   display: inline-block;
-}
-
-.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child img {
-  width: auto;
-  height: 100%;
 }
 
 .mark_cross {
