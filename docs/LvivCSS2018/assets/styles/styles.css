@@ -108,6 +108,11 @@
 .f-video {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.f-video video {
+  width: 100%;
 }
 
 /**
