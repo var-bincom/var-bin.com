@@ -126,9 +126,19 @@
   margin: auto;
 }
 
-.slide__code-editor-item img {
-  width: 100%;
-  height: auto;
+.slide__code-editor_vertical img {
+  width: auto;
+  height: 100%;
+}
+
+.slide__code-editors.slide__code-editor_vertical {
+  height: 90%;
+  width: auto;
+}
+
+.slide__code-editor_vertical .slide__code-editor-item {
+  width: auto;
+  height: 100%;
 }
 
 .figure img {
@@ -352,4 +362,8 @@ ul.al-list .al-link.al-link__shower::before {
 
 a:hover {
   text-decoration: none;
+}
+
+.slide__code code {
+  color: initial;
 }
