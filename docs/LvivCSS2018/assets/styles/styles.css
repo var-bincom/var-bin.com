@@ -372,6 +372,6 @@ a:hover {
   height: 80%;
 }
 
-.f-video_blowminds video {
+.f-video.f-video_blowminds video {
   height: 100%;
 }
