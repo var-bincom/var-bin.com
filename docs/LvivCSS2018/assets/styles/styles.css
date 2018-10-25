@@ -367,3 +367,11 @@ a:hover {
 .slide__code code {
   color: initial;
 }
+
+.f-video_blowminds {
+  height: 80%;
+}
+
+.f-video_blowminds video {
+  height: 100%;
+}
