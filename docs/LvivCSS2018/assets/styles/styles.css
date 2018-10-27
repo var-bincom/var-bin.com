@@ -4,13 +4,15 @@
   --black: #000;
   --transparent: transparent;
   --cover-text-shadow: 0 1px 1px var(--black);
+  --cover-text-color: var(--white);
+  --author-text-color: var(--white);
 }
 
 /**
  * Common styles
  */
 #cover {
-  background: url(../pictures/stefan-stefancik-106115-unsplash.min.jpg) no-repeat 0 0;
+  background: url(../pictures/markus-spiske-763806-unsplash_tsldbl.min.jpg) no-repeat 0 0;
   background-size: cover;
   background-clip: padding-box;
 }
@@ -25,9 +27,9 @@
 }
 
 #cover h2 {
-  margin: 30px 0 0 28px;
-  font-size: 80px;
-  color: var(--white);
+  margin: 30px 0 0 -40px;
+  font-size: 120px;
+  color: var(--cover-text-color);
   line-height: 1.2;
   text-shadow: var(--cover-text-shadow);
 }
@@ -51,9 +53,10 @@
 .slide__author-info {
   display: flex;
   justify-content: space-between;
-  color: var(--white);
+  color: var(--author-text-color);
   text-shadow: var(--cover-text-shadow);
-  margin-left: -10px;
+  margin-left: -45px;
+  font-size: 45px;
 }
 
 .author-divider::after {
@@ -66,7 +69,7 @@
 .slide__date {
   display: flex;
   justify-content: space-around;
-  flex: 1 1 33%;
+  flex: 1 1 17%;
 }
 
 .slide__date.author-divider::after {
@@ -106,6 +109,11 @@
 .f-video {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.f-video video {
+  width: 100%;
 }
 
 /**
@@ -116,57 +124,26 @@
 }
 
 .slide__code-editor-item {
-  flex: 1 1 50%;
+  margin: auto;
 }
 
-.slide__code-editor-item img {
-  width: 100%;
-  height: auto;
+.slide__code-editor_vertical img {
+  width: auto;
+  height: 100%;
 }
 
-.slide__code-editors_ci a {
-  background: var(--transparent);
-  color: var(--transparent);
+.slide__code-editors.slide__code-editor_vertical {
+  height: 90%;
+  width: auto;
 }
 
-.slide__code-editors.slide__code-editors-row2 {
-  flex-wrap: wrap;
-}
-
-.slide__code-editors.slide__code-editors_ci {
-  align-items: center;
-  height: 80%;
-  justify-content: space-between;
-}
-
-.slide__code-editors.slide__code-editors_ci .slide__code-editor-item {
-  flex-basis: 45%;
-  flex-grow: 0;
-}
-
-.slide__code-editors.slide__code-editors_ci .slide__code-editor-item:last-child {
-  background-color: var(--black);
-  padding: 0.5em;
-}
-
-.slide__code-editors.slide__code-editors_ci .slide__code-editor-item:last-child img {
-  vertical-align: middle;
-}
-
-/**
- * Special styles for Slide with spaces-vs-tabs
- */
-.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child {
-  text-align: center;
+.slide__code-editor_vertical .slide__code-editor-item {
+  width: auto;
+  height: 100%;
 }
 
 .figure img {
   display: inline-block;
-}
-
-.slide__code-editors-spaces-vs-tabs .slide__code-editor-item:last-child img {
-  width: auto;
-  height: 100%;
 }
 
 .mark_cross {
@@ -182,14 +159,14 @@
   min-width: 300px;
 }
 
-.figure a {
-  display: block;
-  text-align: center;
+.figure_well-css {
+  height: 400px;
 }
 
-.figure figcaption {
-  font-size: 20px;
-  line-height: 24px;
+.figure_well-css img {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 .stdout pre code {
@@ -332,4 +309,82 @@ ul.al-list .al-link.al-link__shower::before {
 
 .slide_example-ci img {
   width: 100%;
+}
+
+.form-check-input_login {
+  position: relative;
+}
+
+.slide__pre {
+  overflow: initial;
+}
+
+.col_ood {
+  border: 2px solid var(--white);
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 60px;
+}
+
+.col_ood-abstraction {
+  background-color: #6200ea;
+}
+
+.col_ood-encapsulatin {
+  background-color: #304ffe;
+}
+
+.col_ood-decomposition {
+  background-color: #bf360c;
+}
+
+.col_ood-generalization {
+  background-color: #263238;
+}
+
+.col_ood-encapsulatin,
+.col_ood-generalization {
+  border-left: 0;
+
+}
+
+.col_ood-decomposition,
+.col_ood-generalization {
+  border-top: 0;
+}
+
+.container_ood {
+  display: flex;
+  height: 80%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.slide__code code {
+  color: initial;
+}
+
+.f-video_blowminds {
+  height: 80%;
+}
+
+.f-video.f-video_blowminds video {
+  height: 100%;
+}
+
+.slide.slide_ood-rescue {
+  background: url(../pictures/sebastian-grochowicz-790936-unsplash.min.jpg) no-repeat 0 0;
+  background-size: cover;
+  background-clip: padding-box;
+}
+
+.slide_ood-rescue h2 {
+  color: var(--cover-text-color);
+  text-shadow: var(--cover-text-shadow);
+  font-size: 90px;
 }
