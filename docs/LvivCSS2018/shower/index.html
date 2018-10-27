@@ -18,7 +18,7 @@
   <!-- start slide -->
   <section class="slide" id="cover">
     <div class="slide__content">
-      <h2>Object Oriented Design в CSS</h2>
+      <h2>Object Oriented<br>Design in CSS</h2>
       <div class="slide__author-info">
         <div class="slide__author author-divider">
           Vitalii Rybka
@@ -45,33 +45,40 @@
   <!-- why? -->
   <section class="slide">
     <h2>Why?</h2>
-    <ul>
-      <li class="next">
-        В то время как <mark class="important">3-5 разработчиков</mark> могут достичь согласия в отношении лучших практик, беседуя за обедом, <mark>10 разработчиков</mark> не могут.
-      </li>
-      <li class="next">
-        Если у вас <mark>один проект</mark> в работе, то вы можете себе позволить вольности в подходах к разработке. Но это непозволительная роскошь, когда у вас проектов <mark>больше, чем один</mark>.
-      </li>
-    </ul>
+
+    <p style="zoom:2">
+      <mark>3-5 developers</mark> can reach agreement on best practices while talking over lunch, <mark>10 developers</mark> cannot.
+    </p>
+  </section>
+  <!-- why? -->
+  <section class="slide">
+    <h2>Why?</h2>
+
+    <p style="zoom:1.7">
+      If you have <mark>one project</mark> in work, then you can take liberties in the approaches to development. However this is this is no longer a simple process, when you have <mark>more than one project</mark>.
+    </p>
   </section>
   <!-- pain -->
   <section class="slide">
-    <h2>Боль, которая не дает спать</h2>
+    <h2>Pain that keeps you awake</h2>
     <ul>
       <li>
-        Изменения в коде непредсказуемы 😱
+        Code changes are unpredictable. 😱
       </li>
       <li>
-        Глобальная область видимости 👎
+        Global scope 👎
       </li>
       <li>
-        CSS - гадкий утенок 🦆
+        CSS - the ugly duckling 🦆
       </li>
       <li>
-        Компоненты не могут переиспользоваться 🎲
+        Components cannot be reused 🎲
       </li>
       <li>
-        Порог вхождения для нового члена команды слишком высокий 👀
+        Dangerous for newbies 👀
+      </li>
+      <li>
+        ...
       </li>
     </ul>
   </section>
@@ -100,15 +107,27 @@
   <!-- CSS - 🦆 -->
   <section class="slide">
     <h2>CSS - The Ugly Duckling 🦆</h2>
+
     <blockquote>
       How well do you know CSS? 👨🏼‍🏫 Given these classes:
-<pre class="slide__pre"><code>.red { color: red; }
-.blue { color: blue; }</code>
-</pre>
-Which color would these divs be?
-<pre class="slide__pre"><code>&lt;div class="red blue"&gt;
-&lt;div class="blue red"&gt;</code></pre>
+      <pre class="slide__pre" style="zoom:2">
+        <code>.red { color: red; }<br>.blue { color: blue; }</code>
+      </pre>
     </blockquote>
+
+    <a href="https://twitter.com/mxstbr/status/1038073603311448064" target="_blank" rel="noopener">@mxstbr</a>
+  </section>
+  <!-- CSS - 🦆 -->
+  <section class="slide">
+    <h2>CSS - The Ugly Duckling 🦆</h2>
+
+    <blockquote>
+      Which color would these divs be?
+      <pre class="slide__pre" style="zoom:2">
+        <code>&lt;div class="red blue"&gt;&lt;/div&gt;<br>&lt;div class="blue red"&gt;&lt;/div&gt;</code>
+      </pre>
+    </blockquote>
+
     <a href="https://twitter.com/mxstbr/status/1038073603311448064" target="_blank" rel="noopener">@mxstbr</a>
   </section>
   <!-- CSS - 🦆 -->
@@ -127,20 +146,19 @@ Which color would these divs be?
   <section class="slide">
     <h2>CSS - The Ugly Duckling 🦆</h2>
 
-    <h3>bootstrap.css + webpack</h3>
-    <div class="my-progress">
-      <div class="progress-bar bg-danger"
-        role="progressbar"
-        aria-valuenow="100"
-        aria-valuemin="0"
-        aria-valuemax="100">
-        <b>~ 1Mb</b>
-      </div>
-    </div>
+    <h3 style="zoom:2">bootstrap.css + webpack = ~1Mb</h3>
+
+    <figure class="f-video f-video_blowminds">
+      <video src="./videos/trash-gomer+bart.mp4" loop autoplay></video>
+    </figure>
+  </section>
+  <!-- OOD is your rescue -->
+  <section class="slide slide_ood-rescue">
+    <h2>OOD is your rescue</h2>
   </section>
   <!-- 4 principles of OOD -->
   <section class="slide">
-    <h2>Взгляните на CSS с другого ракурса</h2>
+    <h2>Four principles OOD</h2>
 
     <div class="container container_ood">
       <div class="row justify-content-md-center align-items-center">
@@ -150,46 +168,6 @@ Which color would these divs be?
         <div class="next col-6 col_ood col_ood-generalization">Generalization</div>
       </div>
     </div>
-  </section>
-  <!-- Abstraction -->
-  <section class="slide">
-      <h2>Abstraction</h2>
-
-      <blockquote>
-        It's an idea of simplifying a concept in the problem domain. Abstraction allows you to better understand a concept by breaking it down into a simplified description that ignores unimportant details.
-      </blockquote>
-  </section>
-  <!-- Encapsulation -->
-  <section class="slide">
-    <h2>Encapsulation</h2>
-
-    <blockquote>
-      It's an OOP concept that binds together the data and functions that manipulate the data, and that keeps both safe from outside interference and misuse.
-    </blockquote>
-  </section>
-  <!-- Decomposition -->
-  <section class="slide">
-    <h2>Decomposition</h2>
-
-    <blockquote>
-      Taking a whole thing and dividing it up into different parts. Or, on the flip side, taking a bunch of separate parts with different functionalities and combining them together to form the whole.
-    </blockquote>
-  </section>
-  <!-- Generalization -->
-  <section class="slide">
-    <h2>Generalization</h2>
-
-    <blockquote>
-      Consists of two characteristics: <mark>polymorphism</mark> and <mark>inheritance</mark>. <b>Polymorphism</b> is when two classes have the same description of a behavior but the implementation of the behavior may be different. <b>Inheritance</b> is used to describe the relationship between classes.
-    </blockquote>
-  </section>
-  <!-- abstraction with css classes -->
-  <section class="slide">
-    <h2>OOD is your rescue</h2>
-
-    <figure class="f-video f-video_blowminds">
-      <video src="./videos/blowminds.mp4" loop autoplay></video>
-    </figure>
   </section>
   <!-- abstraction with css classes wrong -->
   <section class="slide">
@@ -210,14 +188,71 @@ Which color would these divs be?
         <div class="col">
           <form class="form form_login">
             <div class="form-group">
-              <label for="exampleInputEmail2">
+              <label for="exampleInputEmail7">
                 Email address
               </label>
               <input type="email"
                      class="form-control"
-                     id="exampleInputEmail2"
+                     id="exampleInputEmail7"
                      aria-describedby="emailHelp1"
                      placeholder="Enter email">
+              <small id="emailHelp1" class="form-text text-muted">
+                We'll never share your email with anyone else.
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword10">
+                Password
+              </label>
+              <input type="password"
+                     class="form-control"
+                     id="exampleInputPassword10"
+                     placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox"
+                     class="form-check-input form-check-input_login"
+                     id="exampleCheck3">
+              <label class="form-check-label" for="exampleCheck3">
+                Check me out
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- abstraction with css classes wrong -->
+  <section class="slide">
+    <h2>Abstraction</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <pre class="slide__pre">
+            <code>class=<mark class="important">"admin-email-label"</mark></code>
+            <code>class=<mark class="important">"admin-email-input"</mark></code>
+            <br>
+            <br>
+            <code>class=<mark class="important">"admin-pass-label"</mark></code>
+            <code>class=<mark class="important">"admin-pass-input"</mark></code>
+          </pre>
+        </div>
+        <div class="col">
+          <form class="form form_login">
+            <div class="form-group">
+              <label for="exampleInputEmail6">
+                Email address
+              </label>
+              <input type="email"
+                      class="form-control"
+                      id="exampleInputEmail6"
+                      aria-describedby="emailHelp1"
+                      placeholder="Enter email">
               <small id="emailHelp1" class="form-text text-muted">
                 We'll never share your email with anyone else.
               </small>
@@ -228,15 +263,72 @@ Which color would these divs be?
                 Password
               </label>
               <input type="password"
-                     class="form-control"
-                     id="exampleInputPassword2"
-                     placeholder="Password">
+                      class="form-control"
+                      id="exampleInputPassword2"
+                      placeholder="Password">
             </div>
             <div class="form-group form-check">
               <input type="checkbox"
-                     class="form-check-input form-check-input_login"
-                     id="exampleCheck3">
-              <label class="form-check-label" for="exampleCheck3">
+                      class="form-check-input form-check-input_login"
+                      id="exampleCheck4">
+              <label class="form-check-label" for="exampleCheck4">
+                Check me out
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- abstraction with css classes wrong -->
+  <section class="slide">
+    <h2>Abstraction</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <pre class="slide__pre">
+            <code>class=<mark class="important">"payment-email-label"</mark></code>
+            <code>class=<mark class="important">"payment-email-input"</mark></code>
+            <br>
+            <br>
+            <code>class=<mark class="important">"payment-pass-label"</mark></code>
+            <code>class=<mark class="important">"payment-pass-input"</mark></code>
+          </pre>
+        </div>
+        <div class="col">
+          <form class="form form_login">
+            <div class="form-group">
+              <label for="exampleInputEmail2">
+                Email address
+              </label>
+              <input type="email"
+                      class="form-control"
+                      id="exampleInputEmail2"
+                      aria-describedby="emailHelp1"
+                      placeholder="Enter email">
+              <small id="emailHelp1" class="form-text text-muted">
+                We'll never share your email with anyone else.
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword11">
+                Password
+              </label>
+              <input type="password"
+                      class="form-control"
+                      id="exampleInputPassword11"
+                      placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox"
+                      class="form-check-input form-check-input_login"
+                      id="exampleCheck5">
+              <label class="form-check-label" for="exampleCheck5">
                 Check me out
               </label>
             </div>
@@ -256,12 +348,12 @@ Which color would these divs be?
       <div class="row">
         <div class="col">
           <pre class="slide__pre">
-            <code>class=<mark>"form-label"</mark></code>
-            <code>class=<mark>"form-input"</mark></code>
+            <code>class=<mark class="important">"form-label"</mark></code>
+            <code>class=<mark class="important">"form-input"</mark></code>
             <br>
             <br>
-            <code>class=<mark>"form-label"</mark></code>
-            <code>class=<mark>"form-input"</mark></code>
+            <code>class=<mark class="important">"form-label"</mark></code>
+            <code>class=<mark class="important">"form-input"</mark></code>
           </pre>
         </div>
         <div class="col">
@@ -330,7 +422,7 @@ Which color would these divs be?
     <h2>Decomposition</h2>
 
     <figure class="f-video">
-      <video src="./videos/d0947b361cec44ac8f30df42ed4b61f7-1539919853308.mp4" loop controls></video>
+      <video src="./videos/d0947b361cec44ac8f30df42ed4b61f7-1539919853308.mp4" loop autoplay></video>
     </figure>
   </section>
   <!-- Decomposition -->
@@ -395,6 +487,30 @@ Which color would these divs be?
         <img src="./pictures/minifig-5.min.png" alt="Generalization. Inheritance">
       </figure>
     </div>
+  </section>
+  <!-- Generalization. Inheritance -->
+  <section class="slide">
+    <h2>Generalization. Inheritance</h2>
+    <pre class="slide__pre" style="zoom:1.4">
+      <code>&lt;div class="<mark class="important">minifig minifig--batman</mark>"&gt;</code>
+      <code>  &lt;div class="minifig__head"&gt;&lt;/div&gt;</code>
+      <code>  &lt;div class="minifig__headgear"&gt;&lt;/div&gt;</code>
+      <code>  &lt;div class="minifig__backpack"&gt;&lt;/div&gt;</code>
+      <code>  &lt;div class="minifig__torso"&gt;&lt;/div&gt;</code>
+      <code>  &lt;div class="minifig__legs"&gt;&lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Generalization. Inheritance</h2>
+    <pre class="slide__pre" style="zoom:1.4">
+      <code><mark class="important">.minifig </mark>{</code>
+      <code>  /* some css */</code>
+      <code>}</code>
+      <code><mark class="important">.minifig--batman </mark>{</code>
+      <code>  /* some css */</code>
+      <code>}</code>
+    </pre>
   </section>
   <!-- Generalization. Polymorphism -->
   <section class="slide">
@@ -504,6 +620,34 @@ Which color would these divs be?
       <button class="btn btn-primary" type="submit">Submit form</button>
     </form>
   </section>
+  <!-- Wrap up -->
+  <section class="slide">
+    <h2>Wrap up</h2>
+
+    <ul>
+      <li class="next">
+        Naming 🏁
+      </li>
+      <li class="next">
+        Global scope is protected 👍
+      </li>
+      <li class="next">
+        Reusability is increased 🔁
+      </li>
+      <li class="next">
+        Components are become smallest and simplest 🎲
+      </li>
+      <li class="next">
+        Changing the code base is easier 😀
+      </li>
+      <li class="next">
+        <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="noopener">D.R.Y.</a>
+      </li>
+      <li class="next">
+        <a href="https://en.wikipedia.org/wiki/KISS_principle" target="_blank" rel="noopener">K.I.S.S</a>
+      </li>
+    </ul>
+  </section>
   <!-- About me -->
   <section class="slide">
     <h2>About me</h2>
@@ -516,9 +660,10 @@ Which color would these divs be?
       </li>
       <li class="al-list_item">
         <hr>
-        <span>Фото: </span>
+        <span>Photos: </span>
         <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align:middle" href="https://unsplash.com/@markusspiske?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Markus Spiske"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Markus Spiske</span></a>
         <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align:middle" href="https://unsplash.com/@nate_dumlao?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Nathan Dumlao"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Nathan Dumlao</span></a>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align:middle" href="https://unsplash.com/@sebastiangrochowicz?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Sebastian Grochowicz"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Sebastian Grochowicz</span></a>
       </li>
     </ul>
   </section>
