@@ -378,7 +378,9 @@ a:hover {
 }
 
 .slide.slide_ood-rescue {
-  background: url(../pictures/sebastian-grochowicz-790936-unsplash.min.jpg) no-repeat 0 0;
+  background-image: url(../pictures/sebastian-grochowicz-790936-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
   background-clip: padding-box;
 }
@@ -387,4 +389,12 @@ a:hover {
   color: var(--cover-text-color);
   text-shadow: var(--cover-text-shadow);
   font-size: 90px;
+}
+
+.slide.slide_why {
+  background-image: url(../pictures/ken-treloar-346065-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 25% 0;
+  background-size: cover;
+  background-clip: padding-box;
 }
