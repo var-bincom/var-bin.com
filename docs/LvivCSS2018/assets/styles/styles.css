@@ -394,7 +394,7 @@ a:hover {
 .slide.slide_why {
   background-image: url(../pictures/ken-treloar-346065-unsplash.min.jpg);
   background-repeat: no-repeat;
-  background-position: 25% 0;
+  background-position: 0 25%;
   background-size: cover;
   background-clip: padding-box;
 }
