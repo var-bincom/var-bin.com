@@ -577,6 +577,7 @@
   </section>
   <section class="slide">
     <h2>Generalization. Inheritance</h2>
+
     <pre class="slide__pre" style="zoom:1.4">
       <code><mark class="important">.minifig </mark>{</code>
       <code>  /* some css */</code>
@@ -633,9 +634,9 @@
     <h2>Generalization. Polymorphism</h2>
 
     <ul class="slide__code">
-      <li><code>success</code></li>
-      <li><code>danger</code></li>
-      <li><code>warning</code></li>
+      <li><code>is-success</code></li>
+      <li><code>is-danger</code></li>
+      <li><code>is-warning</code></li>
     </ul>
   </section>
   <!-- Generalization. Polymorphism -->
@@ -653,6 +654,15 @@
         A simple warning alert—check it out!
       </div>
     </div>
+  </section>
+  <section class="slide">
+    <h2>Generalization. Polymorphism</h2>
+
+    <pre class="slide__pre" style="zoom:1.4">
+      <code>.alert<mark>.is-success </mark>{ }</code>
+      <code>.alert<mark>.is-danger </mark>{ }</code>
+      <code>.alert<mark>.is-warning </mark>{ }</code>
+    </pre>
   </section>
   <!-- Generalization. Polymorphism -->
   <section class="slide">
@@ -693,6 +703,15 @@
       </div>
       <button class="btn btn-primary" type="submit">Submit form</button>
     </form>
+  </section>
+  <section class="slide">
+    <h2>Generalization. Polymorphism</h2>
+
+    <pre class="slide__pre" style="zoom:1.4">
+      <code>.form-input<mark>.is-success </mark>{ }</code>
+      <code>.form-input<mark>.is-danger </mark>{ }</code>
+      <code>.form-input<mark>.is-warning </mark>{ }</code>
+    </pre>
   </section>
   <!-- Wrap up -->
   <section class="slide">
