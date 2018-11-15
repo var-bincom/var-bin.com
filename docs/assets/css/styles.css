@@ -634,8 +634,61 @@ main {
 footer p {
   margin: 0;
 }
+.main-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-description__hello,
+.main-description__mscp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.main-description__hello {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+.main-description__hello h1 {
+  margin-top: 0;
+}
+.main-description__mscp {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.main-description__mscp-badge {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main-description .icon {
+  display: block;
+  margin-right: 5%;
+  width: 176px;
+  height: 176px;
+}
 @media (max-width: 1024px) {
   html {
     font-size: 60%;
+  }
+  .main-description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .main-description .icon {
+    margin-top: 10%;
+    margin-right: 0;
   }
 }

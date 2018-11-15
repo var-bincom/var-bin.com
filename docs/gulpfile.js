@@ -25,9 +25,11 @@ const STYLES = path.join(ASSETS_DIR, "less", "styles.less");
 const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
 const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
 const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
-const SVG_SPRITE = "images/sprite.svg";
+const SVG_SPRITE = path.join(ASSETS_IMAGES, "sprite");
 const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets", "images");
 const KharkivCssImages = path.join(__dirname, "KharkivCSS2018", "shower", "pictures");
+const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
+const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -105,7 +107,7 @@ gulp.task("svgStore", () => {
   return gulp.src(ASSETS_SVG)
     .pipe(svgo())
     .pipe(svgStore())
-    .pipe(gulp.dest(path.join(ASSETS_IMAGES, "sprite")));
+    .pipe(gulp.dest(SVG_SPRITE));
 });
 
 gulp.task("inject:svg", () => {
@@ -124,6 +126,15 @@ gulp.task("inject:svg", () => {
 });
 
 gulp.task("sprite:inject", gulp.series("svgStore", "htmlmin", "inject:svg"));
+
+gulp.task("images:var-bin:min", () => {
+  return gulp.src(VARBIN_ASSETS_IMAGES)
+    .pipe(image())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest(VARBIN_ASSETS_IMAGES_MIN));
+});
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
