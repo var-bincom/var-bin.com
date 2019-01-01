@@ -72,7 +72,7 @@
 
     <footer>
       <p>
-        &copy; 2018 Vitalii Rybka.
+        &copy; <span id="currentYear">&nbsp;</span> Vitalii Rybka
       </p>
     </footer>
 
@@ -84,6 +84,9 @@
 
       ga("create", "UA-89569652-1", "auto");
       ga("send", "pageview");
+    </script>
+    <script>
+      (function(e){var n=document.getElementById(e);var r=new Date;n.innerHTML=r.getUTCFullYear()})("currentYear");
     </script>
   </body>
 </html>
