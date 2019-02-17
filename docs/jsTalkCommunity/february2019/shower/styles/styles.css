@@ -1,10 +1,11 @@
-/*styles.css*/
+/* styles.css */
 
 #cover h2 {
   margin: 30px 0 0;
   font-size: 100px;
   color: #fff;
 }
+
 #cover p {
   margin: 10px 0 0;
   font-style: italic;
@@ -223,7 +224,7 @@ ul.al-list .al-link.al-link__twitter {
 }
 
 ul.al-list .al-link.al-link__twitter::before {
-  background: url("../pictures/Twitter_Logo_Blue.svg") no-repeat center;
+  background: url("../pictures/Twitter_Logo_Blue.min.svg") no-repeat center;
   background-size: cover;
   margin: 0 -5px 0 -15px;
   width: 96px;
@@ -231,13 +232,13 @@ ul.al-list .al-link.al-link__twitter::before {
 }
 
 ul.al-list .al-link.al-link__github::before {
-  background: url("../pictures/GitHub-Mark-120px-plus.png") no-repeat center;
+  background: url("../pictures/GitHub-Mark-120px-plus.min.png") no-repeat center;
   background-size: cover;
   margin-right: 15px;
 }
 
 ul.al-list .al-link.al-link__shower::before {
-  background: url("../pictures/logo.svg") no-repeat center;
+  background: url("../pictures/logo.min.svg") no-repeat center;
   background-size: cover;
   margin-right: 15px;
 }
