@@ -17,6 +17,12 @@ const svgo = require("gulp-svgo");
 const inject = require("gulp-inject");
 const image = require("gulp-image");
 
+const imageMinOptions = {
+  jpegRecompress: ['--strip', '--quality', 'medium', '--max', 80],
+  mozjpeg: ['-optimize', '-progressive'],
+  svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors']
+};
+
 const ASSETS_DIR = path.resolve(__dirname, "./assets");
 const INDEX = path.resolve(__dirname, "./index.html");
 const INDEX_TPL = path.resolve(__dirname, "./index.tpl.html");
@@ -30,6 +36,11 @@ const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets", 
 const KharkivCssImages = path.join(__dirname, "KharkivCSS2018", "shower", "pictures");
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
+const PRES_ASSETS_IMAGES = path.join(__dirname, "jsTalkCommunity", "february2019", "assets", "images");
+const PRES_IMAGES = path.join(__dirname, "jsTalkCommunity", "february2019", "shower", "pictures");
+const PRES_ASSETS_STYLES = path.join(__dirname, "jsTalkCommunity", "february2019", "assets", "styles", "styles.css");
+const PRES_STYLES = path.join(__dirname, "jsTalkCommunity", "february2019", "shower", "styles");
+const PRES_INDEX_HTML = path.join(__dirname, "jsTalkCommunity", "february2019", "shower", "index.html");
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -138,28 +149,25 @@ gulp.task("images:var-bin:min", () => {
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
-  return gulp.src(path.join(KharkivCssImagesAssets, "/*.{png,jpg,jpeg,svg,gif}"))
-    .pipe(image())
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{png,jpg,jpeg,svg,gif}"))
+    .pipe(image(imageMinOptions))
     .pipe(rename({
       suffix: ".min"
     }))
-    .pipe(gulp.dest(path.resolve(KharkivCssImages)));
+    .pipe(gulp.dest(path.resolve(PRES_IMAGES)));
 });
 
 gulp.task("css:pres", () => {
-  const stylesDest = path.join(__dirname, "KharkivCSS2018", "shower", "styles");
-  const styles = path.join(__dirname, "KharkivCSS2018", "assets", "styles", "styles.css");
-
-  return gulp.src(styles)
+  return gulp.src(PRES_ASSETS_STYLES)
     .pipe(postcss([
       uncss({
-        html: [path.join(__dirname, "KharkivCSS2018", "shower", "index.html")],
+        html: [PRES_INDEX_HTML],
       }),
       autoprefixer,
       csso
     ]))
     .pipe(rename("styles.min.css"))
-    .pipe(gulp.dest(stylesDest));
+    .pipe(gulp.dest(PRES_STYLES));
 });
 
 gulp.task("watch:pres", (cb) => {
