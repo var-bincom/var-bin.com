@@ -15,11 +15,15 @@
  * Common styles
  */
 #cover {
-  background: url(../pictures/simon-matzinger-633741-unsplash.min.jpg) no-repeat 0 0;
+  background-image: url(../pictures/simon-matzinger-633741-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
 }
 
-#cover::after {
+#cover::after,
+.slide_80::after,
+.slide_tablet::after {
   content: "";
   right: 0;
   bottom: 0;
@@ -30,6 +34,41 @@
   margin: auto;
   z-index: -1;
   padding-top: 0;
+}
+
+.slide_80 {
+  background-image: url(../pictures/ben-white-128604-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.slide_tablet {
+  background-image: url(../pictures/kelly-sikkema-266805-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.slide__80-text,
+.slide__tablet-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: right;
+  font-size: 200px;
+  color: var(--white);
+  padding: 0 80px 0 0;
+}
+
+.slide__tablet-text {
+  line-height: 1;
+  font-size: 180px;
+  top: auto;
+  bottom: 50px;
 }
 
 .slide h2 {
