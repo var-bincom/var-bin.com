@@ -1,0 +1,416 @@
+/* styles.css */
+:root {
+  --white: #fff;
+  --black: #000;
+  --transparent: transparent;
+  --grey: #4c4c4c;
+  --new-color: #b71c1c;
+  --cover-text-shadow: -1px 2px 4px var(--black);
+  --cover-text-color: var(--white);
+  --author-text-color: var(--white);
+  --overlay: rgba(0, 0, 0, 0.6);
+}
+
+/**
+ * Common styles
+ */
+#cover {
+  background: url(../pictures/simon-matzinger-633741-unsplash.min.jpg) no-repeat 0 0;
+  background-size: cover;
+}
+
+#cover::after {
+  content: "";
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--overlay);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: -1;
+  padding-top: 0;
+}
+
+.slide h2 {
+  margin-bottom: 25px;
+  font-size: 50px;
+}
+
+#cover h2 {
+  margin: 30px 0 0 -40px;
+  font-size: 95px;
+  color: var(--cover-text-color);
+  line-height: 1.2;
+}
+
+.slide {
+  padding-top: 80px;
+}
+
+/**
+ * Slide #1
+ * Slide author info
+ */
+.slide__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
+  margin: 0 -20px;
+}
+
+.slide__author-info {
+  display: flex;
+  color: var(--author-text-color);
+  margin-left: -45px;
+  font-size: 40px;
+}
+
+.slide__author-info::after {
+  display: inline-block;
+  content: "|";
+  color: var(--white);
+  margin: 0 50px 0 20px;
+}
+
+.slide__author,
+.slide__place,
+.slide__date {
+  display: flex;
+}
+
+.slide__author,
+.slide__date {
+  flex-basis: 33%;
+}
+
+.slide__date {
+  order: 3;
+}
+
+.slide__place {
+  color: var(--white);
+  justify-content: flex-end;
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+  font-size: 18px;
+}
+
+/**
+ * Slide #2
+ * Repo links
+ */
+.slide_repo-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide_repo-links a {
+  font-size: 65px;
+}
+
+/**
+ * Slide #3
+ * @TODO
+ * `quistion-mark_animated` - added styles for animations
+ */
+.quistion-mark {
+  font-size: 5em;
+  text-align: center;
+}
+
+.f-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-video video {
+  width: 100%;
+}
+
+/**
+ * Slide with code editors
+ */
+.slide__code-editors {
+  display: flex;
+}
+
+.slide__code-editor-item {
+  margin: auto;
+}
+
+.slide__code-editor_vertical img {
+  width: auto;
+  height: 100%;
+}
+
+.slide__code-editors.slide__code-editor_vertical {
+  height: 90%;
+  width: auto;
+}
+
+.slide__code-editor_vertical .slide__code-editor-item {
+  width: auto;
+  height: 100%;
+}
+
+.figure img {
+  display: inline-block;
+}
+
+.mark_cross {
+  text-decoration: line-through;
+}
+
+.blockquote-big-fs {
+  font-size: 1.45em;
+}
+
+.figure {
+  max-width: 1000px;
+  min-width: 300px;
+}
+
+.figure_well-css {
+  height: 400px;
+}
+
+.figure_well-css img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.stdout pre code {
+  white-space: pre-wrap;
+}
+
+.slide .slide-comment {
+  line-height: 1.4;
+}
+
+.shower.is-black {
+  color: var(--white);
+}
+
+.shower.is-black .slide {
+  background: var(--black);
+}
+
+.shower.is-black .slide code,
+.slide kbd,
+.slide samp {
+  background: rgba(88, 90, 94, 0.5);
+
+}
+
+.shower.is-black .slide pre code {
+  background: 0 0;
+}
+
+.slide.slide__video video {
+  width: 100%;
+  height: 85%;
+}
+
+.slide ul.al-list > .al-list_item::before {
+  content: none;
+}
+
+.slide ul.al-list .al-list_item {
+  text-indent: 0;
+}
+
+ul.al-list .al-link {
+  display: inline-block;
+  vertical-align: top;
+  background: none;
+}
+
+ul.al-list .al-link::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 64px;
+  height: 64px;
+}
+
+ul.al-list .al-link.al-link__twitter {
+  margin-bottom: -12px;
+}
+
+ul.al-list .al-link.al-link__twitter::before {
+  background: url(../pictures/Twitter_Logo_Blue.min.svg) no-repeat center;
+  background-size: cover;
+  margin: 0 -5px 0 -15px;
+  width: 96px;
+  height: 96px;
+}
+
+ul.al-list .al-link.al-link__github::before {
+  background: url(../pictures/GitHub-Mark-120px-plus.min.png) no-repeat center;
+  background-size: cover;
+  margin-right: 15px;
+}
+
+ul.al-list .al-link.al-link__shower::before {
+  background: url(../pictures/logo.min.svg) no-repeat center;
+  background-size: cover;
+  margin-right: 15px;
+}
+
+.slide_plan {
+  font-size: 50px;
+}
+
+.slide_pre-formated {
+  font-size: 30px;
+}
+
+.slide_works-on {
+  font-size: 38px;
+  margin-top: -20px;
+}
+
+.l-article-links {
+  margin-top: -15px;
+}
+
+.slide ul li.article-links_link-holder {
+  text-indent: 0;
+}
+
+.slide ul li.article-links_link-item {
+  line-height: 1.5;
+}
+
+.slide ul > li.article-links_link-holder::before {
+  content: none;
+}
+
+.article-links_link-holder_icon.icon__icon-habr .icon-svg_logo-habrahabr {
+  vertical-align: middle;
+}
+
+.article-links_link-holder_icon.icon__icon-codepen {
+  margin: 20px 0 0;
+}
+
+.not-cover {
+  display: inline-block;
+  width: auto;
+  height: 85%;
+}
+
+.slide_css-lint {
+  padding-top: 0;
+}
+
+.slide_css-lint .f-video {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.slide_css-lint video {
+  width: 100%;
+}
+
+.slide_example-ci {
+  padding-top: 10px;
+}
+
+.slide_example-ci img {
+  width: 100%;
+}
+
+.form-check-input_login {
+  position: relative;
+}
+
+.slide__pre {
+  overflow: initial;
+}
+
+.col_ood {
+  border: 2px solid var(--white);
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 60px;
+}
+
+.col_ood-abstraction {
+  background-color: #6200ea;
+}
+
+.col_ood-encapsulatin {
+  background-color: #304ffe;
+}
+
+.col_ood-decomposition {
+  background-color: #bf360c;
+}
+
+.col_ood-generalization {
+  background-color: #263238;
+}
+
+.col_ood-encapsulatin,
+.col_ood-generalization {
+  border-left: 0;
+
+}
+
+.col_ood-decomposition,
+.col_ood-generalization {
+  border-top: 0;
+}
+
+.container_ood {
+  display: flex;
+  height: 80%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.slide__code code {
+  color: initial;
+}
+
+.f-video_blowminds {
+  height: 80%;
+}
+
+.f-video.f-video_blowminds video {
+  height: 100%;
+}
+
+.slide.slide_ood-rescue {
+  background-image: url(../pictures/sebastian-grochowicz-790936-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  background-clip: padding-box;
+}
+
+.slide_ood-rescue h2 {
+  color: var(--cover-text-color);
+  text-shadow: var(--cover-text-shadow);
+  font-size: 90px;
+}
+
+.slide.slide_why {
+  background-image: url(../pictures/ken-treloar-346065-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 25%;
+  background-size: cover;
+  background-clip: padding-box;
+}

@@ -36,11 +36,11 @@ const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets", 
 const KharkivCssImages = path.join(__dirname, "KharkivCSS2018", "shower", "pictures");
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
-const PRES_ASSETS_IMAGES = path.join(__dirname, "jsTalkCommunity", "february2019", "assets", "images");
-const PRES_IMAGES = path.join(__dirname, "jsTalkCommunity", "february2019", "shower", "pictures");
-const PRES_ASSETS_STYLES = path.join(__dirname, "jsTalkCommunity", "february2019", "assets", "styles", "styles.css");
-const PRES_STYLES = path.join(__dirname, "jsTalkCommunity", "february2019", "shower", "styles");
-const PRES_INDEX_HTML = path.join(__dirname, "jsTalkCommunity", "february2019", "shower", "index.html");
+const PRES_ASSETS_IMAGES = path.join(__dirname, "sps2019", "final", "assets", "images");
+const PRES_IMAGES = path.join(__dirname, "sps2019", "final", "shower", "pictures");
+const PRES_ASSETS_STYLES = path.join(__dirname, "sps2019", "final", "assets", "styles", "styles.css");
+const PRES_STYLES = path.join(__dirname, "sps2019", "final", "shower", "styles");
+const PRES_INDEX_HTML = path.join(__dirname, "sps2019", "final", "shower", "index.html");
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -171,8 +171,8 @@ gulp.task("css:pres", () => {
 });
 
 gulp.task("watch:pres", (cb) => {
-  const styles = path.join(__dirname, "KharkivCSS2018", "assets", "styles", "styles.css");
-  gulp.watch(styles, gulp.series("css:pres"));
+  gulp.watch(PRES_ASSETS_IMAGES, gulp.series("images:min"));
+  gulp.watch(PRES_ASSETS_STYLES, gulp.series("css:pres"));
 
   cb();
 });
