@@ -343,6 +343,7 @@
 
 .slide ul.al-list .al-list_item {
   text-indent: 0;
+  line-height: 1;
 }
 
 ul.al-list .al-link {
