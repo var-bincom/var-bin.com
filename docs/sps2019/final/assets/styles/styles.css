@@ -22,8 +22,13 @@
 }
 
 #cover::after,
-.slide_80::after,
-.slide_tablet::after {
+.slide_80::before,
+.slide_tablet::before,
+.slide_words::before,
+.slide_words-1-2::before,
+.slide_words-1-3::before,
+.slide_words-1-5::before,
+.slide_mother::before {
   content: "";
   right: 0;
   bottom: 0;
@@ -34,6 +39,7 @@
   margin: auto;
   z-index: -1;
   padding-top: 0;
+  position: absolute;
 }
 
 .slide_80 {
@@ -50,8 +56,53 @@
   background-size: cover;
 }
 
+.slide_words {
+  background-image: url(../pictures/ben-white-197668-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: -140px 0;
+  background-size: cover;
+  background-color: #222;
+}
+
+.slide_words-1-2 {
+  background-image: url(../pictures/bekah-russom-231866-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.slide_words-1-3 {
+  background-image: url(../pictures/caroline-hernandez-219485-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.slide_words-1-4 {
+  background-image: url(../pictures/insung-yoon-369908-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.slide_words-1-5 {
+  background-image: url(../pictures/ben-wicks-1118947-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.slide_mother {
+  background-image: url(../pictures/annie-spratt-313520-unsplash.min.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
 .slide__80-text,
-.slide__tablet-text {
+.slide__tablet-text,
+.slide__words-text,
+.slide__mother-text {
   position: absolute;
   top: 0;
   right: 0;
@@ -64,16 +115,46 @@
   padding: 0 80px 0 0;
 }
 
-.slide__tablet-text {
+.slide__tablet-text,
+.slide__mother-text {
   line-height: 1;
   font-size: 180px;
   top: auto;
   bottom: 50px;
 }
 
+.slide__mother-text {
+  font-size: 120px;
+  text-align: left;
+  padding-left: 50px;
+  top: 0;
+}
+
+.slide__words-text {
+  font-size: 160px;
+  padding-right: 30px;
+}
+
 .slide h2 {
   margin-bottom: 25px;
   font-size: 50px;
+}
+
+.slide_words-1-3 .slide__words-text,
+.slide_words-1-2 .slide__words-text {
+  text-align: left;
+  line-height: 1;
+  padding: 0 0 0 10px;
+}
+
+.slide_words-1-5 .slide__words-text {
+  top: auto;
+  text-align: center;
+}
+
+.fs-150,
+.slide .fs-150 {
+  font-size: 150px;
 }
 
 #cover h2 {
