@@ -17,18 +17,8 @@ const svgo = require("gulp-svgo");
 const inject = require("gulp-inject");
 const image = require("gulp-image");
 
-import {
-  ASSETS_DIRECTORY,
-  IMAGES_DIRECTORY,
-  SHOWER_DIRECTORY,
-  PICTURES_DIRECTORY,
-  STYLES_DIRECTORY,
-  STYLES_CSS,
-  INDEX_HTML,
-  IMAGES_REGEXP,
-  STYLES_MIN_CSS,
-  IMAGE_MIN_SUFFIX
-} from './buildUtils/constants';
+const constants = require('./buildUtils/constants');
+const paths = require('./buildUtils/paths');
 
 const imageMinOptions = {
   jpegRecompress: ['--strip', '--quality', 'medium', '--max', 80],
@@ -49,42 +39,11 @@ const SVG_SPRITE = path.join(ASSETS_IMAGES, "sprite");
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
 
-const PRES_ASSETS_IMAGES = path.join(
-  __dirname,
-  "conferences",
-  "chernivtsijs2019",
-  ASSETS_DIRECTORY,
-  IMAGES_DIRECTORY
-);
-const PRES_IMAGES = path.join(
-  __dirname,
-  "conferences",
-  "chernivtsijs2019",
-  SHOWER_DIRECTORY,
-  PICTURES_DIRECTORY
-);
-const PRES_ASSETS_STYLES = path.join(
-  __dirname,
-  "conferences",
-  "chernivtsijs2019",
-  ASSETS_DIRECTORY,
-  STYLES_DIRECTORY,
-  STYLES_CSS
-);
-const PRES_STYLES = path.join(
-  __dirname,
-  "conferences",
-  "chernivtsijs2019",
-  SHOWER_DIRECTORY,
-  STYLES_DIRECTORY
-);
-const PRES_INDEX_HTML = path.join(
-  __dirname,
-  "conferences",
-  "chernivtsijs2019",
-  SHOWER_DIRECTORY,
-  INDEX_HTML
-);
+const PRES_ASSETS_IMAGES = paths.PRES_ASSETS_IMAGES("conferences", "chernivtsijs2019");
+const PRES_IMAGES = paths.PRES_IMAGES("conferences", "chernivtsijs2019");
+const PRES_ASSETS_STYLES = paths.PRES_ASSETS_STYLES("conferences", "chernivtsijs2019");
+const PRES_STYLES = paths.PRES_STYLES("conferences", "chernivtsijs2019");
+const PRES_INDEX_HTML = paths.PRES_INDEX_HTML("conferences", "chernivtsijs2019");
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -193,10 +152,10 @@ gulp.task("images:var-bin:min", () => {
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
-  return gulp.src(path.join(PRES_ASSETS_IMAGES, IMAGES_REGEXP))
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, constants.IMAGES_REGEXP))
     .pipe(image(imageMinOptions))
     .pipe(rename({
-      suffix: IMAGE_MIN_SUFFIX
+      suffix: constants.IMAGE_MIN_SUFFIX
     }))
     .pipe(gulp.dest(path.resolve(PRES_IMAGES)));
 });
@@ -210,7 +169,7 @@ gulp.task("css:pres", () => {
       autoprefixer,
       csso
     ]))
-    .pipe(rename(STYLES_MIN_CSS))
+    .pipe(rename(constants.STYLES_MIN_CSS))
     .pipe(gulp.dest(PRES_STYLES));
 });
 
