@@ -17,6 +17,19 @@ const svgo = require("gulp-svgo");
 const inject = require("gulp-inject");
 const image = require("gulp-image");
 
+import {
+  ASSETS_DIRECTORY,
+  IMAGES_DIRECTORY,
+  SHOWER_DIRECTORY,
+  PICTURES_DIRECTORY,
+  STYLES_DIRECTORY,
+  STYLES_CSS,
+  INDEX_HTML,
+  IMAGES_REGEXP,
+  STYLES_MIN_CSS,
+  IMAGE_MIN_SUFFIX
+} from './buildUtils/constants';
+
 const imageMinOptions = {
   jpegRecompress: ['--strip', '--quality', 'medium', '--max', 80],
   mozjpeg: ['-optimize', '-progressive'],
@@ -32,15 +45,46 @@ const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
 const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
 const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
 const SVG_SPRITE = path.join(ASSETS_IMAGES, "sprite");
-const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets", "images");
-const KharkivCssImages = path.join(__dirname, "KharkivCSS2018", "shower", "pictures");
+
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
-const PRES_ASSETS_IMAGES = path.join(__dirname, "sps2019", "final", "assets", "images");
-const PRES_IMAGES = path.join(__dirname, "sps2019", "final", "shower", "pictures");
-const PRES_ASSETS_STYLES = path.join(__dirname, "sps2019", "final", "assets", "styles", "styles.css");
-const PRES_STYLES = path.join(__dirname, "sps2019", "final", "shower", "styles");
-const PRES_INDEX_HTML = path.join(__dirname, "sps2019", "final", "shower", "index.html");
+
+const PRES_ASSETS_IMAGES = path.join(
+  __dirname,
+  "conferences",
+  "chernivtsijs2019",
+  ASSETS_DIRECTORY,
+  IMAGES_DIRECTORY
+);
+const PRES_IMAGES = path.join(
+  __dirname,
+  "conferences",
+  "chernivtsijs2019",
+  SHOWER_DIRECTORY,
+  PICTURES_DIRECTORY
+);
+const PRES_ASSETS_STYLES = path.join(
+  __dirname,
+  "conferences",
+  "chernivtsijs2019",
+  ASSETS_DIRECTORY,
+  STYLES_DIRECTORY,
+  STYLES_CSS
+);
+const PRES_STYLES = path.join(
+  __dirname,
+  "conferences",
+  "chernivtsijs2019",
+  SHOWER_DIRECTORY,
+  STYLES_DIRECTORY
+);
+const PRES_INDEX_HTML = path.join(
+  __dirname,
+  "conferences",
+  "chernivtsijs2019",
+  SHOWER_DIRECTORY,
+  INDEX_HTML
+);
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -149,10 +193,10 @@ gulp.task("images:var-bin:min", () => {
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
-  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{png,jpg,jpeg,svg,gif}"))
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, IMAGES_REGEXP))
     .pipe(image(imageMinOptions))
     .pipe(rename({
-      suffix: ".min"
+      suffix: IMAGE_MIN_SUFFIX
     }))
     .pipe(gulp.dest(path.resolve(PRES_IMAGES)));
 });
@@ -166,7 +210,7 @@ gulp.task("css:pres", () => {
       autoprefixer,
       csso
     ]))
-    .pipe(rename("styles.min.css"))
+    .pipe(rename(STYLES_MIN_CSS))
     .pipe(gulp.dest(PRES_STYLES));
 });
 

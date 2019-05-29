@@ -1,0 +1,20 @@
+export const ASSETS_DIRECTORY = "assets";
+export const IMAGES_DIRECTORY = "images";
+export const SHOWER_DIRECTORY = "shower";
+export const PICTURES_DIRECTORY = "pictures";
+export const STYLES_DIRECTORY = "styles";
+export const STYLES_CSS = "styles.css";
+export const INDEX_HTML = "index.html";
+export const IMAGES_REGEXP = "/*.{png,jpg,JPG,jpeg,svg,gif}";
+export const STYLES_MIN_CSS = "styles.min.css";
+export const IMAGE_MIN_SUFFIX = ".min";
+
+const ASSETS_DIR = path.resolve(__dirname, "./assets");
+const INDEX = path.resolve(__dirname, "./index.html");
+const INDEX_TPL = path.resolve(__dirname, "./index.tpl.html");
+const BASE_DIR = path.resolve("./");
+const STYLES = path.join(ASSETS_DIR, "less", "styles.less");
+const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
+const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
+const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
+const SVG_SPRITE = path.join(ASSETS_IMAGES, "sprite");
