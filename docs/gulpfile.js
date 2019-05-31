@@ -17,6 +17,11 @@ const svgo = require("gulp-svgo");
 const inject = require("gulp-inject");
 const image = require("gulp-image");
 
+// for webp
+const imagemin = require("gulp-imagemin");
+const webp = require("imagemin-webp");
+const extReplace = require("gulp-ext-replace");
+
 const constants = require('./buildUtils/constants');
 const paths = require('./buildUtils/paths');
 
@@ -152,7 +157,7 @@ gulp.task("images:var-bin:min", () => {
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
-  return gulp.src(path.join(PRES_ASSETS_IMAGES, constants.IMAGES_REGEXP))
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{svg,gif}"))
     .pipe(image(imageMinOptions))
     .pipe(rename({
       suffix: constants.IMAGE_MIN_SUFFIX
@@ -173,8 +178,19 @@ gulp.task("css:pres", () => {
     .pipe(gulp.dest(PRES_STYLES));
 });
 
+gulp.task("exportWebP", function () {
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{jpg,JPG,jpeg,png}"))
+    .pipe(imagemin([
+      webp({
+        quality: 75
+      })
+    ]))
+    .pipe(extReplace(".webp"))
+    .pipe(gulp.dest(path.resolve(PRES_IMAGES)));
+});
+
 gulp.task("watch:pres", (cb) => {
-  gulp.watch(PRES_ASSETS_IMAGES, gulp.series("images:min"));
+  gulp.watch(PRES_ASSETS_IMAGES, gulp.series("exportWebP", "images:min"));
   gulp.watch(PRES_ASSETS_STYLES, gulp.series("css:pres"));
 
   cb();
