@@ -17,6 +17,14 @@ const svgo = require("gulp-svgo");
 const inject = require("gulp-inject");
 const image = require("gulp-image");
 
+// for webp
+const imagemin = require("gulp-imagemin");
+const webp = require("imagemin-webp");
+const extReplace = require("gulp-ext-replace");
+
+const constants = require('./buildUtils/constants');
+const paths = require('./buildUtils/paths');
+
 const imageMinOptions = {
   jpegRecompress: ['--strip', '--quality', 'medium', '--max', 80],
   mozjpeg: ['-optimize', '-progressive'],
@@ -32,15 +40,15 @@ const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
 const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
 const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
 const SVG_SPRITE = path.join(ASSETS_IMAGES, "sprite");
-const KharkivCssImagesAssets = path.join(__dirname, "KharkivCSS2018", "assets", "images");
-const KharkivCssImages = path.join(__dirname, "KharkivCSS2018", "shower", "pictures");
+
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
-const PRES_ASSETS_IMAGES = path.join(__dirname, "sps2019", "final", "assets", "images");
-const PRES_IMAGES = path.join(__dirname, "sps2019", "final", "shower", "pictures");
-const PRES_ASSETS_STYLES = path.join(__dirname, "sps2019", "final", "assets", "styles", "styles.css");
-const PRES_STYLES = path.join(__dirname, "sps2019", "final", "shower", "styles");
-const PRES_INDEX_HTML = path.join(__dirname, "sps2019", "final", "shower", "index.html");
+
+const PRES_ASSETS_IMAGES = paths.PRES_ASSETS_IMAGES("conferences", "chernivtsijs2019");
+const PRES_IMAGES = paths.PRES_IMAGES("conferences", "chernivtsijs2019");
+const PRES_ASSETS_STYLES = paths.PRES_ASSETS_STYLES("conferences", "chernivtsijs2019");
+const PRES_STYLES = paths.PRES_STYLES("conferences", "chernivtsijs2019");
+const PRES_INDEX_HTML = paths.PRES_INDEX_HTML("conferences", "chernivtsijs2019");
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -149,10 +157,10 @@ gulp.task("images:var-bin:min", () => {
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
-  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{png,jpg,jpeg,svg,gif}"))
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{svg,gif}"))
     .pipe(image(imageMinOptions))
     .pipe(rename({
-      suffix: ".min"
+      suffix: constants.IMAGE_MIN_SUFFIX
     }))
     .pipe(gulp.dest(path.resolve(PRES_IMAGES)));
 });
@@ -166,12 +174,23 @@ gulp.task("css:pres", () => {
       autoprefixer,
       csso
     ]))
-    .pipe(rename("styles.min.css"))
+    .pipe(rename(constants.STYLES_MIN_CSS))
     .pipe(gulp.dest(PRES_STYLES));
 });
 
+gulp.task("exportWebP", function () {
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{jpg,JPG,jpeg,png}"))
+    .pipe(imagemin([
+      webp({
+        quality: 75
+      })
+    ]))
+    .pipe(extReplace(".webp"))
+    .pipe(gulp.dest(path.resolve(PRES_IMAGES)));
+});
+
 gulp.task("watch:pres", (cb) => {
-  gulp.watch(PRES_ASSETS_IMAGES, gulp.series("images:min"));
+  gulp.watch(PRES_ASSETS_IMAGES, gulp.series("exportWebP", "images:min"));
   gulp.watch(PRES_ASSETS_STYLES, gulp.series("css:pres"));
 
   cb();
