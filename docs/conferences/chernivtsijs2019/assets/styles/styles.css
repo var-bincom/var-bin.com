@@ -76,6 +76,10 @@
   font-size: 1.5em;
 }
 
+.interesting-facts-list_conclusion {
+  font-size: 1.3em;
+}
+
 .author-divider::after {
   display: inline-block;
   content: "|";
@@ -143,6 +147,7 @@
 }
 
 .figure {
+  display: block;
   max-width: 1000px;
   min-width: 300px;
 }
@@ -181,9 +186,21 @@
   background-size: cover;
 }
 
+.slide_teamwork {
+  background: url(../pictures/slide_3_1024x1024.webp) no-repeat center;
+  background-size: cover;
+}
+
+.slide_demo-time {
+  background: url(../pictures/weather-react-app.webp) no-repeat center;
+  background-size: cover;
+}
+
 .slide_company-issues::before,
 .slide_dev-denefits::before,
-.slide_unicorn::before {
+.slide_unicorn::before,
+.slide_teamwork::before,
+.slide_demo-time::before {
   content: "";
   position: absolute;
   top: 0;
@@ -197,7 +214,9 @@
 
 .slide_company-issues h2,
 .slide_dev-denefits h2,
-.slide_unicorn h2 {
+.slide_unicorn h2,
+.slide_teamwork h2,
+.slide_demo-time h2 {
   position: relative;
   z-index: 2;
   color: var(--white);
