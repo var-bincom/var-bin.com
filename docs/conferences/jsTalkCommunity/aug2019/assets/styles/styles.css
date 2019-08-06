@@ -4,7 +4,7 @@
   --black: #000;
   --transparent: transparent;
   --cover-text-shadow: 0 1px 1px var(--black);
-  --cover-text-color: yellow;
+  --cover-text-color: #ffea00;
   --author-text-color: var(--white);
   --cover-overlay-bg: rgba(0, 0, 0, 0.7);
 }
@@ -183,22 +183,22 @@
 }
 
 .slide_company-issues {
-  background: url(../pictures/austin-distel-1555609-unsplash.webp) no-repeat center;
+  background: url(../pictures/mikhail-vasilyev-NodtnCsLdTE-unsplash.min.jpg) no-repeat center;
   background-size: cover;
 }
 
 .slide_dev-denefits {
-  background: url(../pictures/austin-distel-1555611-unsplash.webp) no-repeat center;
+  background: url(../pictures/brendan-church-pKeF6Tt3c08-unsplash.min.jpg) no-repeat center;
   background-size: cover;
 }
 
 .slide_unicorn {
-  background: url(../pictures/ines-pimentel-564023-unsplash.webp) no-repeat center;
+  background: url(../pictures/start-digital-DChgWclU_xU-unsplash.min.jpg) no-repeat center;
   background-size: cover;
 }
 
 .slide_teamwork {
-  background: url(../pictures/slide_3_1024x1024.webp) no-repeat center;
+  background: url(../pictures/joao-cruz-IkEpl3JkVqU-unsplash.min.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -231,7 +231,7 @@
   position: relative;
   z-index: 2;
   color: var(--white);
-  font-size: 4em;
+  font-size: 3.8em;
 }
 
 .shower.is-black .slide code,
