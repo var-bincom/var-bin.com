@@ -131,10 +131,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80%;
 }
 
 .slide_repo-links a {
   font-size: 65px;
+}
+
+.slide_repo-links figure {
+  display: inherit;
+  flex-basis: 40%;
+  height: 100%;
+}
+
+.slide_repo-links img {
+  width: 100%;
+  height: auto;
 }
 
 /**
