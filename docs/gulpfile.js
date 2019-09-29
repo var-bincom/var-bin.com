@@ -16,6 +16,7 @@ const svgStore  = require('gulp-svgstore');
 const svgo = require('gulp-svgo');
 const inject = require('gulp-inject');
 const image = require('gulp-image');
+const del = require('del');
 
 // for webp
 const imagemin = require('gulp-imagemin');
@@ -39,11 +40,11 @@ const SVG_SPRITE = path.join(ASSETS_IMAGES, 'sprite');
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, '/*.{png,jpg,jpeg}');
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, 'min'));
 
-const PRES_ASSETS_IMAGES = paths.PRES_ASSETS_IMAGES('conferences', 'chernivtsijs2019');
-const PRES_IMAGES = paths.PRES_IMAGES('conferences', 'chernivtsijs2019');
-const PRES_ASSETS_STYLES = paths.PRES_ASSETS_STYLES('conferences', 'chernivtsijs2019');
-const PRES_STYLES = paths.PRES_STYLES('conferences', 'chernivtsijs2019');
-const PRES_INDEX_HTML = paths.PRES_INDEX_HTML('conferences', 'chernivtsijs2019');
+const PRES_ASSETS_IMAGES = paths.PRES_ASSETS_IMAGES('conferences', 'jsTalkCommunity/oct2019');
+const PRES_IMAGES = paths.PRES_IMAGES('conferences', 'jsTalkCommunity/oct2019');
+const PRES_ASSETS_STYLES = paths.PRES_ASSETS_STYLES('conferences', 'jsTalkCommunity/oct2019');
+const PRES_STYLES = paths.PRES_STYLES('conferences', 'jsTalkCommunity/oct2019');
+const PRES_INDEX_HTML = paths.PRES_INDEX_HTML('conferences', 'jsTalkCommunity/oct2019');
 
 // Static server
 gulp.task('browser-sync', (cb) => {
@@ -150,6 +151,12 @@ gulp.task('images:var-bin:min', () => {
     .pipe(gulp.dest(VARBIN_ASSETS_IMAGES_MIN));
 });
 
+gulp.task('clean:images-pres', function () {
+  return del([
+    PRES_IMAGES,
+  ]);
+});
+
 // tasks for conferences' presentations
 gulp.task('images:min', () => {
   return gulp.src(path.join(PRES_ASSETS_IMAGES, constants.IMAGES_REGEXP))
@@ -185,7 +192,7 @@ gulp.task('exportWebP', function () {
 });
 
 gulp.task('watch:pres', (cb) => {
-  gulp.watch(PRES_ASSETS_IMAGES, gulp.series('images:min'));
+  gulp.watch(PRES_ASSETS_IMAGES, gulp.series('clean:images-pres', 'images:min'));
   gulp.watch(PRES_ASSETS_STYLES, gulp.series('css:pres'));
 
   cb();
