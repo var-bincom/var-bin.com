@@ -7,13 +7,14 @@
   --cover-text-color: #ffea00;
   --author-text-color: var(--white);
   --cover-overlay-bg: rgba(0, 0, 0, 0.7);
+  --img-path: '../pictures';
 }
 
 /**
  * Common styles
  */
 #cover {
-  background: url(../pictures/65242711_2259254004385552_6852507757286022863_n.min.jpg) no-repeat 0 0;
+  background: url(../pictures/jared-arango-1-mh6U3qeGQ-unsplash.min.jpg) no-repeat 0 0;
   background-size: cover;
   background-clip: padding-box;
 }
@@ -25,7 +26,7 @@
 
 #cover h2 {
   margin: 0 0 0 -40px;
-  font-size: 90px;
+  font-size: 120px;
   color: var(--cover-text-color);
   line-height: 1.2;
   text-shadow: var(--cover-text-shadow);
@@ -33,18 +34,6 @@
 
 #cover::after {
   display: none;
-}
-
-#cover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-color: var(--cover-overlay-bg);
-  z-index: -1;
 }
 
 .slide {
