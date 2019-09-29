@@ -1,10 +1,10 @@
-const path = require("path");
+const path = require('path');
 
 const constants = require('./constants');
 
 const PRES_ASSETS_IMAGES = (mainDirectory, conferenceNameDirectory) => path.join(
   __dirname,
-  '../',
+  constants.ONE_LEVEL_UP,
   mainDirectory,
   conferenceNameDirectory,
   constants.ASSETS_DIRECTORY,
@@ -12,7 +12,7 @@ const PRES_ASSETS_IMAGES = (mainDirectory, conferenceNameDirectory) => path.join
 );
 const PRES_IMAGES = (mainDirectory, conferenceNameDirectory) => path.join(
   __dirname,
-  '../',
+  constants.ONE_LEVEL_UP,
   mainDirectory,
   conferenceNameDirectory,
   constants.SHOWER_DIRECTORY,
@@ -20,7 +20,7 @@ const PRES_IMAGES = (mainDirectory, conferenceNameDirectory) => path.join(
 );
 const PRES_ASSETS_STYLES = (mainDirectory, conferenceNameDirectory) => path.join(
   __dirname,
-  '../',
+  constants.ONE_LEVEL_UP,
   mainDirectory,
   conferenceNameDirectory,
   constants.ASSETS_DIRECTORY,
@@ -29,7 +29,7 @@ const PRES_ASSETS_STYLES = (mainDirectory, conferenceNameDirectory) => path.join
 );
 const PRES_STYLES = (mainDirectory, conferenceNameDirectory) => path.join(
   __dirname,
-  '../',
+  constants.ONE_LEVEL_UP,
   mainDirectory,
   conferenceNameDirectory,
   constants.SHOWER_DIRECTORY,
@@ -37,7 +37,7 @@ const PRES_STYLES = (mainDirectory, conferenceNameDirectory) => path.join(
 );
 const PRES_INDEX_HTML = (mainDirectory, conferenceNameDirectory) => path.join(
   __dirname,
-  '../',
+  constants.ONE_LEVEL_UP,
   mainDirectory,
   conferenceNameDirectory,
   constants.SHOWER_DIRECTORY,
@@ -49,5 +49,5 @@ module.exports = {
   PRES_IMAGES,
   PRES_ASSETS_STYLES,
   PRES_STYLES,
-  PRES_INDEX_HTML
-}
+  PRES_INDEX_HTML,
+};
