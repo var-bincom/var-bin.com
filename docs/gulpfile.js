@@ -136,7 +136,7 @@ gulp.task("inject:svg", () => {
   return gulp.src(INDEX)
     .pipe(inject(gulp.src(svg), {
       starttag,
-      transform: (filePath, file) => {
+      transform: (_filePath, file) => {
         // return file contents as string
         return file.contents.toString("utf8")
       }
@@ -190,7 +190,7 @@ gulp.task("exportWebP", function () {
 });
 
 gulp.task("watch:pres", (cb) => {
-  gulp.watch(PRES_ASSETS_IMAGES, gulp.series("exportWebP", "images:min"));
+  gulp.watch(PRES_ASSETS_IMAGES, gulp.series("images:min"));
   gulp.watch(PRES_ASSETS_STYLES, gulp.series("css:pres"));
 
   cb();

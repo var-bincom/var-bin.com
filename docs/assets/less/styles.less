@@ -1,8 +1,6 @@
 @import (reference) "variables";
 @import (reference) "mixins";
-
 @import (inline) "./normalize/styles.less";
-
 @import "./socialButtons/styles";
 
 @font-face {
@@ -17,6 +15,10 @@
 @icon-height: image-height("@{img-path}/min/exam-480.min.png");
 
 @keyframes body {
+  ._generate-keyframes(@body-animation-steps);
+}
+
+@keyframes highlight {
   ._generate-keyframes(@body-animation-steps);
 }
 
@@ -95,6 +97,7 @@ footer {
 .main-description {
   display: flex;
   align-items: center;
+  margin: 0 10%;
 
   &__hello,
   &__mscp {
@@ -103,8 +106,6 @@ footer {
   }
 
   &__hello {
-    flex-basis: 75%;
-
     h1 {
       margin-top: 0;
     }
@@ -124,10 +125,17 @@ footer {
   .icon {
     display: block;
     margin-right: 5%;
-
     width: @icon-width / 2;
     height: @icon-height / 2;
   }
+}
+
+.highlight {
+  background: #369;
+  color: @highlight-text;
+  padding: 0 10px;
+  display: inline-block;
+  animation: highlight 20s linear infinite;
 }
 
 @media (max-width: 1024px) {
@@ -136,8 +144,6 @@ footer {
   }
 
   .main-description {
-    flex-direction: column-reverse;
-
     .icon {
       margin-top: 10%;
       margin-right: 0;
