@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
+</head>
+<!-- is-black for black theme-->
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <!-- start slide -->
+  <section class="slide" id="cover">
+    <div class="slide__content">
+      <h2>What you need to know to start development of PWA</h2>
+      <div class="slide__author-info">
+        <div class="slide__author author-divider">
+          Vitalii Rybka
+        </div>
+        <div class="slide__place author-divider">
+          JS Talk
+        </div>
+        <div class="slide__date author-divider">
+          Feb 20, 2020
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- links to the slides -->
+  <section class="slide">
+    <h2>Slides</h2>
+    <div class="slide_repo-links">
+      <a href="#" target="_blank" rel="noopener">add link</a>
+      <figure>
+        <img src="./pictures/qr.min.svg" alt="add qr code">
+      </figure>
+    </div>
+  </section>
+  <!-- Agenda -->
+  <section class="slide">
+    <h2>Agenda</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">Why PWA</li>
+      <li class="next">Main components of PWA</li>
+      <li class="next">Web App Manifest</li>
+      <li class="next">
+        ServiceWorker
+        <ul>
+          <li>ServiceWorker Life Cycle</li>
+          <li>Cache</li>
+          <li>Offline</li>
+        </ul>
+      </li>
+      <li class="next">Advanced tools for PWA</li>
+      <li class="next">Lighthouse CI</li>
+      <li class="next">Frameworks and libs for working with PWA</li>
+      <li class="next">Case studies</li>
+    </ul>
+  </section>
+  <!-- Why PWA -->
+  <section class="slide">
+    <h2>Why PWA</h2>
+
+    <p class="slide__distance">
+      Mobile vs. Desktop
+    </p>
+  </section>
+  <!-- Distributing Native Software is HARD -->
+  <section class="slide">
+    <h2>Why PWA</h2>
+
+    <p class="slide__distance slide__distance-city">
+      Distributing Native Software is HARD
+    </p>
+  </section>
+  <!-- Every Step Costs You 20% of Users -->
+  <section class="slide">
+    <h2>Why PWA</h2>
+
+    <p class="slide__distance slide__distance-city">
+      Every Step Costs You 20% of Users
+    </p>
+
+    &copy; ComScore
+  </section>
+  <!-- Approaches -->
+  <section class="slide">
+    <h2>Why PWA</h2>
+
+    <h3>Existing solutions:</h3>
+
+    <ul>
+      <li>React Native</li>
+      <li>Native Script</li>
+      <li>Flutter</li>
+      <li>Cordova</li>
+      <li>Ionic</li>
+      <li>...</li>
+    </ul>
+  </section>
+  <!-- Benefits -->
+  <section class="slide">
+    <h2>Benefits</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">HTML5, CSS3, JavaScript</li>
+      <li class="next">Browser-based env</li>
+      <li class="next">No hustle with App Store, Google Play</li>
+      <li class="next">No hustle with Android OS, iOS APIs</li>
+    </ul>
+  </section>
+  <!-- Main PWA components -->
+  <section class="slide">
+    <h2>Main PWA Components</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">Web App Manifest</li>
+      <li class="next">HTTPS</li>
+      <li class="next">Service Worker</li>
+      <li class="next">Offline *</li>
+    </ul>
+  </section>
+  <!-- Web App Manifest -->
+  <section class="slide">
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code>  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code>  "icons": [{...}],</code>
+      <code>  "start_url": "/index.html",</code>
+      <code>  "display": "standalone",</code>
+      <code>  "background_color": "#3E4EB8",</code>
+      <code>  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code class="mark">  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code class="mark">  "icons": [{...}],</code>
+      <code class="mark">  "start_url": "/index.html",</code>
+      <code>  "display": "standalone",</code>
+      <code>  "background_color": "#3E4EB8",</code>
+      <code>  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code>  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code>  "icons": [{...}],</code>
+      <code>  "start_url": "/index.html",</code>
+      <code class="mark">  "display": "standalone",</code>
+      <code>  "background_color": "#3E4EB8",</code>
+      <code>  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code>  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code>  "icons": [{...}],</code>
+      <code>  "start_url": "/index.html",</code>
+      <code>  "display": "standalone",</code>
+      <code class="mark">  "background_color": "#3E4EB8",</code>
+      <code class="mark">  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <!-- ServiceWorker -->
+  <section class="slide">
+    <h2>ServiceWorker</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">HTTPS</li>
+      <li class="next">Lifecycle</li>
+      <li class="next">Cache Data</li>
+      <li class="next">Offline</li>
+    </ul>
+  </section>
+  <section class="slide">
+    <h2>ServiceWorker</h2>
+
+    <p class="slide__sw">
+      Where should I put <code class="mark">service-worker.js</code>?
+    </p>
+  </section>
+  <section class="slide">
+    <h2>ServiceWorker Lifecycle</h2>
+
+    <ul class="interesting-facts-list">
+      <li>install</li>
+      <li>activate</li>
+      <li>fetch</li>
+    </ul>
+  </section>
+  <section class="slide">
+    <h2>ServiceWorker Install Lifecycle</h2>
+
+    <pre>
+      <code>...</code>
+      <code>self.addEventListener(<mark>'install'</mark>, (evt) => {</code>
+      <code>  evt.waitUntil(</code>
+      <code class="next mark">    caches.open(CACHE_NAME).then((cache) => {</code>
+      <code class="next mark">      return cache.addAll(FILES_TO_CACHE);</code>
+      <code>    })</code>
+      <code>  );</code>
+      <code>  self.skipWaiting();</code>
+      <code>});</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>ServiceWorker Activate Lifecycle</h2>
+
+    <pre>
+      <code>...</code>
+      <code>self.addEventListener(<mark>'activate'</mark>, (evt) => {</code>
+      <code>  ...</code>
+      <code class="next mark">      return Promise.all(keyList.map((key) => {</code>
+      <code class="next mark">        if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {</code>
+      <code class="next mark">          return caches.delete(key);</code>
+      <code>        }</code>
+      <code>...</code>
+      <code>self.clients.claim();</code>
+    </pre>
+  </section>
+  <!-- useful links -->
+  <section class="slide">
+    <h2>Useful links</h2>
+
+    <ul class="interesting-facts-list">
+      <li>
+        <a href="https://www.mann-ivanov-ferber.ru/books/paperbook/sekrety-velikikh-oratorov" target="_blank" rel="noopener">
+          Секреты великих ораторов
+        </a>
+      </li>
+      <li>
+        <a href="https://www.mann-ivanov-ferber.ru/books/mif/050/" target="_blank" rel="noopener">
+          Камасутра для оратора
+        </a>
+      </li>
+      <li>
+        <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%85_%D1%81%D1%86%D0%B5%D0%BD%D1%8B" target="_blank" rel="noopener">
+          Страх сцены
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- About me -->
+  <section class="slide">
+    <h2>About me</h2>
+    <ul class="al-list slide_plan">
+      <li class="al-list_item">
+        <a href="https://twitter.com/var_bincom" class="al-link al-link__twitter" target="_blank" rel="noopener">var_bincom</a>
+      </li>
+      <li class="al-list_item">
+        <a href="https://github.com/var-bin" class="al-link al-link__github" target="_blank" rel="noopener">var-bin</a>
+      </li>
+      <li class="al-list_item">
+        <hr>
+        <span>Photos: </span>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle" href="https://unsplash.com/@jcruzweb?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Joao Cruz"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Joao Cruz</span></a>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle" href="https://unsplash.com/@startdig?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Start Digital"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Start Digital</span></a>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle;" href="https://unsplash.com/@miklevasilyev?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Mikhail Vasilyev"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Mikhail Vasilyev</span></a>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle"
+          href="https://unsplash.com/@carlheyerdahl?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+          target="_blank" rel="noopener noreferrer"
+          title="Download free do whatever you want high-resolution photos from Carl Heyerdahl"><span
+            style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+              style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
+              <title>unsplash-logo</title>
+              <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+            </svg></span><span style="display:inline-block;padding:2px 3px">Carl Heyerdahl</span></a>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower" target="_blank" rel="noopener">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+
+    ga("create", "UA-89569652-1", "auto");
+    ga("send", "pageview");
+  </script>
+</body>
+</html>
