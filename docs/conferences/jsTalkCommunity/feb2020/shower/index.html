@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/bootstrap.min.css">
   <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
   <link rel="stylesheet" href="styles/styles.min.css">
 </head>
@@ -34,178 +33,219 @@
   </section>
   <!-- links to the slides -->
   <section class="slide">
-    <h2>Слайды</h2>
+    <h2>Slides</h2>
     <div class="slide_repo-links">
-      <a href="https://epa.ms/speaking-at-conf" target="_blank" rel="noopener">speaking-at-conf</a>
+      <a href="#" target="_blank" rel="noopener">add link</a>
       <figure>
-        <img src="./pictures/qr.min.svg" alt="link to the slides">
+        <img src="./pictures/qr.min.svg" alt="add qr code">
       </figure>
     </div>
   </section>
-  <!-- Interesting facts -->
+  <!-- Agenda -->
   <section class="slide">
-    <h2>Interesting Facts</h2>
+    <h2>Agenda</h2>
 
     <ul class="interesting-facts-list">
-      <li class="next">📣 4 Months</li>
-      <li class="next">7 Conferences</li>
-      <li class="next">👨‍💻👩‍💻 ~500-600</li>
-      <li class="next">👨‍💻👩‍💻 &lt; 50</li>
-      <li class="next">🏰 Chernivtsi</li>
-      <li class="next">🏢 Dnipro</li>
-      <li class="next">🔥 The fastest preparation</li>
-      <li class="next">💰 0</li>
+      <li class="next">Why PWA</li>
+      <li class="next">Main components of PWA</li>
+      <li class="next">Web App Manifest</li>
+      <li class="next">
+        ServiceWorker
+        <ul>
+          <li>ServiceWorker Life Cycle</li>
+          <li>Cache</li>
+          <li>Offline</li>
+        </ul>
+      </li>
+      <li class="next">Advanced tools for PWA</li>
+      <li class="next">Lighthouse CI</li>
+      <li class="next">Frameworks and libs for working with PWA</li>
+      <li class="next">Case studies</li>
     </ul>
   </section>
-  <!-- Distance -->
+  <!-- Why PWA -->
   <section class="slide">
-    <h2>Distance</h2>
+    <h2>Why PWA</h2>
 
-    <p class="next slide__distance">
-      7822 km
+    <p class="slide__distance">
+      Mobile vs. Desktop
     </p>
   </section>
-  <!-- Distance -->
+  <!-- Distributing Native Software is HARD -->
   <section class="slide">
-    <h2>Distance</h2>
+    <h2>Why PWA</h2>
 
     <p class="slide__distance slide__distance-city">
-      9,23 Kyiv
+      Distributing Native Software is HARD
     </p>
   </section>
-  <!-- Distance -->
+  <!-- Every Step Costs You 20% of Users -->
   <section class="slide">
-    <h2>Distance</h2>
+    <h2>Why PWA</h2>
 
     <p class="slide__distance slide__distance-city">
-      22,35 Kharkiv
+      Every Step Costs You 20% of Users
     </p>
+
+    &copy; ComScore
   </section>
-  <!-- Distance -->
+  <!-- Approaches -->
   <section class="slide">
-    <h2>Distance</h2>
+    <h2>Why PWA</h2>
 
-    <p class="slide__distance slide__distance-city">
-      18,85 Dnipro
-    </p>
-  </section>
-  <!-- Distance -->
-  <section class="slide">
-    <h2>Distance</h2>
+    <h3>Existing solutions:</h3>
 
-    <p class="slide__distance slide__distance-city">
-      24,8 Malta
-    </p>
+    <ul>
+      <li>React Native</li>
+      <li>Native Script</li>
+      <li>Flutter</li>
+      <li>Cordova</li>
+      <li>Ionic</li>
+      <li>...</li>
+    </ul>
   </section>
   <!-- Benefits -->
   <section class="slide">
     <h2>Benefits</h2>
 
     <ul class="interesting-facts-list">
-      <li class="next">Professional growing</li>
-      <li class="next">Become a more valuable employee</li>
-      <li class="next">Visit conferences for free</li>
-      <li class="next">Useful connections</li>
+      <li class="next">HTML5, CSS3, JavaScript</li>
+      <li class="next">Browser-based env</li>
+      <li class="next">No hustle with App Store, Google Play</li>
+      <li class="next">No hustle with Android OS, iOS APIs</li>
     </ul>
   </section>
-  <!-- Inconvenience -->
+  <!-- Main PWA components -->
   <section class="slide">
-    <h2>Inconvenience</h2>
+    <h2>Main PWA Components</h2>
 
     <ul class="interesting-facts-list">
-      <li class="next">Spend your own time</li>
-      <li class="next">Sometimes you'll be faced with rejections</li>
-      <li class="next">Have to communicate with real people</li>
-      <li class="next">Sometimes companies don't like this</li>
-      <li class="next">Become public person</li>
+      <li class="next">Web App Manifest</li>
+      <li class="next">HTTPS</li>
+      <li class="next">Service Worker</li>
+      <li class="next">Offline *</li>
     </ul>
   </section>
-  <!-- Why I started speaking at conferences -->
-  <section class="slide slide_teamwork">
-    <h2>⚡ Why I started speaking at conferences</h2>
-  </section>
-  <!-- How to start -->
-  <section class="slide slide_unicorn">
-    <h2>How to</h2>
-  </section>
-  <!-- How to choose your first conference -->
-  <section class="slide slide_dev-denefits">
-    <h2>How to choose your first conference</h2>
-  </section>
-  <!-- How to choose your first conference -->
+  <!-- Web App Manifest -->
   <section class="slide">
-    <h2>How to choose your first conference</h2>
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code>  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code>  "icons": [{...}],</code>
+      <code>  "start_url": "/index.html",</code>
+      <code>  "display": "standalone",</code>
+      <code>  "background_color": "#3E4EB8",</code>
+      <code>  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code class="mark">  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code class="mark">  "icons": [{...}],</code>
+      <code class="mark">  "start_url": "/index.html",</code>
+      <code>  "display": "standalone",</code>
+      <code>  "background_color": "#3E4EB8",</code>
+      <code>  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code>  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code>  "icons": [{...}],</code>
+      <code>  "start_url": "/index.html",</code>
+      <code class="mark">  "display": "standalone",</code>
+      <code>  "background_color": "#3E4EB8",</code>
+      <code>  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Web App Manifest</h2>
+
+    <pre>
+      <code>{</code>
+      <code>  "name": "Dark Sky Weather PWA",</code>
+      <code>  "short_name": "Weather",</code>
+      <code>  "icons": [{...}],</code>
+      <code>  "start_url": "/index.html",</code>
+      <code>  "display": "standalone",</code>
+      <code class="mark">  "background_color": "#3E4EB8",</code>
+      <code class="mark">  "theme_color": "#2F3BA2"</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <!-- ServiceWorker -->
+  <section class="slide">
+    <h2>ServiceWorker</h2>
 
     <ul class="interesting-facts-list">
-      <li>
-        <a href="https://confs.tech" target="_blank" rel="noopener">
-          https://confs.tech
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/webstandards_ru" target="_blank" rel="noopener">
-          @webstandards_ru
-        </a>
-      </li>
-      <li>
-        <a href="https://wsd.events" target="_blank" rel="noopener">
-          wsd.events
-        </a>
-      </li>
-      <li>
-        <a href="https://dou.ua" target="_blank" rel="noopener">
-          DOU
-        </a>
-      </li>
+      <li class="next">HTTPS</li>
+      <li class="next">Lifecycle</li>
+      <li class="next">Cache Data</li>
+      <li class="next">Offline</li>
     </ul>
   </section>
-  <!-- What's going on behind the scene -->
-  <section class="slide slide_company-issues">
-    <h2>What's going on behind the scene</h2>
-  </section>
-  <!-- My first conference -->
   <section class="slide">
-    <h2>My first conference</h2>
+    <h2>ServiceWorker</h2>
 
-    <figure class="figure">
-      <img src="./pictures/CyM1uqaXEAAC7I0.min.jpeg" alt="My first conference">
-    </figure>
+    <p class="slide__sw">
+      Where should I put <code class="mark">service-worker.js</code>?
+    </p>
   </section>
   <section class="slide">
-    <h2>My first conference</h2>
-
-    <figure class="figure">
-      <img src="./pictures/15167637_376627799348118_7956247671079588154_o.min.jpg" alt="My first conference">
-    </figure>
-  </section>
-  <!-- If you're ready you'll catch luck -->
-  <section class="slide slide_demo-time">
-    <h2>☝ If you're ready you'll catch luck</h2>
-  </section>
-  <!-- Common mistakes -->
-  <section class="slide">
-    <h2>Common mistakes</h2>
+    <h2>ServiceWorker Lifecycle</h2>
 
     <ul class="interesting-facts-list">
-      <li class="next">A speaker doesn't do preparation</li>
-      <li class="next">A speaker doesn't do preparation with audience, slides, projector, etc</li>
-      <li class="next">A speaker doesn't check presentation and place</li>
-      <li class="next">Questions</li>
+      <li>install</li>
+      <li>activate</li>
+      <li>fetch</li>
     </ul>
   </section>
-  <!-- Soft skills -->
   <section class="slide">
-    <h2>Soft skills</h2>
+    <h2>ServiceWorker Install Lifecycle</h2>
 
-    <ul class="interesting-facts-list">
-      <li class="next">Self discipline</li>
-      <li class="next">Time management</li>
-      <li class="next">Communication skills</li>
-      <li class="next">Planning skills</li>
-      <li class="next">Team work</li>
-      <li class="next">...</li>
-    </ul>
+    <pre>
+      <code>...</code>
+      <code>self.addEventListener(<mark>'install'</mark>, (evt) => {</code>
+      <code>  evt.waitUntil(</code>
+      <code class="next mark">    caches.open(CACHE_NAME).then((cache) => {</code>
+      <code class="next mark">      return cache.addAll(FILES_TO_CACHE);</code>
+      <code>    })</code>
+      <code>  );</code>
+      <code>  self.skipWaiting();</code>
+      <code>});</code>
+    </pre>
   </section>
+
+  <section class="slide">
+    <h2>ServiceWorker Activate Lifecycle</h2>
+
+    <pre>
+      <code>...</code>
+      <code>self.addEventListener(<mark>'activate'</mark>, (evt) => {</code>
+      <code>  ...</code>
+      <code class="next mark">      return Promise.all(keyList.map((key) => {</code>
+      <code class="next mark">        if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {</code>
+      <code class="next mark">          return caches.delete(key);</code>
+      <code>        }</code>
+      <code>...</code>
+      <code>self.clients.claim();</code>
+    </pre>
+  </section>
+  <!-- useful links -->
   <section class="slide">
     <h2>Useful links</h2>
 
@@ -226,13 +266,6 @@
         </a>
       </li>
     </ul>
-  </section>
-  <section class="slide slide_stats">
-    <h2>Where The Magic Happens</h2>
-
-    <figure class="figure">
-      <img src="./pictures/1_NlHP9ELK1wfY1YSIQXBOAg.min.jpeg" alt="Your comfort zone">
-    </figure>
   </section>
   <!-- About me -->
   <section class="slide">
