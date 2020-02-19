@@ -23,7 +23,7 @@
           Vitalii Rybka
         </div>
         <div class="slide__place author-divider">
-          JS Talk
+          Dnipro JS
         </div>
         <div class="slide__date author-divider">
           Feb 20, 2020
@@ -35,9 +35,9 @@
   <section class="slide">
     <h2>Slides</h2>
     <div class="slide_repo-links">
-      <a href="#" target="_blank" rel="noopener">add link</a>
+      <a href="https://epa.ms/pwa" target="_blank" rel="noopener">epa.ms/pwa</a>
       <figure>
-        <img src="./pictures/qr.min.svg" alt="add qr code">
+        <img src="./pictures/qr.min.svg" alt="qr core with link to slides">
       </figure>
     </div>
   </section>
@@ -49,17 +49,10 @@
       <li class="next">Why PWA</li>
       <li class="next">Main components of PWA</li>
       <li class="next">Web App Manifest</li>
-      <li class="next">
-        ServiceWorker
-        <ul>
-          <li>ServiceWorker Life Cycle</li>
-          <li>Cache</li>
-          <li>Offline</li>
-        </ul>
-      </li>
+      <li class="next">ServiceWorker</li>
       <li class="next">Advanced tools for PWA</li>
       <li class="next">Lighthouse CI</li>
-      <li class="next">Frameworks and libs for working with PWA</li>
+      <li class="next">Frameworks and libs for PWA</li>
       <li class="next">Case studies</li>
     </ul>
   </section>
@@ -76,7 +69,7 @@
     <h2>Why PWA</h2>
 
     <p class="slide__distance slide__distance-city">
-      Distributing Native Software is HARD
+      Distributing Native Software is <em>HARD</em>
     </p>
   </section>
   <!-- Every Step Costs You 20% of Users -->
@@ -221,8 +214,8 @@
       <code>...</code>
       <code>self.addEventListener(<mark>'install'</mark>, (evt) => {</code>
       <code>  evt.waitUntil(</code>
-      <code class="next mark">    caches.open(CACHE_NAME).then((cache) => {</code>
-      <code class="next mark">      return cache.addAll(FILES_TO_CACHE);</code>
+      <code class="mark">    caches.open(CACHE_NAME).then((cache) => {</code>
+      <code class="mark">      return cache.addAll(FILES_TO_CACHE);</code>
       <code>    })</code>
       <code>  );</code>
       <code>  self.skipWaiting();</code>
@@ -237,13 +230,211 @@
       <code>...</code>
       <code>self.addEventListener(<mark>'activate'</mark>, (evt) => {</code>
       <code>  ...</code>
-      <code class="next mark">      return Promise.all(keyList.map((key) => {</code>
-      <code class="next mark">        if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {</code>
-      <code class="next mark">          return caches.delete(key);</code>
+      <code class="mark">      return Promise.all(keyList.map((key) => {</code>
+      <code class="mark">        if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {</code>
+      <code class="mark">          return caches.delete(key);</code>
       <code>        }</code>
       <code>...</code>
       <code>self.clients.claim();</code>
     </pre>
+  </section>
+  <section class="slide">
+    <h2>ServiceWorker Fetch Lifecycle</h2>
+
+    <pre>
+      <code>...</code>
+      <code>self.addEventListener(<mark>'fetch'</mark>, (evt) => {</code>
+      <code>  ...</code>
+      <code class="mark">  if (evt.request.url.includes('/forecast/')) {</code>
+      <code class="mark">    return fetch(evt.request)</code>
+      <code class="mark">      .then((response) => {</code>
+      <code>        ...</code>
+      <code>    }</code>
+      <code>  }</code>
+
+      <code>...</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>ServiceWorker Fetch Lifecycle</h2>
+
+    <pre>
+      <code>...</code>
+      <code>self.addEventListener(<mark>'fetch'</mark>, (evt) => {</code>
+      <code>  ...</code>
+      <code class="mark">  evt.respondWith(</code>
+      <code class="mark">    caches.open(CACHE_NAME).then((cache) => {</code>
+      <code class="mark">      return cache.match(evt.request).then((response) => {</code>
+      <code class="mark">        return response || fetch(evt.request);</code>
+      <code>    });</code>
+      <code>  })</code>
+
+      <code>);</code>
+    </pre>
+  </section>
+  <!-- Advanced tools for PWA -->
+  <section class="slide">
+    <h2>Advanced tools for PWA</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">
+        <a href="https://developers.google.com/web/tools/workbox" target="_blank" rel="noopener">
+          Workbox by Google
+        </a>
+      </li>
+      <li class="next">
+        <a href="https://pwa-starter-kit.polymer-project.org" target="_blank" rel="noopener">
+          PWA Starter Kit by Polymer Team
+        </a>
+      </li>
+      <li class="next">
+        <a href="https://github.com/Polymer/pwa-helpers" target="_blank" rel="noopener">
+          Pwa-helpers by Polymer Team
+        </a>
+      </li>
+      <li class="next">
+        <a href="https://manifest-validator.appspot.com" target="_blank" rel="noopener">
+          Web Manifest Validator
+        </a>
+      </li>
+      <li class="next">
+        <a href="https://www.pwabuilder.com" target="_blank" rel="noopener">
+          PWA Builder by Microsoft
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- Lighthouse CI -->
+  <section class="slide">
+    <h2>Lighthouse CI</h2>
+
+    <figure class="lighthouse-logo">
+      <img src="./pictures/lighthouse-logo.min.svg" alt="Lighthouse">
+    </figure>
+
+    <p>
+      <a href="https://github.com/GoogleChrome/lighthouse-ci" target="_blank" rel="noopener">
+        GoogleChrome/lighthouse-ci
+      </a>
+    </p>
+  </section>
+  <section class="slide">
+    <h2>Lighthouse CI with GitHub Actions</h2>
+
+    <pre>
+      <code>name: Build project and Run Lighthouse CI</code>
+      <code>on: [push]{</code>
+      <code>jobs:</code>
+      <code class="mark">  lhci:</code>
+      <code class="mark">    name: Lighthouse CI</code>
+      <code class="mark">    runs-on: ubuntu-latest</code>
+      <code class="mark">      steps:</code>
+      <code>...</code>
+    </pre>
+
+    <p>
+      <a href="https://github.com/GoogleChrome/lighthouse-ci/blob/master/docs/getting-started.md" target="_blank" rel="noopener">
+        GoogleChrome/lighthouse-ci Getting Started
+      </a>
+    </p>
+  </section>
+  <section class="slide">
+    <h2>Lighthouse CI with GitHub Actions</h2>
+
+    <figure class="lighthouse-ci-real-example">
+      <img src="./pictures/13-33-48-055ma.min.jpg" alt="Lighthouse CI with GitHub Actions Real Example">
+    </figure>
+    <p>
+      <a href="https://github.com/var-bin/dark-sky-pwa/actions?query=workflow%3A%22Build+project+and+Run+Lighthouse+CI%22" target="_blank" rel="noopener">
+        Real Example
+      </a>
+    </p>
+  </section>
+  <!-- Frameworks and libs for PWA -->
+  <section class="slide">
+    <h2>Frameworks and libs for PWA</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">
+        <a href="https://web.dev/creating-pwa-with-angular-cli" target="_blank" rel="noopener">
+          Create a PWA with the Angular CLI
+        </a>
+      </li>
+      <li class="next">
+        <a href="https://create-react-app.dev/docs/making-a-progressive-web-app" target="_blank" rel="noopener">
+          Making a PWA with Create React App
+        </a>
+      </li>
+      <li class="next">
+        Making a PWA with <a href="https://cli.vuejs.org" target="_blank" rel="noopener">Vue CLI</a> and <a href="https://cli.vuejs.org/core-plugins/pwa.html" target="_blank" rel="noopener">cli-plugin-pwa</a>
+      </li>
+      <li class="next">
+        <a href="https://pwa-starter-kit.polymer-project.org" target="_blank" rel="noopener">
+          Making a PWA with Polymer
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- Case studies -->
+  <section class="slide">
+    <h2>Case studies</h2>
+
+    <ul class="interesting-facts-list">
+      <li>Trivago</li>
+      <li>BMW</li>
+      <li>Pinterest</li>
+    </ul>
+  </section>
+  <!-- Case studies. Trivago -->
+  <section class="slide">
+    <h2>Case studies. Trivago</h2>
+
+    <ul class="interesting-facts-list">
+      <li>150% Increase in engagement for users who add to the home screen.</li>
+      <li>50% increase in mobile sessions.</li>
+    </ul>
+
+    <p>
+      <a href="https://www.thinkwithgoogle.com/intl/en-gb/consumer-insights/trivago-embrace-progressive-web-apps-as-the-future-of-mobile/" target="_blank" rel="noopener">
+        More Info
+      </a>
+    </p>
+  </section>
+  <!-- Case studies. BMW -->
+  <section class="slide">
+    <h2>Case studies. BMW</h2>
+
+    <ul class="interesting-facts-list">
+      <li>4X increase in people clicking from BMW.com to a BMW sales site</li>
+      <li>Up to 4X faster site load times</li>
+      <li>50% growth in mobile users</li>
+      <li>49% more site visits from search engine optimisation than old site</li>
+    </ul>
+
+    <p>
+      <a href="https://www.thinkwithgoogle.com/intl/en-gb/success-stories/global-success-stories/bmws-journey-fast-smooth-and-reliable-mobile-website/" target="_blank" rel="noopener">
+        More Info
+      </a>
+    </p>
+  </section>
+  <!-- Case studies. Pinterest -->
+  <section class="slide">
+    <h2>Case studies. Pinterest</h2>
+
+    <ul class="interesting-facts-list">
+      <li>103% increase in weekly active users on mobile web.</li>
+      <li>156% increase in weekly active users on mobile web in Brazil.</li>
+      <li>312% increase in weekly active users on mobile web in India.</li>
+      <li>296% increase in session length.</li>
+      <li>370% increase logins</li>
+      <li>...</li>
+    </ul>
+
+    <p>
+      <a href="https://medium.com/pinterest-engineering/a-one-year-pwa-retrospective-f4a2f4129e05" target="_blank" rel="noopener">
+        More Info
+      </a>
+    </p>
   </section>
   <!-- useful links -->
   <section class="slide">
@@ -251,18 +442,18 @@
 
     <ul class="interesting-facts-list">
       <li>
-        <a href="https://www.mann-ivanov-ferber.ru/books/paperbook/sekrety-velikikh-oratorov" target="_blank" rel="noopener">
-          Секреты великих ораторов
+        <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp" target="_blank" rel="noopener">
+          Your First Progressive Web App (Google Developers Codelabs)
         </a>
       </li>
       <li>
-        <a href="https://www.mann-ivanov-ferber.ru/books/mif/050/" target="_blank" rel="noopener">
-          Камасутра для оратора
+        <a href="https://addyosmani.com/blog/progressive-web-apps-with-react/" target="_blank" rel="noopener">
+          Progressive Web Apps With React by Addy Osmani
         </a>
       </li>
       <li>
-        <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%85_%D1%81%D1%86%D0%B5%D0%BD%D1%8B" target="_blank" rel="noopener">
-          Страх сцены
+        <a href="https://www.pwastats.com/" target="_blank" rel="noopener">
+          PWA Stats
         </a>
       </li>
     </ul>
@@ -270,7 +461,7 @@
   <!-- About me -->
   <section class="slide">
     <h2>About me</h2>
-    <ul class="al-list slide_plan">
+    <ul class="al-list">
       <li class="al-list_item">
         <a href="https://twitter.com/var_bincom" class="al-link al-link__twitter" target="_blank" rel="noopener">var_bincom</a>
       </li>
@@ -278,20 +469,12 @@
         <a href="https://github.com/var-bin" class="al-link al-link__github" target="_blank" rel="noopener">var-bin</a>
       </li>
       <li class="al-list_item">
+        <a href="https://var-bin.com" class="al-link al-link__homepage" target="_blank" rel="noopener">var-bin.com</a>
+      </li>
+      <li class="al-list_item">
         <hr>
         <span>Photos: </span>
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle" href="https://unsplash.com/@jcruzweb?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Joao Cruz"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Joao Cruz</span></a>
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle" href="https://unsplash.com/@startdig?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Start Digital"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Start Digital</span></a>
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle;" href="https://unsplash.com/@miklevasilyev?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Mikhail Vasilyev"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Mikhail Vasilyev</span></a>
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle"
-          href="https://unsplash.com/@carlheyerdahl?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
-          target="_blank" rel="noopener noreferrer"
-          title="Download free do whatever you want high-resolution photos from Carl Heyerdahl"><span
-            style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
-              style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32">
-              <title>unsplash-logo</title>
-              <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
-            </svg></span><span style="display:inline-block;padding:2px 3px">Carl Heyerdahl</span></a>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align:middle" href="https://unsplash.com/@lucabravo?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Luca Bravo"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Luca Bravo</span></a>
       </li>
     </ul>
   </section>
