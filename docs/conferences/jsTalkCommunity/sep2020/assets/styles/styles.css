@@ -25,7 +25,7 @@
 
 #cover h2 {
   margin: 0 0 0 -40px;
-  font-size: 90px;
+  font-size: 130px;
   color: var(--cover-text-color);
   line-height: 1.2;
   text-shadow: var(--cover-text-shadow);
@@ -178,10 +178,20 @@
   min-width: 300px;
 }
 
+.figure.figure--square {
+  max-height: 450px;
+  display: flex;
+  justify-content: center;
+}
+
 .figure img {
   display: inline-block;
   width: 100%;
   height: auto;
+}
+
+.figure.figure--square img {
+  width: 70%;
 }
 
 /* because of bootstrap styles */
@@ -195,58 +205,6 @@
 
 .shower.is-black .slide {
   background: var(--black);
-}
-
-.slide_company-issues {
-  background: url(../pictures/mikhail-vasilyev-NodtnCsLdTE-unsplash.min.jpg) no-repeat center;
-  background-size: cover;
-}
-
-.slide_dev-denefits {
-  background: url(../pictures/brendan-church-pKeF6Tt3c08-unsplash.min.jpg) no-repeat center;
-  background-size: cover;
-}
-
-.slide_unicorn {
-  background: url(../pictures/start-digital-DChgWclU_xU-unsplash.min.jpg) no-repeat center;
-  background-size: cover;
-}
-
-.slide_teamwork {
-  background: url(../pictures/joao-cruz-IkEpl3JkVqU-unsplash.min.jpg) no-repeat center;
-  background-size: cover;
-}
-
-.slide_demo-time {
-  background: url(../pictures/photo-1558507334-57300f59f0bd.min.jpeg) no-repeat center;
-  background-size: cover;
-}
-
-.slide_company-issues::before,
-.slide_dev-denefits::before,
-.slide_unicorn::before,
-.slide_teamwork::before,
-.slide_demo-time::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
-
-.slide_company-issues h2,
-.slide_dev-denefits h2,
-.slide_unicorn h2,
-.slide_teamwork h2,
-.slide_demo-time h2 {
-  position: relative;
-  z-index: 2;
-  color: var(--white);
-  font-size: 3.8em;
 }
 
 .shower.is-black .slide code,
@@ -357,48 +315,6 @@ ul.al-list .al-link.al-link__shower::before {
   overflow: initial;
 }
 
-.col_ood {
-  border: 2px solid var(--white);
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--white);
-  font-size: 60px;
-}
-
-.col_ood-abstraction {
-  background-color: #6200ea;
-}
-
-.col_ood-encapsulatin {
-  background-color: #304ffe;
-}
-
-.col_ood-decomposition {
-  background-color: #bf360c;
-}
-
-.col_ood-generalization {
-  background-color: #263238;
-}
-
-.col_ood-encapsulatin,
-.col_ood-generalization {
-  border-left: 0;
-
-}
-
-.col_ood-decomposition,
-.col_ood-generalization {
-  border-top: 0;
-}
-
-.container_ood {
-  display: flex;
-  height: 80%;
-}
-
 a:hover {
   text-decoration: none;
 }
@@ -413,26 +329,4 @@ a:hover {
 
 .f-video.f-video_blowminds video {
   height: 100%;
-}
-
-.slide.slide_ood-rescue {
-  background-image: url(../pictures/sebastian-grochowicz-790936-unsplash.min.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: cover;
-  background-clip: padding-box;
-}
-
-.slide_ood-rescue h2 {
-  color: var(--cover-text-color);
-  text-shadow: var(--cover-text-shadow);
-  font-size: 90px;
-}
-
-.slide.slide_why {
-  background-image: url(../pictures/ken-treloar-346065-unsplash.min.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 25%;
-  background-size: cover;
-  background-clip: padding-box;
 }
