@@ -311,6 +311,18 @@ ul.al-list .al-link.al-link__shower::before {
   height: 85%;
 }
 
+.fs-37 {
+  font-size: 37px;
+}
+
+.fs-45 {
+  font-size: 45px;
+}
+
+.fs-60 {
+  font-size: 60px;
+}
+
 .slide__pre {
   overflow: initial;
 }
