@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
+</head>
+<!-- is-black for black theme-->
+<body class="shower list">
+  <header class="caption">
+    <h1>Shower Presentation Engine</h1>
+    <p>Yours Truly, Famous Inc.</p>
+  </header>
+  <!-- start slide -->
+  <section class="slide" id="cover">
+    <div class="slide__content">
+      <h2>JavaScript and Clean Code</h2>
+      <div class="slide__author-info">
+        <div class="slide__author author-divider">
+          Vitalii Rybka
+        </div>
+        <div class="slide__place author-divider">
+          JS Talk
+        </div>
+        <div class="slide__date author-divider">
+          September 17, 2020
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Agenda -->
+  <section class="slide">
+    <h2>Agenda</h2>
+
+    <ul class="interesting-facts-list">
+      <li>Effects of Messy Code</li>
+      <li>What is Clean Code? Main Characteristics</li>
+      <li>Naming</li>
+      <li>Functions</li>
+      <li>Comments</li>
+    </ul>
+  </section>
+  <!-- Which is clean? -->
+  <section class="slide">
+    <h2>Which is clean?</h2>
+
+    <div class="next">
+      <h3>1</h3>
+
+      <pre class="slide__pre slide_pre-formated">
+        <code>votes = posts</code>
+        <code>  .reduce((a, b) => a += b.votes, 0);</code>
+      </pre>
+    </div>
+
+    <div class="next">
+      <h3>2</h3>
+
+      <pre class="slide__pre slide_pre-formated">
+        <code>posts.forEach((post) => {</code>
+        <code>  votes += post.votes;</code>
+        <code>}</code>
+      </pre>
+    </div>
+
+  </section>
+  <!-- Effects of Messy Code -->
+  <section class="slide">
+    <h2>Effects of Messy Code</h2>
+
+    <blockquote>
+      <p>
+        Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way.
+      </p>
+
+      <figcaption>
+        Robert C. Martin
+      </figcaption>
+    </blockquote>
+  </section>
+  <!-- Effects of Messy Code -->
+  <section class="slide">
+    <h2>Effects of Messy Code</h2>
+
+    <figure class="figure figure--square">
+      <img src="pictures/excalidraw-2020323175810.min.png" alt="Effects of Messy Code">
+    </figure>
+  </section>
+  <!-- Effects of Messy Code -->
+  <section class="slide">
+    <h2>Effects of Messy Code</h2>
+
+    <video id="videoAfter" loop>
+			<source src="videos/ezgif.com-gif-to-mp4.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+  </section>
+  <!-- What is Clean Code? Main Characteristics -->
+  <section class="slide">
+    <h2>What is Clean Code? Main Characteristics</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">Focused</li>
+      <li class="next">Nonredundant</li>
+      <li class="next">Pleasant</li>
+      <li class="next">Easily Extended</li>
+      <li class="next">Minimal Dependencies</li>
+    </ul>
+  </section>
+  <!-- Naming -->
+  <section class="slide">
+    <h2>Naming</h2>
+
+    <p class="next">
+      Rules of Naming
+    </p>
+
+    <ul class="interesting-facts-list">
+      <li class="next">Don’t be cute</li>
+      <li class="next">Searchable names</li>
+      <li class="next">Meaningful Distinctions</li>
+      <li class="next">Use Pronounceable Names</li>
+    </ul>
+  </section>
+  <!-- Methods and Classes, Short Names -->
+  <section class="slide">
+    <h2>Methods and Classes, Short Names</h2>
+
+    <blockquote>
+      <p class="fs-60">
+        The longer the scope of a function, the shorter its name should be.
+      </p>
+    </blockquote>
+  </section>
+  <!-- Methods and Classes, Short Names -->
+  <section class="slide">
+    <h2>Methods and Classes, Short Names</h2>
+
+    <pre class="slide__pre slide_pre-formated fs-45">
+      <code>@Component({</code>
+      <code>  selector: 'app-click-me',</code>
+      <code>  ...</code>
+      <code>})</code>
+    </pre>
+
+    <a href="https://angular.io/guide/user-input#binding-to-user-input-events" target="_blank" rel="noopener">More info</a>
+  </section>
+  <!-- Methods and Classes, Short Names -->
+  <section class="slide">
+    <h2>Methods and Classes, Short Names</h2>
+
+    <pre class="slide__pre slide_pre-formated fs-45">
+      <code>ReactDOM.render(</code>
+      <code>  &lt;h1&gt;Hello, world!&lt;/h1&gt;,</code>
+      <code>  document.getElementById('root')</code>
+      <code>});</code>
+    </pre>
+
+    <a href="https://reactjs.org/docs/hello-world.html" target="_blank" rel="noopener">More info</a>
+  </section>
+  <!-- Methods and Classes, Long Names -->
+  <section class="slide">
+    <h2>Methods and Classes, Long Names</h2>
+
+    <blockquote>
+      <p class="fs-45">
+        When functions have a shorter scope or if it is only used once, using long descriptive names will help readability.
+      </p>
+    </blockquote>
+  </section>
+  <!-- Methods and Classes, Long Names -->
+  <section class="slide">
+    <h2>Methods and Classes, Long Names</h2>
+
+    <pre class="slide_pre-formated">
+      <code>export const Compiler_compileModuleAndAllComponentsAsync__POST_R3__</code>
+    </pre>
+
+    <a href="https://github.com/angular/angular/blob/297c060ae797c2fdad55fffc34d83e4a6a4b3948/packages/core/src/linker/compiler.ts#L78" target="_blank" rel="noopener">More info</a>
+  </section>
+  <!-- Methods and Classes, Long Names -->
+  <section class="slide">
+    <h2>Methods and Classes, Long Names</h2>
+
+    <pre class="slide_pre-formated">
+      <code>function registerSimplePluginEventsAndSetTheirPriorities(...) { }</code>
+    </pre>
+
+    <a href="https://github.com/facebook/react/blob/master/packages/react-dom/src/events/DOMEventProperties.js#L159" target="_blank" rel="noopener">More info</a>
+  </section>
+  <!-- Variables and Parameters, Long Names -->
+  <section class="slide">
+    <h2>Variables and Parameters, Long Names</h2>
+
+    <div class="next">
+      <pre class="slide__pre slide_pre-formated">
+        <code>const LOCATION_UPGRADE_CONFIGURATION</code>
+      </pre>
+
+      <a href="https://angular.io/api/common/upgrade/LOCATION_UPGRADE_CONFIGURATION" target="_blank" rel="noopener">More info</a>
+    </div>
+
+    <hr />
+
+    <div class="next">
+      <pre class="slide__pre slide_pre-formated">
+        <code>const HTML_NAMESPACE = ...;</code>
+      </pre>
+
+      <a href="https://github.com/facebook/react/blob/master/packages/react-dom/src/shared/DOMNamespaces.js#L8" target="_blank" rel="noopener">More info</a>
+    </div>
+  </section>
+  <!-- Variables and Parameters, Short Names -->
+  <section class="slide">
+    <h2>Variables and Parameters, Short Names</h2>
+
+    <ul class="interesting-facts-list">
+      <li class="next">Counter variables for simple for loops</li>
+      <li class="next">Exception instances in Catch blocks</li>
+      <li class="next">Arguments of very short functions</li>
+    </ul>
+
+    <hr/>
+    <pre class="slide__pre slide_pre-formated next">
+      <code>for (let i = 0; i &lt; 3; i++) {</code>
+      <code>  // do stuff</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <!-- Functions -->
+  <section class="slide">
+    <h2>Functions</h2>
+
+    <p>
+      What is the ideal length of a function?
+    </p>
+    <ol class="interesting-facts-list">
+      <li class="next">1-8 lines</li>
+      <li class="next">10-20 lines</li>
+      <li class="next">There is no "ideal" long</li>
+      <li class="next">20-50 lines</li>
+    </ol>
+  </section>
+  <!-- Functions Should Be Small -->
+  <section class="slide">
+    <h2>Functions Should Be Small</h2>
+
+    <blockquote>
+      <p class="fs-37">
+        The first rule of functions is that they should be small. The second rule of functions is that they should be smaller than that. Functions should not be 100 lines long. Functions should hardly ever be 20 lines long.
+      </p>
+
+      <figcaption>
+        Robert C. Martin, Clean Code
+      </figcaption>
+    </blockquote>
+  </section>
+  <!-- Functions Should Only Do One Thing -->
+  <section class="slide">
+    <h2>Functions Should Only Do One Thing</h2>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>function loadData() {</code>
+      <code>  <mark>localStorage.setItem('loadData', true);</mark></code>
+      <code>  <mark>setData(Date.now());</mark></code>
+      <code>  return fetch(`http://example.com/books`);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <!-- Functions Should Not Have Side Effects -->
+  <section class="slide">
+    <h2>Functions Should Not Have Side Effects</h2>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>function sum(a, b) {</code>
+      <code>  return a + b;</code>
+      <code>}</code>
+    </pre>
+
+    <hr/>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>function getBookById(id) {</code>
+      <code>  return fetch(`http://example.com/books/${id}`);</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <!-- Functions Parameters -->
+  <section class="slide">
+    <h2>Functions Parameters</h2>
+
+    <p>
+      What is the ideal number of parameters?
+    </p>
+    <ol class="interesting-facts-list">
+      <li class="next">0</li>
+      <li class="next">1-3</li>
+      <li class="next">There is no "ideal" number</li>
+      <li class="next">1-6</li>
+    </ol>
+  </section>
+  <!-- Comments -->
+  <section class="slide">
+    <h2>Comments</h2>
+
+    <blockquote class="fs-45">
+      <p>
+        The only good comment is the comment you found a way NOT to write!
+      </p>
+    </blockquote>
+
+    <ul class="interesting-facts-list">
+      <li class="next">Good Comments</li>
+      <li class="next">Bad Comments</li>
+    </ul>
+  </section>
+  <!-- Comments. Good Comments -->
+  <section class="slide">
+    <h2>Comments. Good Comments</h2>
+
+    <p class="next">
+      Legal Comments
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>// Copyright (C) 2003,2004,2005 </code>
+      <code>// by Object Mentor, Inc. All rights reserved.</code>
+      <code>// Released under the terms of the GNU</code>
+      <code>// General Public License version 2 or later.</code>
+    </pre>
+  </section>
+  <!-- Comments. Good Comments -->
+  <section class="slide">
+    <h2>Comments. Good Comments</h2>
+
+    <p class="next">
+      Informative comments
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>// should return a string in special format</code>
+      <code>// kk:mm EEE, MMM dd</code>
+      <code>public abstract load(inputData: Input): string;</code>
+    </pre>
+  </section>
+  <!-- Comments. Good Comments -->
+  <section class="slide">
+    <h2>Comments. Good Comments</h2>
+
+    <p class="next">
+      Explanation of Intent
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>// format matched kk:mm EEE, MMM dd</code>
+      <code>Pattern.compile("\\d*:\\d* \\w*, \\w* \\d*");</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Comments. Good Comments</h2>
+
+    <p class="next">
+      Improving the code
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>// TODO will be deleted in next release</code>
+      <code>function testConnection() {</code>
+      <code>  // do stuff</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Comments. Bad Comments</h2>
+
+    <p class="next">
+      Bad Code
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code><mark>// Formatting</mark></code>
+      <code>addFormatToken('D', ['DD', 2], 'Do', 'date');</code>
+      <code><mark>// Aliases</mark></code>
+      <code>addUnitAlias('date', 'D');</code>
+      <code><mark>// Priority</mark></code>
+      <code>addUnitPriority('date', 9);</code>
+      <code>...</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Comments. Bad Comments</h2>
+
+    <p class="next">
+      Redundant Comments
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code><mark>// return sum of a and b</mark></code>
+      <code>function sum(a, b) {</code>
+      <code>  return a + b;</code>
+      <code>}</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Comments. Bad Comments</h2>
+
+    <p class="next">
+      Closing Brace Comments
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code>try {</code>
+      <code>  while (books.length &gt; 0) {</code>
+      <code>    ...</code>
+      <code>  } <mark>// while</mark></code>
+      <code>} <mark>// try</mark></code>
+      <code>...</code>
+    </pre>
+  </section>
+  <section class="slide">
+    <h2>Comments. Bad Comments</h2>
+
+    <p class="next">
+      Commented Out Code
+    </p>
+
+    <pre class="slide__pre slide_pre-formated next">
+      <code class="mark">/* </code>
+      <code class="mark">  function loadData() {</code>
+      <code class="mark">    ...</code>
+      <code class="mark">  }</code>
+      <code class="mark">*/</code>
+    </pre>
+  </section>
+  <!-- useful links -->
+  <section class="slide">
+    <h2>Useful links</h2>
+
+    <ul class="interesting-facts-list">
+      <li>
+        <a href="https://overreacted.io/the-wet-codebase" target="_blank" rel="noopener">
+          The WET Codebase
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=yhF7OmuIILc&feature=youtu.be" target="_blank" rel="noopener">
+          The Art of Code Comments - Sarah Drasner | JSConf Hawaii 2020
+        </a>
+      </li>
+      <li>
+        <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank" rel="noopener">
+          Clean Code: A Handbook of Agile Software Craftsmanship
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- About me -->
+  <section class="slide">
+    <h2>About me</h2>
+    <ul class="al-list slide_plan">
+      <li class="al-list_item">
+        <a href="https://twitter.com/var_bincom" class="al-link al-link__twitter" target="_blank" rel="noopener">var_bincom</a>
+      </li>
+      <li class="al-list_item">
+        <a href="https://github.com/var-bin" class="al-link al-link__github" target="_blank" rel="noopener">var-bin</a>
+      </li>
+      <li class="al-list_item">
+        <hr>
+        <span>Photos: </span>
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;vertical-align: middle" href="https://unsplash.com/@danielkcheung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Daniel Cheung"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Daniel Cheung</span></a>
+      </li>
+    </ul>
+  </section>
+  <p class="badge">
+    <a href="https://github.com/shower/shower" target="_blank" rel="noopener">Fork me on GitHub</a>
+  </p>
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"></div>
+  <script src="shower/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+
+    ga("create", "UA-89569652-1", "auto");
+    ga("send", "pageview");
+  </script>
+  <script>
+    var videoAfter = document.getElementById("videoAfter");
+
+    function playPause(videoId) {
+      if (videoId.paused) {
+        videoId.play();
+      } else {
+        videoId.pause();
+      }
+    }
+
+    function playVideoAfter() {
+      playPause(videoAfter);
+    }
+
+    videoAfter.addEventListener("click", playVideoAfter);
+  </script>
+</body>
+</html>

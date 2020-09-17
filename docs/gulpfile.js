@@ -44,11 +44,11 @@ const SVG_SPRITE = path.join(ASSETS_IMAGES, "sprite");
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
 
-const PRES_ASSETS_IMAGES = paths.PRES_ASSETS_IMAGES("conferences", "chernivtsijs2019");
-const PRES_IMAGES = paths.PRES_IMAGES("conferences", "chernivtsijs2019");
-const PRES_ASSETS_STYLES = paths.PRES_ASSETS_STYLES("conferences", "chernivtsijs2019");
-const PRES_STYLES = paths.PRES_STYLES("conferences", "chernivtsijs2019");
-const PRES_INDEX_HTML = paths.PRES_INDEX_HTML("conferences", "chernivtsijs2019");
+const PRES_ASSETS_IMAGES = paths.PRES_ASSETS_IMAGES("conferences", "jsTalkCommunity/sep2020");
+const PRES_IMAGES = paths.PRES_IMAGES("conferences", "jsTalkCommunity/sep2020");
+const PRES_ASSETS_STYLES = paths.PRES_ASSETS_STYLES("conferences", "jsTalkCommunity/sep2020");
+const PRES_STYLES = paths.PRES_STYLES("conferences", "jsTalkCommunity/sep2020");
+const PRES_INDEX_HTML = paths.PRES_INDEX_HTML("conferences", "jsTalkCommunity/sep2020");
 
 // Static server
 gulp.task("browser-sync", (cb) => {
@@ -157,7 +157,7 @@ gulp.task("images:var-bin:min", () => {
 
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
-  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{svg,gif}"))
+  return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{jpg,JPG,jpeg,png,svg,gif}"))
     .pipe(image(imageMinOptions))
     .pipe(rename({
       suffix: constants.IMAGE_MIN_SUFFIX

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp dev",
-    "bs": "browser-sync start",
+    "bs": "browser-sync start -s './conferences/jsTalkCommunity/sep2020/shower' -f './conferences/jsTalkCommunity/sep2020/shower' --host='127.0.0.1'",
+    "httpserver": "http-server ./conferences/jsTalkCommunity/sep2020/shower",
     "css:lint": "stylelint",
     "css:fix": "stylelint --fix",
     "prettier": "prettier",
@@ -32,7 +33,7 @@
   "homepage": "https://github.com/var-bin/var-bin.com#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.5",
-    "browser-sync": "^2.26.4",
+    "browser-sync": "^2.26.12",
     "eslint": "^4.16.0",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
@@ -49,6 +50,7 @@
     "gulp-svgstore": "^6.1.1",
     "gulp-watch": "^5.0.1",
     "gulp-webp": "^3.0.0",
+    "http-server": "^0.12.3",
     "imagemin-webp": "^5.1.0",
     "less": "^2.7.3",
     "postcss-csso": "^3.0.0",
