@@ -57,30 +57,30 @@
         </div>
       </section>
 
-      <section class="social-buttons">
+      <section class="social-buttons" id="socialButtons">
         <div class="social-buttons__item social-buttons__item_tw">
-          <a href="https://twitter.com/var_bincom" class="icon" target="_blank" rel="noopener">
+          <a href="https://twitter.com/var_bincom" class="icon" target="_blank" rel="noopener" id="twitter">
             <svg>
               <use xlink:href="#Tw" />
             </svg>
           </a>
         </div>
         <div class="social-buttons__item social-buttons__item_gh">
-          <a href="https://github.com/var-bin" class="icon" target="_blank" rel="noopener">
+          <a href="https://github.com/var-bin" class="icon" target="_blank" rel="noopener" id="github">
             <svg>
               <use xlink:href="#github" />
             </svg>
           </a>
         </div>
         <div class="social-buttons__item social-buttons__item_m">
-          <a href="https://medium.com/@var_bin" class="icon" target="_blank" rel="noopener">
+          <a href="https://medium.com/@var_bin" class="icon" target="_blank" rel="noopener" id="medium">
             <svg>
               <use xlink:href="#M" />
             </svg>
           </a>
         </div>
         <div class="social-buttons__item social-buttons__item_li">
-          <a href="https://www.linkedin.com/in/varbin/" class="icon" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/varbin/" class="icon" target="_blank" rel="noopener" id="linkedin">
             <svg>
               <use xlink:href="#linkedin" />
             </svg>
@@ -95,8 +95,10 @@
       </p>
     </footer>
 
+    <script src="/assets/js/min/main.min.js"></script>
     <script>
-      (function(e){var n=document.getElementById(e);var r=new Date;n.innerHTML=r.getUTCFullYear()})("currentYear");
+      generateCurrentYear();
+      trackSocialLinksClick();
     </script>
   </body>
 </html>

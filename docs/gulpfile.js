@@ -16,6 +16,9 @@ const svgStore  = require("gulp-svgstore");
 const svgo = require("gulp-svgo");
 const inject = require("gulp-inject");
 const image = require("gulp-image");
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const terser = require('gulp-terser');
 
 // for webp
 const imagemin = require("gulp-imagemin");
@@ -38,11 +41,13 @@ const BASE_DIR = path.resolve("./");
 const STYLES = path.join(ASSETS_DIR, "less", "styles.less");
 const ASSETS_STYLES = path.join(ASSETS_DIR, "css");
 const ASSETS_IMAGES = path.join(ASSETS_DIR, "images");
+const ASSETS_JS = path.join(ASSETS_DIR, "js");
 const ASSETS_SVG = path.join(ASSETS_IMAGES, "/*.svg");
 const SVG_SPRITE = path.join(ASSETS_IMAGES, "sprite");
 
 const VARBIN_ASSETS_IMAGES = path.join(ASSETS_IMAGES, "/*.{png,jpg,jpeg}");
 const VARBIN_ASSETS_IMAGES_MIN = path.resolve(path.join(ASSETS_IMAGES, "min"));
+const VARBIN_ASSETS_JS_MIN = path.resolve(path.join(ASSETS_JS, "min"));
 
 const PRES_ASSETS_IMAGES = paths.PRES_ASSETS_IMAGES("conferences", "jsTalkCommunity/sep2020");
 const PRES_IMAGES = paths.PRES_IMAGES("conferences", "jsTalkCommunity/sep2020");
@@ -50,6 +55,7 @@ const PRES_ASSETS_STYLES = paths.PRES_ASSETS_STYLES("conferences", "jsTalkCommun
 const PRES_STYLES = paths.PRES_STYLES("conferences", "jsTalkCommunity/sep2020");
 const PRES_INDEX_HTML = paths.PRES_INDEX_HTML("conferences", "jsTalkCommunity/sep2020");
 
+// @TODO Move to a separate file
 // Static server
 gulp.task("browser-sync", (cb) => {
   browserSync.init({
@@ -60,13 +66,15 @@ gulp.task("browser-sync", (cb) => {
     open: false
   });
 
-  gulp.watch("./assets/less/**/*.less", gulp.series("styles", "htmlmin"));
+  gulp.watch("./assets/less/**/*.less", gulp.series("styles", "htmlmin", "sprite:inject"));
   gulp.watch("./index.tpl.html")
-    .on("change", gulp.series("styles", "htmlmin"));
+    .on("change", gulp.series("styles", "htmlmin", "sprite:inject"));
+  gulp.watch("./assets/js/**/*.js", gulp.series("scripts", "htmlmin", "sprite:inject"));
 
   cb();
 });
 
+// @TODO Move to a separate file
 // html min
 gulp.task("htmlmin", () => {
   return gulp.src(INDEX_TPL)
@@ -77,6 +85,7 @@ gulp.task("htmlmin", () => {
     .pipe(gulp.dest(BASE_DIR));
 });
 
+// @TODO Move to a separate file
 // less, css
 gulp.task("css", () => {
   return gulp.src(STYLES)
@@ -87,6 +96,7 @@ gulp.task("css", () => {
     .pipe(gulp.dest(ASSETS_STYLES));
 });
 
+// @TODO Move to a separate file
 // css min
 gulp.task("cssmin", () => {
   return gulp.src(path.join(ASSETS_STYLES, "styles.css"))
@@ -99,6 +109,7 @@ gulp.task("cssmin", () => {
     .pipe(rename("styles.min.css"))
     .pipe(gulp.dest(ASSETS_STYLES));
 });
+
 
 gulp.task("styles", gulp.series("css", "cssmin"));
 
@@ -117,10 +128,9 @@ gulp.task("watchHtml", () => {
 // watch
 gulp.task("watch", gulp.parallel("watchLess", "watchHtml"));
 
-gulp.task("dev", gulp.series("styles", "htmlmin", "browser-sync"));
-
 gulp.task("prod", gulp.series("styles", "htmlmin"));
 
+// @TODO Move to a separate file
 // svgStore
 gulp.task("svgStore", () => {
   return gulp.src(ASSETS_SVG)
@@ -146,6 +156,8 @@ gulp.task("inject:svg", () => {
 
 gulp.task("sprite:inject", gulp.series("svgStore", "htmlmin", "inject:svg"));
 
+gulp.task("dev", gulp.series("browser-sync", "sprite:inject"));
+
 gulp.task("images:var-bin:min", () => {
   return gulp.src(VARBIN_ASSETS_IMAGES)
     .pipe(image())
@@ -155,6 +167,7 @@ gulp.task("images:var-bin:min", () => {
     .pipe(gulp.dest(VARBIN_ASSETS_IMAGES_MIN));
 });
 
+// @TODO Move to a separate file
 // tasks for conferences' presentations
 gulp.task("images:min", () => {
   return gulp.src(path.join(PRES_ASSETS_IMAGES, "/*.{jpg,JPG,jpeg,png,svg,gif}"))
@@ -194,4 +207,14 @@ gulp.task("watch:pres", (cb) => {
   gulp.watch(PRES_ASSETS_STYLES, gulp.series("css:pres"));
 
   cb();
+});
+
+gulp.task("scripts", () => {
+  return gulp.src(path.join(ASSETS_JS, "/*.js"), { sourcemaps: true })
+    .pipe(babel())
+    .pipe(terser({
+      ecma: 5,
+    }))
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest(VARBIN_ASSETS_JS_MIN));
 });
