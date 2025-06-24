@@ -4,7 +4,7 @@
   "id": "https://var-bin.com/badges/react-certificate-UC-ebcc7088.json",
   "badge": {
     "type": "BadgeClass",
-    "id": "https://var-bin.com/badges/react-complete-guide-2025-badgeclass",
+    "id": "urn:uuid:react-complete-guide-2025-badgeclass",
     "name": "React - The Complete Guide 2025",
     "description": "Completed comprehensive React development course covering components, hooks, Redux, Next.js, and modern React practices.",
     "image": "https://res.cloudinary.com/dlxpwfaic/image/upload/v1750774181/certificates/react-complete-guide-2025_z97u0e.png",
