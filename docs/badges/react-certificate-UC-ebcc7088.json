@@ -1,0 +1,31 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "type": "Assertion",
+  "id": "https://var-bin.com/badges/react-certificate-UC-ebcc7088.json",
+  "badge": {
+    "type": "BadgeClass",
+    "id": "https://var-bin.com/badges/react-complete-guide-2025-badgeclass",
+    "name": "React - The Complete Guide 2025",
+    "description": "Completed comprehensive React development course covering components, hooks, Redux, Next.js, and modern React practices.",
+    "image": "https://res.cloudinary.com/dlxpwfaic/image/upload/v1750774181/certificates/react-complete-guide-2025_z97u0e.png",
+    "issuer": {
+      "type": "Profile",
+      "id": "https://www.udemy.com/user/academind",
+      "name": "Academind by Maximilian Schwarzmüller",
+      "url": "https://www.udemy.com/user/academind/"
+    }
+  },
+  "recipient": {
+    "type": "email",
+    "hashed": false,
+    "identity": "var.bin.com@gmail.com"
+  },
+  "verification": {
+    "type": "hosted"
+  },
+  "issuedOn": "2023-06-09T00:00:00Z",
+  "evidence": {
+    "id": "https://www.udemy.com/certificate/UC-ebcc7088-57eb-413a-bd45-9550eb408958",
+    "name": "Udemy Certificate"
+  }
+}
